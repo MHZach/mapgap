@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Measure What You Can't See | mapgap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --void: #0a0a0f;
+    --surface: #111118;
+    --panel: #1a1a25;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --text-dim: #7a7a9a;
+    --text-muted: #4a4a6a;
+    --electric: #4f8ef7;
+    --electric-dim: rgba(79, 142, 247, 0.12);
+    --green: #2ecc71;
+    --green-dim: rgba(46, 204, 113, 0.1);
+    --amber: #f0a030;
+    --amber-dim: rgba(240, 160, 48, 0.1);
+    --red: #e05555;
+    --serif: 'Instrument Serif', Georgia, serif;
+    --sans: 'Syne', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--void);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* Scan line texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255,255,255,0.008) 2px,
+      rgba(255,255,255,0.008) 4px
+    );
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* Header */
+  .site-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    color: var(--electric);
+    text-decoration: none;
+  }
+
+  .header-meta {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .ep-badge {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.75rem;
+    letter-spacing: 0.1em;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* Hero terminal block */
+  .hero {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 5rem 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .hero-left {}
+
+  .ep-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--electric);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .ep-label::before {
+    content: '//';
+    color: var(--text-muted);
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--electric);
+  }
+
+  .hero-intro {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-dim);
+    margin-bottom: 2rem;
+  }
+
+  .hero-byline {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+  }
+
+  /* Terminal widget */
+  .terminal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 0.78rem;
+  }
+
+  .terminal-header {
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .terminal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .terminal-dot:nth-child(1) { background: #ff5f57; }
+  .terminal-dot:nth-child(2) { background: #ffbd2e; }
+  .terminal-dot:nth-child(3) { background: #28ca41; }
+
+  .terminal-title {
+    margin-left: auto;
+    color: var(--text-muted);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+  }
+
+  .terminal-body {
+    padding: 1.5rem;
+    line-height: 2;
+  }
+
+  .t-prompt { color: var(--text-muted); }
+  .t-cmd { color: var(--text); }
+  .t-comment { color: var(--text-muted); font-style: italic; }
+  .t-output { color: var(--text-dim); }
+  .t-value { color: var(--green); }
+  .t-warn { color: var(--amber); }
+  .t-error { color: var(--red); }
+  .t-key { color: var(--electric); }
+  .t-blank { display: block; height: 0.5rem; }
+
+  /* Section: content body */
+  .content-body {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+  }
+
+  .section-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-number {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--electric);
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+  }
+
+  .section-rule {
+    height: 1px;
+    background: var(--border);
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 2rem;
+  }
+
+  h2 em { font-style: italic; color: var(--electric); }
+
+  h3 {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--electric);
+    margin: 2.5rem 0 1rem;
+  }
+
+  .body-text {
+    max-width: 720px;
+  }
+
+  .body-text p {
+    font-size: 1.02rem;
+    line-height: 1.85;
+    color: var(--text-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  .body-text p strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* Metric panels grid */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin: 3rem 0;
+    border: 1px solid var(--border);
+  }
+
+  .metric-panel {
+    background: var(--surface);
+    padding: 1.75rem 1.5rem;
+  }
+
+  .metric-panel:hover {
+    background: var(--panel);
+  }
+
+  .metric-id {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+  }
+
+  .metric-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .metric-def {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .metric-formula {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--electric);
+    background: var(--electric-dim);
+    padding: 0.5rem 0.75rem;
+    border-left: 2px solid var(--electric);
+    line-height: 1.6;
+  }
+
+  .metric-benchmark {
+    margin-top: 1rem;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--text-muted);
+  }
+
+  .benchmark-bar {
+    display: flex;
+    gap: 2px;
+    margin-top: 0.4rem;
+  }
+
+  .bar-segment {
+    height: 3px;
+    flex: 1;
+    background: var(--border);
+  }
+
+  .bar-segment.low { background: var(--red); }
+  .bar-segment.mid { background: var(--amber); }
+  .bar-segment.high { background: var(--green); }
+
+  /* Pull quote dark */
+  .pull-quote {
+    border: 1px solid var(--electric);
+    border-left: 3px solid var(--electric);
+    padding: 2rem 2.5rem;
+    margin: 3rem 0;
+    background: var(--electric-dim);
+  }
+
+  .pull-quote p {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--text);
+    margin: 0;
+  }
+
+  /* Two-column layout for comparison */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 3rem 0;
+  }
+
+  .col-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 2rem;
+  }
+
+  .col-panel.old { border-top: 2px solid var(--red); }
+  .col-panel.new { border-top: 2px solid var(--green); }
+
+  .col-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .col-panel.old .col-label { color: var(--red); }
+  .col-panel.new .col-label { color: var(--green); }
+
+  .col-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.88rem;
+    align-items: baseline;
+  }
+
+  .col-item:last-child { border-bottom: none; }
+
+  .col-item::before {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    flex-shrink: 0;
+  }
+
+  .col-panel.old .col-item::before {
+    content: '✗';
+    color: var(--red);
+  }
+
+  .col-panel.new .col-item::before {
+    content: '→';
+    color: var(--green);
+  }
+
+  .col-item-label {
+    font-weight: 600;
+    color: var(--text);
+    display: block;
+    font-size: 0.82rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .col-item-desc {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  /* Audit anatomy */
+  .audit-anatomy {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    margin: 3rem 0;
+  }
+
+  .audit-title {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--electric);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .audit-phases {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .audit-phase {
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    position: relative;
+  }
+
+  .audit-phase::before {
+    content: attr(data-step);
+    position: absolute;
+    top: -0.6rem;
+    left: 1rem;
+    background: var(--surface);
+    padding: 0 0.5rem;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+
+  .audit-phase-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+  }
+
+  .audit-phase-desc {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  .audit-phase-output {
+    margin-top: 1rem;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--amber);
+    background: var(--amber-dim);
+    padding: 0.4rem 0.6rem;
+    border-left: 2px solid var(--amber);
+  }
+
+  /* Callout block */
+  .callout {
+    background: var(--green-dim);
+    border: 1px solid rgba(46, 204, 113, 0.2);
+    border-left: 3px solid var(--green);
+    padding: 1.75rem 2rem;
+    margin: 2.5rem 0;
+  }
+
+  .callout-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--green);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .callout p {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .callout p strong { color: var(--text); }
+
+  /* Footer */
+  .article-footer {
+    border-top: 1px solid var(--border);
+    padding: 4rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+  }
+
+  .next-ep {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--electric);
+    padding: 2.5rem;
+  }
+
+  .next-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--electric);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+
+  .next-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  .series-index {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+  }
+
+  .series-index-title {
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+  }
+
+  .series-index-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    align-items: baseline;
+  }
+
+  .series-index-item:last-child { border-bottom: none; }
+
+  .series-ep {
+    color: var(--text-muted);
+    flex-shrink: 0;
+    width: 2rem;
+  }
+
+  .series-ep-title { color: var(--text-dim); }
+  .series-ep-title.current { color: var(--electric); }
+  .series-ep-title.published { color: var(--text-muted); text-decoration: underline; cursor: pointer; }
+
+  @media (max-width: 900px) {
+    .hero, .two-col, .audit-phases, .article-footer { grid-template-columns: 1fr; }
+    .metrics-grid { grid-template-columns: 1fr 1fr; }
+    body { font-size: 0.95rem; }
+    .hero, .content-body { padding: 3rem 1.5rem; }
+    .site-header { padding: 1rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#" class="logo">mapgap_</a>
+  <div class="header-meta">
+    <div class="status-dot"></div>
+    <div class="ep-badge">EP.04 · GEO METRICS</div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-left">
+      <div class="ep-label">Episode Four · Measurement</div>
+      <h1 class="hero-title">How to measure<br>what you <em>can't see</em></h1>
+      <p class="hero-intro">GEO metrics for the B2B practitioner. When your buyer's research journey runs through ChatGPT, Perplexity, and Gemini before arriving at your domain, the measurement problem is fundamental — not methodological. Here's what to track, how to calculate it, and what early data reveals.</p>
+      <div class="hero-byline">MICHAEL ZACHRAU · FEBRUARY 2026 · 12 MIN READ</div>
+    </div>
+    <div class="terminal">
+      <div class="terminal-header">
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+        <div class="terminal-title">geo_audit.py · abcfinance.de</div>
+      </div>
+      <div class="terminal-body">
+        <div><span class="t-prompt">$ </span><span class="t-cmd">python geo_audit.py --client abcfinance --prompts 440</span></div>
+        <div class="t-blank"></div>
+        <div><span class="t-comment"># Executing 440 prompts across 4 LLM providers</span></div>
+        <div><span class="t-comment"># 7-phase buyer journey coverage</span></div>
+        <div class="t-blank"></div>
+        <div><span class="t-output">Providers: </span><span class="t-value">OpenAI · Google · Anthropic · Perplexity</span></div>
+        <div><span class="t-output">Languages: </span><span class="t-value">DE (primary) · EN (secondary)</span></div>
+        <div><span class="t-output">Prompts executed: </span><span class="t-value">1,760</span></div>
+        <div class="t-blank"></div>
+        <div><span class="t-output">─── RESULTS ───────────────────────────</span></div>
+        <div><span class="t-key">SOV_overall:          </span><span class="t-value">34.2%</span></div>
+        <div><span class="t-key">discovery_rate:       </span><span class="t-value">41.8%</span></div>
+        <div><span class="t-key">list_presence:        </span><span class="t-value">28.6%</span></div>
+        <div><span class="t-key">win_probability_score:</span><span class="t-value">0.52</span></div>
+        <div><span class="t-key">position_score:       </span><span class="t-value">0.61</span></div>
+        <div class="t-blank"></div>
+        <div><span class="t-output">─── PHASE BREAKDOWN ───────────────────</span></div>
+        <div><span class="t-key">awareness:      </span><span class="t-value">61%</span><span class="t-comment">  (strong)</span></div>
+        <div><span class="t-key">consideration:  </span><span class="t-warn">29%</span><span class="t-comment">  (moderate)</span></div>
+        <div><span class="t-key">decision:       </span><span class="t-error">8%</span><span class="t-comment">   (critical gap)</span></div>
+        <div class="t-blank"></div>
+        <div><span class="t-output">─── ALERTS ────────────────────────────</span></div>
+        <div><span class="t-warn">⚠ switching_housebank: 0 citations</span></div>
+        <div><span class="t-warn">⚠ criteria_selection:  2 citations</span></div>
+        <div><span class="t-error">✗ competitor_compare:  hallucination risk detected</span></div>
+        <div class="t-blank"></div>
+        <div><span class="t-output">Report: </span><span class="t-value">output/geo_report_abcfinance_feb26.xlsx</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="content-body">
+
+    <div class="section-header">
+      <div class="section-number">// 01</div>
+      <div class="section-rule"></div>
+    </div>
+
+    <h2>The measurement problem, <em>stated precisely</em></h2>
+    <div class="body-text">
+      <p>Before we discuss what to measure, let's be precise about what the problem actually is. It is not that AI search is unmeasurable. It is that the measurement framework developed for Google — impressions, clicks, rankings, CTR — is categorically inapplicable to how LLMs work.</p>
+
+      <p>Search engines produce result pages. Those pages are measurable. LLMs produce synthesized responses. The synthesis process is opaque. No impression is registered. No referral is logged. The buyer who spent ninety seconds reading a Perplexity summary of your category left no trace in any system you own.</p>
+
+      <p>The implication is uncomfortable but necessary: <strong>you cannot measure LLM-mediated research the way you measure search traffic.</strong> You can only measure the outputs of that research — through systematic prompting, response analysis, and citation detection. GEO measurement is active, not passive. You must query the LLMs yourself, as your buyers do, and analyze what comes back.</p>
+    </div>
+
+    <div class="pull-quote">
+      <p>GEO measurement inverts the traditional model. Instead of waiting for signals from buyers, you simulate the buyer — systematically, at scale, across every relevant question in the journey.</p>
+    </div>
+
+    <div class="section-header" style="margin-top: 4rem;">
+      <div class="section-number">// 02</div>
+      <div class="section-rule"></div>
+    </div>
+
+    <h2>The five core GEO metrics</h2>
+    <div class="body-text">
+      <p>After tracking LLM visibility for B2B financial services clients across multiple providers in 2025, five metrics have proven consistently meaningful. They measure different dimensions of the same underlying phenomenon: how prominently and accurately your brand appears in AI-generated responses to buyer-relevant queries.</p>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-panel">
+        <div class="metric-id">KPI_01</div>
+        <div class="metric-name">Share of Voice (SOV)</div>
+        <div class="metric-def">The percentage of relevant prompts in which your brand is mentioned at least once.</div>
+        <div class="metric-formula">Brand_Mentions / Total_Prompts × 100</div>
+        <div class="metric-benchmark">
+          <div>Benchmark (B2B Financial DE)</div>
+          <div class="benchmark-bar">
+            <div class="bar-segment low"></div>
+            <div class="bar-segment low"></div>
+            <div class="bar-segment mid"></div>
+            <div class="bar-segment mid"></div>
+            <div class="bar-segment mid"></div>
+            <div class="bar-segment high"></div>
+            <div class="bar-segment high"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:0.25rem;color:var(--text-muted)">
+            <span>&lt;20% weak</span><span>20–50% mid</span><span>&gt;50% strong</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="metric-panel">
+        <div class="metric-id">KPI_02</div>
+        <div class="metric-name">Discovery Rate</div>
+        <div class="metric-def">Of all prompts where your brand could be mentioned, what percentage actually contain a brand mention.</div>
+        <div class="metric-formula">Prompts_with_Brand / Total_Prompts × 100</div>
+        <div class="metric-benchmark">
+          <div>Interpretation</div>
+          <div style="margin-top:0.4rem;color:var(--text-dim);font-size:0.65rem;line-height:1.5">High discovery + low list presence = mentioned but not recommended. The gap between the two reveals the quality problem.</div>
+        </div>
+      </div>
+
+      <div class="metric-panel">
+        <div class="metric-id">KPI_03</div>
+        <div class="metric-name">List Presence</div>
+        <div class="metric-def">Frequency of brand appearance in recommendation lists or ranked shortlists — weighted higher than casual mentions.</div>
+        <div class="metric-formula">Brand_in_List / List_Prompts × 100</div>
+        <div class="metric-benchmark">
+          <div>Why it matters</div>
+          <div style="margin-top:0.4rem;color:var(--text-dim);font-size:0.65rem;line-height:1.5">Buyers who ask "which providers should I consider" receive list answers. Appearing in that list is categorically more valuable than being mentioned in a definition.</div>
+        </div>
+      </div>
+
+      <div class="metric-panel">
+        <div class="metric-id">KPI_04</div>
+        <div class="metric-name">Win Probability Score</div>
+        <div class="metric-def">Composite score combining position, sentiment framing, and context quality of brand mentions.</div>
+        <div class="metric-formula">
+          (Position × 0.4)<br>
+          + (Sentiment × 0.3)<br>
+          + (Context × 0.3)
+        </div>
+        <div class="metric-benchmark">
+          <div>Score range: 0.0 – 1.0</div>
+          <div style="margin-top:0.4rem;color:var(--text-dim);font-size:0.65rem;line-height:1.5">A WPS of 0.7+ indicates the LLM is positioning your brand as a primary recommendation, not merely an option.</div>
+        </div>
+      </div>
+
+      <div class="metric-panel">
+        <div class="metric-id">KPI_05</div>
+        <div class="metric-name">Position Score</div>
+        <div class="metric-def">Where in the response the brand first appears. First mention carries disproportionate weight in buyer interpretation.</div>
+        <div class="metric-formula">1 − (First_Mention_Position / Response_Length)</div>
+        <div class="metric-benchmark">
+          <div>LLM behavior note</div>
+          <div style="margin-top:0.4rem;color:var(--text-dim);font-size:0.65rem;line-height:1.5">Models consistently position what they interpret as "best fit" first. First position is not coincidental — it reflects the model's implicit ranking.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" style="margin-top: 4rem;">
+      <div class="section-number">// 03</div>
+      <div class="section-rule"></div>
+    </div>
+
+    <h2>From metrics to audit: what a GEO assessment looks like</h2>
+    <div class="body-text">
+      <p>The metrics above require a structured prompt library to produce meaningful results. An ad-hoc query to ChatGPT tells you almost nothing. A systematic audit across 440 structured prompts, executed across four LLM providers in two languages, tells you quite a lot.</p>
+
+      <p>The prompt library must cover all seven buyer journey phases — not just the obvious provider-selection queries. The discovery that your brand is well-cited in awareness-phase prompts ("what is factoring") but almost absent from decision-phase prompts ("which factoring provider is right for a Zeitarbeit company with €2M receivables") is among the most actionable findings a GEO audit produces.</p>
+    </div>
+
+    <div class="audit-anatomy">
+      <div class="audit-title">// Anatomy of a GEO Audit — Four Phases</div>
+      <div class="audit-phases">
+        <div class="audit-phase" data-step="Phase 01">
+          <div class="audit-phase-name">Prompt Architecture</div>
+          <div class="audit-phase-desc">Build structured prompt library covering all 7 information situations, 4 LLM providers, 2+ languages. Minimum 80 prompts; 440+ for comprehensive coverage.</div>
+          <div class="audit-phase-output">Output: prompt_library.json</div>
+        </div>
+        <div class="audit-phase" data-step="Phase 02">
+          <div class="audit-phase-name">Multi-Provider Execution</div>
+          <div class="audit-phase-desc">Run all prompts across OpenAI, Google, Anthropic, Perplexity simultaneously. Capture raw responses with timestamps and provider metadata.</div>
+          <div class="audit-phase-output">Output: raw_responses.json</div>
+        </div>
+        <div class="audit-phase" data-step="Phase 03">
+          <div class="audit-phase-name">Response Parsing</div>
+          <div class="audit-phase-desc">Extract brand mentions, position, sentiment framing, context quality, competitor co-mentions, and hallucination flags from each response.</div>
+          <div class="audit-phase-output">Output: parsed_signals.csv</div>
+        </div>
+        <div class="audit-phase" data-step="Phase 04">
+          <div class="audit-phase-name">Metric Aggregation</div>
+          <div class="audit-phase-desc">Calculate the 5 core KPIs per phase, per provider, per language. Identify gaps, risks, and high-priority content opportunities.</div>
+          <div class="audit-phase-output">Output: geo_report.xlsx</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" style="margin-top: 4rem;">
+      <div class="section-number">// 04</div>
+      <div class="section-rule"></div>
+    </div>
+
+    <h2>What early data reveals</h2>
+    <div class="body-text">
+      <p>Running GEO audits across B2B financial services clients over the past six months has produced findings that are consistent enough to treat as early patterns rather than isolated observations.</p>
+
+      <h3>Pattern 1: Awareness strength, decision weakness</h3>
+      <p>Every audited company shows significantly higher brand visibility in awareness-phase prompts than in decision-phase prompts. This is structurally expected — awareness content is definitional, and definitional content is what LLMs absorb most readily. The concerning finding is the <em>magnitude</em> of the gap.</p>
+
+      <p>A company with 150 well-structured glossary pages may achieve 60%+ SOV on awareness prompts while sitting below 10% on decision-phase provider queries. This is not a content volume problem. It is a content function problem. The decision-phase content simply does not exist in a form that LLMs can accurately synthesize and cite.</p>
+
+      <h3>Pattern 2: The hallucination risk concentration</h3>
+      <p>LLM hallucinations are not uniformly distributed across query types. They concentrate in two areas: specific company claims (ownership, market position, product availability) and comparative statements ("X is better than Y because..."). The first type is dangerous to your brand. The second is structurally unavoidable, but the risk varies based on how clearly your positioning is communicated in source content.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="col-panel old">
+        <div class="col-label">// Old measurement framework</div>
+        <div class="col-item">
+          <div>
+            <span class="col-item-label">Organic sessions</span>
+            <span class="col-item-desc">Misses all pre-session LLM research; declining metric that shows the problem, not the cause</span>
+          </div>
+        </div>
+        <div class="col-item">
+          <div>
+            <span class="col-item-label">Keyword rankings</span>
+            <span class="col-item-desc">LLMs don't expose query signals; ranking for "what is factoring" tells you nothing about LLM citation rate</span>
+          </div>
+        </div>
+        <div class="col-item">
+          <div>
+            <span class="col-item-label">Page impressions</span>
+            <span class="col-item-desc">Counts after-the-fact website visits; invisible to the synthesis sessions that precede them</span>
+          </div>
+        </div>
+        <div class="col-item">
+          <div>
+            <span class="col-item-label">Content engagement</span>
+            <span class="col-item-desc">Measures what your existing visitors do; says nothing about the research journey of buyers who never arrive</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-panel new">
+        <div class="col-label">// GEO measurement framework</div>
+        <div class="col-item">
+          <div>
+            <span class="col-item-label">Share of Voice by phase</span>
+            <span class="col-item-desc">Reveals where in the buyer journey you're visible vs. invisible — actionable by content type</span>
+          </div>
+        </div>
+        <div class="col-item">
+          <div>
+            <span class="col-item-label">Discovery Rate by provider</span>
+            <span class="col-item-desc">Shows which LLMs are your brand advocates and which are systematically overlooking you</span>
+          </div>
+        </div>
+        <div class="col-item">
+          <div>
+            <span class="col-item-label">Win Probability Score</span>
+            <span class="col-item-desc">Distinguishes between being mentioned and being recommended — the quality dimension of LLM visibility</span>
+          </div>
+        </div>
+        <div class="col-item">
+          <div>
+            <span class="col-item-label">Hallucination risk flags</span>
+            <span class="col-item-desc">Identifies specific factual claims about your company that LLMs are getting wrong — proactively addressable</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <h3>Pattern 3: Provider divergence</h3>
+      <p>The four major LLM providers do not produce consistent brand visibility results. A company that appears in 45% of prompts on OpenAI may appear in 22% on Google Gemini and 61% on Perplexity. The divergence is not random — it reflects different training data compositions, different recency weighting, and different approaches to synthesizing competitive comparisons.</p>
+
+      <p><strong>Provider divergence is diagnostic.</strong> When you are well-cited on Perplexity (which uses live web search) but poorly cited on ChatGPT (which relies on training data), the implication is that your content is crawlable and current, but was underrepresented in the training corpus. The remediation is different than if the pattern were reversed.</p>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">// Actionable insight</div>
+      <p>A GEO audit produces a prioritized content gap report — not by topic, but by buyer situation and LLM provider. The finding "your switching_housebank content produces 0 citations across all providers" is specific, verifiable, and directly addressable with a single well-structured article. This is a fundamentally different quality of insight than "your organic traffic declined 12% this quarter."</p>
+    </div>
+
+    <div class="body-text">
+      <h3>The attribution model it suggests</h3>
+      <p>Early data from clients running parallel GEO tracking and traditional analytics produces a consistent pattern: non-brand organic clicks decline, brand clicks increase, brand impressions grow substantially. The interpretation is clear — content is being absorbed by LLMs and driving brand awareness, but the awareness is materializing as branded search rather than organic click-through.</p>
+
+      <p>This reframes the attribution model entirely. The organic content that produced no direct traffic in 2025 may have been responsible for the branded search spike in 2025. Traditional last-click attribution misses this completely. GEO metrics, cross-referenced against branded search trends, begin to reconstruct the invisible journey.</p>
+
+      <p>In the next episode, we'll turn from measurement to architecture — what content structure, semantic precision, and internal linking strategy give your content the highest probability of becoming the source that LLMs absorb and reproduce accurately.</p>
+    </div>
+
+  </div>
+
+  <footer class="article-footer">
+    <div class="next-ep">
+      <div class="next-label">// Next in series →</div>
+      <div class="next-title">Episode Five: Content Architecture for LLM Authority — Structure, Precision, and the Semantic Coverage Principle</div>
+    </div>
+    <div class="series-index">
+      <div class="series-index-title">// mapgap_ intelligence series</div>
+      <div class="series-index-item">
+        <div class="series-ep">01</div>
+        <div class="series-ep-title published">The Two-Year Window</div>
+      </div>
+      <div class="series-index-item">
+        <div class="series-ep">02</div>
+        <div class="series-ep-title published">Why Your Analytics Stack Is Measuring the Wrong Layer</div>
+      </div>
+      <div class="series-index-item">
+        <div class="series-ep">03</div>
+        <div class="series-ep-title published">The Invisible Buyer Journey</div>
+      </div>
+      <div class="series-index-item">
+        <div class="series-ep">04</div>
+        <div class="series-ep-title current">How to Measure What You Can't See</div>
+      </div>
+      <div class="series-index-item">
+        <div class="series-ep">05</div>
+        <div class="series-ep-title">Content Architecture for LLM Authority</div>
+      </div>
+    </div>
+  </footer>
+
+</main>
+</body>
+</html>
