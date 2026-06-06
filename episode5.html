@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Architecture for LLM Authority · Insights | Rhinegold Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --paper: #f5f0e8;
+    --warm: #c8a96e;
+    --warm-light: #e8d9bb;
+    --rust: #9b4f2a;
+    --sage: #4a6741;
+    --mist: #8a9ba8;
+    --accent: #d4521a;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* === Rhinegold Brand Header === */
+  .site-header {
+    padding: 1.4rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--warm-light);
+    background: var(--paper);
+    gap: 2rem;
+    position: relative;
+  }
+
+  .rg-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .rg-logo-mark {
+    width: 26px;
+    height: 26px;
+    color: var(--rust);
+    flex-shrink: 0;
+  }
+
+  .rg-wordmark {
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+  }
+
+  .rg-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+
+  .rg-nav a {
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .rg-nav a:hover {
+    color: var(--ink);
+  }
+
+  .rg-nav a.active {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .rg-nav-sep {
+    color: var(--warm-light);
+  }
+
+  .rg-home-link {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .rg-home-link:hover {
+    color: var(--rust);
+  }
+
+  /* === Rhinegold Brand Footer === */
+  .rg-footer {
+    background: #ebe2d0;
+    border-top: 1px solid var(--warm-light);
+    padding: 3rem;
+    font-family: var(--sans);
+    margin-top: 0;
+  }
+
+  .rg-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .rg-identity {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .rg-logo-mark-large {
+    width: 34px;
+    height: 34px;
+    color: var(--rust);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .rg-identity-text .rg-wordmark-large {
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .rg-tagline {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #5a4d3f;
+    max-width: 380px;
+  }
+
+  .rg-footer-column h5 {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--mist);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .rg-footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .rg-footer-column a {
+    font-size: 0.88rem;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .rg-footer-column a:hover {
+    color: var(--rust);
+  }
+
+  .rg-footer-bottom {
+    max-width: 1200px;
+    margin: 2.5rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #d9cdb5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--mist);
+  }
+
+  .rg-footer-bottom-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .rg-footer-bottom-links a {
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .rg-footer-bottom-links a:hover {
+    color: var(--ink);
+  }
+
+  /* Responsive Brand Bridge */
+  @media (max-width: 900px) {
+    .site-header {
+      padding: 1.25rem 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .rg-nav {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--warm-light);
+    }
+    .rg-footer {
+      padding: 2.5rem 1.5rem;
+    }
+    .rg-footer-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .rg-footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+  /* Hero */
+  .hero {
+    padding: 6rem 3rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .episode-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--rust);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .episode-tag::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--rust);
+    opacity: 0.4;
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--rust);
+  }
+
+  .hero-deck {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 3rem 0;
+    border-top: 1px solid var(--warm-light);
+  }
+
+  .hero-intro {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #3a3028;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .byline {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--mist);
+  }
+
+  .byline strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--ink);
+    font-weight: 500;
+    margin-top: 0.3rem;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .reading-time {
+    font-size: 0.8rem;
+    color: var(--mist);
+    margin-top: 1rem;
+  }
+
+  /* Pull quote / chapter intro */
+  .chapter-marker {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 4rem 3rem;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chapter-marker::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 169, 110, 0.15);
+  }
+
+  .chapter-marker::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    right: 5%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 169, 110, 0.08);
+  }
+
+  .chapter-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .chapter-number {
+    font-family: var(--serif);
+    font-size: 8rem;
+    font-weight: 300;
+    color: var(--warm);
+    opacity: 0.3;
+    line-height: 1;
+  }
+
+  .chapter-quote {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--paper);
+  }
+
+  .chapter-quote cite {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--warm);
+    margin-top: 1.5rem;
+  }
+
+  /* Body content */
+  .content-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+  }
+
+  .content-cols {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 5rem;
+  }
+
+  .sidebar {
+    padding-top: 0.5rem;
+  }
+
+  .sidebar-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--mist);
+    margin-bottom: 1.5rem;
+  }
+
+  .sidebar-nav {
+    list-style: none;
+  }
+
+  .sidebar-nav li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--warm-light);
+    font-size: 0.85rem;
+    color: var(--mist);
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .sidebar-nav li:hover { color: var(--ink); }
+  .sidebar-nav li.active { color: var(--rust); font-weight: 500; }
+
+  .sidebar-stat {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: var(--warm-light);
+    border-left: 3px solid var(--warm);
+  }
+
+  .sidebar-stat .number {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--rust);
+    line-height: 1;
+  }
+
+  .sidebar-stat .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--mist);
+    margin-top: 0.5rem;
+  }
+
+  /* Article text */
+  .article-body h2 {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 3.5rem 0 1.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--warm-light);
+  }
+
+  .article-body h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .article-body h3 {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--rust);
+    margin: 2.5rem 0 1rem;
+  }
+
+  .article-body p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #2e2820;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-body p strong {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  /* Pull quote inline */
+  .pull-quote {
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem 2rem;
+    margin: 3rem 0;
+    background: rgba(212, 82, 26, 0.04);
+  }
+
+  .pull-quote p {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* Journey diagram */
+  .journey-diagram {
+    margin: 3rem 0;
+    background: var(--ink);
+    padding: 3rem;
+    position: relative;
+  }
+
+  .journey-diagram h4 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--warm);
+    margin-bottom: 2.5rem;
+  }
+
+  .journey-phases {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .journey-phases::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 24px;
+    right: 24px;
+    height: 1px;
+    background: linear-gradient(to right, var(--sage), var(--warm), var(--rust));
+    z-index: 0;
+  }
+
+  .phase-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .phase-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid;
+    background: var(--ink);
+  }
+
+  .phase-dot.awareness { border-color: var(--sage); }
+  .phase-dot.consideration { border-color: var(--warm); }
+  .phase-dot.decision { border-color: var(--rust); }
+  .phase-dot.filled.awareness { background: var(--sage); }
+  .phase-dot.filled.consideration { background: var(--warm); }
+  .phase-dot.filled.decision { background: var(--rust); }
+
+  .phase-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(245, 240, 232, 0.5);
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .phase-question {
+    font-size: 0.6rem;
+    color: rgba(245, 240, 232, 0.25);
+    text-align: center;
+    line-height: 1.4;
+    font-style: italic;
+  }
+
+  /* Data callout */
+  .data-callout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin: 3rem 0;
+  }
+
+  .data-cell {
+    padding: 2rem;
+    background: var(--warm-light);
+    text-align: center;
+  }
+
+  .data-cell .figure {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--rust);
+  }
+
+  .data-cell .unit {
+    font-size: 0.8rem;
+    color: var(--mist);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.3rem;
+  }
+
+  .data-cell .context {
+    font-size: 0.8rem;
+    color: var(--mist);
+    margin-top: 0.75rem;
+    line-height: 1.5;
+  }
+
+  /* Insight block */
+  .insight-block {
+    background: var(--sage);
+    color: var(--paper);
+    padding: 2.5rem;
+    margin: 3rem 0;
+  }
+
+  .insight-block .eyebrow {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(245, 240, 232, 0.6);
+    margin-bottom: 1rem;
+  }
+
+  .insight-block p {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--paper);
+    margin: 0;
+  }
+
+  /* Implication table */
+  .implication-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+  }
+
+  .implication-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--mist);
+    border-bottom: 2px solid var(--warm-light);
+    font-weight: 400;
+  }
+
+  .implication-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--warm-light);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  .implication-table tr:last-child td { border-bottom: none; }
+
+  .implication-table .signal {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .implication-table .old {
+    color: var(--mist);
+    text-decoration: line-through;
+  }
+
+  .implication-table .new {
+    color: var(--sage);
+    font-weight: 500;
+  }
+
+  /* Footer */
+  .article-footer {
+    border-top: 2px solid var(--ink);
+    padding: 4rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .next-episode {
+    padding: 2.5rem;
+    border: 1px solid var(--warm-light);
+    position: relative;
+  }
+
+  .next-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--mist);
+    margin-bottom: 1rem;
+  }
+
+  .next-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  .series-nav {
+    font-size: 0.8rem;
+    color: var(--mist);
+  }
+
+  .series-nav p {
+    margin-bottom: 1rem;
+  }
+
+  .series-list {
+    list-style: none;
+  }
+
+  .series-list li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--warm-light);
+    font-size: 0.82rem;
+  }
+
+  .series-list li.current {
+    color: var(--rust);
+    font-weight: 500;
+  }
+
+  .series-list li.published a {
+    color: var(--mist);
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .hero-deck, .content-cols, .data-callout,
+    .journey-phases, .article-footer { grid-template-columns: 1fr; }
+    .chapter-inner { grid-template-columns: 1fr; }
+    .chapter-number { font-size: 4rem; }
+    .hero, .content-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .site-header { padding: 1.5rem; }
+    .chapter-marker { padding: 3rem 1.5rem; }
+    .hero-title { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="https://rhinegold.de" class="rg-brand">
+      <svg class="rg-logo-mark" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M2.5 8 C 5.5 5, 8.5 11, 11.5 8 S 17.5 5, 21.5 8"/>
+        <path d="M2.5 12 C 5.5 9, 8.5 15, 11.5 12 S 17.5 9, 21.5 12"/>
+        <path d="M2.5 16 C 5.5 13, 8.5 19, 11.5 16 S 17.5 13, 21.5 16"/>
+      </svg>
+      <span class="rg-wordmark">Rhinegold Consulting</span>
+    </a>
+  <nav class="rg-nav">
+    <a href="/insights/" class="active">Insights</a>
+    <span class="rg-nav-sep">·</span>
+    <a href="/glossar/">Glossar</a>
+    <span class="rg-nav-sep">·</span>
+    <a href="/anwendungen/">Anwendungen</a>
+  </nav>
+  <a href="https://rhinegold.de" class="rg-home-link">Hauptseite →</a>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="episode-tag">Episode Five · Content Architecture for LLM Authority</div>
+
+    <h1 class="hero-title">
+      What survives <em>compression</em>
+    </h1>
+
+    <div class="hero-deck">
+      <div class="hero-intro">
+        Four episodes diagnosed the new reality. The fifth turns from observation to construction. When a language model answers a question about your category, it does not retrieve your page — it retrieves what survives compression. Most content does not survive. This episode is about the architecture, the precision, and the coverage principle that determines which content becomes <em>source</em>, and which becomes noise the model discards.
+      </div>
+      <div class="hero-meta">
+        <div>
+          <div class="byline">By</div>
+          <strong>Michael Zachrau</strong>
+        </div>
+        <div class="reading-time">14 min read · June 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="chapter-marker">
+    <div class="chapter-inner">
+      <div class="chapter-number">V</div>
+      <div class="chapter-quote">
+        "Citation is not retrieval. It is what remains after the model has discarded everything that wasn't structured enough, dense enough, or precise enough to keep."
+      </div>
+    </div>
+  </div>
+
+  <div class="content-wrap">
+    <div class="content-cols">
+      <aside class="sidebar">
+        <div class="sidebar-label">In this episode</div>
+        <nav class="sidebar-nav">
+          <a href="#filter" class="active">The compression filter</a>
+          <a href="#coverage">Semantic coverage, defined</a>
+          <a href="#inventory">The function inventory</a>
+          <a href="#silent">The silent citation pattern</a>
+          <a href="#precision">Precision over density</a>
+          <a href="#architecture">Architecture, explicit</a>
+          <a href="#close">The closing argument</a>
+        </nav>
+
+        <div class="sidebar-stat">
+          <div class="number">38<span style="font-size:1.4rem">%</span></div>
+          <div class="label">of measured glossary URLs absorbed by Gemini as grounding source in a mid-2026 B2B cohort</div>
+        </div>
+
+        <div class="sidebar-stat">
+          <div class="number">61<span style="font-size:1.4rem">%</span></div>
+          <div class="label">share of those grounded answers in which the brand is not mentioned in the response text — the silent citation pattern</div>
+        </div>
+      </aside>
+
+      <article class="article-body">
+
+        <h2 id="filter">The compression filter</h2>
+
+        <p>A language model does not answer with your page. It answers with what survives compression — what remains after billions of tokens have been weighted, ranked, and discarded into a single response of a few hundred words. The compression filter is brutal and not particularly visible from the outside. It is, however, learnable.</p>
+
+        <p>What survives compression has properties. It tends to be definitionally clear in its first sentence. It tends to carry data points the model can quote without inventing them. It tends to be structurally legible — tables, lists, comparison frames — so the model can re-emit the structure rather than paraphrase around it. It tends to be self-contained: a paragraph that requires the rest of the article to make sense will lose to one that does not.</p>
+
+        <p>This is not a stylistic preference. It is what we observe, empirically, in eight months of measuring which content becomes source at four major LLM providers across thousands of buyer-intent prompts. The variance is not random. The patterns are stable across providers, though the weighting differs. And the patterns are <em>buildable</em>.</p>
+
+        <div class="pull-quote">
+          The page is not the unit of measurement. The function the page performs in the buyer's mental state is the unit of measurement.
+        </div>
+
+        <h2 id="coverage">Semantic coverage, defined</h2>
+
+        <p>The dominant content strategy frame of the last decade was keyword density on the input side and topic coverage on the output side. Both frames assumed search engines as the reader. They have not aged well, because LLMs do not read the way search engines do.</p>
+
+        <p>What LLMs read for, when they read your content as a candidate source, is whether you have <strong>performed the cognitive functions</strong> that the user's question implicitly requires. A user asking what a concept means requires a definition. A user asking how two options differ requires a comparison structure. A user asking what to look for in a provider requires a criteria list. The page that performs the right function for the question becomes source. The page that tries to perform all functions at once becomes none of them.</p>
+
+        <p>Semantic coverage is the degree to which a page performs the specific functions required by the information situation it serves. It is not measured in words or keywords. It is measured in function-presence, function-completeness, and function-precision. Three pages of 1,500 words each, all attempting the same coverage, will lose to one page of 800 words that performs three precise functions and stops.</p>
+
+        <h3>The eight situations</h3>
+
+        <p>Through systematic prompt analysis and grounding observation, the buyer-journey decomposition we introduced in Episode Three resolves cleanly into eight distinct information situations, each with its own function requirements. We do not invent the situations from theory. We observe them in what users ask and what LLMs answer.</p>
+
+        <div class="journey-diagram">
+          <h4>The Eight Information Situations and Their Function Anchors</h4>
+          <div class="journey-phases">
+            <div class="phase-item">
+              <div class="phase-dot filled awareness"></div>
+              <div class="phase-label">Understand<br>the Problem</div>
+              <div class="phase-question">describe_symptoms · contextualize_impact</div>
+            </div>
+            <div class="phase-item">
+              <div class="phase-dot filled awareness"></div>
+              <div class="phase-label">Understand<br>the Term</div>
+              <div class="phase-question">define_term · clarify_misconceptions</div>
+            </div>
+            <div class="phase-item">
+              <div class="phase-dot filled awareness"></div>
+              <div class="phase-label">Discover<br>the Topic</div>
+              <div class="phase-question">give_orientation · differentiate_terms</div>
+            </div>
+            <div class="phase-item">
+              <div class="phase-dot filled consideration"></div>
+              <div class="phase-label">Explore<br>Solutions</div>
+              <div class="phase-question">list_solution_types · describe_each_type</div>
+            </div>
+            <div class="phase-item">
+              <div class="phase-dot filled consideration"></div>
+              <div class="phase-label">Compare<br>Options</div>
+              <div class="phase-question">comparison_table · pros_cons_overview</div>
+            </div>
+            <div class="phase-item">
+              <div class="phase-dot filled consideration"></div>
+              <div class="phase-label">Clarify<br>Criteria</div>
+              <div class="phase-question">list_criteria · quality_indicators</div>
+            </div>
+            <div class="phase-item">
+              <div class="phase-dot filled decision"></div>
+              <div class="phase-label">Compare<br>Providers</div>
+              <div class="phase-question">provider_fit_guide · show_credentials</div>
+            </div>
+            <div class="phase-item">
+              <div class="phase-dot filled decision"></div>
+              <div class="phase-label">Ready<br>to Decide</div>
+              <div class="phase-question">show_requirements · offer_consultation</div>
+            </div>
+          </div>
+        </div>
+
+        <p>The point of this granularity is not academic. Every named function corresponds to a structural pattern an LLM can recognize and re-emit. <em>define_term</em> is a sentence beginning with the noun and ending with a precise predicate. <em>comparison_table</em> is a table with column headers naming the comparison dimension. <em>list_criteria</em> is an enumerated list where each item is a criterion plus its operationalization. These are not abstractions. They are detectable patterns in HTML, and they are exactly what models reach for when constructing answers.</p>
+
+        <h2 id="inventory">The function inventory</h2>
+
+        <p>From three years of pattern observation and eight months of focused LLM-grounding measurement, we maintain an evolving inventory of content functions. The current production set contains thirty-one named functions, each with operational detection rules and empirical evidence of their effect on citation rate.</p>
+
+        <p>A function is not a topic. It is what the page <em>does</em> when read. The same topic — say, pricing structure — can be addressed via at least four distinct functions: a cost comparison table, a list of cost drivers, a calculator, or a worked example. Each performs differently for different prompts. None is universally superior. The architectural decision is which function to assign to which page, given the information situation that page is meant to serve.</p>
+
+        <p>The function inventory has a corollary that surprises most content teams when they first see it: <strong>more is not better</strong>. A page that attempts to perform six functions simultaneously will perform none of them well, will fail every individual function-detection test, and will not become source for any prompt. We see this repeatedly in the wild. The instinct to make pages comprehensive is the instinct that destroys semantic coverage.</p>
+
+        <div class="insight-block">
+          <div class="eyebrow">The principle</div>
+          <p>One page, one situation, one function-cluster. The semantic coverage of a site is the sum of focused pages, not the sum of comprehensive ones. A site of 150 precise pages outperforms a site of 30 long ones — measurably, at the citation level, across all four major providers.</p>
+        </div>
+
+        <h2 id="silent">The silent citation pattern</h2>
+
+        <p>In mid-2026, we observed a phenomenon at Google Gemini that quietly reframes the entire content-architecture question. Over a sustained measurement of roughly twenty-two thousand executions in a single B2B category, Gemini cited the client's URLs as grounding source approximately two thousand eight hundred times across nearly five hundred distinct URLs. Thirty-eight percent of the client's glossary pages were retrieved as source at least once. By any reasonable measure, the content was working.</p>
+
+        <p>And yet, in roughly <strong>sixty-one percent</strong> of those same answers, the brand was not named in the response text at all. The model used the content. It did not attribute to the source.</p>
+
+        <div class="data-callout">
+          <div class="data-cell">
+            <div class="figure">~2,800</div>
+            <div class="unit">grounding citations</div>
+            <div class="context">on Gemini across a single B2B client domain, multi-week measurement window</div>
+          </div>
+          <div class="data-cell">
+            <div class="figure">~490</div>
+            <div class="unit">distinct URLs cited</div>
+            <div class="context">across glossary, methodology, and product-explanation pages</div>
+          </div>
+          <div class="data-cell">
+            <div class="figure">61<span style="font-size:2rem">%</span></div>
+            <div class="unit">silent share</div>
+            <div class="context">of grounded answers in which the brand is not named in the response text</div>
+          </div>
+        </div>
+
+        <p>This is the silent citation pattern, and it is the most important strategic finding of our last twelve months. It means: content can be absorbed and used as authoritative source by a major LLM without the brand ever appearing in the answer the user sees. The content was good enough to ground the response. It was not anchored enough to brand the response.</p>
+
+        <p>The implication for architecture is sharp. <strong>Semantic coverage produces grounding. Branded-entity anchoring produces visible attribution.</strong> They are two different layers, and both must be designed for. A glossary page can be authoritative without being branded. A branded page can be visible without being authoritative. The art is to be both — and the technique is to embed the brand as a semantic anchor inside the function, not as a footer decoration outside it.</p>
+
+        <p>Concretely: a definition page that opens with a category-level definition gives the model a definition. A definition page that opens with the same category-level definition <em>bound to the brand as the entity performing it</em> gives the model a definition <em>and</em> a branded entity to attribute to. Same function, different anchoring. Different citation behaviour downstream. The technique is not to add brand mentions; it is to make the brand the grammatical subject of the function the page performs.</p>
+
+        <p>This also reframes the open question. In the thirty-nine percent of grounded answers that do attribute, what is different about the pages being cited? Our working hypothesis, supported by emerging pattern analysis: those pages bind their function to their entity inside the first paragraph. The pages that remain silent do not. The asymmetry between sixty-one percent silent and thirty-nine percent attributed is, in this reading, a measurable consequence of anchoring discipline — not of model behaviour alone.</p>
+
+        <h2 id="precision">Precision over density</h2>
+
+        <p>The second architectural axis after coverage is precision. Coverage asks: does the page perform the required function. Precision asks: does it perform it in the form the model can reuse.</p>
+
+        <p>Models reuse what is quotable. They quote what is dense, specific, and traceable. Princeton research published in late 2025 — and replicated in our own client-side measurement — shows that proprietary statistics with named sources increase citation rate by approximately a factor of three over the equivalent claim made without numbers or attribution. The same finding holds for date markers, for explicit unit specifications, and for named methodology references.</p>
+
+        <p>The practical translation is uncomfortable for marketing-trained writers, because it inverts the instinct toward smooth, flowing copy. The first sentence of a glossary page should not invite the reader in. It should answer the question. The second sentence should anchor the answer with a number, a year, or a named reference. The third sentence may, finally, address context — but only if the context is itself dense with information the model can re-emit.</p>
+
+        <table class="implication-table">
+          <thead>
+            <tr>
+              <th>Sentence pattern</th>
+              <th>Common form</th>
+              <th>Citation-optimized form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="signal">Opening</td>
+              <td class="old">Atmospheric framing that invites the reader in</td>
+              <td class="new">A first-sentence definition that names the concept and predicates it precisely, with a quantified anchor where one exists</td>
+            </tr>
+            <tr>
+              <td class="signal">Definition</td>
+              <td class="old">Soft introduction acknowledging that the term has several uses</td>
+              <td class="new">A specific operational definition, ideally tied to a named legal or industry frame, with the variants enumerated rather than gestured at</td>
+            </tr>
+            <tr>
+              <td class="signal">Comparison</td>
+              <td class="old">Generalized statement of advantages without a comparison structure</td>
+              <td class="new">A direct, dimensional comparison: each row a named dimension, each cell a numeric or categorical fact, with the relevant unit explicit</td>
+            </tr>
+            <tr>
+              <td class="signal">Criterion</td>
+              <td class="old">Adjectival recommendation ("choose a reliable provider")</td>
+              <td class="new">An enumerated list of criteria, each item paired with its operationalization — what to look for, how to verify it, what range or threshold matters</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>None of this is stylistic preference. The right-hand column is what models reach for when constructing answers. The left-hand column is what models discard during compression. Style as it has been taught for forty years was optimized for human attention. The new optimization target is model retention. The two are not the same, and pretending otherwise is the most expensive habit in B2B content right now.</p>
+
+        <h2 id="architecture">Architecture, explicit</h2>
+
+        <p>The architectural answer to the LLM-authority problem has three layers, not one. Most content strategies address one and call it sufficient. Few address all three.</p>
+
+        <p><strong>Coverage layer.</strong> One page per situation. One function-cluster per page. No page attempting more than it can perform precisely. The site as a portfolio of focused pages, mapped explicitly to the eight information situations, with named functions per page and detection rules for each.</p>
+
+        <p><strong>Precision layer.</strong> First-sentence definitions. Numbers with sources. Date markers. Tables with named columns. Lists with criteria, not slogans. Sentence patterns the model can reuse without paraphrasing. The cost of this layer is editorial — it requires writers who will sacrifice flow for density. The reward is citation behaviour that compounds over months.</p>
+
+        <p><strong>Anchoring layer.</strong> The brand as a semantic entity inside the function, not as a logo outside it. Named provider in the comparison row. Named methodology in the criterion list. Named case in the worked example. Each anchoring instance gives the model a branded reference it can — and over time, will — attribute to in answers.</p>
+
+        <div class="insight-block">
+          <div class="eyebrow">The synthesis</div>
+          <p>Coverage produces eligibility. Precision produces retention. Anchoring produces attribution. A site that does only one of the three becomes invisible in one of three ways. A site that does all three becomes the source LLMs reach for and the brand they name.</p>
+        </div>
+
+        <h2 id="close">The closing argument</h2>
+
+        <p>Five episodes. The first observed the closing window. The second diagnosed the measurement failure. The third decomposed the invisible journey. The fourth specified the measurement instrument. The fifth — this one — closes with the construction principle.</p>
+
+        <p>None of this is theory we are testing. Every claim in this episode is observable in production data across multiple clients, measured biweekly, traced URL-by-URL through grounding-source extraction at four providers. The function inventory is operational. The coverage measurement is operational. The silent-citation pattern was discovered, not predicted, and the architectural correction is in active deployment.</p>
+
+        <p>What the series has documented, episode by episode, is the operating instruction set for a category of content work that did not exist three years ago and that most agencies still describe in the vocabulary of the work that preceded it. The vocabulary that fits is not "SEO for AI." It is content architecture for absorption. Coverage, precision, anchoring. Three layers, all measurable, all buildable, all observable in their effects on citation rate.</p>
+
+        <p>The brands that build for absorption — explicitly, deliberately, with measurement closing the loop — will spend the next two years quietly accumulating presence in the LLM answers that increasingly precede every B2B purchase decision. The brands that do not will spend the same two years writing content that compresses to nothing.</p>
+
+        <p>That is the window. The architecture is no longer a guess. The closing argument of this series is also its operating instruction: build for compression survival, measure what survives, repeat.</p>
+
+      </article>
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="next-episode">
+      <div class="next-label">Series complete</div>
+      <a href="index.html" style="text-decoration:none; color:inherit;">
+        <div class="next-title">Return to Episode One: The Two-Year Window — or browse the full Intelligence Series below.</div>
+      </a>
+    </div>
+    <div class="series-nav">
+      <p>Rhinegold Insights · Intelligence Series</p>
+      <ul class="series-list">
+        <li class="published"><a href="index.html">Ep. 1 — The Two-Year Window</a></li>
+        <li class="published"><a href="blog_ep02_wrong_layer.html">Ep. 2 — Why Your Analytics Stack Is Measuring the Wrong Layer</a></li>
+        <li class="published"><a href="episode3.html">Ep. 3 — The Invisible Buyer Journey</a></li>
+        <li class="published"><a href="episode4.html">Ep. 4 — How to Measure What You Can't See</a></li>
+        <li class="current">Ep. 5 — Content Architecture for LLM Authority</li>
+      </ul>
+    </div>
+  </footer>
+</main>
+
+<footer class="rg-footer">
+  <div class="rg-footer-inner">
+    <div class="rg-identity">
+      <svg class="rg-logo-mark-large" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M3 10 C 7 7, 11 14, 15 10 S 23 7, 29 10"/>
+        <path d="M3 16 C 7 13, 11 20, 15 16 S 23 13, 29 16"/>
+        <path d="M3 22 C 7 19, 11 26, 15 22 S 23 19, 29 22"/>
+      </svg>
+      <div class="rg-identity-text">
+        <div class="rg-wordmark-large">Rhinegold Consulting</div>
+        <div class="rg-tagline">Diagnostic consulting for content, search, and AI visibility in complex B2B markets.</div>
+      </div>
+    </div>
+
+    <div class="rg-footer-column">
+      <h5>Inhalte</h5>
+      <ul>
+        <li><a href="/insights/">Insights</a></li>
+        <li><a href="/glossar/">Glossar</a></li>
+        <li><a href="/anwendungen/">Anwendungen</a></li>
+      </ul>
+    </div>
+
+    <div class="rg-footer-column">
+      <h5>Beratung</h5>
+      <ul>
+        <li><a href="https://rhinegold.de">Hauptseite</a></li>
+        <li><a href="https://rhinegold.de/methodik">Methodik</a></li>
+        <li><a href="https://rhinegold.de/kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="rg-footer-bottom">
+    <div>© 2026 Rhinegold Consulting · Michael Zachrau</div>
+    <div class="rg-footer-bottom-links">
+      <a href="https://rhinegold.de/impressum">Impressum</a>
+      <a href="https://rhinegold.de/datenschutz">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
