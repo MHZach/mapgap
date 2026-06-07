@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Rhinegold Compendium — Semantic Intelligence</title><meta name="description" content="An operator-level compendium on semantic intelligence, GEO and LLM measurement — sharp, evidence-anchored, no marketing talk."><link rel="canonical" href="https://rhinegold.de/compendium/"><meta property="og:type" content="website"><meta property="og:site_name" content="The Rhinegold Compendium"><meta property="og:title" content="The Rhinegold Compendium — Semantic Intelligence"><meta property="og:description" content="An operator-level compendium on semantic intelligence, GEO and LLM measurement — sharp, evidence-anchored, no marketing talk."><meta property="og:url" content="https://rhinegold.de/compendium/"><meta property="og:image" content="https://rhinegold.de/compendium/assets/compendium-og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="The Rhinegold Compendium — Semantic Intelligence"><meta name="twitter:description" content="An operator-level compendium on semantic intelligence, GEO and LLM measurement — sharp, evidence-anchored, no marketing talk."><meta name="twitter:image" content="https://rhinegold.de/compendium/assets/compendium-og.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"><style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1612;--paper:#f7f4ef;--gold:#c8892e;--gold-b:#d99a36;--mid:#6b6560;--rule:#e0d9cf;--warm:#efe9e0;--sans:'DM Sans',system-ui,sans-serif;--display:'Fraunces',Georgia,serif}
+html{background:var(--paper);scroll-behavior:smooth;scroll-padding-top:68px}
+/* anchored sections clear the sticky section-nav when jumped to */
+.det [id]{scroll-margin-top:68px}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.rg-topbar{background:#14110f;border-bottom:1px solid #2a2622;padding:12px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.rg-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.rg-logo svg{width:34px;height:26px}
+.rg-logo .nm{font-family:var(--display);font-weight:300;font-size:21px;color:#f4efe7;letter-spacing:.01em}
+.rg-nav{display:flex;gap:24px;font-size:14px}
+.rg-nav a{color:#cdc6bb;text-decoration:none;transition:color .15s}
+.rg-nav a:hover,.rg-nav a.active{color:#f0c070}
+.wrap{max-width:1040px;margin:0 auto;padding:0 32px}
+/* ── content grid: centered reading column + symmetric breakout/full tracks ── */
+.det{display:grid;max-width:1240px;margin:0 auto;
+  grid-template-columns:
+    [full-start] minmax(20px,1fr)
+    [wide-start] minmax(0,200px)
+    [content-start] min(700px, calc(100% - 40px)) [content-end]
+    minmax(0,200px) [wide-end]
+    minmax(20px,1fr) [full-end];}
+.det>*{grid-column:content-start/content-end}
+.det>.breakout{grid-column:wide-start/wide-end}
+.det>.full{grid-column:full-start/full-end}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.crumb{padding:26px 0 0;font-size:12px;letter-spacing:.04em;color:var(--mid)}
+.crumb a{color:var(--mid);text-decoration:none}.crumb a:hover{color:var(--gold)}
+.crumb-sep{color:var(--rule);margin:0 4px}.crumb-cat{color:var(--gold)}
+.det h1{font-family:var(--display);font-weight:300;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.04;letter-spacing:-.02em;margin:14px 0 6px}
+.det .abk{font-size:1rem;color:var(--mid);font-weight:500;margin-bottom:6px}
+/* meta strip under H1 */
+.metastrip{display:flex;flex-wrap:wrap;gap:13px 24px;align-items:baseline;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:10px 0 0;font-size:.82rem}
+.metastrip .mi{display:flex;gap:8px;align-items:baseline}
+.metastrip .mi-l{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);font-weight:600}
+.metastrip .mi-v{color:#37322c;font-weight:500}
+.fp-badge{display:inline-block;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:12px;font-weight:600}
+/* sticky section nav (top, not side → no breakout collision) */
+.secnav{position:sticky;top:0;z-index:50;background:rgba(247,244,239,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);margin:0 0 6px}
+.secnav-inner{max-width:1080px;margin:0 auto;padding:11px 24px;display:flex;gap:24px;flex-wrap:wrap}
+.secnav a{font-size:12px;letter-spacing:.03em;color:var(--mid);text-decoration:none;white-space:nowrap;transition:color .15s}
+.secnav a:hover{color:var(--gold)}
+.lede{font-family:var(--display);font-weight:300;font-style:italic;font-size:1.6rem;line-height:1.44;color:#2c2722;margin:24px 0 6px}
+.det .sec p{max-width:none}
+/* breakout exhibits */
+.colrow{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:8px 0}
+.colrow.single{grid-template-columns:1fr}
+.colcard{padding:24px 28px;background:#faf7f1;border:1px solid var(--rule)}
+.colcard h3{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:9px}
+.colcard p{font-size:1.02rem;color:#37322c;font-weight:300;line-height:1.6;max-width:none}
+.colcard.consensus{background:#f4efe5;border:none;border-left:2px solid #c8c0b0}
+.colcard.operator{background:#f4ede0;border:none;border-left:2px solid var(--gold)}
+.colcard.warn h3{color:#9a5a23}
+.exhibit-cap{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);font-weight:600;margin:0 0 10px}
+/* key takeaways */
+.takeaways{background:#efe9e0;border:1px solid var(--rule);border-left:3px solid var(--gold);padding:22px 28px;margin:26px 0}
+.takeaways .lbl{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px}
+.takeaways ul{list-style:none;padding:0;margin:0}
+.takeaways li{padding:5px 0 5px 22px;position:relative;font-size:1rem;line-height:1.5;font-weight:400;color:#2c2722}
+.takeaways li::before{content:'\2192';position:absolute;left:0;color:var(--gold);font-weight:600}
+/* stat callout */
+.statcallout{display:flex;align-items:baseline;gap:22px;margin:26px 0;padding:20px 28px;background:var(--warm);border-left:3px solid var(--gold)}
+.statcallout .num{font-family:var(--display);font-weight:300;font-size:3.1rem;line-height:1;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+.statcallout .lab{font-size:.98rem;color:#48413a;font-weight:300;line-height:1.5}
+.statcallout .lab .src-ref{font-size:.74rem;color:var(--mid);font-style:italic;display:block;margin-top:5px}
+/* big pull-quote — wide breakout, brand-gold (rhinegold echo of McKinsey's blue) */
+.pullquote{font-family:var(--display);font-weight:400;font-size:clamp(1.55rem,2.8vw,2.25rem);line-height:1.3;letter-spacing:-.01em;color:#a86e1c;margin:38px 0;padding:0}
+/* chart exhibit — two-column: title/caption left, visual right (McKinsey exhibit) */
+.chart-exhibit{margin:18px 0}
+.chart-box{display:grid;grid-template-columns:0.62fr 1fr;gap:38px;align-items:center;background:#faf7f1;border:1px solid var(--rule);padding:30px 34px}
+.ch-head .ch-title{font-family:var(--display);font-weight:400;font-size:1.5rem;line-height:1.2;color:var(--ink);margin:8px 0 8px}
+.ch-head .ch-cap{font-size:.9rem;color:var(--mid);font-weight:300;line-height:1.5;margin:0;max-width:none}
+.ch-vis{min-width:0}
+.ch-notes{font-size:.72rem;color:#8a8079;line-height:1.55;margin-top:16px;font-weight:300;grid-column:1/-1}
+.ch-notes sup{color:#8a8079;font-weight:600}
+.ch-notes .ch-src{display:block;margin-top:5px}
+/* inline rich-text: body links, footnotes, bold */
+.xlink{color:inherit;text-decoration:underline;text-decoration-color:rgba(200,137,46,.55);text-underline-offset:3px;text-decoration-thickness:1px;transition:text-decoration-color .15s,color .15s}
+.xlink:hover{color:var(--gold);text-decoration-color:var(--gold)}
+.det strong{font-weight:600;color:var(--ink)}
+sup.fn{font-size:.66rem;line-height:0;vertical-align:super;font-weight:600;margin-left:1px}
+sup.fn a{color:var(--gold);text-decoration:none}
+.src-num{display:inline-block;min-width:1.5em;color:var(--gold);font-weight:600;font-size:.8rem;font-family:var(--sans)}
+/* comparison table (breakout/full track) */
+table.cmp{width:100%;border-collapse:collapse;font-size:.94rem;background:#faf7f1;border:1px solid var(--rule)}
+table.cmp th,table.cmp td{text-align:left;padding:13px 18px;border-bottom:1px solid var(--rule);vertical-align:top;font-weight:300;color:#37322c}
+table.cmp thead th{background:#efe9e0;font-family:var(--sans);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600}
+table.cmp tbody th{font-weight:500;color:var(--ink);width:200px}
+table.cmp tr:last-child td,table.cmp tr:last-child th{border-bottom:none}
+/* foot furniture: related + cite */
+.foot-furniture{display:grid;grid-template-columns:1.4fr 1fr;gap:38px;margin-top:42px;padding-top:24px;border-top:1px solid var(--rule)}
+.ff-h{font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);font-weight:600;margin-bottom:12px}
+.foot-related{display:flex;flex-wrap:wrap;gap:8px}
+.foot-related a{font-size:13px;border:1px solid var(--rule);padding:6px 13px;border-radius:18px;text-decoration:none;color:var(--ink);transition:all .15s}
+.foot-related a:hover{border-color:var(--gold);color:var(--gold)}
+.cite-box{font-size:.78rem;color:#5c554c;line-height:1.55;background:#f4efe5;border:1px solid var(--rule);padding:14px 16px;font-family:var(--sans)}
+@media(max-width:760px){.det{display:block;padding:0 18px}.colrow{grid-template-columns:1fr}.foot-furniture{grid-template-columns:1fr;gap:24px}.secnav-inner{gap:16px;overflow-x:auto;flex-wrap:nowrap;padding:11px 18px}}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 14px}
+.badge{font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px;font-weight:600;cursor:help}
+.b-green{background:#e3efe0;color:#3c6b39}.b-yellow{background:#f5edd2;color:#8a6d1e}.b-orange{background:#f6e3d2;color:#9a5a23}.b-red{background:#f3dada;color:#9a2f2f}
+.b-cycle{background:#eae6df;color:#6b6560}.b-praxis{background:#dde7ef;color:#39607a}
+.tldr{font-family:var(--display);font-style:italic;font-size:1.32rem;line-height:1.5;color:var(--ink);border-left:3px solid var(--gold);padding:6px 0 6px 22px;margin:26px 0 30px}
+.sec{margin:26px 0}
+.sec h3{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.sec p{font-size:1.02rem;color:#37322c;font-weight:300}
+.sec.warn h3{color:#9a5a23}
+.sec ul{list-style:none;padding:0}
+.sec li{font-size:1rem;color:#37322c;font-weight:300;padding:6px 0 6px 20px;position:relative}
+.sec li::before{content:'–';position:absolute;left:0;color:var(--gold)}
+.consensus{background:#f4efe5;border-left:2px solid #c8c0b0;padding:18px 22px;margin:22px 0;font-size:1rem;color:#37322c;font-weight:300}
+.consensus .lbl{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);font-weight:600;margin-bottom:8px}
+.operator{background:#f4ede0;border-left:2px solid var(--gold);padding:18px 22px;margin:22px 0;font-size:1rem;color:#37322c;font-weight:300}
+.operator .lbl{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font-size:13px;border:1px solid var(--rule);padding:6px 13px;border-radius:20px;text-decoration:none;color:var(--ink);transition:all .15s}
+.related a:hover{border-color:var(--gold);color:var(--gold)}
+.empirical{background:var(--warm);border:1px solid var(--rule);padding:18px 20px;font-size:.96rem;color:#4a443d;font-weight:300;margin:22px 0}
+.obstacles{margin:26px 0}
+.obstacle{background:#f4efe5;border-left:2px solid var(--gold);padding:16px 22px;margin:12px 0}
+.obstacle .ob-q{font-family:var(--sans);font-size:.98rem;font-weight:500;color:var(--ink);margin-bottom:6px}
+.obstacle .ob-why{font-size:.95rem;color:#5c554c;font-weight:300;margin-bottom:10px}
+.obstacle .ob-res{font-size:.97rem;color:#37322c;font-weight:300}
+.obstacle .ob-res b{font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:3px}
+.cadence{font-size:.78rem;color:var(--mid);font-style:italic;margin-top:24px;padding-top:14px;border-top:1px solid var(--rule)}
+.src{font-size:.92rem;color:var(--mid);border-top:1px solid var(--rule);padding-top:20px;margin-top:34px}
+.src h3{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+.src-section{margin-top:16px}
+.src-section:first-of-type{margin-top:4px}
+.src-section-label{font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);font-weight:500;margin-bottom:6px}
+.src-list{list-style:none;padding:0;margin:0}
+.src-list li{padding:6px 0 6px 22px;position:relative;font-size:.92rem;line-height:1.55;color:#48413a;font-weight:300}
+.src-list li::before{content:'›';position:absolute;left:0;color:var(--gold);font-weight:600;font-size:1.05rem;line-height:1.2}
+.src-list a{color:var(--ink);text-decoration:underline;text-decoration-color:rgba(200,137,46,.45);text-underline-offset:3px;transition:color .15s,text-decoration-color .15s}
+.src-list a:hover{color:var(--gold);text-decoration-color:var(--gold)}
+.src-list .src-plain{color:var(--ink)}
+.src-list li.src-internal{color:var(--mid);font-style:italic}
+.src-list li.src-internal::before{content:'•';color:var(--mid)}
+.src-meta{font-size:.78rem;color:#8a8079;margin-top:3px}
+sup.ref{font-size:.7rem;color:var(--gold);text-decoration:none;font-weight:600}
+.formula-block{background:#f4efe5;border:1px solid var(--rule);padding:22px 26px;margin:26px 0;font-size:.95rem;line-height:1.55}
+.formula-block dl{display:grid;grid-template-columns:max-content 1fr;column-gap:18px;row-gap:10px;margin:0}
+.formula-block dt{font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;padding-top:2px;white-space:nowrap}
+.formula-block dd{color:#37322c;font-weight:300;margin:0}
+.formula-block .formula{font-family:var(--display);font-style:italic;font-size:1.1rem;color:var(--ink);font-weight:400;padding:6px 0 12px;border-bottom:1px solid var(--rule);margin-bottom:10px;grid-column:1/-1}
+.formula-block .version-line{font-size:.78rem;color:var(--mid);grid-column:1/-1;text-align:right;font-style:italic}
+.rg-footer{background:#14110f;border-top:1px solid #2a2622;padding:36px 30px 28px;color:#9a938a;margin-top:60px}
+.rg-footer-inner{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px 26px;align-items:center;justify-content:space-between;font-size:13px}
+.rg-footer a{color:#cdc6bb;text-decoration:none}.rg-footer a:hover{color:#f0c070}
+.rg-copy{width:100%;text-align:center;font-size:11px;color:#615a51;margin-top:18px}
+@media(max-width:600px){.rg-topbar{padding:10px 16px}.rg-nav{gap:14px;font-size:13px}.formula-block dl{grid-template-columns:1fr}.formula-block dt{padding-top:8px}}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "DefinedTermSet", "name": "The Rhinegold Compendium", "url": "https://rhinegold.de/compendium/", "description": "An operator-level compendium on semantic intelligence, generative engine optimization and LLM measurement — by rhinegold.", "hasDefinedTerm": [{"@type": "DefinedTerm", "name": "Attribution", "url": "https://rhinegold.de/compendium/attribution/", "description": "Attribution is the discipline of estimating how marketing contacts, channels, and interventions contribute to commercial outcomes such as pipeline, qualified leads, and revenue."}, {"@type": "DefinedTerm", "name": "Brand Recommendation Share", "url": "https://rhinegold.de/compendium/brand-recommendation-share/", "description": "Brand Recommendation Share is a Rhinegold-defined metric that measures the share of an LLM's recommendation attention a brand holds — weighted by the number of competitors named alongside it in the same answer."}, {"@type": "DefinedTerm", "name": "Citation Rate", "url": "https://rhinegold.de/compendium/citation-rate/", "description": "Citation Rate is the share of AI answers that cite the brand as a source — with a link or named reference backing the answer — not merely mention it in passing."}, {"@type": "DefinedTerm", "name": "Discovery Prompt", "url": "https://rhinegold.de/compendium/discovery-prompt/", "description": "A discovery prompt is a question that asks an AI for options or recommendations — \"best X for Y\", \"which providers do Z\" — the prompt class where brands compete to be named."}, {"@type": "DefinedTerm", "name": "Generative Engine Optimization", "url": "https://rhinegold.de/compendium/generative-engine-optimization/", "description": "Generative Engine Optimization (GEO) is the practice of improving how a brand is surfaced, cited, and recommended inside AI-generated answers — not in the ten blue links."}, {"@type": "DefinedTerm", "name": "Grounding", "url": "https://rhinegold.de/compendium/grounding/", "description": "Grounding is the mechanism by which an LLM retrieves external sources at answer time and conditions its response on them — the plumbing behind citations, not the citation itself."}, {"@type": "DefinedTerm", "name": "Mention Rate", "url": "https://rhinegold.de/compendium/mention-rate/", "description": "Mention Rate is the share of AI answers in which a brand is named in the answer text, measured across a fixed prompt set."}, {"@type": "DefinedTerm", "name": "Semantic Intelligence", "url": "https://rhinegold.de/compendium/semantic-intelligence/", "description": "Rhinegold uses Semantic Intelligence as a framework for measuring what markets actually hear, recommend, and decide inside language-based systems — and for connecting that signal to commercial steering."}, {"@type": "DefinedTerm", "name": "Share of Voice", "url": "https://rhinegold.de/compendium/share-of-voice/", "description": "Share of Voice (SoV) in AI answers is a brand's mentions expressed as a share of all mentions across a defined competitor set and prompt set."}]}</script></head><body><header class="rg-topbar"><a class="rg-logo" href="https://rhinegold.de"><svg viewBox="0 0 118 92" fill="none" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f0c070"/><stop offset="55%" stop-color="#d99a36"/><stop offset="100%" stop-color="#a86e1c"/></linearGradient></defs><g stroke="url(#g)" stroke-width="7" stroke-linecap="round"><path d="M8 16 C 22 5, 40 5, 55 16 S 92 27, 110 16"/><path d="M8 34 C 22 23, 40 23, 55 34 S 92 45, 110 34" opacity=".86"/><path d="M8 52 C 22 41, 40 41, 55 52 S 92 63, 110 52" opacity=".70"/><path d="M8 70 C 22 59, 40 59, 55 70 S 92 81, 110 70" opacity=".54"/><path d="M8 88 C 22 77, 40 77, 55 88 S 92 99, 110 88" opacity=".40"/></g></svg><span class="nm">rhinegold</span></a><nav class="rg-nav"><a href="https://insights.rhinegold.de">Insights</a><a href="https://rhinegold.de/compendium/" class="active">Compendium</a><a href="https://rhinegold.de/methodology">Methodology</a><a href="https://rhinegold.de/about">About</a><a href="https://rhinegold.de/contact">Contact</a></nav></header><section style="padding:72px 0 36px;border-bottom:1px solid var(--rule)"><div class="wrap"><div class="eyebrow">rhinegold · Semantic Intelligence</div><h1 style="font-family:var(--display);font-weight:300;font-size:clamp(2.6rem,7vw,4.4rem);line-height:1.03;letter-spacing:-.02em;margin:18px 0 18px">The Rhinegold Compendium</h1><p style="font-family:var(--display);font-weight:300;font-style:italic;font-size:1.25rem;color:#48413a;max-width:660px">Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</p></div></section><div class="wrap"><div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:50px 0 70px"><a class="card" href="ai-overview-vs-ai-mode/" style="background:var(--paper);padding:30px 30px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .18s"><h2 style="font-family:var(--display);font-weight:400;font-size:1.42rem;line-height:1.2;margin:0 0 6px;">AI Overviews vs AI Mode</h2><p style="font-size:.92rem;color:#55504a;font-weight:300;flex:1;margin:14px 0 16px;">AI Overviews and AI Mode are two distinct Google surfaces: AI Overviews summarise above the classic results; AI Mode is a separate conversational search. They reach similar conclusions but cite largely different sources — so they must be measured separately.</p><span style="font-size:12px;letter-spacing:.04em;color:var(--gold);font-weight:500;">Read entry →</span></a><a class="card" href="attribution/" style="background:var(--paper);padding:30px 30px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .18s"><h2 style="font-family:var(--display);font-weight:400;font-size:1.42rem;line-height:1.2;margin:0 0 6px;">Attribution</h2><p style="font-size:.92rem;color:#55504a;font-weight:300;flex:1;margin:14px 0 16px;">Attribution is the discipline of estimating how marketing contacts, channels, and interventions contribute to commercial outcomes such as pipeline, qualified leads, and revenue.</p><span style="font-size:12px;letter-spacing:.04em;color:var(--gold);font-weight:500;">Read entry →</span></a><a class="card" href="brand-recommendation-share/" style="background:var(--paper);padding:30px 30px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .18s"><h2 style="font-family:var(--display);font-weight:400;font-size:1.42rem;line-height:1.2;margin:0 0 6px;">Brand Recommendation Share</h2><p style="font-size:.92rem;color:#55504a;font-weight:300;flex:1;margin:14px 0 16px;">Brand Recommendation Share is a Rhinegold-defined metric that measures the share of an LLM&#x27;s recommendation attention a brand holds — weighted by the number of competitors named alongside it in the same answer.</p><span style="font-size:12px;letter-spacing:.04em;color:var(--gold);font-weight:500;">Read entry →</span></a><a class="card" href="citation-rate/" style="background:var(--paper);padding:30px 30px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .18s"><h2 style="font-family:var(--display);font-weight:400;font-size:1.42rem;line-height:1.2;margin:0 0 6px;">Citation Rate</h2><p style="font-size:.92rem;color:#55504a;font-weight:300;flex:1;margin:14px 0 16px;">Citation Rate is the share of AI answers that cite the brand as a source — with a link or named reference backing the answer — not merely mention it in passing.</p><span style="font-size:12px;letter-spacing:.04em;color:var(--gold);font-weight:500;">Read entry →</span></a><a class="card" href="discovery-prompt/" style="background:var(--paper);padding:30px 30px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .18s"><h2 style="font-family:var(--display);font-weight:400;font-size:1.42rem;line-height:1.2;margin:0 0 6px;">Discovery Prompt</h2><p style="font-size:.92rem;color:#55504a;font-weight:300;flex:1;margin:14px 0 16px;">A discovery prompt is a question that asks an AI for options or recommendations — &quot;best X for Y&quot;, &quot;which providers do Z&quot; — the prompt class where brands compete to be named.</p><span style="font-size:12px;letter-spacing:.04em;color:var(--gold);font-weight:500;">Read entry →</span></a><a class="card" href="generative-engine-optimization/" style="background:var(--paper);padding:30px 30px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .18s"><h2 style="font-family:var(--display);font-weight:400;font-size:1.42rem;line-height:1.2;margin:0 0 6px;">Generative Engine Optimization <span style="font-size:.8rem;color:#6b6560;">· GEO</span></h2><p style="font-size:.92rem;color:#55504a;font-weight:300;flex:1;margin:14px 0 16px;">Generative Engine Optimization (GEO) is the practice of improving how a brand is surfaced, cited, and recommended inside AI-generated answers — not in the ten blue links.</p><span style="font-size:12px;letter-spacing:.04em;color:var(--gold);font-weight:500;">Read entry →</span></a><a class="card" href="grounding/" style="background:var(--paper);padding:30px 30px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .18s"><h2 style="font-family:var(--display);font-weight:400;font-size:1.42rem;line-height:1.2;margin:0 0 6px;">Grounding</h2><p style="font-size:.92rem;color:#55504a;font-weight:300;flex:1;margin:14px 0 16px;">Grounding is the mechanism by which an LLM retrieves external sources at answer time and conditions its response on them — the plumbing behind citations, not the citation itself.</p><span style="font-size:12px;letter-spacing:.04em;color:var(--gold);font-weight:500;">Read entry →</span></a><a class="card" href="mention-rate/" style="background:var(--paper);padding:30px 30px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .18s"><h2 style="font-family:var(--display);font-weight:400;font-size:1.42rem;line-height:1.2;margin:0 0 6px;">Mention Rate</h2><p style="font-size:.92rem;color:#55504a;font-weight:300;flex:1;margin:14px 0 16px;">Mention Rate is the share of AI answers in which a brand is named in the answer text, measured across a fixed prompt set.</p><span style="font-size:12px;letter-spacing:.04em;color:var(--gold);font-weight:500;">Read entry →</span></a><a class="card" href="semantic-intelligence/" style="background:var(--paper);padding:30px 30px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .18s"><h2 style="font-family:var(--display);font-weight:400;font-size:1.42rem;line-height:1.2;margin:0 0 6px;">Semantic Intelligence <span style="font-size:.8rem;color:#6b6560;">· SI</span></h2><p style="font-size:.92rem;color:#55504a;font-weight:300;flex:1;margin:14px 0 16px;">Rhinegold uses Semantic Intelligence as a framework for measuring what markets actually hear, recommend, and decide inside language-based systems — and for connecting that signal to commercial steering.</p><span style="font-size:12px;letter-spacing:.04em;color:var(--gold);font-weight:500;">Read entry →</span></a><a class="card" href="share-of-voice/" style="background:var(--paper);padding:30px 30px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .18s"><h2 style="font-family:var(--display);font-weight:400;font-size:1.42rem;line-height:1.2;margin:0 0 6px;">Share of Voice <span style="font-size:.8rem;color:#6b6560;">· SoV</span></h2><p style="font-size:.92rem;color:#55504a;font-weight:300;flex:1;margin:14px 0 16px;">Share of Voice (SoV) in AI answers is a brand&#x27;s mentions expressed as a share of all mentions across a defined competitor set and prompt set.</p><span style="font-size:12px;letter-spacing:.04em;color:var(--gold);font-weight:500;">Read entry →</span></a></div></div><footer class="rg-footer"><div class="rg-footer-inner"><a href="https://rhinegold.de">rhinegold.de</a><div>Semantic Intelligence · Decision Systems · External Resonance</div><div><a href="https://insights.rhinegold.de">Insights</a> &nbsp; <a href="https://rhinegold.de/compendium/">Compendium</a> &nbsp; <a href="https://rhinegold.de/contact">Contact</a></div></div><div class="rg-copy">© 2026 rhinegold</div></footer></body></html>
