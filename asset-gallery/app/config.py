@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     qdrant_collection: str = "jina_clip_gallery"
     jina_model: str = "jinaai/jina-clip-v2"
     embedding_dim: int = 1024
-    scan_batch_size: int = 256
+    scan_batch_size: int = 32  # MPS GPU: 256 OOM, 32 safe for Jina CLIP v2
     motif_classes: str = (
         "portrait,person,landscape,city,architecture,interior,product,food,"
         "animal,vehicle,document,artwork,other"
