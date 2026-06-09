@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>The Rhinegold Compendium</title>
+    <link>https://rhinegold.de/compendium/</link>
+    <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Jun 2026 12:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://rhinegold.de/compendium/assets/compendium-og.png</url>
+      <title>The Rhinegold Compendium</title>
+      <link>https://rhinegold.de/compendium/</link>
+    </image>
+
+    <item>
+      <title>Lead Scoring</title>
+      <link>https://rhinegold.de/compendium/lead-scoring/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/lead-scoring/</guid>
+      <pubDate>Mon, 09 Jun 2026 12:00:00 +0000</pubDate>
+      <description>Lead scoring is a systematic method for prioritizing incoming leads by proximity to a purchase decision. Its failure mode is almost never the algorithm — it's the quality of the firmographic data the algorithm is fed.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>MQL — Marketing Qualified Lead</title>
+      <link>https://rhinegold.de/compendium/mql/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/mql/</guid>
+      <pubDate>Mon, 09 Jun 2026 12:00:00 +0000</pubDate>
+      <description>An MQL is a lead the marketing team has determined is qualified enough to pass to sales. The reliability of that signal depends directly on the quality of the data the scoring system operates on.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>SQL — Sales Qualified Lead</title>
+      <link>https://rhinegold.de/compendium/sql/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/sql/</guid>
+      <pubDate>Mon, 09 Jun 2026 12:00:00 +0000</pubDate>
+      <description>An SQL is a lead the sales team has determined is ready for direct outreach. The MQL-to-SQL handoff rate is the sharpest diagnostic signal for the scoring system upstream.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Touchpoints</title>
+      <link>https://rhinegold.de/compendium/touchpoints/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/touchpoints/</guid>
+      <pubDate>Mon, 09 Jun 2026 12:00:00 +0000</pubDate>
+      <description>A touchpoint is any interaction between a potential customer and a company — from the first ad impression to a sales call. In B2B, the path from first contact to a committed decision runs through a sequence of these interactions, and each one leaves a trace.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>AI Overviews vs AI Mode</title>
+      <link>https://rhinegold.de/compendium/ai-overview-vs-ai-mode/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/ai-overview-vs-ai-mode/</guid>
+      <pubDate>Wed, 20 May 2026 12:00:00 +0000</pubDate>
+      <description>AI Overviews and AI Mode are two distinct Google surfaces: AI Overviews summarise above the classic results; AI Mode is a separate conversational search. They reach similar conclusions but cite largely different sources — so they must be measured separately.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Attribution</title>
+      <link>https://rhinegold.de/compendium/attribution/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/attribution/</guid>
+      <pubDate>Sun, 10 May 2026 12:00:00 +0000</pubDate>
+      <description>Attribution is the discipline of estimating how marketing contacts, channels, and interventions contribute to commercial outcomes such as pipeline, qualified leads, and revenue.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Platform Divergence</title>
+      <link>https://rhinegold.de/compendium/platform-divergence/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/platform-divergence/</guid>
+      <pubDate>Wed, 28 Apr 2026 12:00:00 +0000</pubDate>
+      <description>Platform divergence is the empirically observed difference in which brands are mentioned and cited across AI platforms — ChatGPT, Gemini, Perplexity, Copilot — for the same query. A brand can be prominently visible on one platform and absent from another.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Hallucination — Brand Risk</title>
+      <link>https://rhinegold.de/compendium/hallucination-brand-risk/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/hallucination-brand-risk/</guid>
+      <pubDate>Wed, 15 Apr 2026 12:00:00 +0000</pubDate>
+      <description>A brand with high AI visibility but high hallucination rate is being introduced incorrectly at the most influential moment in the buyer journey.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Generative Engine Optimization</title>
+      <link>https://rhinegold.de/compendium/generative-engine-optimization/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/generative-engine-optimization/</guid>
+      <pubDate>Fri, 20 Mar 2026 12:00:00 +0000</pubDate>
+      <description>Generative Engine Optimization (GEO) is the practice of improving how a brand is surfaced, cited, and recommended inside AI-generated answers — not in the ten blue links.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Zero-Click Search</title>
+      <link>https://rhinegold.de/compendium/zero-click-search/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/zero-click-search/</guid>
+      <pubDate>Thu, 05 Mar 2026 12:00:00 +0000</pubDate>
+      <description>A zero-click search is a query that ends without the user clicking through to a website — the answer is delivered directly on the results page. AI Overviews and conversational AI have extended this dynamic far beyond classic Featured Snippets.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Share of Voice</title>
+      <link>https://rhinegold.de/compendium/share-of-voice/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/share-of-voice/</guid>
+      <pubDate>Thu, 20 Feb 2026 12:00:00 +0000</pubDate>
+      <description>Share of Voice (SoV) in AI answers is a brand's mentions expressed as a share of all mentions across a defined competitor set and prompt set.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Semantic Intelligence</title>
+      <link>https://rhinegold.de/compendium/semantic-intelligence/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/semantic-intelligence/</guid>
+      <pubDate>Wed, 04 Feb 2026 12:00:00 +0000</pubDate>
+      <description>Rhinegold uses Semantic Intelligence as a framework for measuring what markets actually hear, recommend, and decide inside language-based systems — and for connecting that signal to commercial steering.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Mention Rate</title>
+      <link>https://rhinegold.de/compendium/mention-rate/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/mention-rate/</guid>
+      <pubDate>Wed, 21 Jan 2026 12:00:00 +0000</pubDate>
+      <description>Mention Rate is the share of AI answers in which a brand is named in the answer text, measured across a fixed prompt set.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Citation Rate</title>
+      <link>https://rhinegold.de/compendium/citation-rate/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/citation-rate/</guid>
+      <pubDate>Wed, 07 Jan 2026 12:00:00 +0000</pubDate>
+      <description>Citation Rate is the share of AI answers that cite the brand as a source — with a link or named reference backing the answer — not merely mention it in passing.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Grounding</title>
+      <link>https://rhinegold.de/compendium/grounding/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/grounding/</guid>
+      <pubDate>Wed, 17 Dec 2025 12:00:00 +0000</pubDate>
+      <description>Grounding is the mechanism by which an LLM retrieves external sources at answer time and conditions its response on them — the plumbing behind citations, not the citation itself.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Discovery Prompt</title>
+      <link>https://rhinegold.de/compendium/discovery-prompt/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/discovery-prompt/</guid>
+      <pubDate>Wed, 03 Dec 2025 12:00:00 +0000</pubDate>
+      <description>A discovery prompt is a question that asks an AI for options or recommendations — "best X for Y", "which providers do Z" — the prompt class where brands compete to be named.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Brand Recommendation Share</title>
+      <link>https://rhinegold.de/compendium/brand-recommendation-share/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/brand-recommendation-share/</guid>
+      <pubDate>Wed, 19 Nov 2025 12:00:00 +0000</pubDate>
+      <description>Brand Recommendation Share is a Rhinegold-defined metric that measures the share of an LLM's recommendation attention a brand holds — weighted by the number of competitors named alongside it in the same answer.</description>
+      <category>Compendium</category>
+    </item>
+
+  </channel>
+</rss>
