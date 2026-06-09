@@ -5,13 +5,22 @@
     <link>https://rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Jun 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Jun 2026 14:00:00 +0000</lastBuildDate>
     <atom:link href="https://rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://rhinegold.de/compendium/assets/compendium-og.png</url>
       <title>The Rhinegold Compendium</title>
       <link>https://rhinegold.de/compendium/</link>
     </image>
+
+    <item>
+      <title>The Invisible Shortlist — B2B Buyers Have Moved. Has Your Visibility?</title>
+      <link>https://rhinegold.de/compendium/invisible-shortlist/</link>
+      <guid isPermaLink="true">https://rhinegold.de/compendium/invisible-shortlist/</guid>
+      <pubDate>Mon, 09 Jun 2026 14:00:00 +0000</pubDate>
+      <description>More than half of B2B buyers now start vendor research with an AI — and one in three completed purchases involves a brand the buyer had no awareness of before the AI recommended it. The shortlist is being written before your website ever loads.</description>
+      <category>Compendium</category>
+    </item>
 
     <item>
       <title>Lead Scoring</title>
