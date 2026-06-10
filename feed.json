@@ -3,7 +3,7 @@
   "items": [
     {
       "title": "The Invisible Shortlist",
-      "url": "https://rhinegold.de/compendium/invisible-shortlist/",
+      "url": "https://insights.rhinegold.de/compendium/invisible-shortlist/",
       "date": "2026-06-09",
       "type": "compendium",
       "teaser": "More than half of B2B buyers now start vendor research with an AI — and one in three deals goes to a brand they had no awareness of before the AI named it."
@@ -17,28 +17,28 @@
     },
     {
       "title": "Lead Scoring",
-      "url": "https://rhinegold.de/compendium/lead-scoring/",
+      "url": "https://insights.rhinegold.de/compendium/lead-scoring/",
       "date": "2026-06-09",
       "type": "compendium",
       "teaser": "Its failure mode is almost never the algorithm — it's the quality of the firmographic data the algorithm is fed."
     },
     {
       "title": "MQL — Marketing Qualified Lead",
-      "url": "https://rhinegold.de/compendium/mql/",
+      "url": "https://insights.rhinegold.de/compendium/mql/",
       "date": "2026-06-09",
       "type": "compendium",
       "teaser": "The reliability of the MQL signal depends directly on the quality of the data the scoring system operates on."
     },
     {
       "title": "SQL — Sales Qualified Lead",
-      "url": "https://rhinegold.de/compendium/sql/",
+      "url": "https://insights.rhinegold.de/compendium/sql/",
       "date": "2026-06-09",
       "type": "compendium",
       "teaser": "The MQL-to-SQL handoff rate is the sharpest diagnostic signal for the scoring system upstream."
     },
     {
       "title": "Touchpoints",
-      "url": "https://rhinegold.de/compendium/touchpoints/",
+      "url": "https://insights.rhinegold.de/compendium/touchpoints/",
       "date": "2026-06-09",
       "type": "compendium",
       "teaser": "In B2B, the path from first contact to a committed decision runs through a sequence of interactions — and each one leaves a trace."
@@ -73,42 +73,42 @@
     },
     {
       "title": "AI Overviews vs AI Mode",
-      "url": "https://rhinegold.de/compendium/ai-overview-vs-ai-mode/",
+      "url": "https://insights.rhinegold.de/compendium/ai-overview-vs-ai-mode/",
       "date": "2026-05-20",
       "type": "compendium",
       "teaser": "Two distinct Google surfaces with similar answers but largely different cited sources — they must be measured separately."
     },
     {
       "title": "Attribution",
-      "url": "https://rhinegold.de/compendium/attribution/",
+      "url": "https://insights.rhinegold.de/compendium/attribution/",
       "date": "2026-05-10",
       "type": "compendium",
       "teaser": "The discipline of estimating how marketing contacts and channels contribute to pipeline and revenue."
     },
     {
       "title": "Platform Divergence",
-      "url": "https://rhinegold.de/compendium/platform-divergence/",
+      "url": "https://insights.rhinegold.de/compendium/platform-divergence/",
       "date": "2026-04-28",
       "type": "compendium",
       "teaser": "A brand can be prominently visible on one AI platform and absent from another. Single-platform measurement doesn't represent the full picture."
     },
     {
       "title": "Hallucination — Brand Risk",
-      "url": "https://rhinegold.de/compendium/hallucination-brand-risk/",
+      "url": "https://insights.rhinegold.de/compendium/hallucination-brand-risk/",
       "date": "2026-04-15",
       "type": "compendium",
       "teaser": "A brand with high AI visibility but high hallucination rate is being introduced incorrectly at the most influential moment in the buyer journey."
     },
     {
       "title": "Generative Engine Optimization",
-      "url": "https://rhinegold.de/compendium/generative-engine-optimization/",
+      "url": "https://insights.rhinegold.de/compendium/generative-engine-optimization/",
       "date": "2026-03-20",
       "type": "compendium",
       "teaser": "The practice of improving how a brand is surfaced, cited, and recommended inside AI-generated answers — not in the ten blue links."
     },
     {
       "title": "Zero-Click Search",
-      "url": "https://rhinegold.de/compendium/zero-click-search/",
+      "url": "https://insights.rhinegold.de/compendium/zero-click-search/",
       "date": "2026-03-05",
       "type": "compendium",
       "teaser": "For brands, the question is not only how many clicks fell off, but what the brand says at the moment the answer is served."
