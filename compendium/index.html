@@ -156,11 +156,14 @@ sup.ref{font-size:.7rem;color:var(--gold);text-decoration:none;font-weight:600}
      feed.json, purge jsDelivr: https://purge.jsdelivr.net/gh/MHZach/mapgap@main/feed.json -->
 <script>
 (function(){
-  var FEED='https://cdn.jsdelivr.net/gh/MHZach/mapgap@main/feed.json';
+  // Same-origin feed (GitHub Pages, not jsDelivr) + cache-bust + no-store:
+  // jsDelivr @main sets a multi-day BROWSER cache → stale links. Same-origin
+  // /feed.json refreshes on every deploy and we force a fresh fetch each load.
+  var FEED='/feed.json';
   var LIMIT=4;
   function fmt(iso){try{var d=new Date(iso);return d.toLocaleDateString('de-DE',{day:'2-digit',month:'short',year:'numeric'});}catch(e){return iso;}}
   function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-  fetch(FEED).then(function(r){return r.json();}).then(function(data){
+  fetch(FEED+'?v='+Date.now(),{cache:'no-store'}).then(function(r){return r.json();}).then(function(data){
     var items=(data.items||[]).slice(0,LIMIT);
     if(!items.length){document.getElementById('rg-new-section').style.display='none';return;}
     var grid=document.getElementById('rg-new-grid');
