@@ -31,3 +31,15 @@
 - [ ] commit + push
 - [ ] Live-URL curl: HTTP 200 + **exakter** Inhalts-Diskriminator (Titel, kein Substring)
 - [ ] feed.json same-origin frisch · jsDelivr-Purge (Framer-Embed)
+
+---
+
+## Architektur-Regel: EINE Wahrheit (Mike-Entscheid 2026-06-12)
+- **Wahrheit = das HTML in diesem Repo (mapgap).** Was live liegt, gilt.
+- Die se4b-Pipeline (`compendium/entries/` + `python -m compendium.build.build`) ist ein
+  **Autoren-Werkzeug** — ihr Output wird hierher deployed, danach gilt wieder das HTML.
+- **Gate gilt für ALLE Artikel gleich** — hand-geschrieben oder generiert. Standalone:
+  `cd ~/PycharmProjects/se4b && python -m compendium.build.qa ~/PycharmProjects/mapgap/compendium [--online]`
+- Entries, die hinter dem Live-Stand zurückliegen, NIE blind über Live-HTML syncen.
+  Corpus-Slugs ohne Entry (lead-scoring, mql, sql, touchpoints, invisible-shortlist)
+  sind in `schema.CORPUS_SLUGS`/`renderer.CORPUS_LABELS` whitelisted und verlinkbar.
