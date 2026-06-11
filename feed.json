@@ -3,6 +3,13 @@
   "updated": "2026-06-09",
   "items": [
     {
+      "title": "Semantic Anchoring",
+      "url": "https://insights.rhinegold.de/compendium/semantic-anchoring/",
+      "date": "2026-06-11",
+      "type": "compendium",
+      "teaser": "How deeply a brand is embedded in an AI model's trained knowledge — as opposed to appearing because a document was retrieved. High Mention Rate does not imply anchoring."
+    },
+    {
       "title": "The Invisible Shortlist",
       "url": "https://insights.rhinegold.de/compendium/invisible-shortlist/",
       "date": "2026-06-09",

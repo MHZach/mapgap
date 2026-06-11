@@ -5,13 +5,22 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Jun 2026 14:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
       <title>The Rhinegold Compendium</title>
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
+
+    <item>
+      <title>Semantic Anchoring</title>
+      <link>https://insights.rhinegold.de/compendium/semantic-anchoring/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/semantic-anchoring/</guid>
+      <pubDate>Thu, 11 Jun 2026 18:00:00 +0000</pubDate>
+      <description>Semantic Anchoring describes how deeply a brand is embedded in an AI model's trained knowledge — as opposed to appearing in AI answers because a document was retrieved at inference time. High Mention Rate does not imply anchoring: retrieval-dependent visibility is fragile.</description>
+      <category>Compendium</category>
+    </item>
 
     <item>
       <title>The Invisible Shortlist — B2B Buyers Have Moved. Has Your Visibility?</title>
