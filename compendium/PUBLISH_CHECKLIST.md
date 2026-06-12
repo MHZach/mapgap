@@ -23,9 +23,14 @@
 ## 3 · Technisch
 - [ ] HTML/JSON/XML parse-valide · JSON-LD valide, Term im DefinedTermSet
 - [ ] Relative Links: Ziele existieren · Externe Links: curl-200
-- [ ] Domain-Regel: klickbare öffentliche Links → `insights.rhinegold.de`
-      (canonical/og bleiben kanonisch) · siehe `feed.json` `_note`
+- [ ] Domain-Regel (verschärft 2026-06-12): **ALLE** Compendium-URLs — klickbare Links
+      UND canonical/og:*/twitter:*/JSON-LD — → `https://insights.rhinegold.de/compendium/…`.
+      KEIN `rhinegold.de/compendium` irgendwo im Dokument (Framer-404; ein Canonical
+      auf 404 blockiert die Indexierung des Eintrags — Vorfall 2026-06-12).
+      Links zur Hauptsite (Logo, /contact, /methodology, /about) bleiben `rhinegold.de`.
 - [ ] Verdrahtet: Index-Card (alphabetisch) + JSON-LD + `feed.json` + `compendium/rss.xml`
+- [ ] Sitemap regeneriert (nach jedem Artikel-Add/-Edit):
+      `cd ~/PycharmProjects/se4b && python -m compendium.build.sitemap ~/PycharmProjects/mapgap/compendium`
 
 ## 4 · Erst nach 1–3: Push + Live-Verifikation
 - [ ] commit + push
