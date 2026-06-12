@@ -1,7 +1,56 @@
 {
   "_note": "PUBLIC LINKS MUST point to https://insights.rhinegold.de/... — NEVER rhinegold.de/... The rhinegold.de/compendium/* Framer redirect is broken (:splat not substituted) and returns 404 on every URL until the Framer routing is fixed. After editing this file, purge the jsDelivr cache: https://purge.jsdelivr.net/gh/MHZach/mapgap@main/feed.json . Verify every new URL with curl (HTTP 200) before announcing it live.",
-  "updated": "2026-06-09",
+  "updated": "2026-06-12",
   "items": [
+    {
+      "title": "Phantom URL",
+      "url": "https://insights.rhinegold.de/compendium/phantom-url/",
+      "date": "2026-06-12",
+      "type": "compendium",
+      "teaser": "A phantom URL is a web address an AI presents as a source that does not exist — fabricated at answer time, plausible in structure, resolving to nothing. When the fabricated address carries a brand's domain, the brand inherits the dead end."
+    },
+    {
+      "title": "Negated Mention",
+      "url": "https://insights.rhinegold.de/compendium/negated-mention/",
+      "date": "2026-06-12",
+      "type": "compendium",
+      "teaser": "A negated mention is an AI answer that names a brand in order to advise against it, exclude it, or mark what it lacks. Counting metrics record it as visibility; commercially it works in the opposite direction."
+    },
+    {
+      "title": "Brand Rank",
+      "url": "https://insights.rhinegold.de/compendium/brand-rank/",
+      "date": "2026-06-12",
+      "type": "compendium",
+      "teaser": "Brand Rank is the position a brand occupies when an AI answer lists options. Being named first and being named last are different commercial events that binary presence metrics record identically. Top-3 presence is the operative shortlist threshold."
+    },
+    {
+      "title": "Mention Intensity",
+      "url": "https://insights.rhinegold.de/compendium/mention-intensity/",
+      "date": "2026-06-12",
+      "type": "compendium",
+      "teaser": "Mention Intensity measures how much of an AI answer is built around a brand — how often and how substantially it is named within a single response. It is the depth dimension that binary presence metrics flatten."
+    },
+    {
+      "title": "Counterfactual",
+      "url": "https://insights.rhinegold.de/compendium/counterfactual/",
+      "date": "2026-06-12",
+      "type": "compendium",
+      "teaser": "The counterfactual is what would have happened without the intervention. Every claim of marketing effect is a comparison against a counterfactual, whether the person making the claim states one or not."
+    },
+    {
+      "title": "Difference-in-Differences",
+      "url": "https://insights.rhinegold.de/compendium/difference-in-differences/",
+      "date": "2026-06-12",
+      "type": "compendium",
+      "teaser": "Difference-in-Differences (DiD) measures an effect by comparing the change in a treated group to the change in an untreated group over the same window — subtracting market drift from measured effect."
+    },
+    {
+      "title": "Control Group",
+      "url": "https://insights.rhinegold.de/compendium/control-group/",
+      "date": "2026-06-12",
+      "type": "compendium",
+      "teaser": "A control group is the set of units deliberately left untreated so that the counterfactual becomes observable. Its quality, not its existence, decides what the measurement is worth."
+    },
     {
       "title": "Semantic Anchoring",
       "url": "https://insights.rhinegold.de/compendium/semantic-anchoring/",

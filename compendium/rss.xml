@@ -5,13 +5,76 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jun 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 15:50:00 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
       <title>The Rhinegold Compendium</title>
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
+
+    <item>
+      <title>Phantom URL</title>
+      <link>https://insights.rhinegold.de/compendium/phantom-url/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/phantom-url/</guid>
+      <pubDate>Fri, 12 Jun 2026 15:50:00 +0000</pubDate>
+      <description>A phantom URL is a web address an AI presents as a source that does not exist — fabricated at answer time, plausible in structure, resolving to nothing. When the fabricated address carries a brand's domain, the brand inherits the dead end.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Negated Mention</title>
+      <link>https://insights.rhinegold.de/compendium/negated-mention/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/negated-mention/</guid>
+      <pubDate>Fri, 12 Jun 2026 15:45:00 +0000</pubDate>
+      <description>A negated mention is an AI answer that names a brand in order to advise against it, exclude it, or mark what it lacks. Counting metrics record it as visibility; commercially it works in the opposite direction.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Brand Rank</title>
+      <link>https://insights.rhinegold.de/compendium/brand-rank/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/brand-rank/</guid>
+      <pubDate>Fri, 12 Jun 2026 15:40:00 +0000</pubDate>
+      <description>Brand Rank is the position a brand occupies when an AI answer lists options. Being named first and being named last are different commercial events that binary presence metrics record identically. Top-3 presence is the operative shortlist threshold.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Mention Intensity</title>
+      <link>https://insights.rhinegold.de/compendium/mention-intensity/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/mention-intensity/</guid>
+      <pubDate>Fri, 12 Jun 2026 15:35:00 +0000</pubDate>
+      <description>Mention Intensity measures how much of an AI answer is built around a brand — how often and how substantially it is named within a single response. It is the depth dimension that binary presence metrics flatten.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Counterfactual</title>
+      <link>https://insights.rhinegold.de/compendium/counterfactual/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/counterfactual/</guid>
+      <pubDate>Fri, 12 Jun 2026 15:30:00 +0000</pubDate>
+      <description>The counterfactual is what would have happened without the intervention. Every claim of marketing effect is a comparison against a counterfactual, whether the person making the claim states one or not.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Difference-in-Differences</title>
+      <link>https://insights.rhinegold.de/compendium/difference-in-differences/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/difference-in-differences/</guid>
+      <pubDate>Fri, 12 Jun 2026 15:25:00 +0000</pubDate>
+      <description>Difference-in-Differences (DiD) measures an effect by comparing the change in a treated group to the change in an untreated group over the same window — subtracting market drift from measured effect.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Control Group</title>
+      <link>https://insights.rhinegold.de/compendium/control-group/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/control-group/</guid>
+      <pubDate>Fri, 12 Jun 2026 15:20:00 +0000</pubDate>
+      <description>A control group is the set of units deliberately left untreated so that the counterfactual becomes observable. Its quality, not its existence, decides what the measurement is worth.</description>
+      <category>Compendium</category>
+    </item>
 
     <item>
       <title>Semantic Anchoring</title>
