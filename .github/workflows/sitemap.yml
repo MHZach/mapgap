@@ -1,0 +1,45 @@
+name: Generate compendium sitemap
+
+# Hält compendium/sitemap.xml automatisch synchron mit den TATSÄCHLICH deployten
+# Artikel-Verzeichnissen (compendium/*/index.html) — immun gegen Pipeline-Clobber, der
+# zuvor die corpus-only-Slugs (invisible-shortlist, lead-scoring, mql, sql, touchpoints)
+# aus der Sitemap fallen ließ. Scannt das echte Live-Korpus, nicht eine Pipeline-Ausgabe.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'compendium/**/index.html'   # Sitemap-only-Push triggert NICHT → keine Schleife
+  workflow_dispatch:                  # manuell auslösbar
+
+permissions:
+  contents: write
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0              # volle Historie für <lastmod> = git-Commit-Datum je Datei
+      - name: Build sitemap from live corpus
+        run: |
+          cd compendium
+          {
+            echo '<?xml version="1.0" encoding="UTF-8"?>'
+            echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            echo '  <url><loc>https://insights.rhinegold.de/compendium/</loc></url>'
+            for d in */; do
+              [ -f "${d}index.html" ] || continue
+              echo "  <url><loc>https://insights.rhinegold.de/compendium/${d}</loc><lastmod>$(git log -1 --format=%cs -- "${d}index.html")</lastmod></url>"
+            done
+            echo '</urlset>'
+          } > sitemap.xml
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add compendium/sitemap.xml
+          # Kein [skip ci]: der paths-Filter (compendium/**/index.html) verhindert die Schleife,
+          # und der sitemap-Commit soll den Pages-Deploy auslösen.
+          git diff --staged --quiet || { git commit -m "chore: regenerate compendium sitemap"; git push; }
