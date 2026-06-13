@@ -5,13 +5,130 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Jun 2026 15:50:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 16:59:00 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
       <title>The Rhinegold Compendium</title>
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
+
+    <item>
+      <title>AI Agents in the Buyer Journey</title>
+      <link>https://insights.rhinegold.de/compendium/ai-agents-buyer-journey/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/ai-agents-buyer-journey/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:59:00 +0000</pubDate>
+      <description>AI agents are tool-using systems that carry out multi-step tasks — increasingly part of vendor research. When an agent builds the shortlist, the audience is no longer only human, and the criteria that win are machine-legible facts.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Sentiment in AI Answers</title>
+      <link>https://insights.rhinegold.de/compendium/ai-answer-sentiment/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/ai-answer-sentiment/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:55:00 +0000</pubDate>
+      <description>Sentiment in AI answers is the qualitative tone with which a brand is introduced — endorsed, described neutrally, or hedged. It is the layer above every counting metric.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Co-Mentions</title>
+      <link>https://insights.rhinegold.de/compendium/co-mentions/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/co-mentions/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:51:00 +0000</pubDate>
+      <description>Co-mentions are the brands named alongside yours in the same AI answer. They define the competitive set the model puts you in — and a brand is positioned by the company it keeps.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Content Decay</title>
+      <link>https://insights.rhinegold.de/compendium/content-decay/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/content-decay/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:47:00 +0000</pubDate>
+      <description>Content decay is the gradual loss of a page's traffic and visibility over time. In an AI-answer world it is sharper and quieter: a page can keep its ranking yet drop out of the answers that now intercept the click.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Embedding</title>
+      <link>https://insights.rhinegold.de/compendium/embedding/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/embedding/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:43:00 +0000</pubDate>
+      <description>An embedding is a representation of text as a vector of numbers, positioned so that things with similar meaning sit close together. It is how machines compute semantic similarity.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Featured Snippet</title>
+      <link>https://insights.rhinegold.de/compendium/featured-snippet/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/featured-snippet/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:39:00 +0000</pubDate>
+      <description>A featured snippet is the boxed answer Google lifts to the top of results, quoting a page directly. It was the first mass surface where the engine answered instead of linking — the ancestor of AI Overviews.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Grounded Response Rate</title>
+      <link>https://insights.rhinegold.de/compendium/grounded-response-rate/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/grounded-response-rate/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:35:00 +0000</pubDate>
+      <description>Grounded Response Rate is the share of AI answers about a topic backed by retrieved sources rather than model memory alone — the dial that decides which optimisation levers can move a brand.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Lead Value</title>
+      <link>https://insights.rhinegold.de/compendium/lead-value/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/lead-value/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:31:00 +0000</pubDate>
+      <description>Lead value is the expected monetary worth of a lead — the probability it converts times what it is worth if it does. It is what lead scoring should optimise toward.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>LLM Referral Traffic</title>
+      <link>https://insights.rhinegold.de/compendium/llm-referral-traffic/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/llm-referral-traffic/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:27:00 +0000</pubDate>
+      <description>LLM referral traffic is the visits that arrive when a user clicks a link inside an AI answer — the click-side counterpart to AI visibility, usually small and systematically under-measured.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Query Fan-Out</title>
+      <link>https://insights.rhinegold.de/compendium/query-fan-out/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/query-fan-out/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:23:00 +0000</pubDate>
+      <description>Query fan-out is the technique by which an AI search surface answers one question by silently issuing many related sub-queries, then synthesising. The brand competes across searches the user never typed.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Retrieval-Augmented Generation</title>
+      <link>https://insights.rhinegold.de/compendium/retrieval-augmented-generation/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/retrieval-augmented-generation/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:19:00 +0000</pubDate>
+      <description>Retrieval-Augmented Generation (RAG) is the architecture in which a language model fetches relevant documents at answer time and conditions its response on them. It is the machinery underneath AI Overviews and answer engines.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Self-Reported Attribution</title>
+      <link>https://insights.rhinegold.de/compendium/self-reported-attribution/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/self-reported-attribution/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:15:00 +0000</pubDate>
+      <description>Self-reported attribution asks the buyer directly — “How did you hear about us?” It is the complement to tracked attribution, and in an AI-mediated journey often the only instrument that sees what analytics cannot.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Structured Data</title>
+      <link>https://insights.rhinegold.de/compendium/structured-data/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/structured-data/</guid>
+      <pubDate>Sat, 13 Jun 2026 16:11:00 +0000</pubDate>
+      <description>Structured data is machine-readable markup — usually Schema.org vocabulary in JSON-LD — that states what a page's entities are. It is how a page declares its facts to machines instead of leaving them to be inferred.</description>
+      <category>Compendium</category>
+    </item>
 
     <item>
       <title>Phantom URL</title>
