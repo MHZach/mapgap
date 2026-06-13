@@ -1,7 +1,98 @@
 {
   "_note": "PUBLIC LINKS MUST point to https://insights.rhinegold.de/... — NEVER rhinegold.de/... The rhinegold.de/compendium/* Framer redirect is broken (:splat not substituted) and returns 404 on every URL until the Framer routing is fixed. After editing this file, purge the jsDelivr cache: https://purge.jsdelivr.net/gh/MHZach/mapgap@main/feed.json . Verify every new URL with curl (HTTP 200) before announcing it live.",
-  "updated": "2026-06-12",
+  "updated": "2026-06-13",
   "items": [
+    {
+      "title": "AI Agents in the Buyer Journey",
+      "url": "https://insights.rhinegold.de/compendium/ai-agents-buyer-journey/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "AI agents are tool-using systems that carry out multi-step tasks — increasingly part of vendor research. When an agent builds the shortlist, the audience is no longer only human, and the criteria that win are machine-legible facts."
+    },
+    {
+      "title": "Sentiment in AI Answers",
+      "url": "https://insights.rhinegold.de/compendium/ai-answer-sentiment/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Sentiment in AI answers is the qualitative tone with which a brand is introduced — endorsed, described neutrally, or hedged. It is the layer above every counting metric."
+    },
+    {
+      "title": "Co-Mentions",
+      "url": "https://insights.rhinegold.de/compendium/co-mentions/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Co-mentions are the brands named alongside yours in the same AI answer. They define the competitive set the model puts you in — and a brand is positioned by the company it keeps."
+    },
+    {
+      "title": "Content Decay",
+      "url": "https://insights.rhinegold.de/compendium/content-decay/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Content decay is the gradual loss of a page's traffic and visibility over time. In an AI-answer world it is sharper and quieter: a page can keep its ranking yet drop out of the answers that now intercept the click."
+    },
+    {
+      "title": "Embedding",
+      "url": "https://insights.rhinegold.de/compendium/embedding/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "An embedding is a representation of text as a vector of numbers, positioned so that things with similar meaning sit close together. It is how machines compute semantic similarity."
+    },
+    {
+      "title": "Featured Snippet",
+      "url": "https://insights.rhinegold.de/compendium/featured-snippet/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "A featured snippet is the boxed answer Google lifts to the top of results, quoting a page directly. It was the first mass surface where the engine answered instead of linking — the ancestor of AI Overviews."
+    },
+    {
+      "title": "Grounded Response Rate",
+      "url": "https://insights.rhinegold.de/compendium/grounded-response-rate/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Grounded Response Rate is the share of AI answers about a topic backed by retrieved sources rather than model memory alone — the dial that decides which optimisation levers can move a brand."
+    },
+    {
+      "title": "Lead Value",
+      "url": "https://insights.rhinegold.de/compendium/lead-value/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Lead value is the expected monetary worth of a lead — the probability it converts times what it is worth if it does. It is what lead scoring should optimise toward."
+    },
+    {
+      "title": "LLM Referral Traffic",
+      "url": "https://insights.rhinegold.de/compendium/llm-referral-traffic/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "LLM referral traffic is the visits that arrive when a user clicks a link inside an AI answer — the click-side counterpart to AI visibility, usually small and systematically under-measured."
+    },
+    {
+      "title": "Query Fan-Out",
+      "url": "https://insights.rhinegold.de/compendium/query-fan-out/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Query fan-out is the technique by which an AI search surface answers one question by silently issuing many related sub-queries, then synthesising. The brand competes across searches the user never typed."
+    },
+    {
+      "title": "Retrieval-Augmented Generation",
+      "url": "https://insights.rhinegold.de/compendium/retrieval-augmented-generation/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Retrieval-Augmented Generation (RAG) is the architecture in which a language model fetches relevant documents at answer time and conditions its response on them. It is the machinery underneath AI Overviews and answer engines."
+    },
+    {
+      "title": "Self-Reported Attribution",
+      "url": "https://insights.rhinegold.de/compendium/self-reported-attribution/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Self-reported attribution asks the buyer directly — “How did you hear about us?” It is the complement to tracked attribution, and in an AI-mediated journey often the only instrument that sees what analytics cannot."
+    },
+    {
+      "title": "Structured Data",
+      "url": "https://insights.rhinegold.de/compendium/structured-data/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Structured data is machine-readable markup — usually Schema.org vocabulary in JSON-LD — that states what a page's entities are. It is how a page declares its facts to machines instead of leaving them to be inferred."
+    },
     {
       "title": "Phantom URL",
       "url": "https://insights.rhinegold.de/compendium/phantom-url/",
