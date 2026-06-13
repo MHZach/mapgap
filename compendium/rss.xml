@@ -5,13 +5,85 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Jun 2026 22:50:25 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 23:48:00 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
       <title>The Rhinegold Compendium</title>
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
+
+    <item>
+      <title>AI Mode</title>
+      <link>https://insights.rhinegold.de/compendium/ai-mode/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/ai-mode/</guid>
+      <pubDate>Sat, 13 Jun 2026 23:48:00 +0000</pubDate>
+      <description>Google's conversational search surface reasons over many parallel sub-searches and answers with citations — shifting the unit of B2B exposure from ranked link to cited passage.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Microsoft Copilot</title>
+      <link>https://insights.rhinegold.de/compendium/microsoft-copilot/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/microsoft-copilot/</guid>
+      <pubDate>Sat, 13 Jun 2026 23:47:00 +0000</pubDate>
+      <description>An AI answer surface embedded in Microsoft 365, grounded in Bing and enterprise data — a decision-stage citation surface that leaves no public results page to audit.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Mistral &amp; Le Chat</title>
+      <link>https://insights.rhinegold.de/compendium/mistral-le-chat/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/mistral-le-chat/</guid>
+      <pubDate>Sat, 13 Jun 2026 23:46:00 +0000</pubDate>
+      <description>Mistral plays two roles for European operators: Le Chat (now Vibe) as an emerging answer surface, and Mistral as the EU-jurisdiction model provider regulated enterprises weigh — two separate decisions.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Agentic Commerce</title>
+      <link>https://insights.rhinegold.de/compendium/agentic-commerce/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/agentic-commerce/</guid>
+      <pubDate>Sat, 13 Jun 2026 23:45:00 +0000</pubDate>
+      <description>Beyond AI-assisted research: an authorised agent selects, checks out and completes the purchase. With payment protocols in production, being findable and being buyable-by-machine split apart.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Chunking &amp; Passage Retrieval</title>
+      <link>https://insights.rhinegold.de/compendium/chunking-passage-retrieval/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/chunking-passage-retrieval/</guid>
+      <pubDate>Sat, 13 Jun 2026 23:44:00 +0000</pubDate>
+      <description>AI search retrieves and cites at the passage level, not the page. Whether each passage is self-contained decides what gets found — the most direct GEO lever an author controls.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Placebo Test</title>
+      <link>https://insights.rhinegold.de/compendium/placebo-test/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/placebo-test/</guid>
+      <pubDate>Sat, 13 Jun 2026 23:43:00 +0000</pubDate>
+      <description>A falsification check: run your estimator where no effect should exist. If it still finds one, the design — not the intervention — produced the result. The minimum credibility gate for any GEO/SEO claim.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Synthetic Control</title>
+      <link>https://insights.rhinegold.de/compendium/synthetic-control/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/synthetic-control/</guid>
+      <pubDate>Sat, 13 Jun 2026 23:42:00 +0000</pubDate>
+      <description>Build a weighted blend of untreated units to approximate what a treated brand or page would have done without an intervention — the honest counterfactual when no single control fits.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Spillover &amp; Contamination</title>
+      <link>https://insights.rhinegold.de/compendium/spillover-contamination/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/spillover-contamination/</guid>
+      <pubDate>Sat, 13 Jun 2026 23:41:00 +0000</pubDate>
+      <description>When a treatment leaks into the comparison group, SUTVA breaks and the measured effect shrinks or inverts. In SEO/GEO it is structural: shared links, clusters and sitewide signals.</description>
+      <category>Compendium</category>
+    </item>
 
     <item>
       <title>AI Vendor Sovereignty</title>
