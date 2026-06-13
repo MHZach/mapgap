@@ -5,13 +5,22 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Jun 2026 16:59:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 22:50:25 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
       <title>The Rhinegold Compendium</title>
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
+
+    <item>
+      <title>AI Vendor Sovereignty</title>
+      <link>https://insights.rhinegold.de/compendium/ai-vendor-sovereignty/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/ai-vendor-sovereignty/</guid>
+      <pubDate>Sat, 13 Jun 2026 22:50:25 +0000</pubDate>
+      <description>Choosing an LLM provider is now two decisions, not one — visibility in the models your buyers use, and control over the models you process with. The 12 June 2026 US suspension of Anthropic's Fable 5 and Mythos 5 turned vendor sovereignty from theory into a dated event.</description>
+      <category>Compendium</category>
+    </item>
 
     <item>
       <title>AI Agents in the Buyer Journey</title>
