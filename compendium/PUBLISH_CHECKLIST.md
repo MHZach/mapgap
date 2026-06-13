@@ -48,3 +48,21 @@
 - Entries, die hinter dem Live-Stand zurückliegen, NIE blind über Live-HTML syncen.
   Corpus-Slugs ohne Entry (lead-scoring, mql, sql, touchpoints, invisible-shortlist)
   sind in `schema.CORPUS_SLUGS`/`renderer.CORPUS_LABELS` whitelisted und verlinkbar.
+
+## Sync-Regel: se4b → mapgap (PFLICHT-Befehl)
+
+**NIEMALS** `rsync --delete` ohne Excludes — löscht Corpus-only-Artikel + rss.xml (Incident 2026-06-13).
+
+```bash
+rsync -a \
+  --exclude="invisible-shortlist" \
+  --exclude="lead-scoring" \
+  --exclude="mql" \
+  --exclude="sql" \
+  --exclude="touchpoints" \
+  --exclude="rss.xml" \
+  ~/PycharmProjects/se4b/compendium/output/site/ \
+  ~/PycharmProjects/mapgap/compendium/
+```
+
+Neue Corpus-Slugs (Artikel nur in mapgap, kein se4b-Entry) → hier sofort als `--exclude` ergänzen.
