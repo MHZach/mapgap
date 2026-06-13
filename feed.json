@@ -3,6 +3,62 @@
   "updated": "2026-06-13",
   "items": [
     {
+      "title": "AI Mode",
+      "url": "https://insights.rhinegold.de/compendium/ai-mode/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Google's conversational search surface reasons over many parallel sub-searches and answers with citations — shifting the unit of B2B exposure from ranked link to cited passage."
+    },
+    {
+      "title": "Microsoft Copilot",
+      "url": "https://insights.rhinegold.de/compendium/microsoft-copilot/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "An AI answer surface embedded in Microsoft 365, grounded in Bing and enterprise data — a decision-stage citation surface that leaves no public results page to audit."
+    },
+    {
+      "title": "Mistral & Le Chat",
+      "url": "https://insights.rhinegold.de/compendium/mistral-le-chat/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Mistral plays two roles for European operators: Le Chat (now Vibe) as an emerging answer surface, and Mistral as the EU-jurisdiction model provider regulated enterprises weigh — two separate decisions."
+    },
+    {
+      "title": "Agentic Commerce",
+      "url": "https://insights.rhinegold.de/compendium/agentic-commerce/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Beyond AI-assisted research: an authorised agent selects, checks out and completes the purchase. With payment protocols in production, being findable and being buyable-by-machine split apart."
+    },
+    {
+      "title": "Chunking & Passage Retrieval",
+      "url": "https://insights.rhinegold.de/compendium/chunking-passage-retrieval/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "AI search retrieves and cites at the passage level, not the page. Whether each passage is self-contained decides what gets found — the most direct GEO lever an author controls."
+    },
+    {
+      "title": "Placebo Test",
+      "url": "https://insights.rhinegold.de/compendium/placebo-test/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "A falsification check: run your estimator where no effect should exist. If it still finds one, the design — not the intervention — produced the result. The minimum credibility gate for any GEO/SEO claim."
+    },
+    {
+      "title": "Synthetic Control",
+      "url": "https://insights.rhinegold.de/compendium/synthetic-control/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Build a weighted blend of untreated units to approximate what a treated brand or page would have done without an intervention — the honest counterfactual when no single control fits."
+    },
+    {
+      "title": "Spillover & Contamination",
+      "url": "https://insights.rhinegold.de/compendium/spillover-contamination/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "When a treatment leaks into the comparison group, SUTVA breaks and the measured effect shrinks or inverts. In SEO/GEO it is structural: shared links, clusters and sitewide signals."
+    },
+    {
       "title": "AI Vendor Sovereignty",
       "url": "https://insights.rhinegold.de/compendium/ai-vendor-sovereignty/",
       "date": "2026-06-13",
