@@ -3,6 +3,13 @@
   "updated": "2026-06-13",
   "items": [
     {
+      "title": "AI Vendor Sovereignty",
+      "url": "https://insights.rhinegold.de/compendium/ai-vendor-sovereignty/",
+      "date": "2026-06-13",
+      "type": "compendium",
+      "teaser": "Choosing an LLM provider is now two decisions, not one — visibility in the models your buyers use, and control over the models you process with. The 12 June 2026 US suspension of Anthropic's Fable 5 and Mythos 5 turned vendor sovereignty from theory into a dated event."
+    },
+    {
       "title": "AI Agents in the Buyer Journey",
       "url": "https://insights.rhinegold.de/compendium/ai-agents-buyer-journey/",
       "date": "2026-06-13",
