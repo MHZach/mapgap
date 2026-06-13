@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://insights.rhinegold.de/compendium/</loc></url>
-  <url><loc>https://insights.rhinegold.de/compendium/ai-agents-buyer-journey/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/ai-answer-sentiment/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/ai-overview-vs-ai-mode/</loc><lastmod>2026-06-13</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/ai-agents-buyer-journey/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/ai-answer-sentiment/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/ai-overview-vs-ai-mode/</loc><lastmod>2026-06-14</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-vendor-sovereignty/</loc><lastmod>2026-06-14</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/attribution/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/brand-rank/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/brand-recommendation-share/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/citation-rate/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/co-mentions/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/content-decay/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/control-group/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/counterfactual/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/difference-in-differences/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/discovery-prompt/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/embedding/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/featured-snippet/</loc><lastmod>2026-06-13</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/attribution/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/brand-rank/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/brand-recommendation-share/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/citation-rate/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/co-mentions/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/content-decay/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/control-group/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/counterfactual/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/difference-in-differences/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/discovery-prompt/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/embedding/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/featured-snippet/</loc><lastmod>2026-06-14</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/generative-engine-optimization/</loc><lastmod>2026-06-14</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/grounded-response-rate/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/grounding/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/hallucination-brand-risk/</loc><lastmod>2026-06-13</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/grounded-response-rate/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/grounding/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/hallucination-brand-risk/</loc><lastmod>2026-06-14</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/invisible-shortlist/</loc><lastmod>2026-06-12</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/lead-scoring/</loc><lastmod>2026-06-12</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/lead-value/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/llm-referral-traffic/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/mention-intensity/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/mention-rate/</loc><lastmod>2026-06-13</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/lead-value/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/llm-referral-traffic/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/mention-intensity/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/mention-rate/</loc><lastmod>2026-06-14</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/mql/</loc><lastmod>2026-06-12</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/negated-mention/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/phantom-url/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/platform-divergence/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/query-fan-out/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/retrieval-augmented-generation/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/self-reported-attribution/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/semantic-anchoring/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/semantic-intelligence/</loc><lastmod>2026-06-13</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/share-of-voice/</loc><lastmod>2026-06-13</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/negated-mention/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/phantom-url/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/platform-divergence/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/query-fan-out/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/retrieval-augmented-generation/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/self-reported-attribution/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/semantic-anchoring/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/semantic-intelligence/</loc><lastmod>2026-06-14</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/share-of-voice/</loc><lastmod>2026-06-14</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/sql/</loc><lastmod>2026-06-12</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/structured-data/</loc><lastmod>2026-06-13</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/structured-data/</loc><lastmod>2026-06-14</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/touchpoints/</loc><lastmod>2026-06-12</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/zero-click-search/</loc><lastmod>2026-06-13</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/zero-click-search/</loc><lastmod>2026-06-14</lastmod></url>
 </urlset>
