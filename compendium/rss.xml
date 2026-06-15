@@ -5,13 +5,40 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Jun 2026 23:48:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 07:43:11 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
       <title>The Rhinegold Compendium</title>
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
+
+    <item>
+      <title>AI Visibility Audit</title>
+      <link>https://insights.rhinegold.de/compendium/ai-visibility-audit/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/ai-visibility-audit/</guid>
+      <pubDate>Mon, 15 Jun 2026 07:43:11 +0000</pubDate>
+      <description>A scoped, time-bounded assessment of how a brand appears across AI-generated answers — covering mention rate, citation rate, sentiment, share of voice and source authority. The deliverable: baseline plus gap analysis plus prioritised intervention list, not a subscription dashboard.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>AI Reputation Risk</title>
+      <link>https://insights.rhinegold.de/compendium/ai-reputation-risk/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/ai-reputation-risk/</guid>
+      <pubDate>Mon, 15 Jun 2026 07:42:00 +0000</pubDate>
+      <description>The cumulative brand exposure a company carries from how it is represented across AI answers — aggregating hallucinated facts, phantom URLs, negated mentions, sentiment and harmful co-mentions into one governance-level risk view. Failure modes compound; a single-issue lens misses the curve.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Sentiment Drift</title>
+      <link>https://insights.rhinegold.de/compendium/sentiment-drift/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/sentiment-drift/</guid>
+      <pubDate>Mon, 15 Jun 2026 07:41:00 +0000</pubDate>
+      <description>The temporal change in how AI answers characterise a brand — the directional derivative of AI Answer Sentiment. A static score is a lagging indicator; drift is the early-warning reading that lets operators intervene before negative framings compound at scale.</description>
+      <category>Compendium</category>
+    </item>
 
     <item>
       <title>AI Mode</title>

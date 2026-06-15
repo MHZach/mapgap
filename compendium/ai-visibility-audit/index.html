@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AI Visibility Audit — The Rhinegold Compendium</title><meta name="description" content="An AI Visibility Audit is a scoped, time-bounded assessment of how a brand appears across AI-generated answers — covering mention rate, citation rate, sentiment, competitive share of voice and source authority across major providers. It produces a baseline plus gap analysis plus prioritised intervention list — a deliverable, not a subscription dashboard."><link rel="canonical" href="https://insights.rhinegold.de/compendium/ai-visibility-audit/"><meta property="og:type" content="article"><meta property="og:site_name" content="The Rhinegold Compendium"><meta property="og:title" content="AI Visibility Audit — The Rhinegold Compendium"><meta property="og:description" content="An AI Visibility Audit is a scoped, time-bounded assessment of how a brand appears across AI-generated answers — covering mention rate, citation rate, sentiment, competitive share of voice and source authority across major providers. It produces a baseline plus gap analysis plus prioritised intervention list — a deliverable, not a subscription dashboard."><meta property="og:url" content="https://insights.rhinegold.de/compendium/ai-visibility-audit/"><meta property="og:image" content="https://insights.rhinegold.de/compendium/assets/compendium-og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AI Visibility Audit — The Rhinegold Compendium"><meta name="twitter:description" content="An AI Visibility Audit is a scoped, time-bounded assessment of how a brand appears across AI-generated answers — covering mention rate, citation rate, sentiment, competitive share of voice and source authority across major providers. It produces a baseline plus gap analysis plus prioritised intervention list — a deliverable, not a subscription dashboard."><meta name="twitter:image" content="https://insights.rhinegold.de/compendium/assets/compendium-og.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"><style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1612;--paper:#f7f4ef;--gold:#c8892e;--gold-b:#d99a36;--mid:#6b6560;--rule:#e0d9cf;--warm:#efe9e0;--sans:'DM Sans',system-ui,sans-serif;--display:'Fraunces',Georgia,serif}
+html{background:var(--paper);scroll-behavior:smooth;scroll-padding-top:68px}
+/* anchored sections clear the sticky section-nav when jumped to */
+.det [id]{scroll-margin-top:68px}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.rg-topbar{background:#14110f;border-bottom:1px solid #2a2622;padding:12px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.rg-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.rg-logo svg{width:34px;height:26px}
+.rg-logo .nm{font-family:var(--display);font-weight:300;font-size:21px;color:#f4efe7;letter-spacing:.01em}
+.rg-nav{display:flex;gap:24px;font-size:14px}
+.rg-nav a{color:#cdc6bb;text-decoration:none;transition:color .15s}
+.rg-nav a:hover,.rg-nav a.active{color:#f0c070}
+.wrap{max-width:1040px;margin:0 auto;padding:0 32px}
+/* ── content grid: centered reading column + symmetric breakout/full tracks ── */
+.det{display:grid;max-width:1240px;margin:0 auto;
+  grid-template-columns:
+    [full-start] minmax(20px,1fr)
+    [wide-start] minmax(0,200px)
+    [content-start] min(700px, calc(100% - 40px)) [content-end]
+    minmax(0,200px) [wide-end]
+    minmax(20px,1fr) [full-end];}
+.det>*{grid-column:content-start/content-end}
+.det>.breakout{grid-column:wide-start/wide-end}
+.det>.full{grid-column:full-start/full-end}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.crumb{padding:26px 0 0;font-size:12px;letter-spacing:.04em;color:var(--mid)}
+.crumb a{color:var(--mid);text-decoration:none}.crumb a:hover{color:var(--gold)}
+.crumb-sep{color:var(--rule);margin:0 4px}.crumb-cat{color:var(--gold)}
+.det h1{font-family:var(--display);font-weight:300;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.04;letter-spacing:-.02em;margin:14px 0 6px}
+.det .abk{font-size:1rem;color:var(--mid);font-weight:500;margin-bottom:6px}
+/* meta strip under H1 */
+.metastrip{display:flex;flex-wrap:wrap;gap:13px 24px;align-items:baseline;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:10px 0 0;font-size:.82rem}
+.metastrip .mi{display:flex;gap:8px;align-items:baseline}
+.metastrip .mi-l{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);font-weight:600}
+.metastrip .mi-v{color:#37322c;font-weight:500}
+.fp-badge{display:inline-block;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:12px;font-weight:600}
+/* sticky section nav (top, not side → no breakout collision) */
+.secnav{position:sticky;top:0;z-index:50;background:rgba(247,244,239,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);margin:0 0 6px}
+.secnav-inner{max-width:1080px;margin:0 auto;padding:11px 24px;display:flex;gap:24px;flex-wrap:wrap}
+.secnav a{font-size:12px;letter-spacing:.03em;color:var(--mid);text-decoration:none;white-space:nowrap;transition:color .15s}
+.secnav a:hover{color:var(--gold)}
+.lede{font-family:var(--display);font-weight:300;font-style:italic;font-size:1.6rem;line-height:1.44;color:#2c2722;margin:24px 0 6px}
+/* optional article hero image (breakout width, doubles as og:image) */
+.hero{margin:22px 0 10px}
+.hero img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:2px}
+.hero figcaption{font-size:.78rem;color:var(--mid);font-style:italic;margin-top:9px;padding:0 2px;line-height:1.5}
+.det .sec p{max-width:none}
+/* breakout exhibits */
+.colrow{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:8px 0}
+.colrow.single{grid-template-columns:1fr}
+.colcard{padding:24px 28px;background:#faf7f1;border:1px solid var(--rule)}
+.colcard h2{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:9px}
+.colcard p{font-size:1.02rem;color:#37322c;font-weight:300;line-height:1.6;max-width:none}
+.colcard.consensus{background:#f4efe5;border:none;border-left:2px solid #c8c0b0}
+.colcard.operator{background:#f4ede0;border:none;border-left:2px solid var(--gold)}
+.colcard.warn h2{color:#9a5a23}
+.exhibit-cap{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);font-weight:600;margin:0 0 10px}
+/* key takeaways */
+.takeaways{background:#efe9e0;border:1px solid var(--rule);border-left:3px solid var(--gold);padding:22px 28px;margin:26px 0}
+.takeaways .lbl{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px}
+.takeaways ul{list-style:none;padding:0;margin:0}
+.takeaways li{padding:5px 0 5px 22px;position:relative;font-size:1rem;line-height:1.5;font-weight:400;color:#2c2722}
+.takeaways li::before{content:'\2192';position:absolute;left:0;color:var(--gold);font-weight:600}
+/* stat callout */
+.statcallout{display:flex;align-items:baseline;gap:22px;margin:26px 0;padding:20px 28px;background:var(--warm);border-left:3px solid var(--gold)}
+.statcallout .num{font-family:var(--display);font-weight:300;font-size:3.1rem;line-height:1;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+.statcallout .lab{font-size:.98rem;color:#48413a;font-weight:300;line-height:1.5}
+.statcallout .lab .src-ref{font-size:.74rem;color:var(--mid);font-style:italic;display:block;margin-top:5px}
+/* big pull-quote — wide breakout, brand-gold (rhinegold echo of McKinsey's blue) */
+.pullquote{font-family:var(--display);font-weight:400;font-size:clamp(1.55rem,2.8vw,2.25rem);line-height:1.3;letter-spacing:-.01em;color:#a86e1c;margin:38px 0;padding:0}
+/* chart exhibit — two-column: title/caption left, visual right (McKinsey exhibit) */
+.chart-exhibit{margin:18px 0}
+.chart-box{display:grid;grid-template-columns:0.62fr 1fr;gap:38px;align-items:center;background:#faf7f1;border:1px solid var(--rule);padding:30px 34px}
+.ch-head .ch-title{font-family:var(--display);font-weight:400;font-size:1.5rem;line-height:1.2;color:var(--ink);margin:8px 0 8px}
+.ch-head .ch-cap{font-size:.9rem;color:var(--mid);font-weight:300;line-height:1.5;margin:0;max-width:none}
+.ch-vis{min-width:0}
+.ch-notes{font-size:.72rem;color:#8a8079;line-height:1.55;margin-top:16px;font-weight:300;grid-column:1/-1}
+.ch-notes sup{color:#8a8079;font-weight:600}
+.ch-notes .ch-src{display:block;margin-top:5px}
+/* inline rich-text: body links, footnotes, bold */
+.xlink{color:inherit;text-decoration:underline;text-decoration-color:rgba(200,137,46,.55);text-underline-offset:3px;text-decoration-thickness:1px;transition:text-decoration-color .15s,color .15s}
+.xlink:hover{color:var(--gold);text-decoration-color:var(--gold)}
+.det strong{font-weight:600;color:var(--ink)}
+sup.fn{font-size:.66rem;line-height:0;vertical-align:super;font-weight:600;margin-left:1px}
+sup.fn a{color:var(--gold);text-decoration:none}
+.src-num{display:inline-block;min-width:1.5em;color:var(--gold);font-weight:600;font-size:.8rem;font-family:var(--sans)}
+/* comparison table (breakout/full track) */
+table.cmp{width:100%;border-collapse:collapse;font-size:.94rem;background:#faf7f1;border:1px solid var(--rule)}
+table.cmp th,table.cmp td{text-align:left;padding:13px 18px;border-bottom:1px solid var(--rule);vertical-align:top;font-weight:300;color:#37322c}
+table.cmp thead th{background:#efe9e0;font-family:var(--sans);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600}
+table.cmp tbody th{font-weight:500;color:var(--ink);width:200px}
+table.cmp tr:last-child td,table.cmp tr:last-child th{border-bottom:none}
+/* foot furniture: related + cite */
+.foot-furniture{display:grid;grid-template-columns:1.4fr 1fr;gap:38px;margin-top:42px;padding-top:24px;border-top:1px solid var(--rule)}
+.ff-h{font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);font-weight:600;margin-bottom:12px}
+.foot-related{display:flex;flex-wrap:wrap;gap:8px}
+.foot-related a{font-size:13px;border:1px solid var(--rule);padding:6px 13px;border-radius:18px;text-decoration:none;color:var(--ink);transition:all .15s}
+.foot-related a:hover{border-color:var(--gold);color:var(--gold)}
+.cite-box{font-size:.78rem;color:#5c554c;line-height:1.55;background:#f4efe5;border:1px solid var(--rule);padding:14px 16px;font-family:var(--sans)}
+@media(max-width:760px){.det{display:block;padding:0 18px}.colrow{grid-template-columns:1fr}.foot-furniture{grid-template-columns:1fr;gap:24px}.secnav-inner{gap:16px;overflow-x:auto;flex-wrap:nowrap;padding:11px 18px}}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 14px}
+.badge{font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px;font-weight:600;cursor:help}
+.b-green{background:#e3efe0;color:#3c6b39}.b-yellow{background:#f5edd2;color:#8a6d1e}.b-orange{background:#f6e3d2;color:#9a5a23}.b-red{background:#f3dada;color:#9a2f2f}
+.b-cycle{background:#eae6df;color:#6b6560}.b-praxis{background:#dde7ef;color:#39607a}
+.tldr{font-family:var(--display);font-style:italic;font-size:1.32rem;line-height:1.5;color:var(--ink);border-left:3px solid var(--gold);padding:6px 0 6px 22px;margin:26px 0 30px}
+.sec{margin:26px 0}
+.sec h2{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.sec p{font-size:1.02rem;color:#37322c;font-weight:300}
+.sec.warn h2{color:#9a5a23}
+.sec ul{list-style:none;padding:0}
+.sec li{font-size:1rem;color:#37322c;font-weight:300;padding:6px 0 6px 20px;position:relative}
+.sec li::before{content:'–';position:absolute;left:0;color:var(--gold)}
+.consensus{background:#f4efe5;border-left:2px solid #c8c0b0;padding:18px 22px;margin:22px 0;font-size:1rem;color:#37322c;font-weight:300}
+.consensus .lbl{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);font-weight:600;margin-bottom:8px}
+.operator{background:#f4ede0;border-left:2px solid var(--gold);padding:18px 22px;margin:22px 0;font-size:1rem;color:#37322c;font-weight:300}
+.operator .lbl{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font-size:13px;border:1px solid var(--rule);padding:6px 13px;border-radius:20px;text-decoration:none;color:var(--ink);transition:all .15s}
+.related a:hover{border-color:var(--gold);color:var(--gold)}
+.empirical{background:var(--warm);border:1px solid var(--rule);padding:18px 20px;font-size:.96rem;color:#4a443d;font-weight:300;margin:22px 0}
+.obstacles{margin:26px 0}
+.obstacle{background:#f4efe5;border-left:2px solid var(--gold);padding:16px 22px;margin:12px 0}
+.obstacle .ob-q{font-family:var(--sans);font-size:.98rem;font-weight:500;color:var(--ink);margin-bottom:6px}
+.obstacle .ob-why{font-size:.95rem;color:#5c554c;font-weight:300;margin-bottom:10px}
+.obstacle .ob-res{font-size:.97rem;color:#37322c;font-weight:300}
+.obstacle .ob-res b{font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:3px}
+.cadence{font-size:.78rem;color:var(--mid);font-style:italic;margin-top:24px;padding-top:14px;border-top:1px solid var(--rule)}
+.src{font-size:.92rem;color:var(--mid);border-top:1px solid var(--rule);padding-top:20px;margin-top:34px}
+.src h2{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+.src-section{margin-top:16px}
+.src-section:first-of-type{margin-top:4px}
+.src-section-label{font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);font-weight:500;margin-bottom:6px}
+.src-list{list-style:none;padding:0;margin:0}
+.src-list li{padding:6px 0 6px 22px;position:relative;font-size:.92rem;line-height:1.55;color:#48413a;font-weight:300}
+.src-list li::before{content:'›';position:absolute;left:0;color:var(--gold);font-weight:600;font-size:1.05rem;line-height:1.2}
+.src-list a{color:var(--ink);text-decoration:underline;text-decoration-color:rgba(200,137,46,.45);text-underline-offset:3px;transition:color .15s,text-decoration-color .15s}
+.src-list a:hover{color:var(--gold);text-decoration-color:var(--gold)}
+.src-list .src-plain{color:var(--ink)}
+.src-list li.src-internal{color:var(--mid);font-style:italic}
+.src-list li.src-internal::before{content:'•';color:var(--mid)}
+.src-meta{font-size:.78rem;color:#8a8079;margin-top:3px}
+sup.ref{font-size:.7rem;color:var(--gold);text-decoration:none;font-weight:600}
+.formula-block{background:#f4efe5;border:1px solid var(--rule);padding:22px 26px;margin:26px 0;font-size:.95rem;line-height:1.55}
+.formula-block dl{display:grid;grid-template-columns:max-content 1fr;column-gap:18px;row-gap:10px;margin:0}
+.formula-block dt{font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;padding-top:2px;white-space:nowrap}
+.formula-block dd{color:#37322c;font-weight:300;margin:0}
+.formula-block .formula{font-family:var(--display);font-style:italic;font-size:1.1rem;color:var(--ink);font-weight:400;padding:6px 0 12px;border-bottom:1px solid var(--rule);margin-bottom:10px;grid-column:1/-1}
+.formula-block .version-line{font-size:.78rem;color:var(--mid);grid-column:1/-1;text-align:right;font-style:italic}
+.rg-footer{background:#14110f;border-top:1px solid #2a2622;padding:36px 30px 28px;color:#9a938a;margin-top:60px}
+.rg-footer-inner{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px 26px;align-items:center;justify-content:space-between;font-size:13px}
+.rg-footer a{color:#cdc6bb;text-decoration:none}.rg-footer a:hover{color:#f0c070}
+.rg-copy{width:100%;text-align:center;font-size:11px;color:#615a51;margin-top:18px}
+@media(max-width:600px){.rg-topbar{padding:10px 16px}.rg-nav{gap:14px;font-size:13px}.formula-block dl{grid-template-columns:1fr}.formula-block dt{padding-top:8px}}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "DefinedTerm", "name": "AI Visibility Audit", "description": "An AI Visibility Audit is a scoped, time-bounded assessment of how a brand appears across AI-generated answers — covering mention rate, citation rate, sentiment, competitive share of voice and source authority across major providers. It produces a baseline plus gap analysis plus prioritised intervention list — a deliverable, not a subscription dashboard.", "url": "https://insights.rhinegold.de/compendium/ai-visibility-audit/", "dateModified": "2026-06-15", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "The Rhinegold Compendium", "url": "https://insights.rhinegold.de/compendium/"}}</script></head><body><header class="rg-topbar"><a class="rg-logo" href="https://rhinegold.de"><svg viewBox="0 0 118 92" fill="none" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f0c070"/><stop offset="55%" stop-color="#d99a36"/><stop offset="100%" stop-color="#a86e1c"/></linearGradient></defs><g stroke="url(#g)" stroke-width="7" stroke-linecap="round"><path d="M8 16 C 22 5, 40 5, 55 16 S 92 27, 110 16"/><path d="M8 34 C 22 23, 40 23, 55 34 S 92 45, 110 34" opacity=".86"/><path d="M8 52 C 22 41, 40 41, 55 52 S 92 63, 110 52" opacity=".70"/><path d="M8 70 C 22 59, 40 59, 55 70 S 92 81, 110 70" opacity=".54"/><path d="M8 88 C 22 77, 40 77, 55 88 S 92 99, 110 88" opacity=".40"/></g></svg><span class="nm">rhinegold</span></a><nav class="rg-nav"><a href="https://insights.rhinegold.de">Insights</a><a href="https://insights.rhinegold.de/compendium/" class="active">Compendium</a><a href="https://rhinegold.de/methodology">Methodology</a><a href="https://rhinegold.de/about">About</a><a href="https://rhinegold.de/contact">Contact</a></nav></header><div class="det"><div class="crumb"><a href="../">Compendium</a> <span class="crumb-sep">/</span> <span class="crumb-cat">Measurement</span></div><h1>AI Visibility Audit</h1><div class="metastrip"><div class="mi"><span class="mi-l">Type</span><span class="mi-v">Method</span></div><div class="mi"><span class="mi-l">Term maturity</span><span class="mi-v"><span class="fp-badge" style="background:#f5edd2;color:#8a6d1e">practice-validated</span></span></div><div class="mi"><span class="mi-l">Operator maturity</span><span class="mi-v"><span class="fp-badge" style="background:#f5edd2;color:#8a6d1e">practice-validated</span></span></div><div class="mi"><span class="mi-l">Lifecycle</span><span class="mi-v">in flux</span></div><div class="mi"><span class="mi-l">Relevance</span><span class="mi-v">operational</span></div><div class="mi"><span class="mi-l">Verified</span><span class="mi-v">2026-06-15</span></div></div><nav class="secnav full"><div class="secnav-inner"><a href="#definition">Definition</a><a href="#use">Use &amp; limits</a><a href="#distinct">Distinct from</a><a href="#mistakes">Mistakes</a><a href="#sources">Sources</a></div></nav><div class="lede">An AI Visibility Audit is a scoped, time-bounded assessment of how a brand appears across AI-generated answers — covering mention rate, citation rate, sentiment, competitive share of voice and source authority across major providers. It produces a baseline plus gap analysis plus prioritised intervention list — a deliverable, not a subscription dashboard.</div><section id="definition" class="breakout"><div class="colrow"><div class="colcard consensus"><h2>Consensus definition</h2><p>An AI Visibility Audit is a structured, time-bounded methodology for measuring a brand&#x27;s presence, accuracy and competitive standing in AI-generated answer outputs across a defined set of providers and prompts<sup class="fn"><a href="#src-s1" id="fnref-s1">1</a></sup>. Its scope spans <strong>five components</strong>: a prompt set of typically 20–30 queries per core topic (brand-direct, category-level and buyer-scenario formulations)<sup class="fn"><a href="#src-s2" id="fnref-s2">2</a></sup>; provider coverage across the major answer surfaces (ChatGPT, Gemini, AI Overviews and AI Mode, Perplexity, Copilot)<sup class="fn"><a href="#src-s3" id="fnref-s3">3</a></sup>; four scored dimensions per response — <a class="xlink" href="../mention-rate/">mention rate</a>, <a class="xlink" href="../citation-rate/">citation rate</a>, sentiment, and competitive <a class="xlink" href="../share-of-voice/">share of voice</a> against a 3–5 competitor benchmark<sup class="fn"><a href="#src-s4" id="fnref-s4">4</a></sup>; a source-authority mapping of which domains the systems pull as citation inputs; and a gap analysis translating findings into a prioritised fix list covering content structure, entity clarity, schema markup and off-site signals<sup class="fn"><a href="#src-s5" id="fnref-s5">5</a></sup>. <strong>Because AI answer content is non-deterministic, each prompt is run three times per platform</strong> to yield a stable median, producing roughly 120–180 measurement points for a standard audit<sup class="fn"><a href="#src-s2" id="fnref-s2">2</a></sup>. The output is a deliverable — typically a scored report plus implementation specifications — not a subscription dashboard<sup class="fn"><a href="#src-s6" id="fnref-s6">6</a></sup>.</p></div><div class="colcard operator"><h2>rhinegold operator refinement</h2><p>Rhinegold&#x27;s reframe: monitoring tools answer <em>what changed</em> — useful only once a credible baseline exists and weekly optimisation cycles are running. An audit answers the prior question — <em>where the brand stands, what is being said, and what to fix first</em>. For operators without dedicated AI-visibility staff, <strong>a quarterly audit often delivers more cost-per-insight than a monitoring subscription accessed four times a year</strong>. The audit is also the correct instrument before a rebrand, product launch or vertical entry<sup class="fn"><a href="#src-s6" id="fnref-s6">6</a></sup>.</p></div></div></section><section id="use" class="breakout"><div class="colrow"><div class="colcard"><h2>Operational use</h2><p>Commission a baseline audit with a 30-prompt set (10 brand-direct, 10 category, 10 buyer-scenario), run across at least four major AI surfaces, three repetitions per prompt<sup class="fn"><a href="#src-s2" id="fnref-s2">2</a></sup>. Score each response on citation presence, mention position, sentiment and share of voice. Translate the gap analysis into a prioritised content + technical action list. Re-audit quarterly or after major brand changes to track delta on identical metrics<sup class="fn"><a href="#src-s5" id="fnref-s5">5</a></sup>.</p></div><div class="colcard warn"><h2>Measurement boundary</h2><p>AI answer content is non-deterministic — back-to-back runs differ substantially. An audit produces a snapshot, not a trend, which is why redundancy sampling (≥3 runs per prompt per platform) and a defined re-audit cadence are structural, not optional<sup class="fn"><a href="#src-s2" id="fnref-s2">2</a></sup>. Provider sampling is bounded: low-frequency or enterprise-specific query formulations may go unrepresented. An audit does not substitute for ongoing monitoring when competitive dynamics shift weekly.</p></div></div></section><div class="sec" id="distinct"><h2>Distinct from</h2><p>From <a class="xlink" href="../mention-rate/">Mention Rate</a> and <a class="xlink" href="../citation-rate/">Citation Rate</a>: those are <em>constituent metrics</em> an audit produces and contextualises across providers and prompt categories. The audit is the methodology that yields them. From <a class="xlink" href="../brand-recommendation-share/">Brand Recommendation Share</a>: a narrower sub-dimension (head-to-head category queries) within the audit&#x27;s share-of-voice analysis. From <a class="xlink" href="../generative-engine-optimization/">Generative Engine Optimization</a>: GEO is the optimisation discipline informed by audit findings — the audit sets the agenda, GEO executes it.</p></div><div class="sec" id="mistakes"><h2>Common mistakes</h2><ul><li>Treating a single manual prompt run as an audit. Non-deterministic outputs require ≥3 runs per prompt per platform to yield a stable baseline; single-run snapshots systematically misstate visibility.</li><li>Building the prompt set only from branded queries. Category-level and buyer-scenario queries reveal organic citation behaviour that brand-direct prompts cannot capture — and that is where the biggest competitive gaps usually sit.</li><li>Conflating provider coverage with completeness. The same brand can show very large citation-volume differences between providers, making single-provider audits misleading for cross-channel strategy.</li><li>Delivering a score without implementation specifications. Source-authority mapping, schema gaps and entity-clarity defects are the actionable outputs; a visibility score without a prioritised fix list converts to no intervention<sup class="fn"><a href="#src-s6" id="fnref-s6">6</a></sup>.</li></ul></div><div class="src" id="sources"><h2>Sources &amp; deeper reading</h2><div class="src-section"><div class="src-section-label">Methodological grounding</div><ul class="src-list"><li id="src-s1"><span class="src-num">1</span><a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener external">Aggarwal et al. — &quot;GEO: Generative Engine Optimization&quot; (KDD 2024, arXiv 2311.09735)</a><div class="src-meta">peer reviewed paper · primary · verified 2026-06-15</div></li><li id="src-s2"><span class="src-num">2</span><a href="https://www.getpassionfruit.com/blog/how-to-audit-brand-visibility-in-chatgpt-perplexity-and-gemini" target="_blank" rel="noopener external">Passionfruit — &quot;Brand Visibility Audit in ChatGPT, Perplexity &amp; Gemini&quot; (prompt-set + redundancy-sampling methodology)</a><div class="src-meta">practitioner article · primary · verified 2026-06-15</div></li><li id="src-s4"><span class="src-num">4</span><a href="https://www.visiblie.com/blog/ai-brand-monitoring" target="_blank" rel="noopener external">Visiblie — &quot;AI Brand Monitoring: The Complete Guide&quot; (mention rate / citation rate / sentiment / SoV framework)</a><div class="src-meta">practitioner article · primary · verified 2026-06-15</div></li><li id="src-s6"><span class="src-num">6</span><a href="https://metricusapp.com/blog/ai-visibility-monitoring-vs-one-time-audits/" target="_blank" rel="noopener external">Metricus — &quot;AI Visibility Monitoring vs One-Time Audits&quot; (audit-vs-monitoring distinction, quarterly cadence rationale)</a><div class="src-meta">practitioner article · primary · verified 2026-06-15</div></li></ul></div><div class="src-section"><div class="src-section-label">Industry observation</div><ul class="src-list"><li id="src-s3"><span class="src-num">3</span><a href="https://otterly.ai/blog/the-25-best-ai-seo-tools/" target="_blank" rel="noopener external">Otterly AI — &quot;The 25 Best AI SEO Tools&quot; (provider coverage landscape)</a><div class="src-meta">vendor study · secondary · verified 2026-06-15</div></li></ul></div><div class="src-section"><div class="src-section-label">Methodological source</div><ul class="src-list"><li id="src-s5"><span class="src-num">5</span><a href="https://www.onely.com/blog/generative-engine-optimization-geo-checklist-optimize/" target="_blank" rel="noopener external">Onely — &quot;The Ultimate GEO Checklist&quot; (audit-to-action workflow, fix-list directives)</a><div class="src-meta">practitioner article · primary · verified 2026-06-15</div></li></ul></div></div><div class="cadence">Last verified 2026-06-15 · Next review 2026-08-14</div><div class="foot-furniture"><div><div class="ff-h">Related terms</div><div class="foot-related"><a href="../generative-engine-optimization/">Generative Engine Optimization</a><a href="../mention-rate/">Mention Rate</a><a href="../citation-rate/">Citation Rate</a><a href="../share-of-voice/">Share of Voice</a></div></div><div><div class="ff-h">Cite this entry</div><div class="cite-box">rhinegold. &ldquo;AI Visibility Audit.&rdquo; The Rhinegold Compendium. https://insights.rhinegold.de/compendium/ai-visibility-audit/. Updated 2026-06-15.</div></div></div></div><footer class="rg-footer"><div class="rg-footer-inner"><a class="rg-logo" href="https://rhinegold.de" aria-label="rhinegold" style="display:flex;align-items:center;gap:9px;text-decoration:none"><svg viewBox="0 0 118 92" fill="none" aria-hidden="true" style="width:28px;height:22px"><defs><linearGradient id="rgmarkf" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f0c070"/><stop offset="55%" stop-color="#d99a36"/><stop offset="100%" stop-color="#a86e1c"/></linearGradient></defs><g stroke="url(#rgmarkf)" stroke-width="7" stroke-linecap="round"><path d="M8 16 C 22 5, 40 5, 55 16 S 92 27, 110 16"/><path d="M8 34 C 22 23, 40 23, 55 34 S 92 45, 110 34" opacity=".86"/><path d="M8 52 C 22 41, 40 41, 55 52 S 92 63, 110 52" opacity=".70"/><path d="M8 70 C 22 59, 40 59, 55 70 S 92 81, 110 70" opacity=".54"/><path d="M8 88 C 22 77, 40 77, 55 88 S 92 99, 110 88" opacity=".40"/></g></svg><span style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:18px;color:#f4efe7">rhinegold</span></a><div class="rg-footer-tag" style="font-size:12px;letter-spacing:.08em;color:#7d766c">Semantic Intelligence · Decision Systems · External Resonance</div><div class="rg-footer-links" style="display:flex;flex-wrap:wrap;gap:20px;font-size:13px"><a href="https://insights.rhinegold.de/">Insights</a><a href="https://insights.rhinegold.de/compendium/">Compendium</a><a href="https://rhinegold.de/methodology">Methodology</a><a href="https://rhinegold.de/legal-notice">Legal Notice</a><a href="https://rhinegold.de/privacy-policy">Privacy Policy</a><a href="https://rhinegold.de/contact">Contact</a></div></div><div class="rg-copy">© 2026 rhinegold</div></footer></body></html>
