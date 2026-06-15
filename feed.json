@@ -3,6 +3,34 @@
   "updated": "2026-06-13",
   "items": [
     {
+      "title": "LLM Brand Tracking",
+      "url": "https://insights.rhinegold.de/compendium/llm-brand-tracking/",
+      "date": "2026-06-15",
+      "type": "compendium",
+      "teaser": "The continuous discipline of monitoring how a brand appears in AI-generated responses across ChatGPT, Claude, Gemini, Perplexity and Copilot. The operational successor to classic survey-based brand tracking in an era where machine answers mediate discovery before any human actively searches."
+    },
+    {
+      "title": "Prompt Coverage",
+      "url": "https://insights.rhinegold.de/compendium/prompt-coverage/",
+      "date": "2026-06-15",
+      "type": "compendium",
+      "teaser": "Share of Voice scores presence within prompts you already test. Prompt Coverage asks the prior question: across all the prompts that matter for the buying decision, in how many does the brand appear at all? A denominator question that reveals the structural blind spots SoV cannot see."
+    },
+    {
+      "title": "Source Authority",
+      "url": "https://insights.rhinegold.de/compendium/source-authority/",
+      "date": "2026-06-15",
+      "type": "compendium",
+      "teaser": "Which third-party domains do AI systems treat as ground truth when answering brand and category questions? Unlike Citation Rate (how often your URL appears), Source Authority is the upstream trust layer — and for many B2B categories, indirect representation in authority sources beats trying to be cited directly."
+    },
+    {
+      "title": "Brand Voice Match",
+      "url": "https://insights.rhinegold.de/compendium/brand-voice-match/",
+      "date": "2026-06-15",
+      "type": "compendium",
+      "teaser": "The degree to which AI descriptions of a brand reproduce its own voice, positioning vocabulary and distinctive attribute language — as opposed to defaulting to generic category phrasing. The distinctiveness check that sits above sentiment: a brand can be neutral-to-positive and simultaneously commoditised."
+    },
+    {
       "title": "AI Visibility Audit",
       "url": "https://insights.rhinegold.de/compendium/ai-visibility-audit/",
       "date": "2026-06-15",
