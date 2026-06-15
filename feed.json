@@ -3,6 +3,13 @@
   "updated": "2026-06-13",
   "items": [
     {
+      "title": "Aided vs Unaided Brand Recall in GEO",
+      "url": "https://insights.rhinegold.de/compendium/aided-unaided-brand-recall-geo/",
+      "date": "2026-06-15",
+      "type": "compendium",
+      "teaser": "Classical brand-equity research separates unaided brand recall from aided brand recognition. Most current GEO measurement tools collapse the two, producing systematically inflated mention rates. A three-stage taxonomy (unaided · category-aided · brand-aided) is the cleanest available correction — and rhinegold openly discloses how its own pipeline carried the same blind spot."
+    },
+    {
       "title": "Mention Quality",
       "url": "https://insights.rhinegold.de/compendium/mention-quality/",
       "date": "2026-06-15",
