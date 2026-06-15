@@ -5,13 +5,49 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Jun 2026 07:43:11 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 08:15:53 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
       <title>The Rhinegold Compendium</title>
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
+
+    <item>
+      <title>LLM Brand Tracking</title>
+      <link>https://insights.rhinegold.de/compendium/llm-brand-tracking/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/llm-brand-tracking/</guid>
+      <pubDate>Mon, 15 Jun 2026 08:15:00 +0000</pubDate>
+      <description>The continuous discipline of monitoring how a brand appears in AI-generated responses across ChatGPT, Claude, Gemini, Perplexity and Copilot. The operational successor to classic survey-based brand tracking in an era where machine answers mediate discovery before any human actively searches.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Prompt Coverage</title>
+      <link>https://insights.rhinegold.de/compendium/prompt-coverage/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/prompt-coverage/</guid>
+      <pubDate>Mon, 15 Jun 2026 08:14:00 +0000</pubDate>
+      <description>Share of Voice scores presence within prompts you already test. Prompt Coverage asks the prior question: across all the prompts that matter for the buying decision, in how many does the brand appear at all? A denominator question that reveals structural blind spots SoV cannot see.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Source Authority</title>
+      <link>https://insights.rhinegold.de/compendium/source-authority/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/source-authority/</guid>
+      <pubDate>Mon, 15 Jun 2026 08:13:00 +0000</pubDate>
+      <description>Which third-party domains do AI systems treat as ground truth when answering brand and category questions? Unlike Citation Rate (how often your URL appears), Source Authority is the upstream trust layer — and for many B2B categories, indirect representation in authority sources beats trying to be cited directly.</description>
+      <category>Compendium</category>
+    </item>
+
+    <item>
+      <title>Brand Voice Match</title>
+      <link>https://insights.rhinegold.de/compendium/brand-voice-match/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/brand-voice-match/</guid>
+      <pubDate>Mon, 15 Jun 2026 08:12:00 +0000</pubDate>
+      <description>The degree to which AI descriptions of a brand reproduce its own voice, positioning vocabulary and distinctive attribute language — as opposed to defaulting to generic category phrasing. The distinctiveness check that sits above sentiment: a brand can be neutral-to-positive and simultaneously commoditised.</description>
+      <category>Compendium</category>
+    </item>
 
     <item>
       <title>AI Visibility Audit</title>
