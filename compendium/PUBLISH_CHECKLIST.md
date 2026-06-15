@@ -19,6 +19,20 @@
 - [ ] Zahlen in Beispielen nachgerechnet · Jargon glossiert
 - [ ] Quellen: URL mit curl-200 ODER explizite src-internal-Konvention —
       nie „verified" ohne prüfbares Ziel
+- [ ] **Cross-Linkage Problem ↔ Definition (Mike-Regel 2026-06-15):**
+      Wenn dieser Eintrag eine Methodik-Schwäche / einen Bias adressiert
+      ODER von einem bestehenden Problem-Artikel adressiert wird, MUSS die
+      Verbindung BEIDSEITIG verdrahtet sein:
+      (a) inline-Link `[[slug|Title]]` in `operator_position.text`,
+      (b) neuer Eintrag in `common_mistakes` (Definitions-Seite) bzw.
+          Caveat (Problem-Seite),
+      (c) `related_relations`-Eintrag: Definitions-Artikel mit
+          `{"type": "compare_with", "target": "<problem-slug>"}` (symmetrisch,
+          Build mirrort), Problem-Artikel mit `{"type": "refines", "target":
+          "<definition-slug>"}` (directed).
+      Einseitige Verlinkung nur vom Problem zur Definition bricht die
+      Navigation für Leser, die über die Definition einsteigen.
+      Pflicht-Grep vor Push: `grep -l "<problem-slug>" entries/<definition>.py`.
 
 ## 3 · Technisch
 - [ ] HTML/JSON/XML parse-valide · JSON-LD valide, Term im DefinedTermSet
