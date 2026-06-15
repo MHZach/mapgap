@@ -3,6 +3,27 @@
   "updated": "2026-06-13",
   "items": [
     {
+      "title": "Mention Quality",
+      "url": "https://insights.rhinegold.de/compendium/mention-quality/",
+      "date": "2026-06-15",
+      "type": "compendium",
+      "teaser": "The weighted-value layer above raw mention counts: grading each AI mention by position, framing, source authority and tone. A brand mentioned first in a list with confident positive framing contributes more than the same brand named parenthetically or dismissed in a comparison."
+    },
+    {
+      "title": "Competitive Mention Map",
+      "url": "https://insights.rhinegold.de/compendium/competitive-mention-map/",
+      "date": "2026-06-15",
+      "type": "compendium",
+      "teaser": "A structured view of which competitors a brand is co-mentioned with in AI answers, by query cluster and platform. Makes the consideration set the AI projects to buyers visible — and reveals whether the AI-perceived peer group matches the brand's intended positioning."
+    },
+    {
+      "title": "AI Mention Velocity",
+      "url": "https://insights.rhinegold.de/compendium/ai-mention-velocity/",
+      "date": "2026-06-15",
+      "type": "compendium",
+      "teaser": "The rate at which a brand begins appearing in AI answers for emerging topics — the first derivative of Mention Rate. Capturing rising-topic velocity is the AI-era equivalent of being first to rank for a breakout keyword before search volume peaks."
+    },
+    {
       "title": "LLM Brand Tracking",
       "url": "https://insights.rhinegold.de/compendium/llm-brand-tracking/",
       "date": "2026-06-15",
