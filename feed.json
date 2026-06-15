@@ -3,6 +3,27 @@
   "updated": "2026-06-13",
   "items": [
     {
+      "title": "AI Visibility Audit",
+      "url": "https://insights.rhinegold.de/compendium/ai-visibility-audit/",
+      "date": "2026-06-15",
+      "type": "compendium",
+      "teaser": "A scoped, time-bounded assessment of how a brand appears across AI-generated answers — covering mention rate, citation rate, sentiment, share of voice and source authority. The deliverable: baseline plus gap analysis plus prioritised intervention list, not a subscription dashboard."
+    },
+    {
+      "title": "AI Reputation Risk",
+      "url": "https://insights.rhinegold.de/compendium/ai-reputation-risk/",
+      "date": "2026-06-15",
+      "type": "compendium",
+      "teaser": "The cumulative brand exposure a company carries from how it is represented across AI answers — aggregating hallucinated facts, phantom URLs, negated mentions, sentiment and harmful co-mentions into one governance-level risk view. Failure modes compound; a single-issue lens misses the curve."
+    },
+    {
+      "title": "Sentiment Drift",
+      "url": "https://insights.rhinegold.de/compendium/sentiment-drift/",
+      "date": "2026-06-15",
+      "type": "compendium",
+      "teaser": "The temporal change in how AI answers characterise a brand — the directional derivative of AI Answer Sentiment. A static score is a lagging indicator; drift is the early-warning reading that lets operators intervene before negative framings compound at scale."
+    },
+    {
       "title": "AI Mode",
       "url": "https://insights.rhinegold.de/compendium/ai-mode/",
       "date": "2026-06-13",
