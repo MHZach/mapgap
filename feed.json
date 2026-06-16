@@ -1,7 +1,14 @@
 {
   "_note": "PUBLIC LINKS MUST point to https://insights.rhinegold.de/... — NEVER rhinegold.de/... The rhinegold.de/compendium/* Framer redirect is broken (:splat not substituted) and returns 404 on every URL until the Framer routing is fixed. After editing this file, purge the jsDelivr cache: https://purge.jsdelivr.net/gh/MHZach/mapgap@main/feed.json . Verify every new URL with curl (HTTP 200) before announcing it live.",
-  "updated": "2026-06-13",
+  "updated": "2026-06-16",
   "items": [
+    {
+      "title": "Multi-Axis Sentiment in GEO",
+      "url": "https://insights.rhinegold.de/compendium/multi-axis-sentiment-geo/",
+      "date": "2026-06-16",
+      "type": "compendium",
+      "teaser": "Most GEO tools score LLM answers on a single polarity axis — positive, neutral, negative. That instrument was built for opinionated user-generated content. LLM brand statements are mostly hedged, multi-perspective and confidence-graded — exactly the register the single-axis model is blind to. The cleanest correction is statement-centric, multi-axis measurement: polarity, hedging grade and confidence as independent axes, scored at the level of the individual brand statement."
+    },
     {
       "title": "Aided vs Unaided Brand Recall in GEO",
       "url": "https://insights.rhinegold.de/compendium/aided-unaided-brand-recall-geo/",
