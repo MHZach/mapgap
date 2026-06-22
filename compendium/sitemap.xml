@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://insights.rhinegold.de/compendium/</loc></url>
+  <url><loc>https://insights.rhinegold.de/compendium/</loc><lastmod>2026-06-22</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/agentic-commerce/</loc><lastmod>2026-06-17</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-agents-buyer-journey/</loc><lastmod>2026-06-17</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-answer-sentiment/</loc><lastmod>2026-06-17</lastmod></url>
@@ -12,6 +12,7 @@
   <url><loc>https://insights.rhinegold.de/compendium/ai-visibility-audit/</loc><lastmod>2026-06-17</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/aided-unaided-brand-recall-geo/</loc><lastmod>2026-06-17</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/attribution/</loc><lastmod>2026-06-17</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/b2b-buyers-start-at-ai/</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/brand-rank/</loc><lastmod>2026-06-17</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/brand-recommendation-share/</loc><lastmod>2026-06-17</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/brand-voice-match/</loc><lastmod>2026-06-17</lastmod></url>
@@ -24,6 +25,7 @@
   <url><loc>https://insights.rhinegold.de/compendium/counterfactual/</loc><lastmod>2026-06-17</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/difference-in-differences/</loc><lastmod>2026-06-17</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/discovery-prompt/</loc><lastmod>2026-06-17</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/earned-media-grounding/</loc><lastmod>2026-06-22</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/embedding/</loc><lastmod>2026-06-17</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/featured-snippet/</loc><lastmod>2026-06-17</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/generative-engine-optimization/</loc><lastmod>2026-06-17</lastmod></url>
