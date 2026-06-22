@@ -5,13 +5,22 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Jun 2026 21:45:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Jun 2026 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
       <title>The Rhinegold Compendium</title>
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
+
+    <item>
+      <title>Earned Media Grounding</title>
+      <link>https://insights.rhinegold.de/compendium/earned-media-grounding/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/earned-media-grounding/</guid>
+      <pubDate>Sun, 22 Jun 2026 12:00:00 +0000</pubDate>
+      <description>Earned media grounding is the GEO equivalent of the link-building channel: third-party platform presence that LLMs retrieve and cite. The outreach tactics are familiar — guest articles, listings, expert quotes — but the success criterion has shifted from traffic to retrievability. Third-party platforms account for 78–98% of citation volume in measured B2B categories.</description>
+      <category>Compendium</category>
+    </item>
 
     <item>
       <title>Multi-Axis Sentiment in GEO</title>

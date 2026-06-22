@@ -1,7 +1,14 @@
 {
   "_note": "PUBLIC LINKS MUST point to https://insights.rhinegold.de/... — NEVER rhinegold.de/... The rhinegold.de/compendium/* Framer redirect is broken (:splat not substituted) and returns 404 on every URL until the Framer routing is fixed. After editing this file, purge the jsDelivr cache: https://purge.jsdelivr.net/gh/MHZach/mapgap@main/feed.json . Verify every new URL with curl (HTTP 200) before announcing it live.",
-  "updated": "2026-06-16",
+  "updated": "2026-06-22",
   "items": [
+    {
+      "title": "Earned Media Grounding",
+      "url": "https://insights.rhinegold.de/compendium/earned-media-grounding/",
+      "date": "2026-06-22",
+      "type": "compendium",
+      "teaser": "Earned media grounding is the GEO equivalent of the link-building channel: third-party platform presence that LLMs retrieve and cite. The outreach tactics are familiar — guest articles, listings, expert quotes — but the success criterion has shifted from traffic to retrievability. Third-party platforms account for 78–98% of citation volume in measured B2B categories."
+    },
     {
       "title": "Multi-Axis Sentiment in GEO",
       "url": "https://insights.rhinegold.de/compendium/multi-axis-sentiment-geo/",
