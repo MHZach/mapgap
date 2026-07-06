@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv*/
+venv/
+.env
+
+
+# IMAGE_DIR=. makes the scan root the project dir, so loose images land here
+# (e.g. sim01-*.jpg). They must NEVER be committed to this PUBLIC Pages repo.
+
+# Qdrant local storage (if mapped as bind mount)
+
+# macOS
+.DS_Store
+
+
+# asset-gallery wurde 2026-07-06 in privates Repo ausgelagert (MHZach/asset-gallery)
+asset-gallery/
