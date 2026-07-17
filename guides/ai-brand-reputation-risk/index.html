@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Brand Reputation Risk: The Complete Guide — rhinegold Insights</title>
+<meta name="description" content="How ChatGPT, Gemini, Perplexity and AI Overviews describe your brand — hallucinations, negated mentions, phantom URLs and sentiment drift, and how to monitor them.">
+<meta name="author" content="Mike Zachrau">
+<link rel="canonical" href="https://insights.rhinegold.de/guides/ai-brand-reputation-risk/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="rhinegold — Insights">
+<meta property="og:title" content="AI Brand Reputation Risk: The Complete Guide">
+<meta property="og:description" content="How ChatGPT, Gemini, Perplexity and AI Overviews describe your brand — hallucinations, negated mentions, phantom URLs and sentiment drift, and how to monitor them.">
+<meta property="og:url" content="https://insights.rhinegold.de/guides/ai-brand-reputation-risk/">
+<meta property="og:image" content="https://insights.rhinegold.de/assets/og/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Brand Reputation Risk: The Complete Guide">
+<meta name="twitter:description" content="How ChatGPT, Gemini, Perplexity and AI Overviews describe your brand — hallucinations, negated mentions, phantom URLs and sentiment drift, and how to monitor them.">
+<meta name="twitter:image" content="https://insights.rhinegold.de/assets/og/og-default.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AI Brand Reputation Risk: The Complete Guide","description":"How ChatGPT, Gemini, Perplexity and AI Overviews describe your brand — hallucinations, negated mentions, phantom URLs and sentiment drift, and how to monitor them.","author":{"@type":"Person","name":"Mike Zachrau"},"publisher":{"@type":"Organization","name":"rhinegold","url":"https://rhinegold.de"},"datePublished":"2026-07-17","dateModified":"2026-07-17","mainEntityOfPage":{"@type":"WebPage","@id":"https://insights.rhinegold.de/guides/ai-brand-reputation-risk/"},"image":"https://insights.rhinegold.de/assets/og/og-default.png","isPartOf":{"@type":"Blog","name":"Semantic Intelligence — rhinegold Insights","url":"https://insights.rhinegold.de/"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1612;--paper:#f7f4ef;--gold:#c8892e;--gold-b:#d99a36;--mid:#6b6560;--rule:#e0d9cf;--warm:#efe9e0;--sans:'DM Sans',system-ui,sans-serif;--display:'Fraunces',Georgia,serif}
+html{background:var(--paper);scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+.rg-topbar{background:#14110f;border-bottom:1px solid #2a2622;padding:12px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative}
+.rg-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.rg-logo img{height:26px;width:auto;display:block}
+.rg-nav{display:flex;gap:24px;font-size:14px}
+.rg-nav a{color:#cdc6bb;text-decoration:none;transition:color .15s}
+.rg-nav a:hover,.rg-nav a.active{color:#f0c070}
+.rg-burger{display:none;cursor:pointer;padding:4px;background:transparent;border:0;line-height:0}
+#rg-nav-toggle{position:absolute;left:-9999px;width:1px;height:1px}
+@media(max-width:699px){
+  .rg-burger{display:flex;align-items:center}
+  .rg-topbar .rg-nav{display:none;position:absolute;top:100%;right:0;left:0;background:#14110f;flex-direction:column;padding:14px 30px;gap:14px;border-bottom:1px solid #2a2622;z-index:50}
+  #rg-nav-toggle:checked~.rg-nav{display:flex}
+}
+
+.wrap{max-width:840px;margin:0 auto;padding:0 32px}
+.crumb{padding:26px 0 0;font-size:12px;letter-spacing:.04em;color:var(--mid)}
+.crumb a{color:var(--mid);text-decoration:none}.crumb a:hover{color:var(--gold)}
+.crumb-sep{color:var(--rule);margin:0 4px}.crumb-cat{color:var(--gold)}
+
+.hero{padding:26px 0 48px;border-bottom:1px solid var(--rule)}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.hero h1{font-family:var(--display);font-weight:300;font-size:clamp(2.3rem,5.4vw,3.6rem);line-height:1.06;letter-spacing:-.02em;color:var(--ink);margin:16px 0 22px}
+.hero .lede{font-family:var(--display);font-weight:300;font-style:italic;font-size:clamp(1.1rem,2.2vw,1.35rem);color:#48413a;line-height:1.5;max-width:680px}
+.hero .byline{font-family:var(--sans);font-size:12px;letter-spacing:.04em;color:var(--mid);margin-top:24px}
+
+.sec{padding:52px 0 0}
+.sec-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+.sec h2{font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,3vw,2.1rem);line-height:1.16;letter-spacing:-.01em;color:var(--ink);margin-bottom:20px}
+.sec p{font-size:1.02rem;color:#37322c;font-weight:300;line-height:1.75;margin-bottom:16px;max-width:680px}
+.sec p strong{font-weight:600;color:var(--ink)}
+.sec p a{color:var(--ink);text-decoration:underline;text-decoration-color:rgba(200,137,46,.5);text-underline-offset:3px;transition:color .15s,text-decoration-color .15s}
+.sec p a:hover{color:var(--gold);text-decoration-color:var(--gold)}
+
+.statcallout{display:flex;align-items:baseline;gap:22px;margin:28px 0;padding:20px 28px;background:var(--warm);border-left:3px solid var(--gold)}
+.statcallout .num{font-family:var(--display);font-weight:300;font-size:2.7rem;line-height:1;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+.statcallout .lab{font-size:.95rem;color:#48413a;font-weight:300;line-height:1.5}
+.statcallout .lab a{color:var(--gold);font-size:.82rem;display:block;margin-top:5px;text-decoration:none}
+.statcallout .lab a:hover{text-decoration:underline}
+
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:28px 0 10px}
+@media(max-width:680px){.card-grid{grid-template-columns:1fr}}
+.rcard{background:var(--paper);padding:26px 26px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .2s}
+.rcard:hover{background:var(--warm)}
+.rcard .rc-kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
+.rcard h3{font-family:var(--display);font-weight:500;font-size:1.18rem;line-height:1.24;color:var(--ink);margin-bottom:8px}
+.rcard p{font-size:.88rem;color:#55504a;font-weight:300;line-height:1.55;margin-bottom:14px;flex:1}
+.rcard .rc-read{font-size:12px;letter-spacing:.03em;color:var(--gold);font-weight:500}
+
+.essay-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:28px 0 10px}
+@media(max-width:680px){.essay-grid{grid-template-columns:1fr}}
+.ecard{background:#faf7f1;padding:26px 26px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .2s}
+.ecard:hover{background:var(--warm)}
+.ecard .ec-ep{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);font-weight:600;margin-bottom:10px}
+.ecard h3{font-family:var(--display);font-weight:500;font-size:1.12rem;line-height:1.28;color:var(--ink);margin-bottom:8px}
+.ecard p{font-size:.86rem;color:#55504a;font-weight:300;line-height:1.55;margin-bottom:14px;flex:1}
+.ecard .ec-read{font-size:12px;letter-spacing:.03em;color:var(--gold);font-weight:500}
+
+.cta-block{margin:56px 0 8px;padding:38px 36px;background:#14110f;color:#e8e2d6}
+.cta-block h2{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,2.8vw,1.9rem);line-height:1.28;margin-bottom:14px;color:#f4efe5}
+.cta-block p{font-size:.98rem;color:#b8b0a2;font-weight:300;line-height:1.6;max-width:560px;margin-bottom:22px}
+.cta-block a.cta-link{display:inline-block;font-size:14px;font-weight:500;color:#14110f;background:var(--gold-b);padding:12px 24px;text-decoration:none;letter-spacing:.02em}
+.cta-block a.cta-link:hover{background:#f0c070}
+
+.rg-footer{background:#14110f;border-top:1px solid #2a2622;padding:40px 30px 30px;color:#9a938a;margin-top:70px}
+.rg-footer-inner{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;justify-content:space-between}
+.rg-footer .rg-logo img{height:22px}
+.rg-footer-tag{font-size:12px;letter-spacing:.08em;color:#7d766c}
+.rg-footer-links{display:flex;gap:22px;font-size:13px}
+.rg-footer-links a{color:#cdc6bb;text-decoration:none}
+.rg-footer-links a:hover{color:#f0c070}
+.rg-copy{width:100%;text-align:center;font-size:11px;color:#615a51;margin-top:22px;letter-spacing:.04em}
+@media(max-width:600px){.rg-topbar{padding:10px 16px}.rg-nav{gap:15px;font-size:13px}.rg-footer-inner{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<header class="rg-topbar">
+  <a class="rg-logo" href="https://rhinegold.de" aria-label="rhinegold home"><img src="/assets/rhinegold-logo.png" alt="rhinegold" width="620" height="160" style="height:26px;width:auto;display:block"></a>
+  <input type="checkbox" id="rg-nav-toggle" aria-label="Menu">
+  <label class="rg-burger" for="rg-nav-toggle" aria-label="Menu öffnen/schließen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cdc6bb" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></label>
+  <nav class="rg-nav">
+    <a href="https://insights.rhinegold.de/">Insights</a>
+    <a href="https://insights.rhinegold.de/compendium/">Compendium</a>
+    <a href="https://rhinegold.de/services">Services</a>
+    <a href="https://rhinegold.de/methodology">Methodology</a>
+    <a href="https://rhinegold.de/about">About</a>
+    <a href="https://rhinegold.de/contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="crumb"><a href="https://insights.rhinegold.de/">Insights</a> <span class="crumb-sep">/</span> <span class="crumb-cat">Guide</span></div>
+
+  <section class="hero">
+    <span class="eyebrow">AI Brand Reputation · Guide</span>
+    <h1>Your brand is already being described inside AI answers. The question is whether it's being described correctly.</h1>
+    <p class="lede">ChatGPT, Gemini, Perplexity and AI Overviews don't just mention brands — they characterise them. Tone, accuracy and framing are decided at inference time, outside any channel a marketing team currently monitors. Your analytics can show whether someone visited your site. They cannot show what an AI system told that person first — or why the visit never happened.</p>
+    <div class="byline">By Mike Zachrau · rhinegold</div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-label">01 · The risk</div>
+    <h2>What can go wrong inside an AI answer</h2>
+    <p>Traditional reputation monitoring was built around visible communication — news coverage, reviews, social posts. AI answers work differently: they synthesise brand descriptions from model knowledge, retrieved sources and the wording of a question, at inference time. The result can be technically plausible and still strategically wrong — too generic, wrongly framed, or compared against the wrong peer group. There is usually no comment field or publisher to correct it, and small distortions compound across models, prompts and time into something a single spot-check never catches.</p>
+  </section>
+
+  <div class="card-grid">
+    <a class="rcard" href="https://insights.rhinegold.de/compendium/ai-reputation-risk/">
+      <div class="rc-kicker">Governance concept</div>
+      <h3>AI Reputation Risk</h3>
+      <p>The aggregate exposure a brand carries from how AI systems describe, compare and recommend it — the umbrella that the three failure modes below roll up into.</p>
+      <span class="rc-read">Read the definition →</span>
+    </a>
+    <a class="rcard" href="https://insights.rhinegold.de/compendium/hallucination-brand-risk/">
+      <div class="rc-kicker">Failure mode</div>
+      <h3>Hallucination &amp; Brand Risk</h3>
+      <p>A fluent, specific, entirely wrong statement about your pricing, features or fit — sounding authoritative enough that users rarely check it.</p>
+      <span class="rc-read">Read the definition →</span>
+    </a>
+    <a class="rcard" href="https://insights.rhinegold.de/compendium/negated-mention/">
+      <div class="rc-kicker">Failure mode</div>
+      <h3>Negated Mentions</h3>
+      <p>Being named only to be ruled out — "less appropriate for smaller companies," "often considered expensive." Mention counts record this as visibility; it's closer to rejection.</p>
+      <span class="rc-read">Read the definition →</span>
+    </a>
+    <a class="rcard" href="https://insights.rhinegold.de/compendium/phantom-url/">
+      <div class="rc-kicker">Failure mode</div>
+      <h3>Phantom URLs</h3>
+      <p>A plausible-looking citation to a page, report or pricing document that doesn't exist — a factual, reputational and UX failure in one.</p>
+      <span class="rc-read">Read the definition →</span>
+    </a>
+  </div>
+
+  <div class="statcallout">
+    <div class="num">73%</div>
+    <div class="lab">of the time, Google AI Overviews and ChatGPT disagree on how they frame the same brand for identical prompts — so no single provider gives complete coverage.
+      <a href="https://insights.rhinegold.de/compendium/ai-reputation-risk/#sources">Source: BrightEdge, cited in the AI Reputation Risk entry →</a>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="sec-label">02 · The measurement model</div>
+    <h2>Measuring more than positive or negative</h2>
+    <p>Classic sentiment analysis compresses language onto one scale — positive, neutral, negative. That's not enough for AI answers, which are often cautious, conditional and multi-perspectival: a brand can be described positively while framed as unsuitable, or mentioned prominently while weakly connected to the category that matters. A useful model has to separate these dimensions rather than force them into a single polarity score.</p>
+  </section>
+
+  <div class="card-grid">
+    <a class="rcard" href="https://insights.rhinegold.de/compendium/ai-answer-sentiment/">
+      <div class="rc-kicker">Axis</div>
+      <h3>AI Answer Sentiment</h3>
+      <p>The immediate evaluative tone around a mention — trusted, established, expensive, risky — that sets the interpretive frame for everything that follows.</p>
+      <span class="rc-read">Read the definition →</span>
+    </a>
+    <a class="rcard" href="https://insights.rhinegold.de/compendium/multi-axis-sentiment-geo/">
+      <div class="rc-kicker">Model</div>
+      <h3>Multi-Axis Sentiment in GEO</h3>
+      <p>Why a single polarity score hides what matters: tone, confidence and commercial framing can all point in different directions on the same mention.</p>
+      <span class="rc-read">Read the definition →</span>
+    </a>
+    <a class="rcard" href="https://insights.rhinegold.de/compendium/sentiment-drift/">
+      <div class="rc-kicker">Axis</div>
+      <h3>Sentiment Drift</h3>
+      <p>How the characterisation moves over time as models update — a category leader quietly reframed as a traditional or niche option, without one dramatic event.</p>
+      <span class="rc-read">Read the definition →</span>
+    </a>
+    <a class="rcard" href="https://insights.rhinegold.de/compendium/semantic-anchoring/">
+      <div class="rc-kicker">Axis</div>
+      <h3>Semantic Anchoring</h3>
+      <p>Whether a brand is embedded in the model's own representation of a category, or only surfaces because one page was retrieved — durable presence vs. fragile exposure.</p>
+      <span class="rc-read">Read the definition →</span>
+    </a>
+    <a class="rcard" href="https://insights.rhinegold.de/compendium/brand-voice-match/" style="grid-column:1/-1">
+      <div class="rc-kicker">Axis</div>
+      <h3>Brand Voice Match</h3>
+      <p>Whether the AI-generated description still sounds like the brand, or reduces a differentiated proposition to generic category language.</p>
+      <span class="rc-read">Read the definition →</span>
+    </a>
+  </div>
+
+  <section class="sec">
+    <div class="sec-label">03 · Operational control</div>
+    <h2>From isolated tests to continuous control</h2>
+    <p>A handful of manually tested prompts can surface examples — they can't establish whether those examples are representative. Reputation governance needs repeatable observation across models, buyer situations, prompt phrasing, competitors and time. Two instruments cover that: a one-time baseline, and continuous tracking.</p>
+  </section>
+
+  <div class="card-grid">
+    <a class="rcard" href="https://insights.rhinegold.de/compendium/ai-visibility-audit/">
+      <div class="rc-kicker">Baseline</div>
+      <h3>AI Visibility Audit</h3>
+      <p>Where a brand appears, how it's characterised, which sources support the answers, and where the material gaps and risks sit — a prioritised evidence base, not a snapshot of examples.</p>
+      <span class="rc-read">Read the definition →</span>
+    </a>
+    <a class="rcard" href="https://insights.rhinegold.de/compendium/llm-brand-tracking/">
+      <div class="rc-kicker">Continuity</div>
+      <h3>LLM Brand Tracking</h3>
+      <p>Monitoring visibility, sentiment, accuracy and competitive framing as they change — so a hallucination, a drift or a lost semantic connection surfaces early enough to act on.</p>
+      <span class="rc-read">Read the definition →</span>
+    </a>
+  </div>
+
+  <section class="sec">
+    <div class="sec-label">Why conventional analytics misses this</div>
+    <h2>From the Insights series</h2>
+    <p>Two essays go deeper on why the existing analytics stack can't see this layer, and what to track instead.</p>
+  </section>
+
+  <div class="essay-grid">
+    <a class="ecard" href="https://insights.rhinegold.de/blog_ep02_wrong_layer.html">
+      <div class="ec-ep">Episode 02 · The Measurement Problem</div>
+      <h3>Why Your Analytics Stack Is Measuring the Wrong Layer</h3>
+      <p>Rankings and clicks show where a brand appeared and whether a user arrived — not what the user was told first, or which alternatives were recommended instead.</p>
+      <span class="ec-read">Read the essay →</span>
+    </a>
+    <a class="ecard" href="https://insights.rhinegold.de/episode4.html">
+      <div class="ec-ep">Episode 04 · The Method</div>
+      <h3>How to Measure What You Can't See</h3>
+      <p>GEO metrics for the B2B practitioner: what to track when buyers research through ChatGPT, Perplexity and Gemini before ever reaching your domain.</p>
+      <span class="ec-read">Read the essay →</span>
+    </a>
+  </div>
+
+  <section class="sec">
+    <div class="sec-label">The bigger picture</div>
+    <h2>Visibility without interpretation is not enough</h2>
+    <p>A brand can achieve high mention frequency and still be misunderstood — cited often but recommended rarely, prominent but associated with the wrong audience, positively worded but excluded from the final recommendation. The relevant unit of analysis isn't the mention. It's the complete representation: whether the brand appears, where, how it's framed, which claims are made, how confident the answer sounds, which competitors surround it, and what the user is implicitly encouraged to do next. That's the difference between AI visibility measurement and AI reputation intelligence.</p>
+  </section>
+
+  <div class="cta-block">
+    <h2>Find out how AI systems currently describe your brand</h2>
+    <p>An AI Visibility Audit establishes where your brand appears, what's being said, and which risks need attention — a structured baseline across tone, accuracy, recommendations, competitive framing and semantic positioning.</p>
+    <a class="cta-link" href="https://rhinegold.de/services">Request an AI Visibility Audit →</a>
+  </div>
+
+</div>
+</main>
+
+<footer class="rg-footer">
+  <div class="rg-footer-inner">
+    <a class="rg-logo" href="https://rhinegold.de" aria-label="rhinegold home" style="display:flex;align-items:center;text-decoration:none"><img src="/assets/rhinegold-logo.png" alt="rhinegold" width="620" height="160" style="height:22px;width:auto;display:block"></a>
+    <div class="rg-footer-tag" style="font-size:12px;letter-spacing:.08em;color:#7d766c">Semantic Intelligence · Decision Systems · External Resonance</div>
+    <div class="rg-footer-links" style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;flex-wrap:wrap;gap:20px;font-size:13px">
+        <a href="https://insights.rhinegold.de/">Insights</a>
+        <a href="https://insights.rhinegold.de/compendium/">Compendium</a>
+        <a href="https://rhinegold.de/services">Services</a>
+        <a href="https://rhinegold.de/methodology">Methodology</a>
+        <a href="https://rhinegold.de/about">About</a>
+        <a href="https://rhinegold.de/contact">Contact</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:20px;font-size:12px;color:#7d766c">
+        <a href="https://rhinegold.de/legal-notice" style="color:#7d766c">Legal Notice</a>
+        <a href="https://rhinegold.de/privacy-policy" style="color:#7d766c">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+  <div class="rg-copy">© 2026 rhinegold</div>
+</footer>
+
+</body>
+</html>
