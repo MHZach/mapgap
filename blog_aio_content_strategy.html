@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AIO Content Paradox: Why Definitional Pages Dominate AI Overviews — rhinegold Insights</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f0e0d;
+    --paper: #f7f4ef;
+    --accent: #c8392b;
+    --accent-muted: #e8d5d3;
+    --mid: #6b6560;
+    --rule: #d4cfc8;
+    --mono: 'JetBrains Mono', monospace;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --display: 'Playfair Display', Georgia, serif;
+  }
+
+  html { background: var(--paper); }
+
+  body {
+    font-family: var(--serif);
+    color: var(--ink);
+    background: var(--paper);
+    font-size: 18px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  .masthead {
+    border-bottom: 3px solid var(--ink);
+    padding: 18px 40px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    animation: fadeDown 0.6s ease both;
+  }
+
+  .masthead-series {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+
+  .masthead-byline {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--mid);
+  }
+
+  .masthead-byline strong { color: var(--ink); font-weight: 500; }
+
+  .hero {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 72px 40px 48px;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+
+  .episode-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .episode-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--accent);
+    max-width: 60px;
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    color: var(--ink);
+  }
+
+  h1 em { font-style: italic; color: var(--accent); }
+
+  .deck {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #3a3632;
+    font-weight: 300;
+    font-style: italic;
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+    margin-bottom: 40px;
+  }
+
+  .meta-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--mid);
+    letter-spacing: 0.08em;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .meta-dot { color: var(--rule); }
+
+  .article-body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 40px 100px;
+    animation: fadeUp 0.8s 0.25s ease both;
+  }
+
+  .article-body p { margin-bottom: 1.5em; font-weight: 300; }
+  .article-body p + p { text-indent: 1.5em; }
+  .article-body p:first-of-type { text-indent: 0; }
+
+  .pullquote {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 1.45rem;
+    line-height: 1.4;
+    color: var(--ink);
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding: 28px 0 24px;
+    margin: 44px 0;
+    font-weight: 700;
+  }
+
+  .pullquote span {
+    display: block;
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--mid);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 14px;
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2.5em 0 0.8em;
+    color: var(--ink);
+  }
+
+  .annotation {
+    font-family: var(--mono);
+    font-size: 12px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2px 8px;
+    letter-spacing: 0.06em;
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+
+  /* Data table */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 36px 0;
+    font-size: 14px;
+  }
+
+  .data-table th {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 10px 14px;
+    background: var(--ink);
+    color: var(--paper);
+    font-weight: 500;
+  }
+
+  .data-table th:not(:first-child) { text-align: right; }
+
+  .data-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  .data-table td:not(:first-child) {
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:nth-child(even) td { background: #f2ede7; }
+
+  .data-table td:first-child {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--mid);
+  }
+
+  .data-table .total-row td {
+    font-weight: 500;
+    border-top: 2px solid var(--ink);
+    border-bottom: none;
+    color: var(--ink);
+  }
+
+  /* Stat callout */
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background: var(--rule);
+    margin: 40px 0;
+    border: 1px solid var(--rule);
+  }
+
+  .stat-cell {
+    background: var(--paper);
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: var(--display);
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mid);
+    line-height: 1.4;
+  }
+
+  /* Finding box */
+  .thesis-box {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 32px 36px;
+    margin: 44px 0;
+  }
+
+  .thesis-box .thesis-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .thesis-box p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    font-weight: 300;
+    margin-bottom: 0;
+    text-indent: 0 !important;
+    color: #e8e3dc;
+  }
+
+  .thesis-box p + p { margin-top: 1em; text-indent: 0 !important; }
+
+  /* Sources */
+  .sources-box {
+    border-top: 1px solid var(--rule);
+    margin-top: 52px;
+    padding-top: 28px;
+  }
+
+  .sources-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 16px;
+  }
+
+  .sources-list { list-style: none; }
+
+  .sources-list li {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--mid);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 12px;
+  }
+
+  .sources-list li:last-child { border-bottom: none; }
+
+  .src-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .sources-list a {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--rule);
+    text-underline-offset: 2px;
+  }
+
+  .sources-list a:hover { text-decoration-color: var(--ink); }
+
+  .src-note {
+    display: block;
+    font-style: italic;
+    color: #9a9690;
+    font-size: 11px;
+    margin-top: 2px;
+  }
+
+  .cite {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-muted);
+    text-underline-offset: 3px;
+    font-weight: 400;
+    transition: text-decoration-color 0.2s;
+  }
+
+  .cite:hover { text-decoration-color: var(--accent); }
+
+  .cite-inv {
+    color: #e8a09a;
+    text-decoration-color: rgba(200,57,43,0.4);
+  }
+
+  .cite-inv:hover { text-decoration-color: #e8a09a; }
+
+  .episode-nav {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 40px 40px 60px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+
+  .next-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+
+  .next-title {
+    font-family: var(--display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  .next-teaser {
+    font-size: 13px;
+    color: var(--mid);
+    margin-top: 8px;
+    font-weight: 300;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 640px) {
+    .masthead { padding: 14px 20px; flex-direction: column; gap: 6px; }
+    .hero { padding: 48px 20px 32px; }
+    .article-body { padding: 0 20px 60px; }
+    .stat-row { grid-template-columns: 1fr; }
+    .episode-nav { padding: 32px 20px 40px; flex-direction: column; gap: 32px; }
+  }
+</style>
+
+<meta name="description" content="Google's new Generative AI Performance reports reveal what keyword tools have always missed: roughly three-quarters of AI Overview impressions go to definitional content, not category pages. The architecture of AIO success is counterintuitive.">
+<meta name="author" content="Mike Zachrau">
+<link rel="canonical" href="https://insights.rhinegold.de/blog_aio_content_strategy.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="rhinegold — Insights">
+<meta property="og:title" content="The AIO Content Paradox: Why Definitional Pages Dominate AI Overviews">
+<meta property="og:description" content="Google's new Generative AI Performance reports reveal what keyword tools have always missed: roughly three-quarters of AI Overview impressions go to definitional content, not category pages.">
+<meta property="og:url" content="https://insights.rhinegold.de/blog_aio_content_strategy.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The AIO Content Paradox: Why Definitional Pages Dominate AI Overviews">
+<meta name="twitter:description" content="Google's new Generative AI Performance reports reveal what keyword tools have always missed: roughly three-quarters of AI Overview impressions go to definitional content, not category pages.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The AIO Content Paradox: Why Definitional Pages Dominate AI Overviews","description":"Google's new Generative AI Performance reports reveal what keyword tools have always missed: roughly three-quarters of AI Overview impressions go to definitional content, not category pages. The architecture of AIO success is counterintuitive.","author":{"@type":"Person","name":"Mike Zachrau"},"publisher":{"@type":"Organization","name":"rhinegold","url":"https://rhinegold.de"},"datePublished":"2026-07-24","dateModified":"2026-07-24","mainEntityOfPage":{"@type":"WebPage","@id":"https://insights.rhinegold.de/blog_aio_content_strategy.html"},"isPartOf":{"@type":"Blog","name":"rhinegold Insights","url":"https://insights.rhinegold.de/"}}</script>
+
+<style id="rg-frame-style">
+.rg-topbar,.rg-footer{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;box-sizing:border-box;}
+.rg-topbar{background:#14110f;border-bottom:1px solid #2a2622;padding:12px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.rg-topbar .rg-logo img{height:24px;width:auto;display:block;}
+.rg-nav{display:flex;gap:26px;font-size:14px;letter-spacing:.01em;}
+.rg-nav a{color:#cdc6bb;text-decoration:none;transition:color .15s;}
+.rg-nav a:hover{color:#f0c070;}
+.rg-footer{background:#14110f;border-top:1px solid #2a2622;padding:36px 30px 30px;color:#9a938a;}
+.rg-footer-inner{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;justify-content:space-between;}
+.rg-footer .rg-logo img{height:22px;width:auto;display:block;}
+.rg-footer-tag{font-size:12px;letter-spacing:.08em;color:#7d766c;}
+.rg-footer-links{display:flex;gap:22px;font-size:13px;}
+.rg-footer-links a{color:#cdc6bb;text-decoration:none;}
+.rg-footer-links a:hover{color:#f0c070;}
+.rg-copy{width:100%;text-align:center;font-size:11px;color:#615a51;margin-top:20px;letter-spacing:.04em;}
+@media(max-width:600px){.rg-topbar{padding:10px 16px;}.rg-nav{gap:15px;font-size:13px;}.rg-footer{padding:28px 16px;}.rg-footer-inner{flex-direction:column;align-items:flex-start;}}
+.rg-topbar{position:relative}
+.rg-burger{display:none;cursor:pointer;padding:4px;background:transparent;border:0;line-height:0}
+#rg-nav-toggle{position:absolute;left:-9999px;width:1px;height:1px}
+@media(max-width:699px){
+.rg-burger{display:flex;align-items:center}
+.rg-topbar .rg-nav{display:none;position:absolute;top:100%;right:0;left:0;background:#14110f;flex-direction:column;padding:14px 30px;gap:14px;border-bottom:1px solid #2a2622;z-index:50}
+#rg-nav-toggle:checked~.rg-nav{display:flex}
+}
+</style>
+</head>
+<body>
+
+<header class="rg-topbar">
+  <a class="rg-logo" href="https://rhinegold.de" aria-label="rhinegold home" style="display:flex;align-items:center;text-decoration:none"><img src="https://insights.rhinegold.de/assets/rhinegold-logo.png" alt="rhinegold" width="620" height="160" style="height:26px;width:auto;display:block"></a>
+  <input type="checkbox" id="rg-nav-toggle" aria-label="Menu">
+  <label class="rg-burger" for="rg-nav-toggle" aria-label="Menu öffnen/schließen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cdc6bb" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></label>
+  <nav class="rg-nav">
+    <a href="https://insights.rhinegold.de/" class="active">Insights</a>
+    <a href="https://insights.rhinegold.de/compendium/">Compendium</a>
+    <a href="https://rhinegold.de/services">Services</a>
+    <a href="https://rhinegold.de/methodology">Methodology</a>
+    <a href="https://rhinegold.de/about">About</a>
+    <a href="https://rhinegold.de/contact">Contact</a>
+  </nav>
+</header>
+
+<header class="masthead">
+  <div class="masthead-series">Data Dispatch — AI Search Measurement</div>
+  <div class="masthead-byline">By <strong>Mike Zachrau</strong></div>
+</header>
+
+<article>
+  <div class="hero">
+    <div class="episode-label">June 2026 — First Data</div>
+    <h1>The <em>AIO Content</em><br>Paradox</h1>
+    <p class="deck">
+      Google's new Generative AI Performance reports are out, and the first real data on
+      which pages actually appear in AI Overviews reveals something that contradicts
+      almost everything keyword tools have been telling us. The pages that dominate
+      are not the ones you optimized for.
+    </p>
+    <div class="meta-row">
+      <span>Mike Zachrau</span>
+      <span class="meta-dot">·</span>
+      <span>June 2026</span>
+      <span class="meta-dot">·</span>
+      <span>~900 words</span>
+      <span class="meta-dot">·</span>
+      <span>Data Dispatch</span>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <p>
+      On June 3, 2026, Google quietly added something genuinely useful to Search Console:
+      a Generative AI Performance report showing, for the first time, exactly which pages
+      from your domain appear inside AI Overviews and AI Mode — and how often.
+      The data goes back to May 18. It shows only impressions, not clicks.
+      There is no query breakdown. But even in its limited form,
+      it already overturns one of the central assumptions of AIO strategy.
+    </p>
+
+    <p>
+      The assumption: optimize for the keywords your tools flag as AIO-triggering,
+      prioritize your high-value category pages, and you control your AI Overview presence.
+      The data says otherwise. By a wide margin.
+    </p>
+
+    <h2>What the First Numbers Show</h2>
+
+    <p>
+      Across a B2B domain measured over the first 35 days of available
+      GSC Generative AI data, the impression distribution by content type is stark:
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Content type</th>
+          <th>Share</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Glossary / definitional</td>
+          <td>49%</td>
+        </tr>
+        <tr>
+          <td>Blog / how-to / explainer</td>
+          <td>26%</td>
+        </tr>
+        <tr>
+          <td>Product / category pages</td>
+          <td>19%</td>
+        </tr>
+        <tr>
+          <td>All other</td>
+          <td>6%</td>
+        </tr>
+        <tr class="total-row">
+          <td>Total</td>
+          <td>100%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Glossary and blog content together account for <strong>roughly three-quarters of all AI Overview impressions</strong>.
+      Product and category pages — the pages that receive the lion's share of SEO investment,
+      conversion optimization, and paid promotion — account for less than a fifth.
+    </p>
+
+    <p>
+      The top-performing individual URL is a glossary entry on a core conceptual term
+      with low commercial intent and negligible CPC. It generated more AI Overview impressions
+      in 35 days than the domain's primary product landing pages combined.
+    </p>
+
+    <div class="pullquote">
+      "Roughly three-quarters of AI Overview impressions went to content
+       that most SEO teams treat as support material,
+       not as a primary channel."
+      <span>— First 35 days of GSC Generative AI data, B2B</span>
+    </div>
+
+    <h2>The Measurement Gap</h2>
+
+    <p>
+      This finding also exposes a structural problem with how AIO exposure has been
+      estimated until now. Standard keyword research tools flag individual keywords
+      as AIO-triggering, typically across a domain's top 30–50 ranking terms.
+      Those flags are real — the keywords do trigger AI Overviews — but they measure
+      only a narrow slice of actual exposure.
+    </p>
+
+    <div class="stat-row">
+      <div class="stat-cell">
+        <div class="stat-number">22%</div>
+        <div class="stat-label">of actual AIO impressions captured by keyword tools</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">3.2×</div>
+        <div class="stat-label">underestimation factor vs. GSC ground truth</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">Most</div>
+        <div class="stat-label">AIO-active URLs entirely invisible to keyword tracking</div>
+      </div>
+    </div>
+
+    <p>
+      Keyword tools are optimized to track high-traffic, high-competition terms —
+      precisely because those terms are where rankings matter most for traditional SEO.
+      But AIO fires most intensely on <em>definitional, informational queries</em>:
+      what is X, how does Y work, what does Z mean. These queries sit at the
+      opposite end of the intent spectrum from high-CPC commercial terms.
+      They appear in almost no competitive keyword set. And they account for
+      the majority of actual AI Overview impression volume.
+    </p>
+
+    <p>
+      The implication is not that keyword tools are wrong about the queries they track.
+      It is that the queries they track are the wrong sample.
+      <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" target="_blank" rel="noopener" class="cite">The GSC Generative AI Performance report</a>,
+      launched June 3, is currently the only source that measures this correctly —
+      directly, at impression level, from the source.
+    </p>
+
+    <h2>Why Definitional Content Wins</h2>
+
+    <p>
+      The mechanism is not accidental. AI Overviews function as
+      <span class="annotation">CITATION ENGINES</span> for definitional vocabulary.
+      When a user asks "what is [concept]" or "how does [mechanism] work,"
+      the AI Overview must source a definition. It retrieves the most retrievable
+      authoritative answer in its training and retrieval corpus — which is almost never
+      a product page and almost always a page whose entire purpose is to explain
+      a concept clearly, completely, and without conversion friction.
+    </p>
+
+    <p>
+      Glossary entries, explainer articles, and how-to content are structurally
+      adapted for this retrieval pattern. They contain the concept term,
+      its synonyms, related mechanisms, and a clean semantic context —
+      everything a retrieval system needs to anchor a citation.
+      A category page optimized for conversion sends mixed signals:
+      product benefits, pricing language, CTAs.
+      It is a poor source for a definition even if it ranks well for a keyword.
+    </p>
+
+    <div class="thesis-box">
+      <div class="thesis-label">The Strategic Implication</div>
+      <p>
+        AIO presence is an architectural outcome, not a keyword optimization outcome.
+        The domains that dominate AI Overviews are those that have invested
+        in definitional depth across their category vocabulary —
+        not just the head terms, but the full semantic neighborhood:
+        sub-concepts, mechanisms, adjacent definitions, common distinctions.
+      </p>
+      <p>
+        A category page for a core product will rarely appear in AI Overviews.
+        A well-constructed glossary entry for a concept that buyers encounter
+        on the path to that product will appear constantly.
+        The competitive question is no longer which keywords you rank for —
+        it is which concepts in your category you own the definition of.
+      </p>
+    </div>
+
+    <h2>The Measurement Shift Required</h2>
+
+    <p>
+      The practical consequence is a change in what you measure and how you act on it.
+      A keyword AIO flag tells you that a specific high-traffic query triggers an AI Overview.
+      That is useful directional information. It tells you almost nothing about
+      actual impression volume, about which pages are generating that volume,
+      or about the long-tail definitional queries driving the majority of AIO traffic.
+    </p>
+
+    <p>
+      The GSC Generative AI report answers a different question:
+      which of your pages actually appear, and how often.
+      That data enables content gap analysis —
+      identifying concepts in your category that buyers query,
+      that competitors partially cover, and that you have not yet
+      given a dedicated authoritative page. Each gap is a slot
+      in the AI Overview citation pool that you are not filling.
+    </p>
+
+    <p>
+      The rollout of the GSC report is still incomplete —
+      <a href="https://support.google.com/webmasters/answer/16984139" target="_blank" rel="noopener" class="cite">Google launched it initially for a subset of properties</a>
+      and is expanding gradually. There is no API yet;
+      the data requires a manual CSV export per property.
+      Despite those limitations, it is already the most accurate
+      AIO measurement available — and the gap between
+      organizations using it and those relying on keyword tool
+      AIO flags alone is approximately 3.2 times the reported exposure.
+    </p>
+
+    <p>
+      The window to act on first-mover data advantage is,
+      as always, shorter than it looks from the outside.
+    </p>
+
+    <div class="sources-box">
+      <div class="sources-label">Sources &amp; Notes</div>
+      <ul class="sources-list">
+        <li>
+          <span class="src-num">01</span>
+          <span>
+            <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" target="_blank" rel="noopener">Google Search Central — Introducing Search Generative AI Performance Reports in Search Console</a>
+            <span class="src-note">June 3, 2026. Official announcement of the Generative AI Performance report. Data available from May 18, 2026.</span>
+          </span>
+        </li>
+        <li>
+          <span class="src-num">02</span>
+          <span>
+            <a href="https://support.google.com/webmasters/answer/16984139" target="_blank" rel="noopener">Google Search Console Help — Generative AI Performance Report (Search)</a>
+            <span class="src-note">Official documentation. Dimensions available: impressions, pages, countries, devices, dates. No query-level breakdown currently.</span>
+          </span>
+        </li>
+        <li>
+          <span class="src-num">03</span>
+          <span>
+            <a href="https://insights.rhinegold.de/compendium/earned-media-grounding/" target="_blank" rel="noopener">rhinegold Compendium — Earned Media Grounding</a>
+            <span class="src-note">The complementary concept: third-party platform presence that LLMs retrieve and cite. Connects AIO content strategy to broader GEO architecture.</span>
+          </span>
+        </li>
+        <li>
+          <span class="src-num">04</span>
+          <span>
+            <a href="https://insights.rhinegold.de/compendium/generative-engine-optimization/" target="_blank" rel="noopener">rhinegold Compendium — Generative Engine Optimization</a>
+            <span class="src-note">The strategic framework within which AIO content architecture operates.</span>
+          </span>
+        </li>
+      </ul>
+      <p style="font-size:11px; color: var(--mid); margin-top: 14px; font-style: italic;">
+        Impression data based on 35 days of GSC Generative AI Performance report output
+        (May 18 – June 21, 2026) across a B2B domain.
+        Content type classification by URL path pattern.
+      </p>
+    </div>
+
+  </div>
+</article>
+
+<nav class="episode-nav">
+  <div>
+    <div class="next-label">Related Reading</div>
+    <a href="https://insights.rhinegold.de/compendium/earned-media-grounding/" style="text-decoration:none; color:inherit;">
+      <div class="next-title">Earned Media Grounding →</div>
+      <div class="next-teaser">The GEO equivalent of link-building: which platforms LLMs actually retrieve, and why retrievability has replaced traffic as the success criterion.</div>
+    </a>
+  </div>
+  <div style="text-align:right">
+    <div class="next-label">Series</div>
+    <div style="font-family:var(--mono);font-size:11px;color:var(--mid);line-height:2">
+      <div><a href="episode1.html" style="color:var(--mid);text-decoration:none">Ep. 01 — The Two-Year Window</a></div>
+      <div><a href="blog_ep02_wrong_layer.html" style="color:var(--mid);text-decoration:none">Ep. 02 — The Wrong Layer</a></div>
+      <div><a href="episode3.html" style="color:var(--mid);text-decoration:none">Ep. 03 — The Invisible Buyer Journey</a></div>
+      <div><a href="episode4.html" style="color:var(--mid);text-decoration:none">Ep. 04 — How to Measure What You Can't See</a></div>
+      <div><a href="episode5.html" style="color:var(--mid);text-decoration:none">Ep. 05 — The Triangulation Method</a></div>
+    </div>
+  </div>
+</nav>
+
+<footer class="rg-footer">
+  <div class="rg-footer-inner">
+    <a class="rg-logo" href="https://rhinegold.de" aria-label="rhinegold home" style="display:flex;align-items:center;text-decoration:none"><img src="https://insights.rhinegold.de/assets/rhinegold-logo.png" alt="rhinegold" width="620" height="160" style="height:22px;width:auto;display:block"></a>
+    <div class="rg-footer-tag" style="font-size:12px;letter-spacing:.08em;color:#7d766c">Semantic Intelligence · Decision Systems · External Resonance</div>
+    <div class="rg-footer-links" style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;flex-wrap:wrap;gap:20px;font-size:13px">
+        <a href="https://insights.rhinegold.de/">Insights</a>
+        <a href="https://insights.rhinegold.de/compendium/">Compendium</a>
+        <a href="https://rhinegold.de/services">Services</a>
+        <a href="https://rhinegold.de/methodology">Methodology</a>
+        <a href="https://rhinegold.de/about">About</a>
+        <a href="https://rhinegold.de/contact">Contact</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:20px;font-size:12px;color:#7d766c">
+        <a href="https://rhinegold.de/legal-notice" style="color:#7d766c">Legal Notice</a>
+        <a href="https://rhinegold.de/privacy-policy" style="color:#7d766c">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+  <div class="rg-copy">© 2026 rhinegold</div>
+</footer>
+
+</body>
+</html>
