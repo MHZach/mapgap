@@ -1,0 +1,80 @@
+name: Generate root sitemap (Insights)
+
+# Haelt sitemap-insights.xml (Root-Content: Episoden, Data-Dispatch-Artikel, Guides,
+# Waitlist) + den sitemap.xml-Index automatisch synchron mit dem TATSAECHLICH
+# deployten Root-Korpus. Analog zu sitemap.yml (compendium), aber fuer alles
+# AUSSERHALB von compendium/ — die zwei Sitemaps werden nie gemischt geschrieben,
+# um Race-Conditions zwischen den beiden Workflows zu vermeiden.
+#
+# Ausschluss-Regeln (automatisch erkannt, nicht hartkodiert):
+#   - *.bak* / googleba*.html (Backups, GSC-Verifikationsdatei)
+#   - Seiten mit <meta http-equiv="refresh"> (Redirect-Stubs, z.B. /glossar/, /insights/, /anwendungen/)
+#   - Seiten mit <meta name="robots" content="noindex"> (z.B. waitlist/thanks/)
+#   - alles unter compendium/ (eigene Sitemap, sitemap.yml)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'guides/**'
+      - 'waitlist/**'
+      - '.github/workflows/root-sitemap.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0              # volle Historie fuer <lastmod> = git-Commit-Datum je Datei
+
+      - name: Build sitemap-insights.xml from live root corpus
+        run: |
+          {
+            echo '<?xml version="1.0" encoding="UTF-8"?>'
+            echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            for f in *.html; do
+              [ -f "$f" ] || continue
+              case "$f" in googleba*|*.bak*) continue ;; esac
+              grep -q 'http-equiv="refresh"' "$f" && continue
+              grep -qi 'name="robots" content="noindex' "$f" && continue
+              lastmod=$(git log -1 --format=%cs -- "$f")
+              if [ "$f" = "index.html" ]; then
+                loc="https://insights.rhinegold.de/"
+              else
+                loc="https://insights.rhinegold.de/${f}"
+              fi
+              echo "  <url><loc>${loc}</loc><lastmod>${lastmod}</lastmod></url>"
+            done
+            for f in $(find . -mindepth 2 -iname "index.html" -not -path "./compendium/*" | sed 's#^\./##' | sort); do
+              grep -q 'http-equiv="refresh"' "$f" && continue
+              grep -qi 'name="robots" content="noindex' "$f" && continue
+              url_path=$(dirname "$f")
+              lastmod=$(git log -1 --format=%cs -- "$f")
+              echo "  <url><loc>https://insights.rhinegold.de/${url_path}/</loc><lastmod>${lastmod}</lastmod></url>"
+            done
+            echo '</urlset>'
+          } > sitemap-insights.xml
+
+      - name: Build sitemap.xml index (references sitemap-insights.xml + compendium/sitemap.xml)
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          {
+            echo '<?xml version="1.0" encoding="UTF-8"?>'
+            echo '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            echo "  <sitemap><loc>https://insights.rhinegold.de/sitemap-insights.xml</loc><lastmod>${TODAY}</lastmod></sitemap>"
+            echo "  <sitemap><loc>https://insights.rhinegold.de/compendium/sitemap.xml</loc><lastmod>${TODAY}</lastmod></sitemap>"
+            echo '</sitemapindex>'
+          } > sitemap.xml
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap-insights.xml sitemap.xml
+          git diff --staged --quiet || { git commit -m "chore: regenerate root sitemap"; git push; }
