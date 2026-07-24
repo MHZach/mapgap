@@ -5,13 +5,22 @@
     <link>https://insights.rhinegold.de/</link>
     <description>Practitioner-level analysis on semantic intelligence, AI search, and what B2B brands need to do differently — by rhinegold.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Jun 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/assets/og-default.png</url>
       <title>rhinegold Insights</title>
       <link>https://insights.rhinegold.de/</link>
     </image>
+
+    <item>
+      <title>The AIO Content Paradox: Why Definitional Pages Dominate AI Overviews</title>
+      <link>https://insights.rhinegold.de/blog_aio_content_strategy.html</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/blog_aio_content_strategy.html</guid>
+      <pubDate>Fri, 24 Jul 2026 12:00:00 +0000</pubDate>
+      <description>Google's new Generative AI Performance report shows what keyword tools have always missed: roughly three-quarters of AI Overview impressions go to glossary and blog content, not the category pages SEO teams optimize for.</description>
+      <category>Insights</category>
+    </item>
 
     <item>
       <title>Content Architecture for LLM Authority</title>
