@@ -18,3 +18,9 @@ venv/
 
 # asset-gallery wurde 2026-07-06 in privates Repo ausgelagert (MHZach/asset-gallery)
 asset-gallery/
+
+# PyCharm/IntelliJ (pro Maschine)
+.idea/
+
+# HTML-Backup-Fossilien vom Bundle-Umbau (2026-06-17)
+*.bak_*
