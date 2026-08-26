@@ -1,7 +1,21 @@
 {
   "_note": "PUBLIC LINKS MUST point to https://insights.rhinegold.de/... — NEVER rhinegold.de/... The rhinegold.de/compendium/* Framer redirect is broken (:splat not substituted) and returns 404 on every URL until the Framer routing is fixed. After editing this file, purge the jsDelivr cache: https://purge.jsdelivr.net/gh/MHZach/mapgap@main/feed.json . Verify every new URL with curl (HTTP 200) before announcing it live.",
-  "updated": "2026-07-24",
+  "updated": "2026-08-26",
   "items": [
+    {
+      "title": "Vendor Concentration Risk",
+      "url": "https://insights.rhinegold.de/compendium/vendor-concentration-risk/",
+      "date": "2026-08-26",
+      "type": "compendium",
+      "teaser": "Vendor concentration risk is the exposure an enterprise takes on when it depends on a single — or very few — AI providers for critical workflows. It is a direct application of established supplier-concentration and ICT third-party-risk frameworks to AI. The 19-day suspension of Anthropic's Fable 5 and Mythos 5 in June 2026 — imposed by government directive, lifted by the same route — made it concrete at board level."
+    },
+    {
+      "title": "Sovereign AI & the EU Model Stack",
+      "url": "https://insights.rhinegold.de/compendium/sovereign-ai-eu-model-stack/",
+      "date": "2026-08-26",
+      "type": "compendium",
+      "teaser": "Sovereign AI is the strategy of running inference on models and infrastructure under European jurisdiction — EU providers, or open-weight models self-hosted on EU compute — to satisfy GDPR/DORA/AI-Act obligations and reduce export-control exposure. It is the internal-processing answer where the enterprise controls the choice, accepting a capability trade-off that only task-specific evaluation can size."
+    },
     {
       "title": "The AIO Content Paradox: Why Definitional Pages Dominate AI Overviews",
       "url": "https://insights.rhinegold.de/blog_aio_content_strategy.html",
