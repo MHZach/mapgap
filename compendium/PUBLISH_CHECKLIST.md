@@ -46,6 +46,20 @@
 - [ ] Sitemap regeneriert (nach jedem Artikel-Add/-Edit):
       `cd ~/PycharmProjects/se4b && python -m compendium.build.sitemap ~/PycharmProjects/mapgap/compendium`
 
+## 3b · Korpus-Kohäsion (BLOCKER, seit 2026-08-26)
+
+- **≥ 3 ausgehende** Links auf andere Korpus-Einträge, **≥ 2 eingehende** von anderen.
+  Darunter bricht das Gate ab (Exit 1). Unter dem Korpus-Median: WARN.
+- Gezählt werden Fließtext-Links **und** Related terms, relativ wie absolut.
+- **Der Auto-Mirror allein genügt nicht.** Er spiegelt nur symmetrische
+  `related_relations` — er ersetzt weder Querverweise im Text noch die
+  Rückverlinkung aus thematisch passenden Bestands-Einträgen.
+- Corpus-Slugs ohne Entry (live in mapgap) sieht nur der **Standalone**-Lauf:
+  `python -m compendium.build.qa ~/PycharmProjects/mapgap/compendium`
+- Anlass: Zwei Einträge gingen am 26.08. mit grünem Gate (64/64) live, einer davon
+  mit 2 ausgehenden Links auf Rang 64/64 des Korpus; `earned-media-grounding` hatte
+  0 eingehende. Die Regel stand nur in der Wellen-Planung, nicht im Gate.
+
 ## 4 · Erst nach 1–3: Push + Live-Verifikation
 - [ ] commit + push
 - [ ] Live-URL curl: HTTP 200 + **exakter** Inhalts-Diskriminator (Titel, kein Substring)
