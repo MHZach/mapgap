@@ -5,7 +5,7 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Aug 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
@@ -13,6 +13,14 @@
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
 
+    <item>
+      <title>API vs UI Measurement (LLM Visibility)</title>
+      <link>https://insights.rhinegold.de/compendium/api-vs-ui-llm-visibility/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/api-vs-ui-llm-visibility/</guid>
+      <pubDate>Sun, 30 Aug 2026 12:00:00 +0000</pubDate>
+      <description>The same prompts produce measurably different answers through a provider's API than through its consumer interface — an August 2026 comparison reports a 41% average shift in brand visibility between the two paths. The finding is real; the conclusion that only UI-scraped data shows 'what real users see' does not follow. Neither path observes 'the' answer: divergence makes the access path a mandatory disclosure, and relative within-instrument metrics the defensible way to track.</description>
+      <category>Compendium</category>
+    </item>
     <item>
       <title>Vendor Concentration Risk</title>
       <link>https://insights.rhinegold.de/compendium/vendor-concentration-risk/</link>

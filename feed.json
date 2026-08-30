@@ -3,6 +3,13 @@
   "updated": "2026-08-26",
   "items": [
     {
+      "title": "API vs UI Measurement (LLM Visibility)",
+      "url": "https://insights.rhinegold.de/compendium/api-vs-ui-llm-visibility/",
+      "date": "2026-08-30",
+      "type": "compendium",
+      "teaser": "The same prompts produce measurably different answers through a provider's API than through its consumer interface — an August 2026 comparison reports a 41% average shift in brand visibility between the two paths. The finding is real; the conclusion that only UI-scraped data shows 'what real users see' does not follow. Neither path observes 'the' answer: divergence makes the access path a mandatory disclosure, relative within-instrument metrics the defensible way to track, and the two paths complements — not rivals for a single truth."
+    },
+    {
       "title": "Vendor Concentration Risk",
       "url": "https://insights.rhinegold.de/compendium/vendor-concentration-risk/",
       "date": "2026-08-26",
