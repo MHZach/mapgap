@@ -6,6 +6,9 @@ name: Generate root sitemap (Insights)
 # AUSSERHALB von compendium/ — die zwei Sitemaps werden nie gemischt geschrieben,
 # um Race-Conditions zwischen den beiden Workflows zu vermeiden.
 #
+# URL-Form: erweiterungsfrei (/episode1, nicht /episode1.html). GitHub Pages liefert
+# beide Formen mit 200; kanonisch ist seit 2026-09-01 die erweiterungsfreie.
+#
 # Ausschluss-Regeln (automatisch erkannt, nicht hartkodiert):
 #   - *.bak* / googleba*.html (Backups, GSC-Verifikationsdatei)
 #   - Seiten mit <meta http-equiv="refresh"> (Redirect-Stubs, z.B. /glossar/, /insights/, /anwendungen/)
@@ -47,7 +50,7 @@ jobs:
               if [ "$f" = "index.html" ]; then
                 loc="https://insights.rhinegold.de/"
               else
-                loc="https://insights.rhinegold.de/${f}"
+                loc="https://insights.rhinegold.de/${f%.html}"
               fi
               echo "  <url><loc>${loc}</loc><lastmod>${lastmod}</lastmod></url>"
             done
