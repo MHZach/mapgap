@@ -1,7 +1,14 @@
 {
   "_note": "PUBLIC LINKS MUST point to https://insights.rhinegold.de/... — NEVER rhinegold.de/... The rhinegold.de/compendium/* Framer redirect is broken (:splat not substituted) and returns 404 on every URL until the Framer routing is fixed. After editing this file, purge the jsDelivr cache: https://purge.jsdelivr.net/gh/MHZach/mapgap@main/feed.json . Verify every new URL with curl (HTTP 200) before announcing it live.",
-  "updated": "2026-08-26",
+  "updated": "2026-09-18",
   "items": [
+    {
+      "title": "Mass Is Not a Method",
+      "url": "https://insights.rhinegold.de/episode7",
+      "date": "2026-09-18",
+      "type": "insights",
+      "teaser": "Six criteria a data set has to meet before it can carry an inference, a statistician who turns 2.3 million into 400, and a conversation that interrupts the essay. Chapter IV of Episode 7."
+    },
     {
       "title": "API vs UI Measurement (LLM Visibility)",
       "url": "https://insights.rhinegold.de/compendium/api-vs-ui-llm-visibility/",
