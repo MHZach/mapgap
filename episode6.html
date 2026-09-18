@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/icons/icon-192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/assets/icons/icon-512.png" sizes="512x512">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Second Experiment · Insights | Rhinegold Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --paper: #f5f0e8;
+    --warm: #c8a96e;
+    --warm-light: #e8d9bb;
+    --rust: #9b4f2a;
+    --sage: #4a6741;
+    --mist: #8a9ba8;
+    --accent: #d4521a;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* === Rhinegold Brand Header === */
+  .site-header {
+    padding: 1.4rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--warm-light);
+    background: var(--paper);
+    gap: 2rem;
+    position: relative;
+  }
+
+  .rg-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .rg-logo-mark {
+    width: 26px;
+    height: 26px;
+    color: var(--rust);
+    flex-shrink: 0;
+  }
+
+  .rg-wordmark {
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+  }
+
+  .rg-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+
+  .rg-nav a {
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .rg-nav a:hover {
+    color: var(--ink);
+  }
+
+  .rg-nav a.active {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .rg-nav-sep {
+    color: var(--warm-light);
+  }
+
+  .rg-home-link {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .rg-home-link:hover {
+    color: var(--rust);
+  }
+
+  /* === Rhinegold Brand Footer === */
+  .rg-footer {
+    background: #ebe2d0;
+    border-top: 1px solid var(--warm-light);
+    padding: 3rem;
+    font-family: var(--sans);
+    margin-top: 0;
+  }
+
+  .rg-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .rg-identity {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .rg-logo-mark-large {
+    width: 34px;
+    height: 34px;
+    color: var(--rust);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .rg-identity-text .rg-wordmark-large {
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .rg-tagline {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #5a4d3f;
+    max-width: 380px;
+  }
+
+  .rg-footer-column h5 {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--mist);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .rg-footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .rg-footer-column a {
+    font-size: 0.88rem;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .rg-footer-column a:hover {
+    color: var(--rust);
+  }
+
+  .rg-footer-bottom {
+    max-width: 1200px;
+    margin: 2.5rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #d9cdb5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--mist);
+  }
+
+  .rg-footer-bottom-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .rg-footer-bottom-links a {
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .rg-footer-bottom-links a:hover {
+    color: var(--ink);
+  }
+
+  /* Responsive Brand Bridge */
+  @media (max-width: 900px) {
+    .site-header {
+      padding: 1.25rem 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .rg-nav {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--warm-light);
+    }
+    .rg-footer {
+      padding: 2.5rem 1.5rem;
+    }
+    .rg-footer-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .rg-footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+  /* Hero */
+  .hero {
+    padding: 6rem 3rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .episode-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--rust);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .episode-tag::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--rust);
+    opacity: 0.4;
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--rust);
+  }
+
+  .hero-deck {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 3rem 0;
+    border-top: 1px solid var(--warm-light);
+  }
+
+  .hero-intro {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #3a3028;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .byline {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--mist);
+  }
+
+  .byline strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--ink);
+    font-weight: 500;
+    margin-top: 0.3rem;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .reading-time {
+    font-size: 0.8rem;
+    color: var(--mist);
+    margin-top: 1rem;
+  }
+
+  /* Pull quote / chapter intro */
+  .chapter-marker {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 4rem 3rem;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chapter-marker::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 169, 110, 0.15);
+  }
+
+  .chapter-marker::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    right: 5%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 169, 110, 0.08);
+  }
+
+  .chapter-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .chapter-number {
+    font-family: var(--serif);
+    font-size: 8rem;
+    font-weight: 300;
+    color: var(--warm);
+    opacity: 0.3;
+    line-height: 1;
+  }
+
+  .chapter-quote {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--paper);
+  }
+
+  .chapter-quote cite {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--warm);
+    margin-top: 1.5rem;
+  }
+
+  /* Body content */
+  .content-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+  }
+
+  .content-cols {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 5rem;
+  }
+
+  .sidebar {
+    padding-top: 0.5rem;
+  }
+
+  .sidebar-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--mist);
+    margin-bottom: 1.5rem;
+  }
+
+  .sidebar-nav {
+    list-style: none;
+  }
+
+  .sidebar-nav li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--warm-light);
+    font-size: 0.85rem;
+    color: var(--mist);
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .sidebar-nav li:hover { color: var(--ink); }
+  .sidebar-nav li.active { color: var(--rust); font-weight: 500; }
+
+  .sidebar-stat {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: var(--warm-light);
+    border-left: 3px solid var(--warm);
+  }
+
+  .sidebar-stat .number {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--rust);
+    line-height: 1;
+  }
+
+  .sidebar-stat .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--mist);
+    margin-top: 0.5rem;
+  }
+
+  /* Article text */
+  .article-body h2 {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 3.5rem 0 1.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--warm-light);
+  }
+
+  .article-body h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .article-body h3 {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--rust);
+    margin: 2.5rem 0 1rem;
+  }
+
+  .article-body p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #2e2820;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-body p strong {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  /* Pull quote inline */
+  .pull-quote {
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem 2rem;
+    margin: 3rem 0;
+    background: rgba(212, 82, 26, 0.04);
+  }
+
+  .pull-quote p {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* Journey diagram */
+  .journey-diagram {
+    margin: 3rem 0;
+    background: var(--ink);
+    padding: 3rem;
+    position: relative;
+  }
+
+  .journey-diagram h4 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--warm);
+    margin-bottom: 2.5rem;
+  }
+
+  .journey-phases {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .journey-phases::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 24px;
+    right: 24px;
+    height: 1px;
+    background: linear-gradient(to right, var(--sage), var(--warm), var(--rust));
+    z-index: 0;
+  }
+
+  .phase-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .phase-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid;
+    background: var(--ink);
+  }
+
+  .phase-dot.awareness { border-color: var(--sage); }
+  .phase-dot.consideration { border-color: var(--warm); }
+  .phase-dot.decision { border-color: var(--rust); }
+  .phase-dot.filled.awareness { background: var(--sage); }
+  .phase-dot.filled.consideration { background: var(--warm); }
+  .phase-dot.filled.decision { background: var(--rust); }
+
+  .phase-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(245, 240, 232, 0.5);
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .phase-question {
+    font-size: 0.6rem;
+    color: rgba(245, 240, 232, 0.25);
+    text-align: center;
+    line-height: 1.4;
+    font-style: italic;
+  }
+
+  /* Data callout */
+  .data-callout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin: 3rem 0;
+  }
+
+  .data-cell {
+    padding: 2rem;
+    background: var(--warm-light);
+    text-align: center;
+  }
+
+  .data-cell .figure {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--rust);
+  }
+
+  .data-cell .unit {
+    font-size: 0.8rem;
+    color: var(--mist);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.3rem;
+  }
+
+  .data-cell .context {
+    font-size: 0.8rem;
+    color: var(--mist);
+    margin-top: 0.75rem;
+    line-height: 1.5;
+  }
+
+  /* Insight block */
+  .insight-block {
+    background: var(--sage);
+    color: var(--paper);
+    padding: 2.5rem;
+    margin: 3rem 0;
+  }
+
+  .insight-block .eyebrow {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(245, 240, 232, 0.6);
+    margin-bottom: 1rem;
+  }
+
+  .insight-block p {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--paper);
+    margin: 0;
+  }
+
+  /* Implication table */
+  .implication-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+  }
+
+  .implication-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--mist);
+    border-bottom: 2px solid var(--warm-light);
+    font-weight: 400;
+  }
+
+  .implication-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--warm-light);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  .implication-table tr:last-child td { border-bottom: none; }
+
+  .implication-table .signal {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .implication-table .old {
+    color: var(--mist);
+    text-decoration: line-through;
+  }
+
+  .implication-table .new {
+    color: var(--sage);
+    font-weight: 500;
+  }
+
+  /* Footer */
+  .article-footer {
+    border-top: 2px solid var(--ink);
+    padding: 4rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .next-episode {
+    padding: 2.5rem;
+    border: 1px solid var(--warm-light);
+    position: relative;
+  }
+
+  .next-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--mist);
+    margin-bottom: 1rem;
+  }
+
+  .next-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  .series-nav {
+    font-size: 0.8rem;
+    color: var(--mist);
+  }
+
+  .series-nav p {
+    margin-bottom: 1rem;
+  }
+
+  .series-list {
+    list-style: none;
+  }
+
+  .series-list li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--warm-light);
+    font-size: 0.82rem;
+  }
+
+  .series-list li.current {
+    color: var(--rust);
+    font-weight: 500;
+  }
+
+  .series-list li.published a {
+    color: var(--mist);
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .hero-deck, .content-cols, .data-callout,
+    .journey-phases, .article-footer { grid-template-columns: 1fr; }
+    .chapter-inner { grid-template-columns: 1fr; }
+    .chapter-number { font-size: 4rem; }
+    .hero, .content-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .site-header { padding: 1.5rem; }
+    .chapter-marker { padding: 3rem 1.5rem; }
+    .hero-title { font-size: 2.5rem; }
+  }
+</style>
+
+<!-- rg-frame:meta -->
+<meta name="description" content="How the channel that seems to prove itself attracts the budget the other one earned">
+<meta name="author" content="Mike Zachrau">
+<link rel="canonical" href="https://insights.rhinegold.de/episode6">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="rhinegold — Insights">
+<meta property="og:title" content="The Second Experiment">
+<meta property="og:description" content="How the channel that seems to prove itself attracts the budget the other one earned">
+<meta property="og:url" content="https://insights.rhinegold.de/episode6">
+<meta property="og:image" content="https://insights.rhinegold.de/assets/og/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Second Experiment">
+<meta name="twitter:description" content="How the channel that seems to prove itself attracts the budget the other one earned">
+<meta name="twitter:image" content="https://insights.rhinegold.de/assets/og/og-default.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Second Experiment", "description": "How the channel that seems to prove itself attracts the budget the other one earned", "author": {"@type": "Person", "name": "Michael Zachrau"}, "publisher": {"@type": "Organization", "name": "rhinegold", "url": "https://rhinegold.de"}, "datePublished": "2026-09-18", "dateModified": "2026-09-18", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://insights.rhinegold.de/episode6"}, "image": "https://insights.rhinegold.de/assets/og/og-default.png", "isPartOf": {"@type": "Blog", "name": "Semantic Intelligence — rhinegold Insights", "url": "https://insights.rhinegold.de/"}, "inLanguage": "en"}</script>
+<style>
+.hero-figure{margin:0 auto 0;padding:0 3rem 3rem;max-width:1100px}
+.hero-figure img{display:block;width:100%;height:auto;border:1px solid var(--warm-light)}
+.hero-figure figcaption{font-size:.78rem;color:var(--mist);margin-top:.7rem;letter-spacing:.02em}
+@media(max-width:699px){.hero-figure{padding:0 1.5rem 2rem}}
+.article-body .dialogue{margin:3rem 0;padding:1.5rem 0 1.5rem 1.75rem;border-left:1px solid var(--rust)}
+.article-body .dialogue p{font-family:var(--serif);font-size:1.15rem;line-height:1.55;color:#2e2820;margin:0 0 .55rem;padding-left:3.2rem;text-indent:-3.2rem}
+.article-body .dialogue .speaker{display:inline-block;width:3.2rem;text-indent:0;font-family:'DM Sans',system-ui,sans-serif;font-size:.74rem;letter-spacing:.12em;color:var(--rust);vertical-align:baseline}
+.article-body .inline-figure{margin:2.5rem 0 3rem}
+.article-body .inline-figure img{display:block;width:100%;height:auto;border:1px solid var(--warm-light)}
+.article-body .inline-figure figcaption{font-size:.78rem;color:var(--mist);margin-top:.7rem;letter-spacing:.02em}
+.hero .part-marker{font-family:var(--serif);font-size:2.4rem;font-weight:300;color:var(--rust);line-height:1;margin:0 0 2.2rem}
+.hero .hero-sub{font-family:var(--serif);font-size:1.05rem;font-weight:300;font-style:italic;line-height:1.7;color:#4a4036;max-width:52rem;margin:0 0 3rem}
+@media(max-width:820px){.hero .hero-sub br{display:none}}
+.hero .hero-title{margin-bottom:1.6rem}
+.article-body hr.rule{border:0;border-top:1px solid var(--warm-light);margin:2.5rem 0}
+.article-body sup.cite{font-size:.65em;line-height:0;margin-left:.15em}
+.article-body sup.cite a{color:var(--rust);text-decoration:none}
+.article-body .tbc{margin:3.5rem 0 1.5rem;font-family:var(--serif);font-weight:300;font-size:1.6rem;line-height:1.3;color:var(--ink)}
+.article-body .tbc p{margin:0}
+.article-body .next-tease{border:1px solid var(--warm-light);padding:1.5rem 2rem;margin:0 0 3rem}
+.article-body .next-tease .next-label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);margin-bottom:.6rem}
+.article-body .next-tease p{font-family:var(--serif);font-style:italic;font-size:1.15rem;line-height:1.5;margin:0}
+.article-body ol.sources{padding-left:1.4rem}
+.article-body ol.sources li{font-size:.86rem;line-height:1.55;color:#4a433a;margin-bottom:.7rem;word-break:break-word}
+.article-body ol.sources a{color:var(--rust)}
+.article-body .src-pre{font-size:.86rem;color:var(--mist)}
+.article-body h2.notes{font-size:1.2rem;margin-top:2.5rem;padding-top:2rem}
+.article-body blockquote{border-left:3px solid var(--warm-light);margin:2rem 0;padding:.2rem 0 .2rem 1.6rem;font-family:var(--serif);font-size:1.12rem;font-style:italic;line-height:1.6;color:#2e2820}
+.article-body blockquote p{margin:0 0 .8rem;font-family:inherit;font-size:inherit;font-style:inherit}
+.article-body blockquote p:last-child{margin-bottom:0}
+</style>
+</head>
+<body>
+
+<style>
+.rg-topbar-burger{position:relative}
+.rg-topbar-burger>nav{display:flex;gap:24px;font-size:14px;flex-wrap:wrap}
+.rg-topbar-burger>nav a{color:#cdc6bb;text-decoration:none}
+.rg-topbar-burger>nav a.rg-active{color:#f0c070}
+.rg-burger{display:none;cursor:pointer;padding:4px;background:transparent;border:0;line-height:0}
+#nav-toggle{position:absolute;left:-9999px;width:1px;height:1px}
+@media(max-width:699px){
+  .rg-burger{display:flex;align-items:center}
+  .rg-topbar-burger>nav{display:none;position:absolute;top:100%;right:0;left:0;background:#14110f;flex-direction:column;padding:14px 30px;gap:14px;border-bottom:1px solid #2a2622;z-index:50}
+  #nav-toggle:checked~nav{display:flex}
+}
+</style>
+<header class="rg-topbar-burger" style="background:#14110f;border-bottom:1px solid #2a2622;padding:12px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:'DM Sans',system-ui,sans-serif"><a href="https://rhinegold.de" aria-label="rhinegold home" style="display:flex;align-items:center;text-decoration:none"><img src="https://insights.rhinegold.de/assets/rhinegold-logo.png" alt="rhinegold" width="620" height="160" style="height:26px;width:auto;display:block"></a><input type="checkbox" id="nav-toggle" aria-label="Menu"><label class="rg-burger" for="nav-toggle" aria-label="Menu öffnen/schließen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cdc6bb" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></label><nav><a href="https://insights.rhinegold.de/" class="rg-active">Insights</a><a href="https://insights.rhinegold.de/compendium/">Compendium</a><a href="https://rhinegold.de/services">Services</a><a href="https://rhinegold.de/sim">SIM</a><a href="https://rhinegold.de/methodology">Methodology</a><a href="https://rhinegold.de/about">About</a><a href="https://chat.rhinegold.de" target="_blank" rel="noopener">Ask Dietrich</a></nav></header>
+
+<main>
+  <section class="hero">
+    <div class="episode-tag">Episode Six · The Second Experiment</div>
+
+    <h1 class="hero-title">
+      The second <em>experiment</em>
+    </h1>
+
+    <div class="hero-deck">
+      <div class="hero-intro">
+        On the channel that seems to prove itself, the channel that cannot, and what that asymmetry does to a budget.
+      </div>
+      <div class="hero-meta">
+        <div>
+          <div class="byline">By</div>
+          <strong>Michael Zachrau</strong>
+        </div>
+        <div class="reading-time">13 min read · September 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="chapter-marker">
+    <div class="chapter-inner">
+      <div class="chapter-number">VI</div>
+      <div class="chapter-quote">
+        "A dashboard that cannot report zero is not a measurement. It is a receipt."
+      </div>
+    </div>
+  </div>
+
+  <div class="content-wrap">
+    <div class="content-cols">
+      <aside class="sidebar">
+        <div class="sidebar-label">In this essay</div>
+        <nav class="sidebar-nav">
+          <a href="#the-channel-with-a-number-next-to-every-euro" class="active">The channel with a number next to every euro</a>
+          <a href="#what-the-number-actually-counts">What the number actually counts</a>
+          <a href="#the-experiment-that-cannot-fail">The experiment that cannot fail</a>
+          <a href="#the-ratchet">The ratchet</a>
+          <a href="#the-panel-became-the-universe">The panel became the universe</a>
+          <a href="#the-second-experiment">The second experiment</a>
+          <a href="#what-this-does-not-prove">What this does not prove</a>
+          <a href="#the-question">The question</a>
+          <a href="#sources">Sources</a>
+        </nav>
+
+        <div class="sidebar-stat">
+          <div class="number">+4,100%</div>
+          <div class="label">return on the same brand-search spending, estimated by regressing sales on advertising — the method the industry calls attribution</div>
+        </div>
+
+        <div class="sidebar-stat">
+          <div class="number">−63%</div>
+          <div class="label">return on that same spending, measured by the randomised field experiment (Blake, Nosko &amp; Tadelis, Econometrica, 2015)</div>
+        </div>
+      </aside>
+
+      <article class="article-body">
+
+        <h2 id="the-channel-with-a-number-next-to-every-euro">The channel with a number next to every euro</h2>
+
+        <p>Two lines in a marketing budget. The first reports a return by Tuesday: spend, clicks, conversions, cost per acquisition, a ratio that can be defended in a meeting. The second reports nothing of the kind. It produces visibility, mentions, positions, answers given to people who never identify themselves, and an effect that arrives, if it arrives, in a quarter nobody is currently discussing.</p>
+        <p>A rational decision-maker moves money toward the first line. Not because they believe the second does not work, but because the first can be <em>shown</em> to work and the second cannot. Over several such decisions, a marketing budget stops being a judgement about what creates value and becomes a judgement about what can be observed to create value. Those are different things, and the gap between them is where this essay lives.</p>
+        <p>Daniel Yankelovich described the sequence in 1971, in a speech about market research:</p>
+        <blockquote><p>"The first step is to measure whatever can be easily measured. This is okay as far as it goes. The second step is to disregard that which can't be easily measured or give it an arbitrary quantitative value. This is artificial and misleading. The third step is to presume that what can't be measured easily really isn't very important. This is blindness. The fourth step is to say that what can't be easily measured really doesn't exist. This is suicide." <sup class="cite"><a href="#src-1">1</a></sup></p></blockquote>
+        <p>It is worth noting, in an essay about measurement error, that this passage is almost always cited to the wrong source. <sup class="cite"><a href="#src-1">1</a></sup></p>
+
+        <h2 id="what-the-number-actually-counts">What the number actually counts</h2>
+
+        <p>Start with the good news about attribution: it is not wrong. The tracked number measures what it measures, correctly. It goes wrong one step later, when someone reads it as an answer to a different question.</p>
+        <p>A session-based channel report answers <em>where the conversion fell</em>. It does not answer <em>what the channel is worth</em>. Those are two different accounting questions, and no amount of better tracking merges them. This is a misallocation of credit, not a measurement defect — which is why it cannot be fixed by fixing the tracking. It can only be fixed by keeping two sets of books.</p>
+        <p>What the tracked view sees is the last mile. In a considered purchase, the research that precedes it runs for weeks across devices, people and platforms, and most of it is structurally invisible: consent limits, cookie lifetimes, cross-device gaps, several people deciding together, corporate networks, and now a growing share of research that happens inside an answer engine and never touches a website at all.</p>
+        <p>This produces an artefact that looks like a finding. When almost every recorded journey shows a single touch, that does not mean buyers had one touch. It means one touch was <em>seen</em>. We keep that in our standing list of traps for exactly this reason, with the note that it cannot be lifted until upstream tracking exists — and it does not.</p>
+        <p>The direction of the error is systematic, which is what makes it a bias rather than noise: credit flows downstream, to whatever channel was present at the end. Early channels are structurally understated. Harvesting channels are structurally overstated. Or, in the sentence we use internally when the argument has to fit on one line: <strong>the last mile gets the credit for the whole journey.</strong></p>
+
+        <h2 id="the-experiment-that-cannot-fail">The experiment that cannot fail</h2>
+
+        <p>Now the uncomfortable part, and it is not a matter of opinion.</p>
+        <p>In 2012, eBay ran the experiment that most advertisers never run. It stopped bidding on its own brand keywords in a randomised subset of US markets and watched what happened to traffic and sales. The result, published in <em>Econometrica</em>: brand-keyword ads "have no measurable short-term benefits", because "almost all (99.5 percent) of the forgone click traffic from turning off brand keyword paid search was immediately captured by natural search traffic." <sup class="cite"><a href="#src-2">2</a></sup></p>
+        <p>The authors then did something more useful than reporting their own result. They compared it to what the standard industry method would have said about the same spend:</p>
+        <blockquote><p>"In the absence of causal measures, the industry relies on 'attribution' measures which correlate clicks and purchases. <strong>By this measure, eBay performed very well.</strong>" <sup class="cite"><a href="#src-2">2</a></sup></p></blockquote>
+        <p>The numbers are worth setting out, because the spread is the entire argument. Using the same data and the same period, a regression of sales on advertising spend without controls implied a return above 4,100 per cent. With time and geography controls, above 1,400 per cent. The experiment implied minus 63 per cent. <sup class="cite"><a href="#src-2">2</a></sup></p>
+        <p>That is not a small discrepancy. It is a sign reversal, and the confident number is the wrong one.</p>
+        <p>This is not an isolated finding. When Lewis and Rao asked how large an advertising experiment must be before it can tell a wildly profitable campaign from one that merely broke even, the answer was that the median campaign in their sample "would have to be nine times larger" — and to resolve a ten-percentage-point difference in return, "62 times larger to possess adequate power—nearly impossible for a campaign of any realistic size." For the observational methods that firms actually use, their verdict is blunt: avoiding the relevant bias "appears to be an impossible statistical feat." <sup class="cite"><a href="#src-3">3</a></sup> A separate line of work named the mechanism: people who see an ad are, in that same window, doing more of everything online. Comparing them to people who did not produces overestimates of effect "on the order of 200 times the correct value." <sup class="cite"><a href="#src-4">4</a></sup> And when fifteen large advertising experiments were re-analysed with the observational methods normally used to report on them, half the estimates were "off by a factor of three." In one, the naive comparison said plus 316 per cent; the experiment said plus 73. <sup class="cite"><a href="#src-5">5</a></sup></p>
+        <p>So the asymmetry at the start of this essay is not what it appeared to be. The measurable channel is not necessarily <em>valued</em> more accurately than the unmeasurable one. It is reported more <em>confidently</em>. Those are not the same thing, and the difference is not a rounding error — it is the difference between plus four thousand and minus sixty-three.</p>
+        <p>There is a reason for this, and it is structural. The always-on dashboard is not an experiment. It has no state of the world in which it reports that the channel added nothing, because every conversion that passes through its window is counted as evidence for it. A test that can only confirm proves nothing. We keep that as a standing rule after finding one of our own gates in exactly that condition: a check drawn against a threshold taken from the same distribution it was checking, mathematically incapable of failing. A gate that cannot fail creates confidence without inspection, which makes it more dangerous than no gate at all.</p>
+
+        <h2 id="the-ratchet">The ratchet</h2>
+
+        <p>If the error were random, it would be an annoyance. It is not random, and that is what turns a measurement problem into a strategic one.</p>
+        <p>Budget follows credit. Credit accrues downstream. So budget moves toward the harvesting channel, and away from the channel that produced the demand being harvested. The channel that loses funding gets weaker. As it gets weaker, more of the demand has to be bought rather than earned — which makes the harvesting channel look <em>even better</em> in attribution, because it is now genuinely present at more endings. More budget follows. We describe the terminal state of this loop in one sentence: <strong>paying rent for demand you used to own.</strong></p>
+        <p>Economists have studied what loops of this shape do to reversibility. Brian Arthur showed in 1989 that adoption processes with increasing returns become "progressively more 'locked in'", and that they are non-ergodic — historical small events "are not averaged away and 'forgotten' by the dynamics — they may decide the outcome." <sup class="cite"><a href="#src-6">6</a></sup> Past a point, the market "becomes increasingly 'locked-in' to an inferior choice", and a subsidy that would have redirected it early can no longer close the gap. <sup class="cite"><a href="#src-6">6</a></sup> Arthur gives us the formal vocabulary for what such a process can become: path-dependent, increasingly difficult to reverse, and capable of locking in an inferior allocation.</p>
+        <p>And the counterparty in this arrangement is not passive. In August 2024, a United States federal court found, after trial, that Google holds monopoly power in general search text advertising. The findings of fact are specific about what that power was used for. Google "strategically has used pricing knobs to raise text ads prices", and did so incrementally, so that advertisers "would view price increases as within the ordinary price fluctuations, or 'noise,' generated by the auctions." Internal documents discussed a ten per cent increase as "safe" because it fell "within usual WoW noise". The court's summary: "through barely perceptible and rarely announced tweaks to its ad auctions, Google has increased text ads prices without fear of losing advertisers", and "<strong>many advertisers do not even realize that Google is responsible for the changes in price.</strong>" <sup class="cite"><a href="#src-7">7</a></sup></p>
+        <p>The same opinion records something that should unsettle anyone who chose this channel <em>because</em> it was transparent. The court found the product had degraded in two ways: advertisers "receive less information in search query reports", and can no longer opt out of keyword matching. Google "removed information from SQRs that provided advertisers with insight into low-volume queries, which diminished advertisers' ability to tailor their ad strategy." The court called these "arguably small changes" that nonetheless "reveal Google as a monopolist unconcerned about product changes that have decreased advertisers' autonomy over the auctions." <sup class="cite"><a href="#src-7">7</a></sup></p>
+        <p>Read that alongside the ratchet. The channel selected for its measurability becomes less measurable over time, at prices that rise below the threshold of perception, and the budget keeps moving toward it — because the dashboard still produces a number, and the number still looks fine.</p>
+
+        <h2 id="the-panel-became-the-universe">The panel became the universe</h2>
+
+        <p>At this point an essay of this kind usually turns to the reader and explains what decision-makers get wrong. That would be dishonest, because we made the same mistake inside a system built specifically to prevent it, and we made it last month.</p>
+        <p>We value pages individually where we can measure them. The set of pages we can value that way is a panel — a deliberate, bounded, entirely legitimate measurement panel. What happened next is recorded in our own standing list of traps, in the entry that opened on 25 August:</p>
+        <blockquote><p>A measurement panel is not a universe of value. In practice it became one: not in the panel, therefore no page-specific search value, therefore small or worthless in any comparison of interventions.</p></blockquote>
+        <p>And the second half of that entry is worse, because it identifies the loop rather than the oversight:</p>
+        <blockquote><p>Both scales define value through visibility — a circular argument that keeps invisible precisely those pages whose performance an intervention would first have to activate.</p></blockquote>
+        <p>That is Yankelovich's third and fourth step, executed by a measurement system whose entire purpose is to catch that kind of error, against its own data, for months, without anyone noticing. The correction was not a better estimate. It was a change of grammar: every object now carries a coverage status alongside its value — fully valued, partially valued, allocated by proxy, exposure only, unobserved — and "no result" is reported as <em>unknown</em>, never as <em>small</em>.</p>
+        <p>Nothing about this was visible from the output. That is the part worth dwelling on. We have a separate trap for it, opened after a report was delivered with its title, axes, legend, counters and tiles all correct and only the data points missing. The script exited zero. Every file was written. The note we left ourselves reads: <strong>an output that looks almost complete is more dangerous than one that is missing.</strong></p>
+        <p>Which is the precise answer to the objection that the dashboards were always fine. They were. That is not evidence that the measurement was.</p>
+        <p>Abraham Kaplan put the general form of this in 1964, and it is more uncomfortable than the hammer line he is usually quoted for: "It comes as no particular surprise to discover that a scientist formulates problems in a way which requires for their solution just those techniques in which he himself is especially skilled." <sup class="cite"><a href="#src-8">8</a></sup> A marketing organisation formulates its strategy in a way that requires for its evaluation just those techniques it already has. Measurability stops being a property of the instrument and becomes a selection rule on the strategy. And once a number is the basis of the decision, Strathern's formulation of Goodhart's law applies: "when a measure becomes a target, it ceases to be a good measure." <sup class="cite"><a href="#src-9">9</a></sup></p>
+
+        <h2 id="the-second-experiment">The second experiment</h2>
+
+        <p>There is an instrument that answers the question the dashboard cannot. Switch the channel off, in a declared way, and see what still arrives.</p>
+        <p>It is called the second experiment because the first one was never an experiment. The permanent measurement is a receipt for money already spent. A properly designed holdout is allowed to come back with an answer nobody wanted.</p>
+        <p>It is also easy to do badly, and doing it badly is worse than not doing it, because it produces a number with a dead experiment's authority. These are the constraints we impose on our own, offered as a design rather than as a result:</p>
+        <p><strong>Declare before you switch.</strong> The specification — segment definition, windows, verdict date — is frozen on the day of the switch-off, before the first post-period observation exists. No retrospective fitting. Where the design later has to deviate, the deviation is declared, not written out.</p>
+        <p><strong>Freeze the definition of the segment</strong>, including the noise you know it contains. A term set assembled after the fact is an argument, not a boundary.</p>
+        <p><strong>Count in whole periods, and only mature ones.</strong> A week counts when its data is complete, not when its last day has passed. No verdict before the end of the switch-off window.</p>
+        <p><strong>Set an abort threshold that fires automatically.</strong> Ours reactivates the channel if reach falls below a declared fraction of baseline for two consecutive complete weeks. An experiment without a stopping rule is not an experiment; it is a gamble with a report attached.</p>
+        <p><strong>Check leakage where leakage happens</strong>, at the level of individual terms rather than by asking the people running the channel — and declare the blind zone you cannot check. In our own case one such guard was not in place at the start. That is in the specification, in writing, as an open risk, because the alternative is a clean-looking result resting on an unexamined assumption.</p>
+        <p><strong>Use actual costs, not planned ones</strong>, and compute rates only from mature periods.</p>
+        <p><strong>Bring a second, independent source.</strong> Our own strongest finding in this area does not come from the tracker at all; it comes from a customer-relationship record that confirms the same thing through a different pipe. A finding that survives two unrelated measurement paths is worth more than a precise finding from one.</p>
+        <p><strong>Discard your control arm if it is unfit.</strong> In one design the obvious comparison series was falling on its own, which would have inflated the measured effect. We ran without it and said so, rather than keeping a comparison that flattered the result.</p>
+        <p>And then accept what the instrument gives you. What a switch-off measures first is substitution, not demand: the same searchers, now clicking the organic result instead of the paid one. That is a real and valuable finding about who was paying for whom. It is not proof of business damage, and it is not an acquittal either. Our own design does not separate changes below roughly a fifth from noise. That limit is in the specification, not in a footnote.</p>
+        <p>There is a rule in this that generalises past marketing. <strong>Unmeasurable is a permitted result.</strong> When the comparison pool is too small, when the base is below the floor, our estimators return <em>not a number</em> — never zero. The most expensive errors we have logged were all cases where something missing passed itself off as something measured.</p>
+
+        <h2 id="what-this-does-not-prove">What this does not prove</h2>
+
+        <p>An essay that argues against convenient evidence does not get to be selective about inconvenient evidence.</p>
+        <p><strong>Paid brand search is not universally worthless.</strong> A large set of experiments across thousands of brands found a positive causal effect of brand ads of one to four per cent where no competitor was bidding — smaller for stronger brands. <sup class="cite"><a href="#src-10">10</a></sup> The same work is explicit that the eBay case, a very strong brand facing no competitor on its own name, "is not the norm." <sup class="cite"><a href="#src-10">10</a></sup> The null result came from the most favourable possible conditions for a null result.</p>
+        <p><strong>And there is a case where the spend is rational.</strong> For brands that face competitors on their own brand search and choose not to bid, competitors take between 18 and 42 per cent of the clicks; defending against that has a "strongly positive" return. <sup class="cite"><a href="#src-10">10</a></sup> At the system level this begins to resemble rent extraction more than value creation: the advertiser is paying to defend access to demand it already created. But the money is real, and telling a company to stop defending itself is not advice, it is a bill.</p>
+        <p><strong>Non-brand advertising reaches people the organic channel does not.</strong> The eBay analysis found that infrequent and new users are genuinely influenced; the negative average came from spending most of the budget on frequent users who would have bought anyway. <sup class="cite"><a href="#src-2">2</a></sup> The finding is about <em>allocation within</em> the channel as much as between channels.</p>
+        <p><strong>The opposite overcorrection is also wrong</strong>, and we rejected it in writing before anyone outside could: abandoning tracking because the best customers are invisible inverts the causality — and without measurement, not one of the findings in this essay would exist.</p>
+        <p><strong>Both sides of this argument have an interest.</strong> The most-cited evidence that long-term brand effects are systematically underweighted comes from an advertising industry body, drawn from campaigns its own members submitted to an effectiveness competition. That is a self-selected sample published by a party that benefits from the conclusion. The conflict runs in the opposite direction to the one this essay has been describing, and it is not smaller. We have not used it.</p>
+        <p><strong>And the organic channel is not sovereign either.</strong> A university study of the staggered rollout of AI summaries in search found a reduction in external search referrals to English Wikipedia articles of around five per cent, measured against the same articles in two other languages. <sup class="cite"><a href="#src-11">11</a></sup> Nobody at Wikipedia did anything. Both channels depend on design decisions made by a third party. The difference is only that in one of them, you can see it happening.</p>
+
+        <h2 id="the-question">The question</h2>
+
+        <p>The point of an incrementality laboratory is not to prove that one channel is better than another. It is to make the real drivers visible — where channels cannibalise each other, and where value is genuinely added — and to be capable of returning an answer the person who commissioned it did not want.</p>
+        <p>Which is why the honest ending here is not a recommendation about budget. It is a question about instruments.</p>
+        <p>In our own canon, among the assets we track, there is a line for resilience of distribution — independence from paid media. Next to it, where a figure would go, it says: <em>not carried as a holding; no metric.</em> We named the dependency and we do not measure it. We wrote that down instead of quietly leaving it out, which is the only part of this we would defend.</p>
+        <p>The first experiment is running in your account right now, and it cannot fail. The second one is the one you have to schedule.</p>
+        <hr class="rule">
+
+<h2 id="sources">Sources</h2>
+        <p class="src-pre">Quotations are verbatim from the cited documents. Where a primary text could not be retrieved and a quotation rests on a secondary source, the entry says so. Conflicts of interest are stated, including those that cut against this essay's argument.</p>
+        <ol class="sources">
+          <li id="src-1">Daniel Yankelovich, speech "The New Odds", 15 October 1971; transcript held in the Daniel Yankelovich Papers, UC San Diego Library. The passage is commonly cited to <em>Corporate Priorities</em> (1972) and popularised by Charles Handy, <em>The Empty Raincoat</em> (1994); the abridged version published in <em>Sales Management</em> in November 1971 does not contain the four evaluative clauses. Quoted here from a secondary source that documents the archival record; the archive transcript itself was not inspected.</li>
+          <li id="src-2">Thomas Blake, Chris Nosko, Steven Tadelis, "Consumer Heterogeneity and Paid Search Effectiveness: A Large-Scale Field Experiment", <em>Econometrica</em> 83(1), 2015, 155–174. <a href="https://faculty.haas.berkeley.edu/stadelis/BNT_ECMA_rev.pdf" rel="noopener">https://faculty.haas.berkeley.edu/stadelis/BNT_ECMA_rev.pdf</a> — <em>Conflict: two authors were with eBay Research Labs and the third held an eBay affiliation; the data are eBay's. This is an advertiser reporting on its own spending. Return figures are short-term, and the revenue and cost basis was reconstructed from public filings because the underlying figures are proprietary.</em></li>
+          <li id="src-3">Randall A. Lewis, Justin M. Rao, "The Unfavorable Economics of Measuring the Returns to Advertising", <em>Quarterly Journal of Economics</em> 130(4), 2015, 1941–1973. — <em>Conflict: both authors were previously employed by Yahoo!, where the twenty-five experiments were run. The finding runs against the platform's interest.</em></li>
+          <li id="src-4">Randall A. Lewis, Justin M. Rao, David H. Reiley, "Here, There, and Everywhere: Correlated Online Behaviors Can Lead to Overestimates of the Effects of Advertising", WWW 2011, 157–166. <a href="http://www.davidreiley.com/papers/HereThereEverywhere.pdf" rel="noopener">http://www.davidreiley.com/papers/HereThereEverywhere.pdf</a> — <em>Conflict: all three authors were at Yahoo! Research. The authors also report a case in which observational methods underestimated rather than overestimated.</em></li>
+          <li id="src-5">Brett R. Gordon, Florian Zettelmeyer, Neha Bhargava, Dan Chapsky, "A Comparison of Approaches to Advertising Measurement: Evidence from Big Field Experiments at Facebook", <em>Marketing Science</em> 38(2), 2019, 193–225. — <em>Conflict, as disclosed in the paper: two co-authors were Facebook employees, all data are Facebook's, and the two academic authors were contingent Facebook employees receiving a token salary of fifteen dollars per week, donated to charity. The finding devalues the platform's own attribution measurement.</em></li>
+          <li id="src-6">W. Brian Arthur, "Competing Technologies, Increasing Returns, and Lock-In by Historical Events", <em>The Economic Journal</em> 99(394), 1989, 116–131.</li>
+          <li id="src-7"><em>United States v. Google LLC</em>, No. 1:20-cv-03010-APM, Memorandum Opinion, U.S. District Court for the District of Columbia, 5 August 2024 (Mehta, J.). The court found monopoly power in general search services and general search text advertising; it did not find monopoly power in the broader search advertising market. The remedies opinion of 2 September 2025 declined divestiture of Chrome and imposed conduct remedies, including advertiser transparency provisions not analysed here.</li>
+          <li id="src-8">Abraham Kaplan, <em>The Conduct of Inquiry: Methodology for Behavioral Science</em> (Chandler, 1964), p. 28.</li>
+          <li id="src-9">Marilyn Strathern, "'Improving ratings': audit in the British University system", <em>European Review</em> 5(3), 1997, 305–321, at p. 308. Compare Donald T. Campbell, "Assessing the impact of planned social change", <em>Evaluation and Program Planning</em> 2(1), 1979 — quoted here from secondary sources; original pages not inspected.</li>
+          <li id="src-10">Andrey Simonov, Chris Nosko, Justin M. Rao, "Competition and Crowd-Out for Brand Keywords in Sponsored Search", <em>Marketing Science</em> 37(2), 2018, 200–215. — <em>Conflict: the experiments ran on a commercial search platform and the authors have platform employment histories. The findings cut both ways: small positive effects without competition, strongly positive returns to defensive bidding, and crowd-out of roughly half of organic clicks when a brand ad is added.</em></li>
+          <li id="src-11">Marc Khosravi, Hema Yoganarasimhan, "Impact of AI Search Summaries on Website Traffic: Evidence from Google AI Overviews and Wikipedia", University of Washington, arXiv:2602.18455, September 2026.</li>
+        </ol>
+        <p class="src-pre">Internal rules and findings quoted without a number — the standing traps, the coverage states, the holdout design and the canon entry on resilience of distribution — are from rhinegold's own measurement governance and are not public documents. No client, sector, or client figure appears in this essay.</p>
+        <p class="src-pre">Related in the Compendium:* Attribution · Self-Reported Attribution · Counterfactual · Control Group · Placebo Test · Difference-in-Differences · Synthetic Control · Spillover &amp; Contamination · Touchpoints · Zero-Click Search · Vendor Concentration Risk.</p>
+      </article>
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="next-episode">
+      <div class="next-label">Also running</div>
+      <div class="next-title"><a href="episode7" style="text-decoration:none; color:inherit;">Episode Seven — Mass Is Not a Method, published in chapters. The fourth is live.</a></div>
+    </div>
+    <div class="series-nav">
+      <p>Rhinegold Insights · Intelligence Series</p>
+      <ul class="series-list">
+        <li class="published"><a href="index.html">Ep. 1 — The Two-Year Window</a></li>
+        <li class="published"><a href="blog_ep02_wrong_layer">Ep. 2 — Why Your Analytics Stack Is Measuring the Wrong Layer</a></li>
+        <li class="published"><a href="episode3">Ep. 3 — The Invisible Buyer Journey</a></li>
+        <li class="published"><a href="episode4">Ep. 4 — How to Measure What You Can't See</a></li>
+        <li class="published"><a href="episode5">Ep. 5 — Content Architecture for LLM Authority</a></li>
+        <li class="current">Ep. 6 — The Second Experiment</li>
+        <li class="published"><a href="episode7">Ep. 7 — Mass Is Not a Method</a></li>
+      </ul>
+    </div>
+  </footer>
+</main>
+
+<footer style="background:#14110f;border-top:1px solid #2a2622;padding:40px 30px 30px;color:#9a938a;margin-top:80px;font-family:'DM Sans',system-ui,sans-serif"><div style="max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;justify-content:space-between"><a href="https://rhinegold.de" aria-label="rhinegold home" style="display:flex;align-items:center;text-decoration:none"><img src="https://insights.rhinegold.de/assets/rhinegold-logo.png" alt="rhinegold" width="620" height="160" style="height:22px;width:auto;display:block"></a><div style="font-size:12px;letter-spacing:.08em;color:#7d766c">Semantic Intelligence · Decision Systems · External Resonance</div><div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;flex-wrap:wrap;gap:20px;font-size:13px"><a href="https://rhinegold.de/contact" style="color:#cdc6bb;text-decoration:none">Contact</a></div><div style="display:flex;flex-wrap:wrap;gap:20px;font-size:12px;color:#7d766c"><a href="https://rhinegold.de/legal-notice" style="color:#7d766c;text-decoration:none">Legal Notice</a><a href="https://rhinegold.de/privacy-policy" style="color:#7d766c;text-decoration:none">Privacy Policy</a></div></div></div><div style="width:100%;text-align:center;font-size:11px;color:#615a51;margin-top:22px;letter-spacing:.04em">© 2026 rhinegold</div></footer>
+
+
+</body>
+</html>
