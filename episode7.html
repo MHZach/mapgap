@@ -829,6 +829,11 @@
 .article-body ol.sources a{color:var(--rust)}
 .article-body .src-pre{font-size:.86rem;color:var(--mist)}
 .article-body h2.notes{font-size:1.2rem;margin-top:2.5rem;padding-top:2rem}
+.sidebar-nav{display:flex;flex-direction:column;gap:11px;list-style:none}
+.sidebar-nav a{display:block;font-size:.85rem;line-height:1.45;color:var(--mist);text-decoration:none;transition:color .18s}
+.sidebar-nav a:hover,.sidebar-nav a:focus-visible{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.sidebar-nav a.active{color:var(--rust);font-weight:500}
+.sidebar-nav a[href="#sources"],.sidebar-nav a[href="#notes-on-form"]{margin-top:.9rem;padding-top:.9rem;border-top:1px solid var(--warm-light)}
 .article-body blockquote{border-left:3px solid var(--warm-light);margin:2rem 0;padding:.2rem 0 .2rem 1.6rem;font-family:var(--serif);font-size:1.12rem;font-style:italic;line-height:1.6;color:#2e2820}
 .article-body blockquote p{margin:0 0 .8rem;font-family:inherit;font-size:inherit;font-style:inherit}
 .article-body blockquote p:last-child{margin-bottom:0}
@@ -997,11 +1002,12 @@
     <div class="series-nav">
       <p>Rhinegold Insights · Intelligence Series</p>
       <ul class="series-list">
-        <li class="published"><a href="index.html">Ep. 1 — The Two-Year Window</a></li>
+        <li class="published"><a href="episode1">Ep. 1 — The Two-Year Window</a></li>
         <li class="published"><a href="blog_ep02_wrong_layer">Ep. 2 — Why Your Analytics Stack Is Measuring the Wrong Layer</a></li>
         <li class="published"><a href="episode3">Ep. 3 — The Invisible Buyer Journey</a></li>
         <li class="published"><a href="episode4">Ep. 4 — How to Measure What You Can't See</a></li>
         <li class="published"><a href="episode5">Ep. 5 — Content Architecture for LLM Authority</a></li>
+        <li class="published"><a href="episode6">Ep. 6 — The Second Experiment</a></li>
         <li class="current">Ep. 7 — Mass Is Not a Method · IV</li>
       </ul>
     </div>
