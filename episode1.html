@@ -826,5 +826,21 @@
   <div class="rg-copy">© 2026 rhinegold</div>
 </footer>
 
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* Cookieless configuration - no visitor, session or referrer cookies are set. */
+  _paq.push(['disableCookies']);
+  /* Keeps rhinegold.de and insights.rhinegold.de one site, not an outlink. */
+  _paq.push(['setDomains', ['*.rhinegold.de']]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo-production-2d0c.up.railway.app/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
 </body>
 </html>
