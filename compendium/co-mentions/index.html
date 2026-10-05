@@ -54,8 +54,10 @@ a{color:inherit}
 .hero img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:2px}
 .hero figcaption{font-size:.78rem;color:var(--mid);font-style:italic;margin-top:9px;padding:0 2px;line-height:1.5}
 .det .sec p{max-width:none}
+.sec p+p,.colcard p+p{margin-top:12px}
 /* breakout exhibits */
 .colrow{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:8px 0}
+.card-grid{grid-template-columns:1fr 1fr}
 .colrow.single{grid-template-columns:1fr}
 .colcard{padding:24px 28px;background:#faf7f1;border:1px solid var(--rule)}
 .colcard h2{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:9px}
@@ -106,7 +108,7 @@ table.cmp tr:last-child td,table.cmp tr:last-child th{border-bottom:none}
 .foot-related a{font-size:13px;border:1px solid var(--rule);padding:6px 13px;border-radius:18px;text-decoration:none;color:var(--ink);transition:all .15s}
 .foot-related a:hover{border-color:var(--gold);color:var(--gold)}
 .cite-box{font-size:.78rem;color:#5c554c;line-height:1.55;background:#f4efe5;border:1px solid var(--rule);padding:14px 16px;font-family:var(--sans)}
-@media(max-width:760px){.det{display:block;padding:0 18px}.colrow{grid-template-columns:1fr}.foot-furniture{grid-template-columns:1fr;gap:24px}.secnav-inner{gap:16px;overflow-x:auto;flex-wrap:nowrap;padding:11px 18px}}
+@media(max-width:760px){.det{display:block;padding:0 18px}.colrow{grid-template-columns:1fr}.foot-furniture{grid-template-columns:1fr;gap:24px}.secnav-inner{gap:16px;overflow-x:auto;flex-wrap:nowrap;padding:11px 18px}table.cmp{display:block;overflow-x:auto}.card-grid{grid-template-columns:1fr}.foot-furniture>div{min-width:0}.cite-box,.src-list li{overflow-wrap:anywhere}}
 .badges{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 14px}
 .badge{font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px;font-weight:600;cursor:help}
 .b-green{background:#e3efe0;color:#3c6b39}.b-yellow{background:#f5edd2;color:#8a6d1e}.b-orange{background:#f6e3d2;color:#9a5a23}.b-red{background:#f3dada;color:#9a2f2f}
@@ -133,6 +135,22 @@ table.cmp tr:last-child td,table.cmp tr:last-child th{border-bottom:none}
 .obstacle .ob-why{font-size:.95rem;color:#5c554c;font-weight:300;margin-bottom:10px}
 .obstacle .ob-res{font-size:.97rem;color:#37322c;font-weight:300}
 .obstacle .ob-res b{font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:3px}
+.tactic{background:#faf7f1;border:1px solid var(--rule);border-left:3px solid var(--gold);padding:20px 24px;margin:14px 0}
+.tactic .tc-label{font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px}
+.tactic .tc-head{font-family:var(--sans);font-size:1rem;font-weight:500;color:var(--ink);margin-bottom:8px}
+.tactic .tc-body{font-size:.97rem;color:#48413a;font-weight:300;line-height:1.6}
+.tactic .tc-seo{font-size:.82rem;color:var(--mid);font-style:italic;margin-top:8px;padding-top:8px;border-top:1px solid var(--rule)}
+.callout{background:#efe9e0;border-left:2px solid var(--gold);padding:16px 20px;margin:22px 0;font-size:.97rem;color:#37322c;font-weight:300;line-height:1.6}
+.callout strong{font-weight:600;color:var(--ink)}
+@media(max-width:520px){.statcallout{flex-direction:column;gap:8px}.statcallout .num{font-size:2.6rem}}
+.abk.untertitel{font-family:var(--display);font-style:italic;font-size:1.18rem;color:var(--mid);font-weight:400;margin-bottom:6px}
+.operator ol{padding-left:22px;margin-top:10px}
+.operator ol li{padding:5px 0;font-size:1rem;color:#37322c;font-weight:300}
+.operator ol li strong{font-weight:600;color:var(--ink)}
+.operator ol+p{margin-top:12px}
+.sec p+ul{margin:8px 0}
+.body-text p{font-size:1.02rem;color:#37322c;font-weight:300;line-height:1.66;margin-bottom:1.1em}
+.lede-2{font-size:1.08rem;margin:4px 0 26px}
 .cadence{font-size:.78rem;color:var(--mid);font-style:italic;margin-top:24px;padding-top:14px;border-top:1px solid var(--rule)}
 .ask-dietrich{display:block;margin:34px 0 0;padding:22px 26px;background:#faf7f1;border:1px solid #d3c9b9;text-decoration:none;color:var(--ink);transition:border-color .15s}
 .ask-dietrich:hover{border-color:var(--gold)}
