@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://insights.rhinegold.de/compendium/</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/</loc></url>
   <url><loc>https://insights.rhinegold.de/compendium/agentic-commerce/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-agents-buyer-journey/</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/ai-answer-sentiment/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/ai-answer-sentiment/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-mention-velocity/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-mode/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-overview-vs-ai-mode/</loc><lastmod>2026-10-06</lastmod></url>
@@ -18,7 +18,7 @@
   <url><loc>https://insights.rhinegold.de/compendium/brand-recommendation-share/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/brand-voice-match/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/chunking-passage-retrieval/</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/citation-rate/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/citation-rate/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/co-mentions/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/competitive-mention-map/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/content-decay/</loc><lastmod>2026-10-06</lastmod></url>
@@ -36,7 +36,7 @@
   <url><loc>https://insights.rhinegold.de/compendium/invisible-shortlist/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/lead-scoring/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/lead-value/</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/llm-brand-tracking/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/llm-brand-tracking/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/llm-referral-traffic/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/measurement-consistency/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/mention-intensity/</loc><lastmod>2026-10-06</lastmod></url>
@@ -49,8 +49,8 @@
   <url><loc>https://insights.rhinegold.de/compendium/negated-mention/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/phantom-url/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/placebo-test/</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/platform-divergence/</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/prompt-coverage/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/platform-divergence/</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/prompt-coverage/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/query-fan-out/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/retrieval-augmented-generation/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/self-reported-attribution/</loc><lastmod>2026-10-06</lastmod></url>
