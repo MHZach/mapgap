@@ -5,7 +5,7 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 30 Aug 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
@@ -13,6 +13,14 @@
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
 
+    <item>
+      <title>Measurement Consistency</title>
+      <link>https://insights.rhinegold.de/compendium/measurement-consistency/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/measurement-consistency/</guid>
+      <pubDate>Thu, 08 Oct 2026 12:00:00 +0000</pubDate>
+      <description>An AI-visibility number is a product of the data and of every choice made in counting it. Four cases from measurement practice where the method moved the number by a factor of three to eight — or reversed a trend.</description>
+      <category>Compendium</category>
+    </item>
     <item>
       <title>API vs UI Measurement (LLM Visibility)</title>
       <link>https://insights.rhinegold.de/compendium/api-vs-ui-llm-visibility/</link>

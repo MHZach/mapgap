@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Measurement Consistency — The Rhinegold Compendium</title><meta name="description" content="An AI-visibility number is a product of the data and of every choice made in counting it: what counts as one mention, which answers go into the denominator, how providers are weighted, which prompts are in the set. Change one of those and the number moves — by a factor, not a rounding error, and sometimes in the opposite direction. Measurement consistency means freezing those choices and declaring every change as a new measurement era, so that a movement in the series is a movement in the market."><link rel="canonical" href="https://insights.rhinegold.de/compendium/measurement-consistency/"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" type="image/png" href="/assets/icons/icon-192.png" sizes="192x192"><link rel="icon" type="image/png" href="/assets/icons/icon-512.png" sizes="512x512"><link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png"><meta property="og:type" content="article"><meta property="og:site_name" content="The Rhinegold Compendium"><meta property="og:title" content="Measurement Consistency — The Rhinegold Compendium"><meta property="og:description" content="An AI-visibility number is a product of the data and of every choice made in counting it: what counts as one mention, which answers go into the denominator, how providers are weighted, which prompts are in the set. Change one of those and the number moves — by a factor, not a rounding error, and sometimes in the opposite direction. Measurement consistency means freezing those choices and declaring every change as a new measurement era, so that a movement in the series is a movement in the market."><meta property="og:url" content="https://insights.rhinegold.de/compendium/measurement-consistency/"><meta property="article:published_time" content="2026-10-08"><meta property="article:modified_time" content="2026-10-08"><meta property="og:image" content="https://insights.rhinegold.de/compendium/assets/compendium-og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Measurement Consistency — The Rhinegold Compendium"><meta name="twitter:description" content="An AI-visibility number is a product of the data and of every choice made in counting it: what counts as one mention, which answers go into the denominator, how providers are weighted, which prompts are in the set. Change one of those and the number moves — by a factor, not a rounding error, and sometimes in the opposite direction. Measurement consistency means freezing those choices and declaring every change as a new measurement era, so that a movement in the series is a movement in the market."><meta name="twitter:image" content="https://insights.rhinegold.de/compendium/assets/compendium-og.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"><style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1612;--paper:#f7f4ef;--gold:#c8892e;--gold-b:#d99a36;--mid:#6b6560;--rule:#e0d9cf;--warm:#efe9e0;--sans:'DM Sans',system-ui,sans-serif;--display:'Fraunces',Georgia,serif}
+html{background:var(--paper);scroll-behavior:smooth;scroll-padding-top:68px}
+/* anchored sections clear the sticky section-nav when jumped to */
+.det [id]{scroll-margin-top:68px}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.rg-topbar{background:#14110f;border-bottom:1px solid #2a2622;padding:12px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative}
+.rg-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.rg-logo img{height:26px;width:auto;display:block}
+.rg-nav{display:flex;gap:24px;font-size:14px}
+.rg-nav a{color:#cdc6bb;text-decoration:none;transition:color .15s}
+.rg-nav a:hover,.rg-nav a.active{color:#f0c070}
+.rg-burger{display:none;cursor:pointer;padding:4px;background:transparent;border:0;line-height:0}
+#rg-nav-toggle{position:absolute;left:-9999px;width:1px;height:1px}
+@media(max-width:699px){
+  .rg-burger{display:flex;align-items:center}
+  .rg-topbar .rg-nav{display:none;position:absolute;top:100%;right:0;left:0;background:#14110f;flex-direction:column;padding:14px 30px;gap:14px;border-bottom:1px solid #2a2622;z-index:50}
+  #rg-nav-toggle:checked~.rg-nav{display:flex}
+}
+.wrap{max-width:1040px;margin:0 auto;padding:0 32px}
+/* ── content grid: centered reading column + symmetric breakout/full tracks ── */
+.det{display:grid;max-width:1240px;margin:0 auto;
+  grid-template-columns:
+    [full-start] minmax(20px,1fr)
+    [wide-start] minmax(0,200px)
+    [content-start] min(700px, calc(100% - 40px)) [content-end]
+    minmax(0,200px) [wide-end]
+    minmax(20px,1fr) [full-end];}
+.det>*{grid-column:content-start/content-end}
+.det>.breakout{grid-column:wide-start/wide-end}
+.det>.full{grid-column:full-start/full-end}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.crumb{padding:26px 0 0;font-size:12px;letter-spacing:.04em;color:var(--mid)}
+.crumb a{color:var(--mid);text-decoration:none}.crumb a:hover{color:var(--gold)}
+.crumb-sep{color:var(--rule);margin:0 4px}.crumb-cat{color:var(--gold)}
+.det h1{font-family:var(--display);font-weight:300;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.04;letter-spacing:-.02em;margin:14px 0 6px}
+.det .abk{font-size:1rem;color:var(--mid);font-weight:500;margin-bottom:6px}
+/* meta strip under H1 */
+.metastrip{display:flex;flex-wrap:wrap;gap:13px 24px;align-items:baseline;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:10px 0 0;font-size:.82rem}
+.metastrip .mi{display:flex;gap:8px;align-items:baseline}
+.metastrip .mi-l{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);font-weight:600}
+.metastrip .mi-v{color:#37322c;font-weight:500}
+.fp-badge{display:inline-block;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:12px;font-weight:600}
+/* sticky section nav (top, not side → no breakout collision) */
+.secnav{position:sticky;top:0;z-index:50;background:rgba(247,244,239,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);margin:0 0 6px}
+.secnav-inner{max-width:1080px;margin:0 auto;padding:11px 24px;display:flex;gap:24px;flex-wrap:wrap}
+.secnav a{font-size:12px;letter-spacing:.03em;color:var(--mid);text-decoration:none;white-space:nowrap;transition:color .15s}
+.secnav a:hover{color:var(--gold)}
+.lede{font-family:var(--display);font-weight:300;font-style:italic;font-size:1.6rem;line-height:1.44;color:#2c2722;margin:24px 0 6px}
+/* optional article hero image (breakout width, doubles as og:image) */
+.hero{margin:22px 0 10px}
+.hero img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:2px}
+.hero figcaption{font-size:.78rem;color:var(--mid);font-style:italic;margin-top:9px;padding:0 2px;line-height:1.5}
+.det .sec p{max-width:none}
+.sec p+p,.colcard p+p{margin-top:12px}
+/* breakout exhibits */
+.colrow{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:8px 0}
+.card-grid{grid-template-columns:1fr 1fr}
+.colrow.single{grid-template-columns:1fr}
+.colcard{padding:24px 28px;background:#faf7f1;border:1px solid var(--rule)}
+.colcard h2{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:9px}
+.colcard p{font-size:1.02rem;color:#37322c;font-weight:300;line-height:1.6;max-width:none}
+.colcard.consensus{background:#f4efe5;border:none;border-left:2px solid #c8c0b0}
+.colcard.operator{background:#f4ede0;border:none;border-left:2px solid var(--gold)}
+.colcard.warn h2{color:#9a5a23}
+.exhibit-cap{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);font-weight:600;margin:0 0 10px}
+/* key takeaways */
+.takeaways{background:#efe9e0;border:1px solid var(--rule);border-left:3px solid var(--gold);padding:22px 28px;margin:26px 0}
+.takeaways .lbl{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px}
+.takeaways ul{list-style:none;padding:0;margin:0}
+.takeaways li{padding:5px 0 5px 22px;position:relative;font-size:1rem;line-height:1.5;font-weight:400;color:#2c2722}
+.takeaways li::before{content:'\2192';position:absolute;left:0;color:var(--gold);font-weight:600}
+/* stat callout */
+.statcallout{display:flex;align-items:baseline;gap:22px;margin:26px 0;padding:20px 28px;background:var(--warm);border-left:3px solid var(--gold)}
+.statcallout .num{font-family:var(--display);font-weight:300;font-size:3.1rem;line-height:1;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+.statcallout .lab{font-size:.98rem;color:#48413a;font-weight:300;line-height:1.5}
+.statcallout .lab .src-ref{font-size:.74rem;color:var(--mid);font-style:italic;display:block;margin-top:5px}
+/* big pull-quote — wide breakout, brand-gold (rhinegold echo of McKinsey's blue) */
+.pullquote{font-family:var(--display);font-weight:400;font-size:clamp(1.55rem,2.8vw,2.25rem);line-height:1.3;letter-spacing:-.01em;color:#a86e1c;margin:38px 0;padding:0}
+/* chart exhibit — two-column: title/caption left, visual right (McKinsey exhibit) */
+.chart-exhibit{margin:18px 0}
+.chart-box{display:grid;grid-template-columns:0.62fr 1fr;gap:38px;align-items:center;background:#faf7f1;border:1px solid var(--rule);padding:30px 34px}
+.ch-head .ch-title{font-family:var(--display);font-weight:400;font-size:1.5rem;line-height:1.2;color:var(--ink);margin:8px 0 8px}
+.ch-head .ch-cap{font-size:.9rem;color:var(--mid);font-weight:300;line-height:1.5;margin:0;max-width:none}
+.ch-vis{min-width:0}
+.ch-notes{font-size:.72rem;color:#8a8079;line-height:1.55;margin-top:16px;font-weight:300;grid-column:1/-1}
+.ch-notes sup{color:#8a8079;font-weight:600}
+.ch-notes .ch-src{display:block;margin-top:5px}
+/* inline rich-text: body links, footnotes, bold */
+.xlink{color:inherit;text-decoration:underline;text-decoration-color:rgba(200,137,46,.55);text-underline-offset:3px;text-decoration-thickness:1px;transition:text-decoration-color .15s,color .15s}
+.xlink:hover{color:var(--gold);text-decoration-color:var(--gold)}
+.det strong{font-weight:600;color:var(--ink)}
+sup.fn{font-size:.66rem;line-height:0;vertical-align:super;font-weight:600;margin-left:1px}
+sup.fn a{color:var(--gold);text-decoration:none}
+.src-num{display:inline-block;min-width:1.5em;color:var(--gold);font-weight:600;font-size:.8rem;font-family:var(--sans)}
+/* comparison table (breakout/full track) */
+table.cmp{width:100%;border-collapse:collapse;font-size:.94rem;background:#faf7f1;border:1px solid var(--rule)}
+table.cmp th,table.cmp td{text-align:left;padding:13px 18px;border-bottom:1px solid var(--rule);vertical-align:top;font-weight:300;color:#37322c}
+table.cmp thead th{background:#efe9e0;font-family:var(--sans);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600}
+table.cmp tbody th{font-weight:500;color:var(--ink);width:200px}
+table.cmp tr:last-child td,table.cmp tr:last-child th{border-bottom:none}
+/* foot furniture: related + cite */
+.foot-furniture{display:grid;grid-template-columns:1.4fr 1fr;gap:38px;margin-top:42px;padding-top:24px;border-top:1px solid var(--rule)}
+.ff-h{font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);font-weight:600;margin-bottom:12px}
+.foot-related{display:flex;flex-wrap:wrap;gap:8px}
+.foot-related a{font-size:13px;border:1px solid var(--rule);padding:6px 13px;border-radius:18px;text-decoration:none;color:var(--ink);transition:all .15s}
+.foot-related a:hover{border-color:var(--gold);color:var(--gold)}
+.cite-box{font-size:.78rem;color:#5c554c;line-height:1.55;background:#f4efe5;border:1px solid var(--rule);padding:14px 16px;font-family:var(--sans)}
+@media(max-width:760px){.det{display:block;padding:0 18px}.colrow{grid-template-columns:1fr}.foot-furniture{grid-template-columns:1fr;gap:24px}.secnav-inner{gap:16px;overflow-x:auto;flex-wrap:nowrap;padding:11px 18px}table.cmp{display:block;overflow-x:auto}.card-grid{grid-template-columns:1fr}.foot-furniture>div{min-width:0}.cite-box,.src-list li{overflow-wrap:anywhere}}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 14px}
+.badge{font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px;font-weight:600;cursor:help}
+.b-green{background:#e3efe0;color:#3c6b39}.b-yellow{background:#f5edd2;color:#8a6d1e}.b-orange{background:#f6e3d2;color:#9a5a23}.b-red{background:#f3dada;color:#9a2f2f}
+.b-cycle{background:#eae6df;color:#6b6560}.b-praxis{background:#dde7ef;color:#39607a}
+.tldr{font-family:var(--display);font-style:italic;font-size:1.32rem;line-height:1.5;color:var(--ink);border-left:3px solid var(--gold);padding:6px 0 6px 22px;margin:26px 0 30px}
+.sec{margin:26px 0}
+.sec h2{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.sec p{font-size:1.02rem;color:#37322c;font-weight:300}
+.sec.warn h2{color:#9a5a23}
+.sec ul{list-style:none;padding:0}
+.sec li{font-size:1rem;color:#37322c;font-weight:300;padding:6px 0 6px 20px;position:relative}
+.sec li::before{content:'–';position:absolute;left:0;color:var(--gold)}
+.consensus{background:#f4efe5;border-left:2px solid #c8c0b0;padding:18px 22px;margin:22px 0;font-size:1rem;color:#37322c;font-weight:300}
+.consensus .lbl{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);font-weight:600;margin-bottom:8px}
+.operator{background:#f4ede0;border-left:2px solid var(--gold);padding:18px 22px;margin:22px 0;font-size:1rem;color:#37322c;font-weight:300}
+.operator .lbl{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font-size:13px;border:1px solid var(--rule);padding:6px 13px;border-radius:20px;text-decoration:none;color:var(--ink);transition:all .15s}
+.related a:hover{border-color:var(--gold);color:var(--gold)}
+.empirical{background:var(--warm);border:1px solid var(--rule);padding:18px 20px;font-size:.96rem;color:#4a443d;font-weight:300;margin:22px 0}
+.obstacles{margin:26px 0}
+.obstacle{background:#f4efe5;border-left:2px solid var(--gold);padding:16px 22px;margin:12px 0}
+.obstacle .ob-q{font-family:var(--sans);font-size:.98rem;font-weight:500;color:var(--ink);margin-bottom:6px}
+.obstacle .ob-why{font-size:.95rem;color:#5c554c;font-weight:300;margin-bottom:10px}
+.obstacle .ob-res{font-size:.97rem;color:#37322c;font-weight:300}
+.obstacle .ob-res b{font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:3px}
+.tactic{background:#faf7f1;border:1px solid var(--rule);border-left:3px solid var(--gold);padding:20px 24px;margin:14px 0}
+.tactic .tc-label{font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px}
+.tactic .tc-head{font-family:var(--sans);font-size:1rem;font-weight:500;color:var(--ink);margin-bottom:8px}
+.tactic .tc-body{font-size:.97rem;color:#48413a;font-weight:300;line-height:1.6}
+.tactic .tc-seo{font-size:.82rem;color:var(--mid);font-style:italic;margin-top:8px;padding-top:8px;border-top:1px solid var(--rule)}
+.callout{background:#efe9e0;border-left:2px solid var(--gold);padding:16px 20px;margin:22px 0;font-size:.97rem;color:#37322c;font-weight:300;line-height:1.6}
+.callout strong{font-weight:600;color:var(--ink)}
+@media(max-width:520px){.statcallout{flex-direction:column;gap:8px}.statcallout .num{font-size:2.6rem}}
+.abk.untertitel{font-family:var(--display);font-style:italic;font-size:1.18rem;color:var(--mid);font-weight:400;margin-bottom:6px}
+.operator ol{padding-left:22px;margin-top:10px}
+.operator ol li{padding:5px 0;font-size:1rem;color:#37322c;font-weight:300}
+.operator ol li strong{font-weight:600;color:var(--ink)}
+.operator ol+p{margin-top:12px}
+.sec p+ul{margin:8px 0}
+.body-text p{font-size:1.02rem;color:#37322c;font-weight:300;line-height:1.66;margin-bottom:1.1em}
+.lede-2{font-size:1.08rem;margin:4px 0 26px}
+.cadence{font-size:.78rem;color:var(--mid);font-style:italic;margin-top:24px;padding-top:14px;border-top:1px solid var(--rule)}
+.upd{font-size:.92rem;line-height:1.5;color:#37322c;background:#f4efe5;border-left:3px solid var(--gold);padding:10px 16px;margin:18px 0 6px}
+.upd b{font-weight:600}
+.revisions li{font-size:.9rem}
+.ask-dietrich{display:block;margin:34px 0 0;padding:22px 26px;background:#faf7f1;border:1px solid #d3c9b9;text-decoration:none;color:var(--ink);transition:border-color .15s}
+.ask-dietrich:hover{border-color:var(--gold)}
+.ask-dietrich .ad-eyebrow{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:9px}
+.ask-dietrich .ad-text{display:block;font-size:1.02rem;line-height:1.55}
+.ask-dietrich .ad-go{display:inline-block;margin-top:3px;font-size:.9rem;font-weight:500;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+.ask-dietrich:hover .ad-go{color:var(--gold)}
+.src{font-size:.92rem;color:var(--mid);border-top:1px solid var(--rule);padding-top:20px;margin-top:34px}
+.src h2{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+.src-section{margin-top:16px}
+.src-section:first-of-type{margin-top:4px}
+.src-section-label{font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);font-weight:500;margin-bottom:6px}
+.src-list{list-style:none;padding:0;margin:0}
+.src-list li{padding:6px 0 6px 22px;position:relative;font-size:.92rem;line-height:1.55;color:#48413a;font-weight:300}
+.src-list li::before{content:'›';position:absolute;left:0;color:var(--gold);font-weight:600;font-size:1.05rem;line-height:1.2}
+.src-list a{color:var(--ink);text-decoration:underline;text-decoration-color:rgba(200,137,46,.45);text-underline-offset:3px;transition:color .15s,text-decoration-color .15s}
+.src-list a:hover{color:var(--gold);text-decoration-color:var(--gold)}
+.src-list .src-plain{color:var(--ink)}
+.src-list li.src-internal{color:var(--mid);font-style:italic}
+.src-list li.src-internal::before{content:'•';color:var(--mid)}
+.src-meta{font-size:.78rem;color:#8a8079;margin-top:3px}
+sup.ref{font-size:.7rem;color:var(--gold);text-decoration:none;font-weight:600}
+.formula-block{background:#f4efe5;border:1px solid var(--rule);padding:22px 26px;margin:26px 0;font-size:.95rem;line-height:1.55}
+.formula-block dl{display:grid;grid-template-columns:max-content 1fr;column-gap:18px;row-gap:10px;margin:0}
+.formula-block dt{font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;padding-top:2px;white-space:nowrap}
+.formula-block dd{color:#37322c;font-weight:300;margin:0}
+.formula-block .formula{font-family:var(--display);font-style:italic;font-size:1.1rem;color:var(--ink);font-weight:400;padding:6px 0 12px;border-bottom:1px solid var(--rule);margin-bottom:10px;grid-column:1/-1}
+.formula-block .version-line{font-size:.78rem;color:var(--mid);grid-column:1/-1;text-align:right;font-style:italic}
+.rg-footer{background:#14110f;border-top:1px solid #2a2622;padding:36px 30px 28px;color:#9a938a;margin-top:60px}
+.rg-footer-inner{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px 26px;align-items:center;justify-content:space-between;font-size:13px}
+.rg-footer a{color:#cdc6bb;text-decoration:none}.rg-footer a:hover{color:#f0c070}
+.rg-copy{width:100%;text-align:center;font-size:11px;color:#615a51;margin-top:18px}
+@media(max-width:600px){.rg-topbar{padding:10px 16px}.rg-nav{gap:14px;font-size:13px}.formula-block dl{grid-template-columns:1fr}.formula-block dt{padding-top:8px}}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "DefinedTerm", "name": "Measurement Consistency", "description": "An AI-visibility number is a product of the data and of every choice made in counting it: what counts as one mention, which answers go into the denominator, how providers are weighted, which prompts are in the set. Change one of those and the number moves — by a factor, not a rounding error, and sometimes in the opposite direction. Measurement consistency means freezing those choices and declaring every change as a new measurement era, so that a movement in the series is a movement in the market.", "url": "https://insights.rhinegold.de/compendium/measurement-consistency/", "dateModified": "2026-10-08", "datePublished": "2026-10-08", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "The Rhinegold Compendium", "url": "https://insights.rhinegold.de/compendium/"}}</script></head><body><header class="rg-topbar"><a class="rg-logo" href="https://rhinegold.de" aria-label="rhinegold home"><img src="/assets/rhinegold-logo.png" alt="rhinegold" width="620" height="160" style="height:26px;width:auto;display:block"></a><input type="checkbox" id="rg-nav-toggle" aria-label="Menu"><label class="rg-burger" for="rg-nav-toggle" aria-label="Menu öffnen/schließen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cdc6bb" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></label><nav class="rg-nav"><a href="https://insights.rhinegold.de">Insights</a><a href="https://insights.rhinegold.de/compendium/" class="active">Compendium</a><a href="https://rhinegold.de/services">Services</a><a href="https://rhinegold.de/sim">SIM</a><a href="https://rhinegold.de/methodology">Methodology</a><a href="https://rhinegold.de/about">About</a><a href="https://chat.rhinegold.de" target="_blank" rel="noopener">Ask Dietrich</a></nav></header><main id="main-content"><article class="det" aria-label="Measurement Consistency"><div class="crumb"><a href="../">Compendium</a> <span class="crumb-sep">/</span> <span class="crumb-cat">Measurement</span></div><h1>Measurement Consistency</h1><div class="metastrip"><div class="mi"><span class="mi-l">Type</span><span class="mi-v">Practitioner concept</span></div><div class="mi"><span class="mi-l">Term maturity</span><span class="mi-v"><span class="fp-badge" style="background:#f6e3d2;color:#9a5a23">plausible</span></span></div><div class="mi"><span class="mi-l">Operator maturity</span><span class="mi-v"><span class="fp-badge" style="background:#f5edd2;color:#8a6d1e">practice-validated</span></span></div><div class="mi"><span class="mi-l">Lifecycle</span><span class="mi-v">emerging</span></div><div class="mi"><span class="mi-l">Relevance</span><span class="mi-v">operational</span></div><div class="mi"><span class="mi-l">Verified</span><span class="mi-v">2026-10-08</span></div></div><nav class="secnav full"><div class="secnav-inner"><a href="#definition">Definition</a><a href="#use">Use &amp; limits</a><a href="#distinct">Distinct from</a><a href="#obstacles">Obstacles</a><a href="#mistakes">Mistakes</a><a href="#sources">Sources</a></div></nav><div class="lede">An AI-visibility number is a product of the data <strong>and</strong> of every choice made in counting it: what counts as one mention, which answers go into the denominator, how providers are weighted, which prompts are in the set. Change one of those and the number moves — by a factor, not a rounding error, and sometimes in the opposite direction. Measurement consistency means freezing those choices and declaring every change as a new measurement era, so that a movement in the series is a movement in the market.</div><div class="statcallout"><div class="num">7.6×</div><div class="lab">mentions per answer recorded by the old counting method versus the span-aware method on the same answers, in the last wave before the switch (Rhinegold client series, 2026).<span class="src-ref"><a href="#src-src_method" style="color:inherit">source</a></span></div></div><section id="definition" class="breakout"><div class="colrow"><div class="colcard consensus"><h2>Consensus definition</h2><p>Measurement consistency is the property of a measurement series in which every observed change can be attributed to the thing measured, because the method did not change in between. For AI-visibility metrics — <a class="xlink" href="../mention-rate/">mention rate</a>, <a class="xlink" href="../citation-rate/">citation rate</a>, <a class="xlink" href="../share-of-voice/">share of voice</a>, shortlist position — the method has at least five moving parts: the <strong>counting unit</strong> (every occurrence of a brand name, or one brand per answer), the <strong>entity map</strong> (which strings count as the brand, which as competitors), the <strong>denominator</strong> (all answers, or only answers of one type), the <strong>provider weights</strong> (how four assistants are blended into one number), and the <strong>prompt set</strong> (which questions are asked, with or without brand names). None of these is given by the data; each is a decision. A series is consistent when the decisions are written down, frozen, and every later change is dated and marked in the series as a break.</p></div><div class="colcard operator"><h2>rhinegold operator refinement</h2><p>Rhinegold&#x27;s reframe: <strong>a visibility dashboard is only as good as its least stable definition.</strong> Most practitioners worry about model updates and prompt variance — real, but visible. The larger errors we have seen were invisible: the method moved and nobody noticed, because every individual number was computed correctly. In our own measurement practice for B2B clients, method changes have moved headline metrics by factors of three to eight and have reversed the sign of a trend. Measurement consistency is therefore not a hygiene topic; it decides whether a quarter&#x27;s &quot;progress&quot; existed.</p></div></div></section><section id="use" class="breakout"><div class="colrow"><div class="colcard"><h2>Operational use</h2><p>Before trusting any trend: ask for the counting unit, the entity map, the denominator, the weights, and the prompt set at both ends of the series. If any of them changed, the two ends are two series. Keep a written <strong>methodology register</strong> with a date for every change; show breaks as vertical lines in charts; re-measure the earlier wave with the new method before comparing. Treat a tool switch, a provider switch and a parser update as method changes, because they are. In an <a class="xlink" href="../ai-visibility-audit/">AI visibility audit</a>, the register is the first document to ask for.</p></div><div class="colcard warn"><h2>Measurement boundary</h2><p>Consistency makes a series interpretable; it does not make it right. A consistently applied bad definition yields a consistently misleading number. And the metric cannot be frozen entirely: providers change retrieval and models without notice, so part of every series is exogenous. The honest position is a frozen method on a moving platform, with the platform changes logged as well.</p></div></div></section><div class="sec" id="distinct"><h2>Distinct from</h2><p>From <a class="xlink" href="../platform-divergence/">Platform Divergence</a>: divergence is providers disagreeing with each other; inconsistency is the measurement disagreeing with itself. From <a class="xlink" href="../prompt-coverage/">Prompt Coverage</a>: coverage asks whether the right questions are in the set; consistency asks whether the set stayed the same. From <a class="xlink" href="../ai-answer-sentiment/">AI Answer Sentiment</a>: the published SISTRIX test is the external version of this entry — the same brand question, asked directly, scattered by 17 points on a 200-point scale and by more than 40 when reworded; measured indirectly from real answers, two brands that direct questioning placed about 30 points apart were 118 points apart<sup class="fn"><a href="#src-src_beus" id="fnref-src_beus">1</a></sup>.</p></div><div class="sec obstacles breakout" id="obstacles"><h2>Obstacles &amp; resolutions</h2><div class="obstacle"><div class="ob-q">The counting unit: a crash that never happened</div><div class="ob-why">Early waves of a client series counted every occurrence of a brand string in an answer; later waves counted one mention per brand per answer (span-aware). In the last wave before the switch, the old method recorded 7.6 times as many mentions per answer as the new one, and the brand&#x27;s share of mentions was 3.2 times higher. Read as one series, the brand&#x27;s share &quot;collapsed&quot; between two adjacent waves. Re-measured with one method, the series rose throughout. In the same programme, the aliases of one competitor summed as separate hits had inflated that competitor&#x27;s count by a factor of 2.7.</div><div class="ob-res"><b>rhinegold resolution</b>One brand, one answer, one mention. Map every alias to one entity before counting. Re-measure the past with the present method before publishing a trend.<sup class="ref"><a href="#src-src_method">[ref]</a></sup></div></div><div class="obstacle"><div class="ob-q">The denominator: a decline that was an improvement</div><div class="ob-why">&quot;Share of answers where the brand is in the top three&quot; fell from 80 % to 62 % between two waves — reported as a decline. The denominator was &quot;all mentions of the brand&quot;, and that denominator had grown mostly in long lists, where top-three places are rarer. Absolute top-three answers had risen by about 40 %; measured against the canonical denominator (all answers of that question type), the top-three rate had more than tripled. Same answers, opposite verdict.</div><div class="ob-res"><b>rhinegold resolution</b>The denominator is the defined population of answers, never &quot;the cases where the brand appears&quot;. Show numerator and denominator in absolute terms next to every share.<sup class="ref"><a href="#src-src_method">[ref]</a></sup></div></div><div class="obstacle"><div class="ob-q">Provider weights: a double-digit move with no change in performance</div><div class="ob-why">A blended rate across four assistants needs weights. Recomputing one wave with a plausible alternative weight set (40/30/20/10 versus 50/22/20/08) moved the citation rate by −16 % relative and the mention rate by +4 % — in opposite directions, because one provider cites generously but mentions the brand less. Nothing had happened in the market.</div><div class="ob-res"><b>rhinegold resolution</b>Freeze the weights; review them on a calendar, not when a number looks wrong; announce any change as a method break. Report the unweighted per-provider rates alongside the blend.<sup class="ref"><a href="#src-src_method">[ref]</a></sup></div></div><div class="obstacle"><div class="ob-q">The prompt set: a plus that was a minus</div><div class="ob-why">A citation balance computed over all prompts showed a net gain. Restricted to prompts that do not name the brand — the only prompts that measure discovery — it showed a net loss. Branded prompts had carried the gain.</div><div class="ob-res"><b>rhinegold resolution</b>Report aided (brand named) and unaided (category only) separately, always. A blended figure answers no question a buyer-journey owner asks.<sup class="ref"><a href="#src-src_method">[ref]</a></sup></div></div></div><div class="sec"><h2>Observed pattern in practice</h2><div class="empirical">The four cases above come from Rhinegold&#x27;s measurement practice for B2B clients in 2026 and are reported as ratios between two methods applied to the same answers; absolute values and clients are withheld<sup class="fn"><a href="#src-src_method" id="fnref-src_method">2</a></sup>. The first case rests on about 23,000 answer rows over six waves; the second on two waves of one question type; the third and fourth on single waves, and they illustrate the mechanism rather than estimate its typical size.</div></div><div class="sec" id="mistakes"><h2>Common mistakes</h2><ul><li>Comparing two waves measured with different tools, parsers or prompt sets as one series.</li><li>Reporting a share without its numerator and denominator in absolute terms.</li><li>Changing provider weights because the result &quot;looked wrong&quot;.</li><li>Blending aided and unaided prompts into one visibility figure.</li><li>Treating consistency as achieved once the method is documented — it has to be re-checked at every change of tool or provider.</li></ul></div><div class="sec"><h2>Where consensus is missing</h2><p>There is no industry standard for any of the five decisions, and tools rarely disclose theirs. Switching between two visibility tools therefore means starting a new series. Whether and how series from different tools can be bridged is an open question; Rhinegold&#x27;s position is that they cannot — only re-measured. See also <a class="xlink" href="../llm-brand-tracking/">LLM Brand Tracking</a> on what a tracking set-up has to hold constant.</p></div><div class="src" id="sources"><h2>Sources &amp; deeper reading</h2><div class="src-section"><div class="src-section-label">Methodological source</div><ul class="src-list"><li id="src-src_method"><span class="src-num">2</span><a href="https://rhinegold.de/methodology" target="_blank" rel="noopener external">rhinegold methodology — measurement register and method-change checks across client series (2026); the cases in this entry are ratios between two methods on the same answers</a><div class="src-meta">official documentation · primary · verified 2026-10-08</div></li></ul></div><div class="src-section"><div class="src-section-label">Industry observation</div><ul class="src-list"><li id="src-src_beus"><span class="src-num">1</span><a href="https://www.linkedin.com/posts/jbeus_wie-sieht-chatgpt-meine-marke-der-naheliegende-ugcPost-7483144401142099969-A7eh" target="_blank" rel="noopener external">Johannes Beus (SISTRIX) — &quot;Wie sieht ChatGPT meine Marke?&quot; (LinkedIn, 15 July 2026; 10 brands × 3 phrasings × 3 repeats × 2 models; direct questioning scatters by 17 points, indirect measurement separates Wirecard and LEGO by 118)</a><div class="src-meta">practitioner article · primary · verified 2026-10-08</div></li></ul></div></div><div class="cadence">Last verified 2026-10-08 · Next review 2027-01-06</div><a class="ask-dietrich" href="https://chat.rhinegold.de/"><span class="ad-eyebrow">Question this measurement</span><span class="ad-text">A metric can be right and the conclusion still wrong.</span><span class="ad-go">Ask Dietrich →</span></a><div class="foot-furniture"><div><div class="ff-h">Related terms</div><div class="foot-related"><a href="../platform-divergence/">Platform Divergence</a><a href="../prompt-coverage/">Prompt Coverage</a><a href="../ai-answer-sentiment/">Sentiment in AI Answers</a><a href="../llm-brand-tracking/">LLM Brand Tracking</a><a href="../citation-rate/">Citation Rate</a><a href="../ai-visibility-audit/">AI Visibility Audit</a></div></div><div><div class="ff-h">Cite this entry</div><div class="cite-box">rhinegold. &ldquo;Measurement Consistency.&rdquo; The Rhinegold Compendium. https://insights.rhinegold.de/compendium/measurement-consistency/. Updated 2026-10-08.</div></div></div></article></main><footer class="rg-footer"><div class="rg-footer-inner"><a class="rg-logo" href="https://rhinegold.de" aria-label="rhinegold home" style="display:flex;align-items:center;text-decoration:none"><img src="/assets/rhinegold-logo.png" alt="rhinegold" width="620" height="160" style="height:22px;width:auto;display:block"></a><div class="rg-footer-tag" style="font-size:12px;letter-spacing:.08em;color:#7d766c">Semantic Intelligence · Decision Systems · External Resonance</div><div class="rg-footer-links" style="display:flex;flex-wrap:wrap;gap:20px;font-size:13px"><a href="https://rhinegold.de/contact">Contact</a></div><div class="rg-footer-links rg-footer-legal" style="display:flex;flex-wrap:wrap;gap:20px;font-size:12px;color:#7d766c;margin-top:8px"><a href="https://rhinegold.de/legal-notice">Legal Notice</a><a href="https://rhinegold.de/privacy-policy">Privacy Policy</a><a href="https://rhinegold.de/grounding">Grounding</a></div></div><div class="rg-copy">© 2026 rhinegold</div></footer><script>
+  var _paq = window._paq = window._paq || [];
+  /* Cookieless configuration - no visitor, session or referrer cookies are set. */
+  _paq.push(['disableCookies']);
+  /* Keeps rhinegold.de and insights.rhinegold.de one site, not an outlink. */
+  _paq.push(['setDomains', ['*.rhinegold.de']]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo-production-2d0c.up.railway.app/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script></body></html>

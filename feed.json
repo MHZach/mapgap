@@ -1,7 +1,14 @@
 {
   "_note": "PUBLIC LINKS MUST point to https://insights.rhinegold.de/... — NEVER rhinegold.de/... The rhinegold.de/compendium/* Framer redirect is broken (:splat not substituted) and returns 404 on every URL until the Framer routing is fixed. After editing this file, purge the jsDelivr cache: https://purge.jsdelivr.net/gh/MHZach/mapgap@main/feed.json . Verify every new URL with curl (HTTP 200) before announcing it live.",
-  "updated": "2026-09-18",
+  "updated": "2026-10-08",
   "items": [
+    {
+      "title": "Measurement Consistency",
+      "url": "https://insights.rhinegold.de/compendium/measurement-consistency/",
+      "date": "2026-10-08",
+      "type": "compendium",
+      "teaser": "An AI-visibility number is a product of the data and of every choice made in counting it. Four cases from measurement practice where the method moved the number by a factor of three to eight — or reversed a trend."
+    },
     {
       "title": "The Second Experiment",
       "url": "https://insights.rhinegold.de/episode6",

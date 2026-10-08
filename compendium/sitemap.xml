@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://insights.rhinegold.de/compendium/</loc></url>
+  <url><loc>https://insights.rhinegold.de/compendium/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/agentic-commerce/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-agents-buyer-journey/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-answer-sentiment/</loc><lastmod>2026-10-06</lastmod></url>
@@ -38,6 +38,7 @@
   <url><loc>https://insights.rhinegold.de/compendium/lead-value/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/llm-brand-tracking/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/llm-referral-traffic/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/measurement-consistency/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/mention-intensity/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/mention-quality/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/mention-rate/</loc><lastmod>2026-10-06</lastmod></url>
