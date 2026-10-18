@@ -5,7 +5,7 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Oct 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
@@ -13,6 +13,22 @@
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
 
+    <item>
+      <title>AI Crawler Traffic</title>
+      <link>https://insights.rhinegold.de/compendium/ai-crawler-traffic/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/ai-crawler-traffic/</guid>
+      <pubDate>Sun, 18 Oct 2026 12:00:00 +0000</pubDate>
+      <description>Training crawlers, search indexers and user-triggered fetchers land in the same server log. Only the last kind is a direct trace of someone asking an AI assistant, so it belongs in the visibility report and must be counted separately.</description>
+      <category>Compendium</category>
+    </item>
+    <item>
+      <title>AI Overview Traffic</title>
+      <link>https://insights.rhinegold.de/compendium/ai-overview-traffic/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/ai-overview-traffic/</guid>
+      <pubDate>Sun, 18 Oct 2026 12:00:00 +0000</pubDate>
+      <description>Google reports impressions in AI Overviews and AI Mode, but no separate clicks. The traffic effect can only be estimated: by comparing affected pages with comparable pages over the same period, not by a before/after on the page alone.</description>
+      <category>Compendium</category>
+    </item>
     <item>
       <title>Measurement Consistency</title>
       <link>https://insights.rhinegold.de/compendium/measurement-consistency/</link>

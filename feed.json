@@ -1,7 +1,21 @@
 {
   "_note": "PUBLIC LINKS MUST point to https://insights.rhinegold.de/... — NEVER rhinegold.de/... The rhinegold.de/compendium/* Framer redirect is broken (:splat not substituted) and returns 404 on every URL until the Framer routing is fixed. After editing this file, purge the jsDelivr cache: https://purge.jsdelivr.net/gh/MHZach/mapgap@main/feed.json . Verify every new URL with curl (HTTP 200) before announcing it live.",
-  "updated": "2026-10-08",
+  "updated": "2026-10-18",
   "items": [
+    {
+      "title": "AI Crawler Traffic",
+      "url": "https://insights.rhinegold.de/compendium/ai-crawler-traffic/",
+      "date": "2026-10-18",
+      "type": "compendium",
+      "teaser": "Training crawlers, search indexers and user-triggered fetchers land in the same server log. Only the last kind is a direct trace of someone asking an AI assistant, so it belongs in the visibility report and must be counted separately."
+    },
+    {
+      "title": "AI Overview Traffic",
+      "url": "https://insights.rhinegold.de/compendium/ai-overview-traffic/",
+      "date": "2026-10-18",
+      "type": "compendium",
+      "teaser": "Google reports impressions in AI Overviews and AI Mode, but no separate clicks. The traffic effect can only be estimated: by comparing affected pages with comparable pages over the same period, not by a before/after on the page alone."
+    },
     {
       "title": "Measurement Consistency",
       "url": "https://insights.rhinegold.de/compendium/measurement-consistency/",
