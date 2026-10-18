@@ -1,0 +1,851 @@
+{
+ "generated_for": "https://insights.rhinegold.de/compendium/",
+ "items": [
+  {
+   "slug": "agentic-commerce",
+   "title": "Agentic Commerce",
+   "abbreviation": null,
+   "aliases": [
+    "agentic checkout",
+    "agent-initiated commerce",
+    "AI checkout"
+   ],
+   "tldr": "Agentic commerce is the execution layer beyond AI-assisted research: an authorised AI agent does not just surface a shortlist — it selects, checks out and completes the transaction. With payment protocols reaching production in 2025–2026, it collapses the distinction between being findable and being buyable-by-machine.",
+   "category": "GEO Impact",
+   "url": "https://insights.rhinegold.de/compendium/agentic-commerce/"
+  },
+  {
+   "slug": "ai-agents-buyer-journey",
+   "title": "AI Agents in the Buyer Journey",
+   "abbreviation": null,
+   "aliases": [
+    "agentic research",
+    "AI shopping agents",
+    "autonomous buyer agents"
+   ],
+   "tldr": "AI agents are tool-using systems that carry out multi-step tasks on a user's behalf — and increasingly, part of vendor research. When an agent builds the shortlist, the audience reading a brand's content is no longer only human, and the criteria that win are machine-legible ones.",
+   "category": "GEO Impact",
+   "url": "https://insights.rhinegold.de/compendium/ai-agents-buyer-journey/"
+  },
+  {
+   "slug": "ai-answer-sentiment",
+   "title": "Sentiment in AI Answers",
+   "abbreviation": null,
+   "aliases": [
+    "brand sentiment in AI",
+    "AI framing",
+    "answer tone"
+   ],
+   "tldr": "Sentiment in AI answers is the qualitative tone with which a brand is introduced — endorsed, described neutrally, or hedged. It is the layer above every counting metric: not whether the brand appears or how often, but how it is characterised at the moment of recommendation.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/ai-answer-sentiment/"
+  },
+  {
+   "slug": "ai-crawler-traffic",
+   "title": "AI Crawler Traffic",
+   "abbreviation": null,
+   "aliases": [
+    "AI bot traffic",
+    "LLM crawler traffic",
+    "AI crawler requests"
+   ],
+   "tldr": "AI crawler traffic is the set of server requests made by bots that AI providers operate — to train models, to index pages for AI search, or to fetch a page live because a user asked the assistant a question. Only the last kind is a direct trace of someone asking, so it belongs in the visibility report and must be counted separately from training crawlers.",
+   "category": "Measurement",
+   "url": "https://insights.rhinegold.de/compendium/ai-crawler-traffic/"
+  },
+  {
+   "slug": "ai-mention-velocity",
+   "title": "AI Mention Velocity",
+   "abbreviation": null,
+   "aliases": [
+    "mention-rate velocity",
+    "AI mention growth rate",
+    "AI visibility velocity"
+   ],
+   "tldr": "AI Mention Velocity measures how quickly a brand's appearance rate in AI-generated answers changes for a given topic cluster over time — the first derivative of mention rate. It serves as an early-warning signal for emerging positioning opportunities in generative search, analogous to the \"rising keyword\" signal in classic SEO but operating inside LLM output rather than index rankings.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/ai-mention-velocity/"
+  },
+  {
+   "slug": "ai-mode",
+   "title": "AI Mode",
+   "abbreviation": null,
+   "aliases": [
+    "Google AI Mode"
+   ],
+   "tldr": "AI Mode is Google's dedicated conversational search surface — a chat-style session, separate from the classic results page, that reasons over multiple sub-searches and answers with cited sources. For B2B visibility it shifts the unit of exposure from ranked link to cited passage.",
+   "category": "Platform surfaces",
+   "url": "https://insights.rhinegold.de/compendium/ai-mode/"
+  },
+  {
+   "slug": "ai-overview-traffic",
+   "title": "AI Overview Traffic",
+   "abbreviation": null,
+   "aliases": [
+    "AIO traffic",
+    "AI Overviews traffic",
+    "AI Overview click loss"
+   ],
+   "tldr": "AI Overview traffic is the part of a page's Google search clicks that AI Overviews and AI Mode add or take away. Google reports impressions in its AI features but no separate clicks from them, so the number cannot be read from a report. It can be estimated, for example by comparing the change in clicks on affected pages and their queries with comparable pages over the same period. A before/after on the page alone counts the market-wide change as the page's own.",
+   "category": "Attribution",
+   "url": "https://insights.rhinegold.de/compendium/ai-overview-traffic/"
+  },
+  {
+   "slug": "ai-overview-vs-ai-mode",
+   "title": "AI Overviews vs AI Mode",
+   "abbreviation": null,
+   "aliases": [
+    "AIO vs AI Mode"
+   ],
+   "tldr": "AI Overviews and AI Mode are two distinct Google surfaces: AI Overviews summarise above the classic results; AI Mode is a separate conversational search. They reach similar conclusions but cite largely different sources. Google now presents and reports them as one experience; telling them apart in measurement takes third-party tooling.",
+   "category": "Platform surfaces",
+   "url": "https://insights.rhinegold.de/compendium/ai-overview-vs-ai-mode/"
+  },
+  {
+   "slug": "ai-reputation-risk",
+   "title": "AI Reputation Risk",
+   "abbreviation": null,
+   "aliases": [
+    "AI brand risk",
+    "AI reputation exposure",
+    "LLM reputation risk"
+   ],
+   "tldr": "AI Reputation Risk is the cumulative brand-exposure a company carries from how it is represented across AI-generated answers — aggregating hallucinated facts, phantom URLs, negated mentions, negative sentiment and harmful co-mentions into a single governance-level risk view. Tracking single failure modes in isolation misses the compounding effect that erodes brand equity faster than any single incident would predict.",
+   "category": "Brand Risk",
+   "url": "https://insights.rhinegold.de/compendium/ai-reputation-risk/"
+  },
+  {
+   "slug": "ai-vendor-sovereignty",
+   "title": "AI Vendor Sovereignty",
+   "abbreviation": null,
+   "aliases": [
+    "vendor sovereignty",
+    "AI sovereignty",
+    "two-axis LLM decision"
+   ],
+   "tldr": "Choosing an LLM provider is no longer one decision. European enterprises now face two independent choices — visibility in the models their buyers use, and control over the models they process with — and the answers are not the same. The 12 June 2026 US suspension of Anthropic's Fable 5 and Mythos 5 — lifted nineteen days later — turned that from a theory into a dated event.",
+   "category": "Strategy & Risk",
+   "url": "https://insights.rhinegold.de/compendium/ai-vendor-sovereignty/"
+  },
+  {
+   "slug": "ai-visibility-audit",
+   "title": "AI Visibility Audit",
+   "abbreviation": null,
+   "aliases": [
+    "AI visibility scan",
+    "brand AI audit",
+    "GEO visibility audit"
+   ],
+   "tldr": "An AI Visibility Audit is a scoped, time-bounded assessment of how a brand appears across AI-generated answers — covering mention rate, citation rate, sentiment, competitive share of voice and source authority across major providers. It produces a baseline plus gap analysis plus prioritised intervention list — a deliverable, not a subscription dashboard.",
+   "category": "Measurement",
+   "url": "https://insights.rhinegold.de/compendium/ai-visibility-audit/"
+  },
+  {
+   "slug": "aided-unaided-brand-recall-geo",
+   "title": "Aided vs Unaided Brand Recall in GEO",
+   "abbreviation": null,
+   "aliases": [
+    "aided vs unaided mention rate",
+    "brand-recall taxonomy GEO",
+    "category-aided prompt",
+    "brand-aided prompt",
+    "aided/unaided split"
+   ],
+   "tldr": "Classical brand-equity research has separated unaided brand recall (the consumer names the brand spontaneously) from aided brand recognition (the consumer confirms the brand when prompted) for more than three decades. Most current GEO measurement tools collapse the two, producing aggregate mention rates that are systematically inflated by prompts which already contain the brand name. The same brand answering a prompt that mentions it by name is methodologically closer to a tautology than to a competitive signal. Reintroducing the aided/unaided split — with a three-stage taxonomy (unaided · category-aided · brand-aided) — is the cleanest available correction. Unaided remains the headline metric; aided becomes a plausibility check.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/aided-unaided-brand-recall-geo/"
+  },
+  {
+   "slug": "api-vs-ui-llm-visibility",
+   "title": "API vs UI Measurement (LLM Visibility)",
+   "abbreviation": null,
+   "aliases": [
+    "API-based vs UI-scraped tracking",
+    "access-path divergence"
+   ],
+   "tldr": "The same prompts produce measurably different answers through a provider's API than through its consumer interface — an August 2026 comparison reports a 41% average shift in brand visibility between the two paths. The finding is real and useful. The conclusion often drawn from it — that only UI-scraped data shows 'what real users see' and API-based tools are therefore lying — does not follow: neither path observes 'the' answer. The interface is personalised per account; the API is a pinned configuration. Divergence makes the access path a mandatory disclosure on every visibility number, makes relative within-instrument metrics the defensible way to track, and makes the two paths complements answering different questions — not rivals for a single truth.",
+   "category": "Measurement",
+   "url": "https://insights.rhinegold.de/compendium/api-vs-ui-llm-visibility/"
+  },
+  {
+   "slug": "attribution",
+   "title": "Attribution",
+   "abbreviation": null,
+   "aliases": [
+    "marketing attribution"
+   ],
+   "tldr": "Attribution is the discipline of estimating how marketing contacts, channels, and interventions contribute to commercial outcomes such as pipeline, qualified leads, and revenue.",
+   "category": "Attribution",
+   "url": "https://insights.rhinegold.de/compendium/attribution/"
+  },
+  {
+   "slug": "b2b-buyers-start-at-ai",
+   "title": "AI-First Vendor Research",
+   "abbreviation": null,
+   "aliases": [
+    "AI-first research",
+    "AI-driven vendor discovery",
+    "LLM-first buying",
+    "invisible shortlist"
+   ],
+   "tldr": "More than half of B2B buyers now open their vendor evaluation with an AI tool before visiting any website. The shortlist — and often the eventual winner — is shaped before a single tracked session arrives. Brands that are not visible in AI answers are structurally absent from consideration, with no signal in any analytics system they own.",
+   "category": "GEO Impact",
+   "url": "https://insights.rhinegold.de/compendium/b2b-buyers-start-at-ai/"
+  },
+  {
+   "slug": "brand-rank",
+   "title": "Brand Rank",
+   "abbreviation": null,
+   "aliases": [
+    "list position",
+    "AI answer rank",
+    "Top-3 presence"
+   ],
+   "tldr": "Brand Rank is the position a brand occupies when an AI answer lists options — first named, third, or ninth. Recommendation lists are ordered surfaces: being named first and being named last are different commercial events that binary presence metrics record identically. Top-3 presence is the operative shortlist threshold.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/brand-rank/"
+  },
+  {
+   "slug": "brand-recommendation-share",
+   "title": "Brand Recommendation Share",
+   "abbreviation": null,
+   "aliases": [],
+   "tldr": "Brand Recommendation Share is a Rhinegold-defined metric that measures the share of an LLM's recommendation attention a brand holds — weighted by the number of competitors named alongside it in the same answer.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/brand-recommendation-share/"
+  },
+  {
+   "slug": "brand-voice-match",
+   "title": "Brand Voice Match",
+   "abbreviation": "BVM",
+   "aliases": [
+    "BVM",
+    "brand voice fidelity",
+    "AI brand-language consistency"
+   ],
+   "tldr": "Brand Voice Match measures the degree to which AI-generated descriptions of a brand reproduce that brand's own tone, positioning vocabulary and distinctive attribute language — as opposed to defaulting to generic category phrasing. It is the distinctiveness check that sits above sentiment: a brand can receive neutral-to-positive AI coverage while simultaneously being rendered indistinguishable from competitors.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/brand-voice-match/"
+  },
+  {
+   "slug": "chunking-passage-retrieval",
+   "title": "Chunking & Passage Retrieval",
+   "abbreviation": null,
+   "aliases": [
+    "chunking",
+    "passage retrieval",
+    "passage indexing"
+   ],
+   "tldr": "Chunking splits documents into passages before they are embedded and retrieved; in AI search, retrieval and citation happen at the passage level, not the page level. Whether each passage is self-contained decides whether the right content is found and cited — which makes passage structure the most direct GEO lever an author actually controls.",
+   "category": "Foundations",
+   "url": "https://insights.rhinegold.de/compendium/chunking-passage-retrieval/"
+  },
+  {
+   "slug": "citation-rate",
+   "title": "Citation Rate",
+   "abbreviation": null,
+   "aliases": [],
+   "tldr": "Citation Rate is the share of AI answers that cite the brand as a source — with a link or named reference backing the answer — not merely mention it in passing.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/citation-rate/"
+  },
+  {
+   "slug": "co-mentions",
+   "title": "Co-Mentions",
+   "abbreviation": null,
+   "aliases": [
+    "co-occurrence",
+    "co-citation (brand level)",
+    "brand co-mention"
+   ],
+   "tldr": "Co-mentions are the brands named alongside yours in the same AI answer. They define the competitive set the model puts you in — and being named with the wrong company, or being the odd one out in a list of leaders, is a positioning signal that single-brand metrics cannot see.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/co-mentions/"
+  },
+  {
+   "slug": "competitive-mention-map",
+   "title": "Competitive Mention Map",
+   "abbreviation": null,
+   "aliases": [
+    "competitor co-mention map",
+    "AI consideration set map",
+    "competitive peer graph"
+   ],
+   "tldr": "A Competitive Mention Map is a structured analytical product — typically a frequency table, heat map or network graph — that shows which competitor brands appear alongside a company in AI-generated responses, segmented by query cluster and platform. It makes the consideration set that AI models project to buyers visible and measurable, enabling brands to diagnose whether their AI-perceived peer group matches their intended positioning.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/competitive-mention-map/"
+  },
+  {
+   "slug": "content-decay",
+   "title": "Content Decay",
+   "abbreviation": null,
+   "aliases": [
+    "content decay",
+    "traffic decay",
+    "visibility decay",
+    "content freshness loss"
+   ],
+   "tldr": "Content decay is the gradual loss of a page's traffic and visibility over time as it ages, competitors refresh, and the topic moves on. In an AI-answer world the decay is sharper and quieter: a page can keep its ranking yet quietly drop out of the answers that now intercept the click.",
+   "category": "GEO Impact",
+   "url": "https://insights.rhinegold.de/compendium/content-decay/"
+  },
+  {
+   "slug": "control-group",
+   "title": "Control Group",
+   "abbreviation": null,
+   "aliases": [
+    "holdout group",
+    "comparison group",
+    "untreated group"
+   ],
+   "tldr": "A control group is the set of units deliberately left untreated so that the counterfactual becomes observable. In marketing measurement it is the difference between knowing an intervention worked and assuming it did — and its quality, not its existence, decides what the measurement is worth.",
+   "category": "Measurement",
+   "url": "https://insights.rhinegold.de/compendium/control-group/"
+  },
+  {
+   "slug": "counterfactual",
+   "title": "Counterfactual",
+   "abbreviation": null,
+   "aliases": [
+    "counterfactual outcome",
+    "potential outcome"
+   ],
+   "tldr": "The counterfactual is what would have happened without the intervention. Every claim of marketing effect — this campaign drove revenue, this optimization lifted visibility — is a comparison against a counterfactual, whether the person making the claim states one or not.",
+   "category": "Measurement",
+   "url": "https://insights.rhinegold.de/compendium/counterfactual/"
+  },
+  {
+   "slug": "difference-in-differences",
+   "title": "Difference-in-Differences",
+   "abbreviation": "DiD",
+   "aliases": [
+    "DiD",
+    "diff-in-diff",
+    "double difference"
+   ],
+   "tldr": "Difference-in-Differences (DiD) measures an effect by comparing the change in a treated group to the change in an untreated group over the same window. The second difference subtracts what the market did to everyone — seasonality, platform shifts, demand drift — leaving the part attributable to the intervention.",
+   "category": "Measurement",
+   "url": "https://insights.rhinegold.de/compendium/difference-in-differences/"
+  },
+  {
+   "slug": "discovery-prompt",
+   "title": "Discovery Prompt",
+   "abbreviation": null,
+   "aliases": [
+    "recommendation prompt"
+   ],
+   "tldr": "A discovery prompt is a question that asks an AI for options or recommendations — \"best X for Y\", \"which providers do Z\" — the prompt class where brands compete to be named.",
+   "category": "Foundations",
+   "url": "https://insights.rhinegold.de/compendium/discovery-prompt/"
+  },
+  {
+   "slug": "earned-media-grounding",
+   "title": "Earned Media Grounding",
+   "abbreviation": null,
+   "aliases": [],
+   "tldr": "Earned media grounding is the GEO equivalent of the link-building channel: third-party platform presence that LLMs retrieve and cite. The outreach tactics are familiar — guest articles, listings, expert quotes — but the success criterion has shifted from traffic to retrievability.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/earned-media-grounding/"
+  },
+  {
+   "slug": "embedding",
+   "title": "Embedding",
+   "abbreviation": null,
+   "aliases": [
+    "vector embedding",
+    "text embedding",
+    "word embedding",
+    "semantic vector"
+   ],
+   "tldr": "An embedding is a representation of text as a vector of numbers, positioned so that things with similar meaning sit close together. It is how machines compute \"semantic similarity\" — the operation underneath retrieval, clustering, and the whole idea that a market can be measured by meaning rather than by exact keywords.",
+   "category": "Foundations",
+   "url": "https://insights.rhinegold.de/compendium/embedding/"
+  },
+  {
+   "slug": "featured-snippet",
+   "title": "Featured Snippet",
+   "abbreviation": null,
+   "aliases": [
+    "answer box",
+    "position zero",
+    "rich answer"
+   ],
+   "tldr": "A featured snippet is the boxed answer Google lifts to the top of results, quoting a page directly. It was the first mass surface where the search engine answered instead of linking — the ancestor of AI Overviews, and the original lesson in being the source of the answer rather than a link beneath it.",
+   "category": "Foundations",
+   "url": "https://insights.rhinegold.de/compendium/featured-snippet/"
+  },
+  {
+   "slug": "generative-engine-optimization",
+   "title": "Generative Engine Optimization",
+   "abbreviation": "GEO",
+   "aliases": [
+    "GEO",
+    "AEO",
+    "LLMO"
+   ],
+   "tldr": "Generative Engine Optimization (GEO) is the practice of improving how a brand is surfaced, cited, and recommended inside AI-generated answers — not in the ten blue links.",
+   "category": "Foundations",
+   "url": "https://insights.rhinegold.de/compendium/generative-engine-optimization/"
+  },
+  {
+   "slug": "grounded-response-rate",
+   "title": "Grounded Response Rate",
+   "abbreviation": null,
+   "aliases": [
+    "grounding rate",
+    "retrieval rate",
+    "source-backed answer rate"
+   ],
+   "tldr": "Grounded Response Rate is the share of AI answers about a topic that are backed by retrieved sources rather than generated from model memory alone. It is the dial between two visibility regimes — what the model knows versus what it looks up — and it decides which optimisation levers can move a brand at all.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/grounded-response-rate/"
+  },
+  {
+   "slug": "grounding",
+   "title": "Grounding",
+   "abbreviation": null,
+   "aliases": [
+    "grounding with Google Search",
+    "retrieval-augmented grounding"
+   ],
+   "tldr": "Grounding is the mechanism by which an LLM retrieves external sources at answer time and conditions its response on them — the plumbing behind citations, not the citation itself.",
+   "category": "Foundations",
+   "url": "https://insights.rhinegold.de/compendium/grounding/"
+  },
+  {
+   "slug": "hallucination-brand-risk",
+   "title": "Hallucination",
+   "abbreviation": null,
+   "aliases": [
+    "AI hallucination",
+    "LLM hallucination",
+    "hallucination risk",
+    "HRI",
+    "Hallucination Risk Index"
+   ],
+   "tldr": "Hallucination is when an AI generates factually incorrect content presented as true. For brands, this means AI assistants can state wrong facts about products, pricing, personnel, or capabilities — with no correction mechanism inside the response. A brand with high visibility but high hallucination rate is being introduced incorrectly at the most influential moment in the buyer journey.",
+   "category": "Brand Risk",
+   "url": "https://insights.rhinegold.de/compendium/hallucination-brand-risk/"
+  },
+  {
+   "slug": "invisible-shortlist",
+   "title": "The Invisible Shortlist",
+   "abbreviation": null,
+   "aliases": [],
+   "tldr": "Your best prospect just put together a shortlist of five vendors. You weren’t on it. You never got the chance to be. They didn’t Google. They asked an AI. The AI synthesized an answer from what it knew. And what it knew didn’t include you. No rejected pitch. No failed ad. No lost RFP. Just absence — quiet, complete, and invisible in every analytics dashboard you own.",
+   "category": "GEO Impact",
+   "url": "https://insights.rhinegold.de/compendium/invisible-shortlist/"
+  },
+  {
+   "slug": "lead-scoring",
+   "title": "Lead Scoring",
+   "abbreviation": null,
+   "aliases": [],
+   "tldr": "Lead scoring is a systematic method for prioritizing incoming leads by proximity to a purchase decision. Its failure mode is almost never the scoring algorithm — it’s the quality of the firmographic data the algorithm is fed.",
+   "category": "Lead & Funnel",
+   "url": "https://insights.rhinegold.de/compendium/lead-scoring/"
+  },
+  {
+   "slug": "lead-value",
+   "title": "Lead Value",
+   "abbreviation": null,
+   "aliases": [
+    "expected lead value",
+    "value per lead",
+    "lead worth"
+   ],
+   "tldr": "Lead value is the expected monetary worth of a lead — the probability it converts multiplied by what it is worth if it does. It is what lead scoring should optimise toward, and the reason counting leads equally is the most common way marketing measurement misleads.",
+   "category": "Attribution",
+   "url": "https://insights.rhinegold.de/compendium/lead-value/"
+  },
+  {
+   "slug": "llm-brand-tracking",
+   "title": "LLM Brand Tracking",
+   "abbreviation": null,
+   "aliases": [
+    "AI brand tracking",
+    "AI brand monitoring",
+    "LLM brand monitoring"
+   ],
+   "tldr": "LLM Brand Tracking is the continuous discipline of monitoring how a brand appears — as mentions, citations and recommended entities — inside AI-generated responses across ChatGPT, Claude, Gemini, Perplexity, Copilot and AI Overviews. It is the operational successor to classic survey-based brand tracking in an era where machine-generated answers mediate discovery before any human actively searches.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/llm-brand-tracking/"
+  },
+  {
+   "slug": "llm-referral-traffic",
+   "title": "LLM Referral Traffic",
+   "abbreviation": null,
+   "aliases": [
+    "AI referral traffic",
+    "AI-driven traffic",
+    "answer-engine referrals"
+   ],
+   "tldr": "LLM referral traffic is the visits that arrive when a user clicks a link inside an AI answer. It is the click-side counterpart to AI visibility — and the gap between how often a brand is mentioned and how rarely those mentions convert to a visit is itself a measurement, not a rounding error.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/llm-referral-traffic/"
+  },
+  {
+   "slug": "measurement-consistency",
+   "title": "Measurement Consistency",
+   "abbreviation": null,
+   "aliases": [
+    "measurement invariance",
+    "method stability",
+    "methodology era",
+    "same data, different number"
+   ],
+   "tldr": "An AI-visibility number is a product of the data and of every choice made in counting it: what counts as one mention, which answers go into the denominator, how providers are weighted, which prompts are in the set. Change one of those and the number moves — by a factor, not a rounding error, and sometimes in the opposite direction. Measurement consistency means freezing those choices and declaring every change as a new measurement era, so that a movement in the series is a movement in the market.",
+   "category": "Measurement",
+   "url": "https://insights.rhinegold.de/compendium/measurement-consistency/"
+  },
+  {
+   "slug": "mention-intensity",
+   "title": "Mention Intensity",
+   "abbreviation": null,
+   "aliases": [
+    "mention depth",
+    "within-answer mention count"
+   ],
+   "tldr": "Mention Intensity measures how much of an AI answer is built around a brand — how often and how substantially it is named within a single response. It is the depth dimension that binary presence metrics flatten: an answer structured around your brand and an answer that lists you once in passing both count as \"mentioned\".",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/mention-intensity/"
+  },
+  {
+   "slug": "mention-quality",
+   "title": "Mention Quality",
+   "abbreviation": null,
+   "aliases": [
+    "weighted mention",
+    "mention grading",
+    "AI mention scoring"
+   ],
+   "tldr": "Mention Quality is the weighted-value layer on top of raw mention presence: it grades each brand mention in an AI-generated answer by position in the response, the framing it carries (primary recommendation vs. passing aside vs. negation), the authority of the underlying source, and the overall context. The earned-media tradition has long distinguished tier-1 quality coverage from raw share of voice — Mention Quality imports that logic into AI-answer measurement.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/mention-quality/"
+  },
+  {
+   "slug": "mention-rate",
+   "title": "Mention Rate",
+   "abbreviation": null,
+   "aliases": [
+    "brand mention rate"
+   ],
+   "tldr": "Mention Rate is the share of AI answers in which a brand is named in the answer text, measured across a fixed prompt set.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/mention-rate/"
+  },
+  {
+   "slug": "microsoft-copilot",
+   "title": "Microsoft Copilot",
+   "abbreviation": null,
+   "aliases": [
+    "Copilot",
+    "Microsoft 365 Copilot",
+    "Bing Copilot"
+   ],
+   "tldr": "Microsoft Copilot is an AI answer surface embedded across Microsoft 365, Windows, Edge and Bing — grounded in both the Bing web index and enterprise data. For B2B vendors it is a decision-stage citation surface with partial visibility: answers appear inside the tools where buyers actually work, with no public results page to audit — but since 2026 Bing Webmaster Tools reports the citations and grounding queries behind Copilot answers.",
+   "category": "Platform surfaces",
+   "url": "https://insights.rhinegold.de/compendium/microsoft-copilot/"
+  },
+  {
+   "slug": "mistral-le-chat",
+   "title": "Mistral & Le Chat",
+   "abbreviation": null,
+   "aliases": [
+    "Le Chat",
+    "Mistral Vibe",
+    "Mistral AI"
+   ],
+   "tldr": "Mistral AI plays two roles for European operators: Le Chat (now Mistral Vibe) is an AI assistant and emerging answer surface with limited but growing reach, while Mistral itself is Europe's most-capitalised model provider — the EU-jurisdiction option regulated enterprises weigh against US hyperscalers. The two are separate decisions.",
+   "category": "Platform surfaces",
+   "url": "https://insights.rhinegold.de/compendium/mistral-le-chat/"
+  },
+  {
+   "slug": "mql",
+   "title": "MQL",
+   "abbreviation": "Marketing Qualified Lead",
+   "aliases": [],
+   "tldr": "An MQL is a lead the marketing team has determined is qualified enough to pass to sales. The reliability of that signal depends directly on the quality of the data the scoring system operates on.",
+   "category": "Lead & Funnel",
+   "url": "https://insights.rhinegold.de/compendium/mql/"
+  },
+  {
+   "slug": "multi-axis-sentiment-geo",
+   "title": "Multi-Axis Sentiment in GEO",
+   "abbreviation": null,
+   "aliases": [
+    "statement-centric sentiment",
+    "multi-dimensional sentiment GEO",
+    "polarity-hedging-confidence axes",
+    "three-axis sentiment LLM"
+   ],
+   "tldr": "Classical sentiment analysis assigns one polarity label — positive, neutral, negative — to a whole piece of text. Most GEO measurement tools have inherited that instrument and applied it to LLM answers. The fit is poor: LLM-generated text about a brand is predominantly hedged, multi-perspective and confidence-graded — characteristics for which a single polarity axis is structurally blind. The cleanest available correction is statement-centric, multi-axis measurement: the unit is the individual brand statement, and at minimum three axes are scored independently — polarity, hedging grade and confidence. Polarity then re-emerges as one signal among several, instead of a flattening summary that absorbs everything operationally interesting into a misleadingly large neutral bucket.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/multi-axis-sentiment-geo/"
+  },
+  {
+   "slug": "negated-mention",
+   "title": "Negated Mention",
+   "abbreviation": null,
+   "aliases": [
+    "negative mention",
+    "anti-recommendation",
+    "negated brand mention"
+   ],
+   "tldr": "A negated mention is an AI answer that names a brand in order to advise against it, exclude it, or mark what it lacks. Counting metrics record it as visibility; commercially it works in the opposite direction. Volume metrics without a sign cannot tell the difference.",
+   "category": "Brand Risk",
+   "url": "https://insights.rhinegold.de/compendium/negated-mention/"
+  },
+  {
+   "slug": "phantom-url",
+   "title": "Phantom URL",
+   "abbreviation": null,
+   "aliases": [
+    "phantom citation",
+    "hallucinated URL",
+    "fabricated source"
+   ],
+   "tldr": "A phantom URL is a web address an AI presents as a source that does not exist — fabricated at answer time, plausible in structure, resolving to nothing. When the fabricated address carries a brand's domain, the brand inherits the dead end: the answer looked authoritative, the click lands on a 404.",
+   "category": "Brand Risk",
+   "url": "https://insights.rhinegold.de/compendium/phantom-url/"
+  },
+  {
+   "slug": "placebo-test",
+   "title": "Placebo Test",
+   "abbreviation": null,
+   "aliases": [
+    "falsification test",
+    "negative-control test",
+    "placebo-in-time",
+    "placebo-in-space"
+   ],
+   "tldr": "A placebo test is a falsification check: apply the same estimator to a unit or period where no effect should exist. If it still finds an \"effect,\" the research design — not a real intervention — is producing the result. It is the minimum credibility gate before claiming an SEO/GEO action caused anything.",
+   "category": "Measurement",
+   "url": "https://insights.rhinegold.de/compendium/placebo-test/"
+  },
+  {
+   "slug": "platform-divergence",
+   "title": "Platform Divergence",
+   "abbreviation": null,
+   "aliases": [
+    "cross-platform divergence",
+    "Platform Divergenz",
+    "inter-platform divergence"
+   ],
+   "tldr": "Platform divergence is the empirically observed difference in which brands are mentioned and cited across AI platforms — ChatGPT, Gemini, Perplexity, Copilot — for the same query. A brand can be prominently visible on one platform and absent from another. Single-platform measurement does not represent a brand's AI visibility; each platform must be tracked independently.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/platform-divergence/"
+  },
+  {
+   "slug": "prompt-coverage",
+   "title": "Prompt Coverage",
+   "abbreviation": null,
+   "aliases": [
+    "coverage rate",
+    "AI prompt coverage",
+    "buyer-journey coverage"
+   ],
+   "tldr": "Prompt Coverage measures the share of the strategically relevant buyer-question space in which a brand achieves any visibility in AI-generated answers. Unlike Share of Voice — which scores relative frequency within an already-tested prompt set — Prompt Coverage answers the prior question: across all the prompts that matter for the buying decision, in how many does the brand appear at all? A denominator question, revealing structural blind spots that Share of Voice cannot see.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/prompt-coverage/"
+  },
+  {
+   "slug": "query-fan-out",
+   "title": "Query Fan-Out",
+   "abbreviation": null,
+   "aliases": [
+    "fan-out",
+    "query decomposition",
+    "sub-query expansion"
+   ],
+   "tldr": "Query fan-out is the technique by which an AI search surface answers one question by silently issuing many related sub-queries, then synthesising the results. The visible prompt is the tip; the brand competes across a fan of searches the user never typed and never sees.",
+   "category": "Platform surfaces",
+   "url": "https://insights.rhinegold.de/compendium/query-fan-out/"
+  },
+  {
+   "slug": "retrieval-augmented-generation",
+   "title": "Retrieval-Augmented Generation",
+   "abbreviation": "RAG",
+   "aliases": [
+    "RAG",
+    "retrieval augmentation"
+   ],
+   "tldr": "Retrieval-Augmented Generation (RAG) is the architecture in which a language model fetches relevant documents at answer time and conditions its response on them, rather than relying only on training-time memory. It is the machinery underneath AI Overviews, AI Mode, and answer engines — and the reason a brand's live content can enter an answer at all.",
+   "category": "Foundations",
+   "url": "https://insights.rhinegold.de/compendium/retrieval-augmented-generation/"
+  },
+  {
+   "slug": "self-reported-attribution",
+   "title": "Self-Reported Attribution",
+   "abbreviation": null,
+   "aliases": [
+    "how did you hear about us",
+    "HDYHAU",
+    "survey attribution",
+    "declared attribution"
+   ],
+   "tldr": "Self-reported attribution asks the buyer directly — \"How did you hear about us?\" — usually on the conversion form. It is a deliberately low-tech complement to tracked attribution, and in an AI-mediated journey it is often the only instrument that can see the influence the analytics stack cannot.",
+   "category": "Attribution",
+   "url": "https://insights.rhinegold.de/compendium/self-reported-attribution/"
+  },
+  {
+   "slug": "semantic-anchoring",
+   "title": "Semantic Anchoring",
+   "abbreviation": null,
+   "aliases": [
+    "entity anchoring",
+    "AI brand depth",
+    "entity sedimentation"
+   ],
+   "tldr": "Semantic Anchoring describes how deeply a brand is embedded in an AI model's trained knowledge — as opposed to appearing in AI answers because a document was retrieved at inference time. High Mention Rate does not imply anchoring: a brand can appear consistently in AI answers while remaining structurally dependent on retrieval, and therefore fragile.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/semantic-anchoring/"
+  },
+  {
+   "slug": "semantic-intelligence",
+   "title": "Semantic Intelligence",
+   "abbreviation": "SI",
+   "aliases": [],
+   "tldr": "Rhinegold uses Semantic Intelligence as a framework for measuring what markets actually hear, recommend, and decide inside language-based systems — and for connecting that signal to commercial steering.",
+   "category": "Frameworks",
+   "url": "https://insights.rhinegold.de/compendium/semantic-intelligence/"
+  },
+  {
+   "slug": "sentiment-drift",
+   "title": "Sentiment Drift",
+   "abbreviation": null,
+   "aliases": [
+    "AI sentiment drift",
+    "brand sentiment drift",
+    "LLM sentiment drift"
+   ],
+   "tldr": "Sentiment Drift is the temporal change in how AI answers characterise a brand — the directional derivative of AI Answer Sentiment. Where a static score is a moment-in-time snapshot, drift reveals direction and velocity across model updates, retrieval shifts and external events. Detecting it early enables intervention before negative characterisations compound at scale.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/sentiment-drift/"
+  },
+  {
+   "slug": "share-of-voice",
+   "title": "Share of Voice",
+   "abbreviation": "SoV",
+   "aliases": [
+    "SoV",
+    "AI share of voice"
+   ],
+   "tldr": "Share of Voice (SoV) in AI answers is a brand's mentions expressed as a share of all mentions across a defined competitor set and prompt set.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/share-of-voice/"
+  },
+  {
+   "slug": "source-authority",
+   "title": "Source Authority",
+   "abbreviation": null,
+   "aliases": [
+    "AI source authority",
+    "RAG source trust",
+    "AI authority sources"
+   ],
+   "tldr": "Source Authority describes how strongly specific third-party domains are treated as ground truth by AI systems when generating answers about a brand or category. Unlike Citation Rate — which measures how often your URL appears — Source Authority is the upstream trust layer: which external sources the AI consistently anchors its narrative on. For B2B operators, shaping accurate representation inside those high-authority nodes often delivers greater AI narrative influence than optimising direct citations.",
+   "category": "Foundations",
+   "url": "https://insights.rhinegold.de/compendium/source-authority/"
+  },
+  {
+   "slug": "sovereign-ai-eu-model-stack",
+   "title": "Sovereign AI & the EU Model Stack",
+   "abbreviation": null,
+   "aliases": [
+    "sovereign AI",
+    "EU model stack",
+    "European AI sovereignty"
+   ],
+   "tldr": "Sovereign AI is the strategy of running inference on models and infrastructure under European jurisdiction — EU providers, or open-weight models self-hosted on EU compute — to satisfy GDPR/DORA/AI-Act obligations and reduce export-control exposure. It is the internal-processing answer where the enterprise controls the choice, accepting a capability trade-off that only task-specific evaluation can size.",
+   "category": "Strategy & Risk",
+   "url": "https://insights.rhinegold.de/compendium/sovereign-ai-eu-model-stack/"
+  },
+  {
+   "slug": "spillover-contamination",
+   "title": "Spillover & Contamination",
+   "abbreviation": null,
+   "aliases": [
+    "SUTVA violation",
+    "interference",
+    "contamination",
+    "cannibalization"
+   ],
+   "tldr": "Spillover (contamination) occurs when a treatment applied to one unit changes the outcomes of others — violating the SUTVA assumption behind every standard causal method. In SEO and GEO it is structurally built in: treated and comparison pages share link equity, topic-cluster signals and sitewide authority, so a clean separation inside one domain is hard.",
+   "category": "Measurement",
+   "url": "https://insights.rhinegold.de/compendium/spillover-contamination/"
+  },
+  {
+   "slug": "sql",
+   "title": "SQL",
+   "abbreviation": "Sales Qualified Lead",
+   "aliases": [],
+   "tldr": "An SQL is a lead the sales team has determined is ready for direct outreach. The MQL-to-SQL handoff rate is the sharpest diagnostic signal for the scoring system upstream.",
+   "category": "Lead & Funnel",
+   "url": "https://insights.rhinegold.de/compendium/sql/"
+  },
+  {
+   "slug": "structured-data",
+   "title": "Structured Data",
+   "abbreviation": null,
+   "aliases": [
+    "schema markup",
+    "Schema.org",
+    "JSON-LD",
+    "rich result markup"
+   ],
+   "tldr": "Structured data is machine-readable markup — usually Schema.org vocabulary in JSON-LD — that states what a page's entities are: this is a product, this its price, this a person, this their role. It is how a page declares its facts to machines instead of leaving them to be inferred from prose.",
+   "category": "Foundations",
+   "url": "https://insights.rhinegold.de/compendium/structured-data/"
+  },
+  {
+   "slug": "synthetic-control",
+   "title": "Synthetic Control",
+   "abbreviation": "SCM",
+   "aliases": [
+    "synthetic control method",
+    "SCM",
+    "donor pool"
+   ],
+   "tldr": "The synthetic control method builds a weighted blend of untreated units — a donor pool — to approximate what a treated unit would have done without an intervention. It is the honest counterfactual when you have one treated brand or page and no single comparable control. The post-intervention gap is the estimated effect.",
+   "category": "Measurement",
+   "url": "https://insights.rhinegold.de/compendium/synthetic-control/"
+  },
+  {
+   "slug": "touchpoints",
+   "title": "Touchpoints",
+   "abbreviation": null,
+   "aliases": [],
+   "tldr": "A touchpoint is any interaction between a potential customer and a company — from the first ad impression to a sales call. In B2B, the path from first contact to closed deal runs through a sequence of these interactions, and each one leaves a trace.",
+   "category": "Lead & Funnel",
+   "url": "https://insights.rhinegold.de/compendium/touchpoints/"
+  },
+  {
+   "slug": "vendor-concentration-risk",
+   "title": "Vendor Concentration Risk",
+   "abbreviation": null,
+   "aliases": [
+    "AI supplier concentration",
+    "AI vendor lock-in risk",
+    "third-party AI risk"
+   ],
+   "tldr": "Vendor concentration risk is the exposure an enterprise takes on when it depends on a single — or very few — AI providers for critical workflows. It is a direct application of established supplier-concentration and ICT third-party-risk frameworks to AI. The 19-day suspension of Anthropic's Fable 5 and Mythos 5 in June 2026 — imposed by government directive, lifted by the same route — made it concrete at board level.",
+   "category": "Strategy & Risk",
+   "url": "https://insights.rhinegold.de/compendium/vendor-concentration-risk/"
+  },
+  {
+   "slug": "zero-click-search",
+   "title": "Zero-Click Search",
+   "abbreviation": null,
+   "aliases": [
+    "zero click",
+    "no-click search",
+    "zero-click rate",
+    "null-click search"
+   ],
+   "tldr": "A zero-click search is a query that ends without the user clicking through to a website — the answer is delivered directly on the results page. AI Overviews and conversational AI have extended this dynamic far beyond classic Featured Snippets. For brands, the question is not only how many clicks fell off, but what the brand says at the moment the answer is served.",
+   "category": "GEO Impact",
+   "url": "https://insights.rhinegold.de/compendium/zero-click-search/"
+  }
+ ]
+}
