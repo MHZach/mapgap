@@ -91,3 +91,27 @@ jobs:
           git add sitemap-insights.xml sitemap.xml
           # Rebase: sitemap.yml kann denselben Push schon bedient haben (andere Dateien → konfliktfrei)
           git diff --staged --quiet || { git commit -m "chore: regenerate root sitemap"; git pull --rebase origin "${GITHUB_REF_NAME}"; git push; }
+
+      - name: IndexNow ping (geaenderte Root-Seiten)
+        continue-on-error: true       # Ping-Fehler darf den Workflow nicht failen
+        env:
+          BEFORE: ${{ github.event.before }}
+          SHA: ${{ github.sha }}
+          INDEXNOW_KEY: 45d7267bd5c6cf3df6b71cf52e89a7bf   # oeffentlich by design, liegt als <key>.txt im Root
+        run: |
+          # Kein Vorgaenger (workflow_dispatch, erster Push, Force-Push) → kein Diff, kein Ping
+          case "$BEFORE" in ""|0000000000000000000000000000000000000000) echo "Kein Vorgaenger-Commit → kein Ping"; exit 0 ;; esac
+          # Nur Root-*.html, gleiche Ausschluesse wie im Sitemap-Step
+          URLS=$(git diff --name-only --diff-filter=AMR "$BEFORE" "$SHA" -- '*.html' | grep -v '/' | while read -r f; do
+            case "$f" in googleba*|*.bak*) continue ;; esac
+            grep -q 'http-equiv="refresh"' "$f" && continue
+            grep -qi 'name="robots" content="noindex' "$f" && continue
+            if [ "$f" = "index.html" ]; then echo "https://insights.rhinegold.de/"; else echo "https://insights.rhinegold.de/${f%.html}"; fi
+          done)
+          [ -n "$URLS" ] || { echo "Keine geaenderten Root-Seiten → kein Ping"; exit 0; }
+          echo "$URLS"
+          BODY=$(printf '%s\n' "$URLS" | jq -R . | jq -s --arg key "$INDEXNOW_KEY" \
+            '{host: "insights.rhinegold.de", key: $key, keyLocation: ("https://insights.rhinegold.de/" + $key + ".txt"), urlList: .}')
+          STATUS=$(curl -s -o indexnow_response.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' -d "$BODY") || true
+          echo "IndexNow HTTP ${STATUS}"; cat indexnow_response.txt 2>/dev/null || true
