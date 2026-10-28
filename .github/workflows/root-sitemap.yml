@@ -23,11 +23,17 @@ on:
       - 'guides/**'
       - 'waitlist/**'
       - 'episode4/**'
+      - 'compendium/**/index.html'   # Index-lastmod der Compendium-Sitemap mitziehen (sitemap.xml hat nur diesen Schreiber)
       - '.github/workflows/root-sitemap.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+# Laeuft bei Compendium-Pushes zusammen mit sitemap.yml → nacheinander statt gleichzeitig pushen
+concurrency:
+  group: sitemap-write
+  cancel-in-progress: false
 
 jobs:
   sitemap:
@@ -67,12 +73,14 @@ jobs:
 
       - name: Build sitemap.xml index (references sitemap-insights.xml + compendium/sitemap.xml)
         run: |
-          TODAY=$(date -u +%Y-%m-%d)
+          # lastmod je Unter-Sitemap = juengster Eintrag darin (nicht das Laufdatum)
+          INSIGHTS_LASTMOD=$(grep -o '<lastmod>[^<]*' sitemap-insights.xml | sed 's/<lastmod>//' | sort | tail -1)
+          COMPENDIUM_LASTMOD=$(for f in compendium/*/index.html; do git log -1 --format=%cs -- "$f"; done | sort | tail -1)
           {
             echo '<?xml version="1.0" encoding="UTF-8"?>'
             echo '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-            echo "  <sitemap><loc>https://insights.rhinegold.de/sitemap-insights.xml</loc><lastmod>${TODAY}</lastmod></sitemap>"
-            echo "  <sitemap><loc>https://insights.rhinegold.de/compendium/sitemap.xml</loc><lastmod>${TODAY}</lastmod></sitemap>"
+            echo "  <sitemap><loc>https://insights.rhinegold.de/sitemap-insights.xml</loc><lastmod>${INSIGHTS_LASTMOD}</lastmod></sitemap>"
+            echo "  <sitemap><loc>https://insights.rhinegold.de/compendium/sitemap.xml</loc><lastmod>${COMPENDIUM_LASTMOD}</lastmod></sitemap>"
             echo '</sitemapindex>'
           } > sitemap.xml
 
@@ -81,4 +89,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add sitemap-insights.xml sitemap.xml
-          git diff --staged --quiet || { git commit -m "chore: regenerate root sitemap"; git push; }
+          # Rebase: sitemap.yml kann denselben Push schon bedient haben (andere Dateien → konfliktfrei)
+          git diff --staged --quiet || { git commit -m "chore: regenerate root sitemap"; git pull --rebase origin "${GITHUB_REF_NAME}"; git push; }

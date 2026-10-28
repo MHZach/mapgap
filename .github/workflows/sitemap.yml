@@ -15,6 +15,11 @@ on:
 permissions:
   contents: write
 
+# root-sitemap.yml laeuft auf Compendium-Pushes mit → nacheinander statt gleichzeitig pushen
+concurrency:
+  group: sitemap-write
+  cancel-in-progress: false
+
 jobs:
   sitemap:
     runs-on: ubuntu-latest
@@ -42,4 +47,5 @@ jobs:
           git add compendium/sitemap.xml
           # Kein [skip ci]: der paths-Filter (compendium/**/index.html) verhindert die Schleife,
           # und der sitemap-Commit soll den Pages-Deploy auslösen.
-          git diff --staged --quiet || { git commit -m "chore: regenerate compendium sitemap"; git push; }
+          # Rebase: root-sitemap.yml kann denselben Push schon bedient haben (andere Dateien → konfliktfrei)
+          git diff --staged --quiet || { git commit -m "chore: regenerate compendium sitemap"; git pull --rebase origin "${GITHUB_REF_NAME}"; git push; }
