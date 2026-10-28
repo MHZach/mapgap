@@ -5,7 +5,7 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 18 Oct 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 17:30:00 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
@@ -13,6 +13,38 @@
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
 
+    <item>
+      <title>GEO for Manufacturers</title>
+      <link>https://insights.rhinegold.de/compendium/geo-for-manufacturers/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/geo-for-manufacturers/</guid>
+      <pubDate>Wed, 28 Oct 2026 17:30:00 +0000</pubDate>
+      <description>When a buyer asks an AI system a specification question, the answer can be assembled from distributors' and resellers' product pages and data sheets instead of the maker's own site. In our working method, the first metric is how often the maker, not its reseller, is named and cited for specification-level prompts.</description>
+      <category>Compendium</category>
+    </item>
+    <item>
+      <title>Answer Accuracy Rate</title>
+      <link>https://insights.rhinegold.de/compendium/answer-accuracy-rate/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/answer-accuracy-rate/</guid>
+      <pubDate>Wed, 28 Oct 2026 17:30:00 +0000</pubDate>
+      <description>Answer Accuracy Rate is the share of checkable claims about a brand in AI answers that match the brand's own maintained fact sheet. It is scored claim by claim, not as one verdict per answer, and separately from tone.</description>
+      <category>Compendium</category>
+    </item>
+    <item>
+      <title>Grounding Queries</title>
+      <link>https://insights.rhinegold.de/compendium/grounding-queries/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/grounding-queries/</guid>
+      <pubDate>Wed, 28 Oct 2026 17:30:00 +0000</pubDate>
+      <description>Grounding queries are the search queries an AI system writes and runs to fetch evidence for an answer — not the prompt the buyer typed. They shape which pages are retrieved and so which can be cited.</description>
+      <category>Compendium</category>
+    </item>
+    <item>
+      <title>AI Citation Decay</title>
+      <link>https://insights.rhinegold.de/compendium/citation-decay/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/citation-decay/</guid>
+      <pubDate>Wed, 28 Oct 2026 17:30:00 +0000</pubDate>
+      <description>AI citation decay is a sustained decline in a defined citation metric for a page or prompt panel, measured over weeks under comparable conditions. A citation that disappears between two runs is rotation, not decay.</description>
+      <category>Compendium</category>
+    </item>
     <item>
       <title>AI Crawler Traffic</title>
       <link>https://insights.rhinegold.de/compendium/ai-crawler-traffic/</link>

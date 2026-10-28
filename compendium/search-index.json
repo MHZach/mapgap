@@ -156,6 +156,19 @@
    "url": "https://insights.rhinegold.de/compendium/aided-unaided-brand-recall-geo/"
   },
   {
+   "slug": "answer-accuracy-rate",
+   "title": "Answer Accuracy Rate",
+   "abbreviation": null,
+   "aliases": [
+    "brand fact accuracy",
+    "AI answer accuracy",
+    "brand claim accuracy"
+   ],
+   "tldr": "Answer Accuracy Rate is the share of checkable claims about a brand in AI answers — price, locations, product scope, eligibility, contact routes — that match the brand's own maintained fact sheet. It is scored claim by claim, not as one verdict per answer, and separately from tone: a positive-sounding answer with a wrong price, location or product scope is a risk, not a win.",
+   "category": "Brand Risk",
+   "url": "https://insights.rhinegold.de/compendium/answer-accuracy-rate/"
+  },
+  {
    "slug": "api-vs-ui-llm-visibility",
    "title": "API vs UI Measurement (LLM Visibility)",
    "abbreviation": null,
@@ -239,6 +252,18 @@
    "tldr": "Chunking splits documents into passages before they are embedded and retrieved; in AI search, retrieval and citation happen at the passage level, not the page level. Whether each passage is self-contained decides whether the right content is found and cited — which makes passage structure the most direct GEO lever an author actually controls.",
    "category": "Foundations",
    "url": "https://insights.rhinegold.de/compendium/chunking-passage-retrieval/"
+  },
+  {
+   "slug": "citation-decay",
+   "title": "AI Citation Decay",
+   "abbreviation": null,
+   "aliases": [
+    "citation decay",
+    "citation share decay"
+   ],
+   "tldr": "AI citation decay is a sustained decline in a defined citation metric for a page or prompt panel, measured over weeks under comparable conditions. Comparable pages then show whether the decline goes beyond a broader shift. A citation that disappears between two runs is rotation, not decay: most cited pages fade quickly after a peak, and AI Mode and ChatGPT exchange a large part of their sources every week, while AI Overviews keep the same sources for most prompts over months.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/citation-decay/"
   },
   {
    "slug": "citation-rate",
@@ -388,6 +413,19 @@
    "url": "https://insights.rhinegold.de/compendium/generative-engine-optimization/"
   },
   {
+   "slug": "geo-for-manufacturers",
+   "title": "GEO for Manufacturers",
+   "abbreviation": null,
+   "aliases": [
+    "GEO for industrial manufacturers",
+    "manufacturer GEO",
+    "AI search optimization for manufacturers"
+   ],
+   "tldr": "GEO for manufacturers applies generative engine optimization to companies whose products reach buyers through distributors, resellers and marketplaces. When a buyer asks an AI system a specification question, the answer can be assembled from those intermediaries' product pages and data sheets instead of the maker's own site. In our working method, the first metric is how often the maker, not its reseller, is named and cited for specification-level prompts.",
+   "category": "Strategy & Risk",
+   "url": "https://insights.rhinegold.de/compendium/geo-for-manufacturers/"
+  },
+  {
    "slug": "grounded-response-rate",
    "title": "Grounded Response Rate",
    "abbreviation": null,
@@ -411,6 +449,20 @@
    "tldr": "Grounding is the mechanism by which an LLM retrieves external sources at answer time and conditions its response on them — the plumbing behind citations, not the citation itself.",
    "category": "Foundations",
    "url": "https://insights.rhinegold.de/compendium/grounding/"
+  },
+  {
+   "slug": "grounding-queries",
+   "title": "Grounding Queries",
+   "abbreviation": null,
+   "aliases": [
+    "grounding query",
+    "retrieval queries",
+    "fan-out queries",
+    "AI search queries"
+   ],
+   "tldr": "Grounding queries are the search queries an AI system writes and runs to fetch evidence for an answer — not the prompt the buyer typed. They shape which pages are retrieved and so which can be cited, and how much of them each provider discloses sets the limit of what can be measured at all.",
+   "category": "GEO Metrics",
+   "url": "https://insights.rhinegold.de/compendium/grounding-queries/"
   },
   {
    "slug": "hallucination-brand-risk",
