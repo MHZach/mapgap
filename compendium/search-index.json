@@ -169,6 +169,18 @@
    "url": "https://insights.rhinegold.de/compendium/answer-accuracy-rate/"
   },
   {
+   "slug": "answer-volatility",
+   "title": "AI Answer Volatility",
+   "abbreviation": null,
+   "aliases": [
+    "run-to-run variance",
+    "answer instability"
+   ],
+   "tldr": "AI answer volatility is the variation in what an AI assistant returns when the identical prompt is asked again within one period: different brands, a different order, different cited sources on some platforms. Even settings meant to make answers repeatable do not guarantee identical outputs, so a single answer is a sample, not a reading. Visibility is therefore reported as a rate over a fixed prompt set, with the number of prompts and runs stated and a noise band per slice.",
+   "category": "Measurement",
+   "url": "https://insights.rhinegold.de/compendium/answer-volatility/"
+  },
+  {
    "slug": "api-vs-ui-llm-visibility",
    "title": "API vs UI Measurement (LLM Visibility)",
    "abbreviation": null,
@@ -204,6 +216,19 @@
    "tldr": "About half of B2B software buyers now start their research with an AI chatbot more often than with Google. The shortlist — and often the eventual winner — is shaped before a single tracked session arrives. Brands that are not visible in AI answers are structurally absent from consideration, with no signal in any analytics system they own.",
    "category": "GEO Impact",
    "url": "https://insights.rhinegold.de/compendium/b2b-buyers-start-at-ai/"
+  },
+  {
+   "slug": "bing-ai-performance-report",
+   "title": "Bing AI Performance Report",
+   "abbreviation": null,
+   "aliases": [
+    "AI Performance report",
+    "Bing Webmaster Tools AI Performance",
+    "Bing WMT AI Performance"
+   ],
+   "tldr": "The AI Performance report in Bing Webmaster Tools is a first-party count of how often Microsoft's AI answers cite a site's pages, broken down by page and by grounding query. It counts citations, not clicks, and it is a sample in which sparse activity may not surface, so it supports trends and like-for-like comparisons, not a full account of AI demand.",
+   "category": "Platform surfaces",
+   "url": "https://insights.rhinegold.de/compendium/bing-ai-performance-report/"
   },
   {
    "slug": "brand-rank",
@@ -340,6 +365,19 @@
    "url": "https://insights.rhinegold.de/compendium/counterfactual/"
   },
   {
+   "slug": "dark-ai-traffic",
+   "title": "Dark AI Traffic",
+   "abbreviation": null,
+   "aliases": [
+    "unattributed AI traffic",
+    "hidden AI traffic",
+    "dark AI referrals"
+   ],
+   "tldr": "Dark AI traffic is the part of AI-prompted website visits that analytics does not attribute to an AI source. It comes in two kinds: AI clicks that lost their referrer or tag, and later visits through brand search or a typed URL. Its size cannot be read off a channel report. Rhinegold proposes to estimate it from three inputs and treats the estimate as a hypothesis.",
+   "category": "Attribution",
+   "url": "https://insights.rhinegold.de/compendium/dark-ai-traffic/"
+  },
+  {
    "slug": "difference-in-differences",
    "title": "Difference-in-Differences",
    "abbreviation": "DiD",
@@ -400,6 +438,19 @@
    "url": "https://insights.rhinegold.de/compendium/featured-snippet/"
   },
   {
+   "slug": "generative-ai-performance-report",
+   "title": "Generative AI Performance Report (Search Console)",
+   "abbreviation": null,
+   "aliases": [
+    "Generative AI performance report (Search)",
+    "Search Console generative AI report",
+    "GSC AI performance report"
+   ],
+   "tldr": "Google's Generative AI performance report in Search Console counts how often links to a site were shown inside AI Overviews and AI Mode, by page, country, device and date. It reports no queries, no clicks and, according to Google's documentation, no split between the two surfaces (as of October 2026). Read it as a record of exposure next to page-level clicks, never as a traffic or effect metric.",
+   "category": "Platform surfaces",
+   "url": "https://insights.rhinegold.de/compendium/generative-ai-performance-report/"
+  },
+  {
    "slug": "generative-engine-optimization",
    "title": "Generative Engine Optimization",
    "abbreviation": "GEO",
@@ -424,6 +475,19 @@
    "tldr": "GEO for manufacturers applies generative engine optimization to companies whose products reach buyers through distributors, resellers and marketplaces. When a buyer asks an AI system a specification question, the answer can be assembled from those intermediaries' product pages and data sheets instead of the maker's own site. In our working method, the first metric is how often the maker, not its reseller, is named and cited for specification-level prompts.",
    "category": "Strategy & Risk",
    "url": "https://insights.rhinegold.de/compendium/geo-for-manufacturers/"
+  },
+  {
+   "slug": "geo-vs-seo",
+   "title": "GEO vs. SEO",
+   "abbreviation": null,
+   "aliases": [
+    "SEO vs. GEO",
+    "GEO versus SEO",
+    "AEO vs. SEO"
+   ],
+   "tldr": "GEO and SEO share the same access conditions — a page has to be crawled, indexed and eligible to show in Search — but they report different outcome measures: SEO counts rank and clicks, GEO counts mentions and citations inside generated answers. Google files GEO under SEO; Microsoft uses GEO as a term of its own and separates search indexing from grounding on a shared foundation. A GEO claim only holds if mention or citation measures move.",
+   "category": "Foundations",
+   "url": "https://insights.rhinegold.de/compendium/geo-vs-seo/"
   },
   {
    "slug": "grounded-response-rate",
