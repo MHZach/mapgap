@@ -5,7 +5,7 @@
     <link>https://insights.rhinegold.de/compendium/</link>
     <description>Operator-level definitions for the concepts markets are now found, compared and recommended through in AI — with empirical anchors, not marketing speak.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Oct 2026 07:45:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 18:25:00 +0000</lastBuildDate>
     <atom:link href="https://insights.rhinegold.de/compendium/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://insights.rhinegold.de/compendium/assets/compendium-og.png</url>
@@ -13,6 +13,14 @@
       <link>https://insights.rhinegold.de/compendium/</link>
     </image>
 
+    <item>
+      <title>AI Content Governance</title>
+      <link>https://insights.rhinegold.de/compendium/ai-content-governance/</link>
+      <guid isPermaLink="true">https://insights.rhinegold.de/compendium/ai-content-governance/</guid>
+      <pubDate>Fri, 30 Oct 2026 18:25:00 +0000</pubDate>
+      <description>AI Content Governance is the set of rules, roles and review steps by which a company decides which AI-generated marketing content may be published, and who answers for it when it is wrong or off-brand. It concerns what the company itself publishes with AI — not what AI systems say about the company.</description>
+      <category>Compendium</category>
+    </item>
     <item>
       <title>GEO vs. SEO</title>
       <link>https://insights.rhinegold.de/compendium/geo-vs-seo/</link>

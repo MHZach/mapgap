@@ -1,7 +1,14 @@
 {
   "_note": "PUBLIC LINKS MUST point to https://insights.rhinegold.de/... — NEVER rhinegold.de/... The rhinegold.de/compendium/* Framer redirect is broken (:splat not substituted) and returns 404 on every URL until the Framer routing is fixed. After editing this file, purge the jsDelivr cache: https://purge.jsdelivr.net/gh/MHZach/mapgap@main/feed.json . Verify every new URL with curl (HTTP 200) before announcing it live.",
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "items": [
+    {
+      "title": "AI Content Governance",
+      "url": "https://insights.rhinegold.de/compendium/ai-content-governance/",
+      "date": "2026-10-30",
+      "type": "compendium",
+      "teaser": "AI Content Governance is the set of rules, roles and review steps by which a company decides which AI-generated marketing content may be published, and who answers for it when it is wrong or off-brand. It concerns what the company itself publishes with AI — not what AI systems say about the company."
+    },
     {
       "title": "GEO vs. SEO",
       "url": "https://insights.rhinegold.de/compendium/geo-vs-seo/",

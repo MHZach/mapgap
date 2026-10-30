@@ -41,6 +41,19 @@
    "url": "https://insights.rhinegold.de/compendium/ai-answer-sentiment/"
   },
   {
+   "slug": "ai-content-governance",
+   "title": "AI Content Governance",
+   "abbreviation": null,
+   "aliases": [
+    "generative AI content governance",
+    "AI marketing content governance",
+    "AI content approval"
+   ],
+   "tldr": "AI Content Governance is the set of rules, roles and review steps by which a company decides which AI-generated marketing content may be published, and who answers for it when it is wrong or off-brand. It concerns what the company itself publishes with AI — not what AI systems say about the company.",
+   "category": "Brand Risk",
+   "url": "https://insights.rhinegold.de/compendium/ai-content-governance/"
+  },
+  {
    "slug": "ai-crawler-traffic",
    "title": "AI Crawler Traffic",
    "abbreviation": null,
