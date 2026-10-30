@@ -2,14 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://insights.rhinegold.de/compendium/</loc></url>
   <url><loc>https://insights.rhinegold.de/compendium/agentic-commerce/</loc><lastmod>2026-10-09</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/ai-agents-buyer-journey/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/ai-agents-buyer-journey/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-answer-sentiment/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/ai-content-governance/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-crawler-traffic/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-mention-velocity/</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-mode/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-overview-traffic/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-overview-vs-ai-mode/</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/ai-reputation-risk/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/ai-reputation-risk/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-vendor-sovereignty/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/ai-visibility-audit/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/aided-unaided-brand-recall-geo/</loc><lastmod>2026-10-09</lastmod></url>
@@ -19,22 +20,22 @@
   <url><loc>https://insights.rhinegold.de/compendium/attribution/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/b2b-buyers-start-at-ai/</loc><lastmod>2026-10-18</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/bing-ai-performance-report/</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/brand-rank/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/brand-rank/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/brand-recommendation-share/</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/brand-voice-match/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/brand-voice-match/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/chunking-passage-retrieval/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/citation-decay/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/citation-rate/</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/co-mentions/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/co-mentions/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/competitive-mention-map/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/content-decay/</loc><lastmod>2026-10-28</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/control-group/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/control-group/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/counterfactual/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/dark-ai-traffic/</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/difference-in-differences/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/difference-in-differences/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/discovery-prompt/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/earned-media-grounding/</loc><lastmod>2026-10-28</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/embedding/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/embedding/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/featured-snippet/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/generative-ai-performance-report/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/generative-engine-optimization/</loc><lastmod>2026-10-29</lastmod></url>
@@ -43,14 +44,14 @@
   <url><loc>https://insights.rhinegold.de/compendium/grounded-response-rate/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/grounding-queries/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/grounding/</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/hallucination-brand-risk/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/hallucination-brand-risk/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/invisible-shortlist/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/lead-scoring/</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/lead-value/</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/lead-value/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/llm-brand-tracking/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/llm-referral-traffic/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/measurement-consistency/</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/mention-intensity/</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/mention-intensity/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/mention-quality/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/mention-rate/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/microsoft-copilot/</loc><lastmod>2026-10-29</lastmod></url>
@@ -65,9 +66,9 @@
   <url><loc>https://insights.rhinegold.de/compendium/query-fan-out/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/retrieval-augmented-generation/</loc><lastmod>2026-10-18</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/self-reported-attribution/</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/semantic-anchoring/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/semantic-anchoring/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/semantic-intelligence/</loc><lastmod>2026-10-09</lastmod></url>
-  <url><loc>https://insights.rhinegold.de/compendium/sentiment-drift/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://insights.rhinegold.de/compendium/sentiment-drift/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/share-of-voice/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/source-authority/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://insights.rhinegold.de/compendium/sovereign-ai-eu-model-stack/</loc><lastmod>2026-10-08</lastmod></url>
