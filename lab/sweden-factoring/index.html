@@ -1,0 +1,962 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="We asked four AI engines who a company in Sweden should turn to for factoring, in Swedish and in English. On Claude, twelve providers lost half their share of recommendations. On Perplexity, they did not."><link rel="canonical" href="https://insights.rhinegold.de/lab/sweden-factoring/">
+<link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" type="image/png" href="/assets/icons/icon-192.png" sizes="192x192"><link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<meta property="og:type" content="article"><meta property="og:title" content="Same market, another language: AI recommendations for factoring in Sweden"><meta property="og:description" content="We asked four AI engines who a company in Sweden should turn to for factoring, in Swedish and in English. On Claude, twelve providers lost half their share of recommendations. On Perplexity, they did not."><meta property="og:url" content="https://insights.rhinegold.de/lab/sweden-factoring/"><meta property="og:image" content="https://insights.rhinegold.de/assets/og/og-default.png"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Same market, another language: AI recommendations for factoring in Sweden", "description": "We asked four AI engines who a company in Sweden should turn to for factoring, in Swedish and in English. On Claude, twelve providers lost half their share of recommendations. On Perplexity, they did not.", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "url": "https://insights.rhinegold.de/lab/sweden-factoring/", "mainEntityOfPage": "https://insights.rhinegold.de/lab/sweden-factoring/", "inLanguage": "en", "image": "https://insights.rhinegold.de/assets/og/og-default.png", "author": {"@type": "Organization", "name": "Rhinegold Consulting", "url": "https://rhinegold.de"}, "publisher": {"@type": "Organization", "name": "Rhinegold Consulting", "url": "https://rhinegold.de"}}</script><title>Same market, another language: AI recommendations for factoring in Sweden · lab inSights 01 | Rhinegold Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --paper: #f5f0e8;
+    --warm: #c8a96e;
+    --warm-light: #e8d9bb;
+    --rust: #9b4f2a;
+    --sage: #4a6741;
+    --mist: #8a9ba8;
+    --accent: #d4521a;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* === Rhinegold Brand Header === */
+  .site-header {
+    padding: 1.4rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--warm-light);
+    background: var(--paper);
+    gap: 2rem;
+    position: relative;
+  }
+
+  .rg-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .rg-logo-mark {
+    width: 26px;
+    height: 26px;
+    color: var(--rust);
+    flex-shrink: 0;
+  }
+
+  .rg-wordmark {
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+  }
+
+  .rg-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+
+  .rg-nav a {
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .rg-nav a:hover {
+    color: var(--ink);
+  }
+
+  .rg-nav a.active {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .rg-nav-sep {
+    color: var(--warm-light);
+  }
+
+  .rg-home-link {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .rg-home-link:hover {
+    color: var(--rust);
+  }
+
+  /* === Rhinegold Brand Footer === */
+  .rg-footer {
+    background: #ebe2d0;
+    border-top: 1px solid var(--warm-light);
+    padding: 3rem;
+    font-family: var(--sans);
+    margin-top: 0;
+  }
+
+  .rg-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .rg-identity {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .rg-logo-mark-large {
+    width: 34px;
+    height: 34px;
+    color: var(--rust);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .rg-identity-text .rg-wordmark-large {
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .rg-tagline {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #5a4d3f;
+    max-width: 380px;
+  }
+
+  .rg-footer-column h5 {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--mist);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .rg-footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .rg-footer-column a {
+    font-size: 0.88rem;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .rg-footer-column a:hover {
+    color: var(--rust);
+  }
+
+  .rg-footer-bottom {
+    max-width: 1200px;
+    margin: 2.5rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #d9cdb5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--mist);
+  }
+
+  .rg-footer-bottom-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .rg-footer-bottom-links a {
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .rg-footer-bottom-links a:hover {
+    color: var(--ink);
+  }
+
+  /* Responsive Brand Bridge */
+  @media (max-width: 900px) {
+    .site-header {
+      padding: 1.25rem 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .rg-nav {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--warm-light);
+    }
+    .rg-footer {
+      padding: 2.5rem 1.5rem;
+    }
+    .rg-footer-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .rg-footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+  /* Hero */
+  .hero {
+    padding: 6rem 3rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .episode-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--rust);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .episode-tag::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--rust);
+    opacity: 0.4;
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--rust);
+  }
+
+  .hero-deck {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 3rem 0;
+    border-top: 1px solid var(--warm-light);
+  }
+
+  .hero-intro {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #3a3028;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .byline {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--mist);
+  }
+
+  .byline strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--ink);
+    font-weight: 500;
+    margin-top: 0.3rem;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .reading-time {
+    font-size: 0.8rem;
+    color: var(--mist);
+    margin-top: 1rem;
+  }
+
+  /* Pull quote / chapter intro */
+  .chapter-marker {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 4rem 3rem;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chapter-marker::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 169, 110, 0.15);
+  }
+
+  .chapter-marker::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    right: 5%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 169, 110, 0.08);
+  }
+
+  .chapter-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .chapter-number {
+    font-family: var(--serif);
+    font-size: 8rem;
+    font-weight: 300;
+    color: var(--warm);
+    opacity: 0.3;
+    line-height: 1;
+  }
+
+  .chapter-quote {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--paper);
+  }
+
+  .chapter-quote cite {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--warm);
+    margin-top: 1.5rem;
+  }
+
+  /* Body content */
+  .content-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+  }
+
+  .content-cols {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 5rem;
+  }
+
+  .sidebar {
+    padding-top: 0.5rem;
+  }
+
+  .sidebar-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--mist);
+    margin-bottom: 1.5rem;
+  }
+
+  .sidebar-nav {
+    list-style: none;
+  }
+
+  .sidebar-nav li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--warm-light);
+    font-size: 0.85rem;
+    color: var(--mist);
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .sidebar-nav li:hover { color: var(--ink); }
+  .sidebar-nav li.active { color: var(--rust); font-weight: 500; }
+
+  .sidebar-stat {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: var(--warm-light);
+    border-left: 3px solid var(--warm);
+  }
+
+  .sidebar-stat .number {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--rust);
+    line-height: 1;
+  }
+
+  .sidebar-stat .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--mist);
+    margin-top: 0.5rem;
+  }
+
+  /* Article text */
+  .article-body h2 {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 3.5rem 0 1.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--warm-light);
+  }
+
+  .article-body h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .article-body h3 {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--rust);
+    margin: 2.5rem 0 1rem;
+  }
+
+  .article-body p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #2e2820;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-body p strong {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  /* Pull quote inline */
+  .pull-quote {
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem 2rem;
+    margin: 3rem 0;
+    background: rgba(212, 82, 26, 0.04);
+  }
+
+  .pull-quote p {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* Journey diagram */
+  .journey-diagram {
+    margin: 3rem 0;
+    background: var(--ink);
+    padding: 3rem;
+    position: relative;
+  }
+
+  .journey-diagram h4 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--warm);
+    margin-bottom: 2.5rem;
+  }
+
+  .journey-phases {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .journey-phases::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 24px;
+    right: 24px;
+    height: 1px;
+    background: linear-gradient(to right, var(--sage), var(--warm), var(--rust));
+    z-index: 0;
+  }
+
+  .phase-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .phase-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid;
+    background: var(--ink);
+  }
+
+  .phase-dot.awareness { border-color: var(--sage); }
+  .phase-dot.consideration { border-color: var(--warm); }
+  .phase-dot.decision { border-color: var(--rust); }
+  .phase-dot.filled.awareness { background: var(--sage); }
+  .phase-dot.filled.consideration { background: var(--warm); }
+  .phase-dot.filled.decision { background: var(--rust); }
+
+  .phase-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(245, 240, 232, 0.5);
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .phase-question {
+    font-size: 0.6rem;
+    color: rgba(245, 240, 232, 0.25);
+    text-align: center;
+    line-height: 1.4;
+    font-style: italic;
+  }
+
+  /* Data callout */
+  .data-callout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin: 3rem 0;
+  }
+
+  .data-cell {
+    padding: 2rem;
+    background: var(--warm-light);
+    text-align: center;
+  }
+
+  .data-cell .figure {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--rust);
+  }
+
+  .data-cell .unit {
+    font-size: 0.8rem;
+    color: var(--mist);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.3rem;
+  }
+
+  .data-cell .context {
+    font-size: 0.8rem;
+    color: var(--mist);
+    margin-top: 0.75rem;
+    line-height: 1.5;
+  }
+
+  /* Insight block */
+  .insight-block {
+    background: var(--sage);
+    color: var(--paper);
+    padding: 2.5rem;
+    margin: 3rem 0;
+  }
+
+  .insight-block .eyebrow {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(245, 240, 232, 0.6);
+    margin-bottom: 1rem;
+  }
+
+  .insight-block p {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--paper);
+    margin: 0;
+  }
+
+  /* Implication table */
+  .implication-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+  }
+
+  .implication-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--mist);
+    border-bottom: 2px solid var(--warm-light);
+    font-weight: 400;
+  }
+
+  .implication-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--warm-light);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  .implication-table tr:last-child td { border-bottom: none; }
+
+  .implication-table .signal {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .implication-table .old {
+    color: var(--mist);
+    text-decoration: line-through;
+  }
+
+  .implication-table .new {
+    color: var(--sage);
+    font-weight: 500;
+  }
+
+  /* Footer */
+  .article-footer {
+    border-top: 2px solid var(--ink);
+    padding: 4rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .next-episode {
+    padding: 2.5rem;
+    border: 1px solid var(--warm-light);
+    position: relative;
+  }
+
+  .next-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--mist);
+    margin-bottom: 1rem;
+  }
+
+  .next-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  .series-nav {
+    font-size: 0.8rem;
+    color: var(--mist);
+  }
+
+  .series-nav p {
+    margin-bottom: 1rem;
+  }
+
+  .series-list {
+    list-style: none;
+  }
+
+  .series-list li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--warm-light);
+    font-size: 0.82rem;
+  }
+
+  .series-list li.current {
+    color: var(--rust);
+    font-weight: 500;
+  }
+
+  .series-list li.published a {
+    color: var(--mist);
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .hero-deck, .content-cols, .data-callout,
+    .journey-phases, .article-footer { grid-template-columns: 1fr; }
+    .chapter-inner { grid-template-columns: 1fr; }
+    .chapter-number { font-size: 4rem; }
+    .hero, .content-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .site-header { padding: 1.5rem; }
+    .chapter-marker { padding: 3rem 1.5rem; }
+    .hero-title { font-size: 2.5rem; }
+  }
+
+.hero-figure{margin:0 auto 0;padding:0 3rem 3rem;max-width:1100px}
+.hero-figure img{display:block;width:100%;height:auto;border:1px solid var(--warm-light)}
+.hero-figure figcaption{font-size:.78rem;color:var(--mist);margin-top:.7rem;letter-spacing:.02em}
+@media(max-width:699px){.hero-figure{padding:0 1.5rem 2rem}}
+.article-body .dialogue{margin:3rem 0;padding:1.5rem 0 1.5rem 1.75rem;border-left:1px solid var(--rust)}
+.article-body .dialogue p{font-family:var(--serif);font-size:1.15rem;line-height:1.55;color:#2e2820;margin:0 0 .55rem;padding-left:3.2rem;text-indent:-3.2rem}
+.article-body .dialogue .speaker{display:inline-block;width:3.2rem;text-indent:0;font-family:'DM Sans',system-ui,sans-serif;font-size:.74rem;letter-spacing:.12em;color:var(--rust);vertical-align:baseline}
+.article-body .inline-figure{margin:2.5rem 0 3rem}
+.article-body .inline-figure img{display:block;width:100%;height:auto;border:1px solid var(--warm-light)}
+.article-body .inline-figure figcaption{font-size:.78rem;color:var(--mist);margin-top:.7rem;letter-spacing:.02em}
+.hero .part-marker{font-family:var(--serif);font-size:2.4rem;font-weight:300;color:var(--rust);line-height:1;margin:0 0 2.2rem}
+.hero .hero-sub{font-family:var(--serif);font-size:1.05rem;font-weight:300;font-style:italic;line-height:1.7;color:#4a4036;max-width:52rem;margin:0 0 3rem}
+@media(max-width:820px){.hero .hero-sub br{display:none}}
+.hero .hero-title{margin-bottom:1.6rem}
+.article-body hr.rule{border:0;border-top:1px solid var(--warm-light);margin:2.5rem 0}
+.article-body sup.cite{font-size:.65em;line-height:0;margin-left:.15em}
+.article-body sup.cite a{color:var(--rust);text-decoration:none}
+.article-body .tbc{margin:3.5rem 0 1.5rem;font-family:var(--serif);font-weight:300;font-size:1.6rem;line-height:1.3;color:var(--ink)}
+.article-body .tbc p{margin:0}
+.article-body .next-tease{border:1px solid var(--warm-light);padding:1.5rem 2rem;margin:0 0 3rem}
+.article-body .next-tease .next-label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);margin-bottom:.6rem}
+.article-body .next-tease p{font-family:var(--serif);font-style:italic;font-size:1.15rem;line-height:1.5;margin:0}
+.article-body ol.sources{padding-left:1.4rem}
+.article-body ol.sources li{font-size:.86rem;line-height:1.55;color:#4a433a;margin-bottom:.7rem;word-break:break-word}
+.article-body ol.sources a{color:var(--rust)}
+.article-body .src-pre{font-size:.86rem;color:var(--mist)}
+.article-body h2.notes{font-size:1.2rem;margin-top:2.5rem;padding-top:2rem}
+.article-body .pull-quote cite{display:block;margin-top:.9rem;font-family:'DM Sans',system-ui,sans-serif;font-style:normal;font-size:.78rem;letter-spacing:.06em;color:var(--mist)}
+.sidebar-nav{display:flex;flex-direction:column;gap:11px;list-style:none}
+.sidebar-nav a{display:block;font-size:.85rem;line-height:1.45;color:var(--mist);text-decoration:none;transition:color .18s}
+.sidebar-nav a:hover,.sidebar-nav a:focus-visible{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.sidebar-nav a.active{color:var(--rust);font-weight:500}
+.sidebar-nav a[href="#sources"],.sidebar-nav a[href="#notes-on-form"]{margin-top:.9rem;padding-top:.9rem;border-top:1px solid var(--warm-light)}
+.article-body blockquote{border-left:3px solid var(--warm-light);margin:2rem 0;padding:.2rem 0 .2rem 1.6rem;font-family:var(--serif);font-size:1.12rem;font-style:italic;line-height:1.6;color:#2e2820}
+.article-body blockquote p{margin:0 0 .8rem;font-family:inherit;font-size:inherit;font-style:inherit}
+.article-body blockquote p:last-child{margin-bottom:0}
+</style><style>
+.lab-wrap{max-width:760px;margin:0 auto;padding:56px 24px 40px}
+.lab-kicker{font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#8a8279;margin:0 0 14px}
+.lab-wrap h1{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(32px,5vw,46px);line-height:1.12;margin:0 0 20px}
+.lab-lede{font-size:19px;line-height:1.55;margin:0 0 22px}
+.lab-facts{font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.55;border-top:1px solid #d9d3c9;border-bottom:1px solid #d9d3c9;padding:12px 0;margin:0 0 34px}
+.lab-facts p{margin:0 0 6px;font-size:14px;line-height:1.55}.lab-facts p:last-child{margin:0}
+.lab-wrap h2{font-family:'Fraunces',serif;font-weight:400;font-size:27px;line-height:1.25;margin:46px 0 14px}
+.lab-wrap p,.lab-wrap li{font-size:17px;line-height:1.65}
+.lab-wrap p{margin:0 0 16px}.lab-wrap ol,.lab-wrap ul{margin:0 0 18px;padding-left:22px}.lab-wrap li{margin:0 0 8px}
+.lab-table{overflow-x:auto;margin:18px 0 18px;-webkit-overflow-scrolling:touch}
+.lab-table table{border-collapse:collapse;width:100%;font-family:'DM Sans',sans-serif;font-size:14px;min-width:620px}
+.lab-table th{text-align:left;font-weight:600;font-size:12.5px;line-height:1.35;vertical-align:bottom;border-bottom:2px solid #14110f;padding:8px 10px 8px 0}
+.lab-table td{border-bottom:1px solid #e3ddd3;padding:8px 10px 8px 0;white-space:nowrap}
+.lab-table td:first-child,.lab-table th:first-child{position:sticky;left:0;background:#f5f0e8;padding-right:14px}
+.lab-more{border-top:1px solid #d9d3c9;margin:0;padding:6px 0}.lab-more:last-of-type{border-bottom:1px solid #d9d3c9}
+.lab-more summary{cursor:pointer;font-family:'Fraunces',serif;font-size:21px;padding:12px 0}
+.lab-more p,.lab-more li{font-size:15px;line-height:1.6}
+.lab-more+h2{margin-top:46px}
+.lab-banner{background:#7a2e1d;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;text-align:center;padding:7px 12px}
+code{font-size:.88em}
+@media(max-width:600px){.lab-table td:first-child,.lab-table th:first-child{white-space:normal;min-width:128px;max-width:150px}.lab-wrap{padding:32px 16px}.lab-wrap p,.lab-wrap li{font-size:16px}}
+</style></head><body>
+
+<style>
+.rg-topbar-burger{position:relative}
+.rg-topbar-burger>nav{display:flex;gap:24px;font-size:14px;flex-wrap:wrap}
+.rg-topbar-burger>nav a{color:#cdc6bb;text-decoration:none}
+.rg-topbar-burger>nav a.rg-active{color:#f0c070}
+.rg-burger{display:none;cursor:pointer;padding:4px;background:transparent;border:0;line-height:0}
+#nav-toggle{position:absolute;left:-9999px;width:1px;height:1px}
+@media(max-width:699px){
+  .rg-burger{display:flex;align-items:center}
+  .rg-topbar-burger>nav{display:none;position:absolute;top:100%;right:0;left:0;background:#14110f;flex-direction:column;padding:14px 30px;gap:14px;border-bottom:1px solid #2a2622;z-index:50}
+  #nav-toggle:checked~nav{display:flex}
+}
+</style>
+<header class="rg-topbar-burger" style="background:#14110f;border-bottom:1px solid #2a2622;padding:12px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:'DM Sans',system-ui,sans-serif"><a href="https://rhinegold.de" aria-label="rhinegold home" style="display:flex;align-items:center;text-decoration:none"><img src="https://insights.rhinegold.de/assets/rhinegold-logo.png" alt="rhinegold" width="620" height="160" style="height:26px;width:auto;display:block"></a><input type="checkbox" id="nav-toggle" aria-label="Menu"><label class="rg-burger" for="nav-toggle" aria-label="Menu öffnen/schließen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cdc6bb" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></label><nav><a href="https://insights.rhinegold.de/" class="rg-active">Insights</a><a href="https://insights.rhinegold.de/compendium/">Compendium</a><a href="https://rhinegold.de/services">Services</a><a href="https://rhinegold.de/sim">SIM</a><a href="https://rhinegold.de/methodology">Methodology</a><a href="https://rhinegold.de/about">About</a><a href="https://chat.rhinegold.de" target="_blank" rel="noopener">Ask Dietrich</a></nav></header>
+<main><div class="lab-wrap"><p class="lab-kicker">lab inSights 01 · Sweden · November 2026</p><h1>Same market, another language: on Claude, twelve providers lose half their share.</h1>
+<p class="lab-lede">We asked four AI engines, in Swedish, who a company in Sweden should turn to for factoring. Then we asked about the same situations in English.</p>
+<p>We had fixed twelve providers in advance, starting from who ranks in Google's top ten on Swedish search terms. This is their share of the recommendations:</p>
+<div class="lab-table"><table><thead><tr><th>Engine</th><th>Asked in Swedish</th><th>Asked in English</th></tr></thead><tbody><tr><td>Claude</td><td>66.3 %</td><td>33.8 %</td></tr><tr><td>Gemini</td><td>52.1 %</td><td>36.7 %</td></tr><tr><td>ChatGPT</td><td>60.3 %</td><td>55.7 %</td></tr><tr><td>Perplexity</td><td>64.5 %</td><td>60.8 %</td></tr></tbody></table></div>
+<p>ChatGPT answered about half of these English questions in another language. Counting only the English answers, its figure is 57.8 %.</p>
+<p>Brokers move the other way. On Claude, the four we track rise from 6.1 % to 19.1 %. On Gemini, one of them, invoier.com, an invoice marketplace, has the highest share of any provider we track in English, in each of our three waves of questions. In Swedish, the highest share on both engines goes to one of the twelve.</p>
+<p>Same market. Same situations. Another language, and on two of four engines another shortlist. So if your AI visibility is one number, in one language, it can hide a swing like this.</p>
+<p>Google's results in English also hold far fewer of the twelve, and on Claude and Gemini the recommendations go the same way. On ChatGPT and Perplexity their share barely moves.</p>
+<p>Even in Swedish, 39 % of the recommendations went to names outside the twelve, some of which rank on Google too.</p>
+<p>Does ranking on Google go with being recommended? It depends on what you count. swedbank.se has hundreds of times the Sistrix visibility of factoringgruppen.se, and in Swedish factoringgruppen.se gets almost five times the share of recommendations. A bank's index also counts mortgages and savings accounts, so we looked at factoring terms alone. There, the order comes closer to who gets recommended.</p>
+<p>And being in the sources is not always being in the answer. On general questions about financing and factoring in Swedish, when one of the twelve is among Gemini's sources, the answer leaves its name out more than nine times in ten; most of those answers name hardly any provider. Asked who to turn to, Gemini names it 92 % of the time.</p>
+<div class="lab-facts"><p><strong>The study: Sweden, Denmark, Norway, United Kingdom · three waves, 12–19 October 2026 · 13,272 answers from 4 answer engines · Part 1 of 4</strong></p></div>
+<div class="lab-facts"><p><strong>This note: Sweden · 12–18 October 2026 · 12 core providers and 4 brokers · 45 Google result pages · 3,792 answers, in Swedish and English</strong></p></div>
+<p>One reason we did this is a kind of sentence we keep reading: we analysed two million pages and can now prove what works on Google. Close behind it comes the LinkedIn tip, and the advice gets repeated and copied. We have seen it with backlinks, with FAQ blocks and with listicles: what worked for someone else, in another market, at another time, gets copied without anyone checking whether it does anything here. Mass does not settle this. A large study can tell you how common something is in what it sampled. Size alone cannot tell you what caused what, or what will happen on your site. An average across every industry says little to a finance director in Sweden who has to choose a factoring provider. Even <a href="https://www.bain.com/insights/your-next-customer-will-find-you-using-ai-now-what/">Bain</a>, citing about 500 million citations from ScrunchAI, reports that 89 % of unbranded prompts are answered from third-party sources, but anywhere from 76 % to 99 % depending on the topic, and it tells companies to measure by persona, category and prompt. And a big sample is not a good one by being big: in our essay <a href="https://insights.rhinegold.de/episode7">Mass Is Not a Method</a> we show, after the statistician Xiao-Li Meng, how a non-random sample of 2.3 million can be worth no more than 400 people picked at random.</p>
+<p>A Swedish singer, Harpo, made fun of the copying decades ago. In "Moviestar" (1975), someone copies the poses of the famous, travels to Sweden to meet Ingmar Bergman and gets nowhere. We looked at Sweden too, but to count.</p>
+<p>So we measured one niche, factoring for businesses, in four markets: Sweden, Denmark, Norway and the United Kingdom, with 35 provider entries (30 companies) and the panels set before the first wave. This is the first of four notes, and it covers Sweden; where we mention the UK, we say so. If you see something different in your market, we would like to hear it.</p>
+<h2>What we did</h2>
+<p>We fixed a panel of twelve Swedish factoring providers before the first wave: three factoring specialists, six banks or bank-owned financiers, and three fintech lenders. Four brokers are tracked beside them. Then we looked at the twelve from four angles, in three waves between 12 and 18 October 2026.</p>
+<ol><li><strong>Google, organic.</strong> Five Swedish search terms for factoring, three fetches per term in each wave, the first results page (eight to ten organic results): 45 result pages.</li><li><strong>Google, AI Overviews.</strong> The sources Google's AI Overview cites in the same fetches. An Overview appeared in 39 of the 45 fetches; for the plain term "factoring" in 3 of 9.</li><li><strong>Answer engines.</strong> Financing decisions in the Swedish market, asked in Swedish, three times per wave, to ChatGPT, Claude, Gemini and Perplexity. Twenty-two of them ask for a recommendation without naming any provider (fourteen in the first two waves, all twenty-two in the third). From those answers we compute each provider's share of the recommendations (brand recommendation share, BRS v1.0, defined in our Compendium).</li><li><strong>The same situations in English.</strong> Not word-for-word translations: each language words the same decision in its own natural way.</li></ol>
+<p>We asked through the engines' APIs, not from Sweden. Three of the four systems were told the user is in Stockholm; Gemini offers no documented setting for this. So this shows what the systems say about the Swedish market, not what a user in Sweden sees.</p>
+<p>We name providers by their domain. Google's results count domains directly. The answer engines name brands, and we assign each brand to its domain.</p>
+<h2>How this was built</h2>
+<p><strong>Why factoring, and why B2B.</strong> Nobody buys factoring on a whim. Our prompts ask from the position of small and mid-sized companies: a sole trader, a wholesaler turning over SEK 20 million, an IT consultancy. We assume that person rarely starts with the word "factoring", but with: our customers take 60 days to pay, our suppliers want their money within 30, how do we bridge that? Also our assumption, not something we measured: few people search for this, a handful of visits can be worth a contract, and three names in an AI answer act as a shortlist. That is why we measure who gets named, not who gets traffic.</p>
+<p><strong>Why Sweden.</strong> We have client work in Germany, and that data stays with those clients. The Nordics let us show the work on real markets without touching anything confidential.</p>
+<p><strong>The providers.</strong> We started from who ranks in Google's top ten for five Swedish factoring terms, then checked on each site what the company actually sells. That left twelve providers and four brokers, which we count separately. One lender ranks for three of the five terms but offers no factoring, so it isn't in the panel. An earlier version of our register also held a domain that turned out to belong to a court.</p>
+<p><strong>The prompts.</strong> Forty situations, forty-eight from wave three, of six kinds: the cash problem, choosing a provider, the product variant, risks, cost, and questions naming a brand. One asks whether you would warn a small business against any factoring company. Our first version of the forty situations was translated from an English master. Two AI models independently translated all 150 native-language prompts, across Swedish, Danish and Norwegian, back and flagged 25, and most of what they found came from the translating. We then rewrote all forty situations in each language from the situation itself. Where a word was in doubt, we looked at what the market writes: on Swedish providers' sites "factoringbolag" appears 1,374 times on ten sites, "factoringleverantör" 8 times on one. We use the first. No native speaker has read the prompts.</p>
+<p><strong>The measurement.</strong> Every prompt ran three times per wave, because the same question does not get the same answer. Three waves, because a review of the first one returned 162 raw findings and left too many caveats. The first wave also misled us: the agreement between Google and the answer engines looked stronger on systems that search the web more, and 42 % of the recommendations seemed to go outside the twelve. Two more waves, eight more situations and a corrected register later, the first idea failed across markets and the 42 % had become 39 %. We threw away one test run with a changed instruction and asked again when answers were cut off. Our OpenAI credit ran out, so ChatGPT for Norway and the UK finished a day late.</p>
+<h2>Four orders, one market</h2>
+<div class="lab-table"><table><thead><tr><th>Domain</th><th>Google organic: rank (result pages with a hit, of 45)</th><th>AI Overview sources: rank (fetches with a hit)</th><th>Our measurement, answer engines, Swedish prompts: BRS (rank band)</th><th>Our measurement, answer engines, English prompts: BRS (rank band)</th></tr></thead><tbody><tr><td>svea.com</td><td>2 (18)</td><td>1 (21)</td><td>12.5 % (1–3)</td><td>7.7 % (1–3)</td></tr><tr><td>capcito.com¹</td><td>10 (4)</td><td>5–6 (12)</td><td>10.2 % (1–4)</td><td>6.1 % (1–6)</td></tr><tr><td>factoringgruppen.se</td><td>1 (30)</td><td>3 (18)</td><td>8.6 % (1–5)</td><td>5.9 % (1–8)</td></tr><tr><td>ikanobank.se</td><td>4 (9)</td><td>2 (20)</td><td>7.2 % (2–5)</td><td>3.5 % (4–9)</td></tr><tr><td>prioritet.se</td><td>3 (10)</td><td>4 (16)</td><td>5.6 % (3–6)</td><td>3.2 % (4–10)</td></tr><tr><td>seb.se</td><td>6 (7)</td><td>8 (7)</td><td>4.5 % (4–8)</td><td>3.8 % (3–9)</td></tr><tr><td>norionbank.se</td><td>12 (3)</td><td>11 (1)</td><td>3.4 % (6–9)</td><td>5.0 % (2–6)</td></tr><tr><td>vismafinance.se</td><td>11 (3)</td><td>not cited</td><td>2.9 % (6–11)</td><td>1.9 % (6–12)</td></tr><tr><td>resursbank.se</td><td>8–9 (4)</td><td>9 (7)</td><td>2.3 % (7–11)</td><td>2.0 % (8–12)</td></tr><tr><td>swedbank.se</td><td>7 (4)</td><td>7 (9)</td><td>1.8 % (8–11)</td><td>3.4 % (3–11)</td></tr><tr><td>serafimfinans.se</td><td>8–9 (4)</td><td>5–6 (12)</td><td>1.3 % (9–12)</td><td>1.6 % (9–12)</td></tr><tr><td>norrafinans.com</td><td>5 (9)</td><td>10 (6)</td><td>0.5 % (11–12)</td><td>2.6 % (6–11)</td></tr><tr><td><strong>Core panel together</strong></td><td></td><td></td><td><strong>60.8 %</strong></td><td><strong>46.8 %</strong></td></tr><tr><td>Brokers (four, in the panel, outside the core)</td><td></td><td></td><td>6.9 %</td><td>12.1 %</td></tr><tr><td>Other providers in our register (version 0.3)</td><td></td><td></td><td>32.3 %</td><td>41.1 %</td></tr></tbody></table></div>
+<p>All ranks are ranks among the twelve core providers. BRS = brand recommendation share: how often a provider is recommended, divided by the number of providers named in that answer, itself included, averaged over the valid recommendation answers of a platform; the four platforms count equally, the three waves are pooled. Rank band: the range a provider's rank stays within in 95 % of recalculations with resampled situations. Google ranks: hits across 45 result pages, ties broken by best position; a shared rank is shown as a range; "not cited" means the provider's domain never appears among AI Overview sources. The last three rows add up to 100 %; providers missing from our register are not counted.</p>
+<p>¹ capcito.com includes Fortnox Finans, which belongs to the same legal entity: in the answer-engine columns every mention of Fortnox Finans counts for capcito.com. In the Google columns only capcito.com counts, because Fortnox Finans has no domain of its own in our register.</p>
+<h2>Reading one: ask in English and, on two of four engines, the shortlist changes</h2>
+<p>When the same situations are asked in English about the Swedish market, the twelve drop from 60.8 % to 46.8 %, the brokers rise from 6.9 % to 12.1 %, and other registered providers rise from 32.3 % to 41.1 %. Most of the change comes from two platforms. On Claude the twelve fall from 66.3 % to 33.8 % and the brokers rise from 6.1 % to 19.1 %; on Gemini the twelve fall from 52.1 % to 36.7 %, the brokers rise from 15.5 % to 19.8 %. On ChatGPT and Perplexity the twelve stay above 55 % in both languages. invoier.com, a broker, has the highest share of any provider we track on Gemini in English (13.3 %, next 9.9 %), in each of the three waves. On Claude it leads in one of the three waves (10.5 % pooled, next 9.5 %). On ChatGPT it gets 3.1 %, on Perplexity 0.5 %.</p>
+<p>The rankings change too. A rank correlation says how closely two rankings agree: 1 means the same order, 0 no relation, −1 the reverse order. On Gemini the English ranking of the twelve has almost nothing to do with the Swedish one (correlation −0.06); on Claude the two are moderately similar (0.57), on Perplexity almost the same (0.93). ChatGPT shows 0.98, though about half of its "English" answers were not in English. On Claude and Gemini, a Swedish answer and its English counterpart also share fewer names (overlap 0.14 and 0.15, on a scale from 0 to 1) than two repeats of the same Swedish question do (0.50 and 0.37); on Perplexity the two are close (0.49 and 0.59).</p>
+<p>Of the 48 differences between the languages (twelve providers, four platforms), 19 differ from zero: 13 lower and 6 higher in English. The largest drops in share are on Claude (capcito.com −9.9 points, svea.com −8.6, ikanobank.se −7.5); the largest rise is norrafinans.com on Gemini (+8.6).</p>
+<p>The sources shift with the language. Of the domains in the search results behind Claude's answers, 81 % end in .se under Swedish prompts and 40 % under English prompts; on Gemini 78 % and 38 %. Perplexity stays Swedish (87 % and 81 %).</p>
+<p>For a provider this is the practical finding: the English answer about your market can name other providers than the Swedish one. On Perplexity the Swedish order mostly holds, and on ChatGPT it appears to as well.</p>
+<h2>Reading two: Google does not agree with Google</h2>
+<p>factoringgruppen.se has the most organic hits (30 of 45 result pages) and ranks third among AI Overview sources. capcito.com ranks tenth organically, with four hits (three other providers also have four; the best position decides), and shares fifth place among AI Overview sources with serafimfinans.se. ikanobank.se is fourth organically and second in the Overview; norrafinans.com fifth organically and tenth in the Overview. vismafinance.se appears in the organic results but never among AI Overview sources.</p>
+<p>The two Google columns show each provider's rank within our panel.</p>
+<p>We can also say how much of the AI Overview a provider holds. An Overview appeared in 39 of the 45 fetches, with four to nine sources each, 248 in all. svea.com is among the sources in 21 of the 39 Overviews (54 %), ikanobank.se in 20 (51 %), factoringgruppen.se in 18 (46 %) and prioritet.se in 16 (41 %). Every Overview lists at least one of the twelve, yet the twelve hold only 52 % of the 248 sources. Brokers hold 1 %, other providers in our register 10 %, and 37 % go to domains outside our provider register: fortnox.se in 20 Overviews, spiris.se and startaegetinfo.se in 9 each, stripe.com, sv.wikipedia.org and avizion.se in 6 each. One term can carry a provider: all nine hits of swedbank.se come from "fakturabelåning".</p>
+<h2>Reading three: the answer engines' order is closer to the AI Overview than to the organic results</h2>
+<p>The order of AI Overview sources and the answer engines' order for Swedish prompts agree at 0.66 (rank correlation, explained under reading one), and that holds up statistically. Against the organic order the value is 0.40, and that does not.</p>
+<p>On each platform the value against the AI Overview is higher than against the organic results (see appendix); ChatGPT is low on both. The UK run of the same design points the same way: 0.87 against the AI Overview, 0.55 against the organic results.</p>
+<p>ChatGPT stands apart: its Swedish order has almost nothing to do with Google's. It also searched the web least: in 45 of its 150 answers to Swedish recommendation prompts, while the other three searched in 139 to 150 of their 150. Searching less need not be the reason, though: in the UK run ChatGPT agrees more with the organic order than Perplexity does (0.57 against 0.43).</p>
+<p>The answer engines and the AI Overview may simply draw on the same sources.</p>
+<h2>Reading four: 39 % of the recommendations go to names outside the twelve</h2>
+<p>The twelve core providers together hold 60.8 % of the recommendations in Swedish. The four brokers take 6.9 %. The remaining 32.3 % goes to other providers in our register. The highest of them, eurofinans.se (4.3 %), is seventh among all registered providers. The next outside the panel are finansia.se (3.5 %), nordeafinance.se (3.4 %), aroskapital.se (2.9 %), billecta.com (2.4 %) and alisabank.se (2.3 %). eurofinans.se has organic hits on 13 of the 45 result pages and none among AI Overview sources.</p>
+<p>The twelve were fixed before the first wave and stay fixed until the end of the quarter, so every wave is measured against the same names. The 39 % moves with the register, which we extended with names the answer engines brought up (version 0.2, 13 October), then corrected and extended (version 0.3, 17 October).</p>
+<p>One check on what the register misses: in 239 of 547 valid Swedish recommendation answers (44 %), at least one item in a provider list matches no register entry. That count can run high, because product terms and criteria in those lists count too.</p>
+<h2>A check we added later: the whole domain or its factoring terms?</h2>
+<p>After the study we asked whether a provider's visibility, today or years ago, goes with being recommended. The obvious number to try is Sistrix's visibility index for the whole domain. Across the twelve it shows no clear agreement with the answer engines' order (0.22). A bank's index also counts mortgages and savings accounts: swedbank.se has hundreds of times the index of factoringgruppen.se, and factoringgruppen.se gets almost five times the share of recommendations (8.6 % against 1.8 %).</p>
+<p>So we looked at factoring terms alone: how often does a provider rank in Google's top ten? In 2026, on three of our study's search terms, the agreement with the recommendation order is 0.53. With three more factoring terms we added later it is 0.76, the only one of the two that holds up statistically. For one niche, look at that niche's terms before the index of a whole domain.</p>
+<figure style="margin:24px 0"><img src="/assets/lab/domain_vs_factoring_en.png" alt="Two charts of the twelve providers against their share of recommendations. Left, the Sistrix index of the whole domain, rank correlation 0.22. Right, the share of top-ten rankings on six factoring terms, three of them added later, rank correlation 0.76." style="width:100%;height:auto;display:block"></figure>
+<p>Top-ten rankings on these terms before 2024 look much like today's (0.88). They agree with today's AI Overview sources at 0.67 and with today's recommendations at 0.57. Who ranked then mostly still ranks now, so a head start and simply still ranking look the same here.</p>
+<p>We also counted how often a provider's domain is listed among an answer engine's sources. That agrees with both the AI Overview (0.79) and the organic results (0.70). Across the twelve, providers listed more often also tend to be recommended more (0.68). In a single answer, though, being listed and being named often come apart, and it depends on the question. On general questions about financing and factoring in Swedish, the answer leaves the provider's name out in 94 % of cases on Gemini (477 of 510), 94 % on Claude (132 of 140) and 99 % on Perplexity (592 of 600). Most of these Gemini answers name fewer than two registered providers at all. Asked who to turn to, that falls to 8 % on Gemini (33 of 413), 21 % on Claude (44 of 214) and 39 % on Perplexity (274 of 703). ChatGPT lists the twelve only 41 times, all on recommendation questions, and names them in 40.</p>
+<h2>"Good SEO is good GEO": does it hold here?</h2>
+<p>Our Swedish results suggest a connection, but it depends on the search terms, the language and the engine.</p>
+<p>In Swedish, rankings on a niche's own terms go with being recommended more than the visibility of a whole domain does. For English we had no Google data, so on 2 November 2026 we fetched Google's result pages in English, with Sweden set as the location.</p>
+<p>Generic terms such as "invoice factoring" returned mostly international pages, and only two of the twelve appeared. So we added "sweden" to the same terms, which is how the models search: 95 to 100 % of their stored search queries for the English prompts name the country.</p>
+<div class="lab-table"><table><thead><tr><th>Share of the twelve among registered providers</th><th>Google</th><th>Claude</th><th>Gemini</th><th>ChatGPT</th><th>Perplexity</th></tr></thead><tbody><tr><td>Swedish</td><td>63 %</td><td>66 %</td><td>52 %</td><td>60 %</td><td>65 %</td></tr><tr><td>English</td><td>25 %</td><td>34 %</td><td>37 %</td><td>56 %</td><td>61 %</td></tr></tbody></table></div>
+<p>We picked the twelve from Swedish Google results, so part of their fall on English Google is built in.</p>
+<p>Then the direct test, across the 34 Swedish providers in our register: does a provider that gains on Google from Swedish to English also gain in recommendations? On Claude that agreement is 0.62 and on Gemini 0.53, and both hold up statistically. On Perplexity it is 0.37, which only just holds up, on ChatGPT 0.07. Most of what names gain there lies outside the twelve, and across the twelve alone the agreement drops to 0.37 and 0.38. Google mostly goes with whether a name appears at all. Among the names present on both sides, the order follows only loosely (0.28 to 0.39; ChatGPT −0.10).</p>
+<p>Why does the twelve's share barely move on ChatGPT and Perplexity? Our reading: with search allowed but not forced, only 89 of ChatGPT's 339 answers to these English prompts have a source. Perplexity's answers do, but its sources stay Swedish (81 % end in .se, against 40 % on Claude and 38 % on Gemini).</p>
+<p>The English Google figures rest on one day, two to three weeks after the answers. We are repeating the fetch on two more days and will correct this section if the result on Claude or Gemini, or the twelve's fall on Google, does not hold.</p>
+<h2>What this is not</h2>
+<ul><li>Not a verdict on any provider. We measure how often a name appears in search results and AI answers. That says nothing about a provider's quality, terms or financial standing.</li><li>Not a trend. Three waves within one week. For Swedish prompts the order of the twelve barely moved between waves (correlation 0.995 across platforms); for English prompts it moved more (0.86 across platforms; per platform lowest on Claude, 0.53).</li><li>Not an experiment. There is no traffic, no lead and no revenue in this data, and nothing here shows that changing a page changes a recommendation.</li><li>Not a count of buyers. How many buyers in Sweden ask in English, we did not measure.</li></ul>
+<h2>What we take from this, and what we don't</h2>
+<p><strong>"AI" as one channel.</strong> In this data it isn't one. Asked in English, the twelve providers' share on Claude falls by half; on Perplexity it barely moves.</p>
+<p><strong>Content.</strong> If your buyers ask in English about your home market, your position in your own language may not carry over.</p>
+<p>We also counted what the checklists tell you to count: ten features, chosen before we looked, on the sites of 34 of the 35 provider entries across all four markets (one had no complete crawl). Against how often a provider gets recommended in the answer engines, FAQ blocks came in at 0.06, words per factoring page at 0.31 and the share of advice pages at 0.28. None of the ten stands out. With this small sample, moderate relationships could still go undetected. That is against AI recommendations, not Google rankings.</p>
+<p><strong>Google and AI answers.</strong> On the search terms we fixed in advance, the answer engines agree more with AI Overview sources (0.66) than with the organic results (0.40). Sistrix rankings on a wider set of factoring terms, three of them added later, reach 0.76. So in Swedish, look at your niche's own terms and at the Overview, not at one visibility number.</p>
+<p><strong>Budget.</strong> Before moving money because of a general report, including this one, check where you actually stand, view by view and language by language.</p>
+<p><strong>What it would take.</strong> To see where one company stands, you need the questions its own buyers ask, in the languages they ask in. You need waves over months, not days, to tell a shift from noise. You need visits, leads and contracts next to the visibility figures, and comparison pages left unchanged, before crediting any change to any action. And you need to check, question by question, whether a provider's own pages answer what is being asked.</p>
+<p>One week in one niche already shows wide gaps. On Claude the twelve's share falls from 66.3 % to 33.8 % when the same situations are asked in English. On Gemini the English ranking has almost nothing to do with the Swedish one. And 39 % of the Swedish recommendations go outside the twelve. That is a risk for anyone planning from one view of the market, because the picture may hold for only one platform or one language. It is also a chance, because a gap you can see is one you can test.</p>
+<p>That is where the real work starts, and these are the questions we spend our days on. Which gaps are worth closing, and with what? How long do you have to measure what before you can tell a change from noise? What role does a brand play now, when a buyer asks a machine instead of searching? And what is any of it worth when a platform changes its model next quarter?</p>
+<p>Measuring something with a blunt tool and producing a handsome dashboard does not answer them. That is activity, not strategy, even when it is called AI enablement or a pilot project. Google competes with the organic click: with AI Overviews, which appeared in 39 of our 45 Swedish fetches, with its own answers, and with ads. In the first four months of 2026, 68 % of US Google searches ended without a click, and <a href="https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/">SparkToro</a> reads that as a trend still rising, across data panels that have changed over the years (more in our Compendium on <a href="https://insights.rhinegold.de/compendium/zero-click-search/">zero-click search</a>).</p>
+<p>And that is a US figure, across all kinds of searches. Most of what we read about this market comes from the US, and much of it from e-commerce. <a href="https://sparktoro.com/blog/zero-click-searches-highest-in-the-uk-lowest-in-germany-and-france-has-the-most-efficient-searchers/">SparkToro's own country figures</a> already run from 62 % in Germany to 70 % in the UK, and they don't cover Sweden, Switzerland or B2B. Whether any of this holds for a B2B provider in Munich, Stockholm or Zurich is still an open question. That is why we check whether the pattern holds in the market at hand.</p>
+<p><strong>What we'd like to know from you.</strong> Do you see the same in your market? And has anyone measured whether a budget shift towards AI visibility paid off?</p>
+<h2>What comes next</h2>
+<p>The UK, Norway and Denmark follow, one note each, and they will not simply repeat Sweden. In all four markets, banks hold a larger share of the core panel in the answer engines than in Google's organic results, by 6 to 20 points. The UK is the only market with one clear first place in the answer engines. And among registered providers visible on Google, those with under 1 % of the recommendations range from 3 of 20 in Sweden to 9 of 18 in Norway.</p>
+<p>The next wave is not scheduled yet. When it runs with the same panel and prompts, it will show what changed. Until then: if your domain appears in the table, you can see how its visibility compares across the four views measured in this study.</p>
+<p><em>This study illustrates the <a href="https://rhinegold.de/sim">measurement work</a> we do for B2B companies.</em></p>
+<p><em>For a first look at a page of your own, our free <a href="https://chat.rhinegold.de/rate">Page Quality Check</a> rates it against Google's public Search Quality Rater Guidelines, with every reason spelled out. It is a beta and not Google's rating, and its accuracy is not yet measured.</em></p>
+<details class="lab-more"><summary>Method in short</summary><ul><li>Panel: twelve core providers and four brokers, fixed on 10 October 2026 before the first wave, unchanged until the end of the quarter. Parent and subsidiary brands count as one provider. Register version 0.3 (17 October), applied to all three waves.</li><li>Prompts: in each language 40 decision situations in parallel wording in waves one and two, 48 in wave three; of these, 14 (from three families of situations) and then 22 (from four) are unaided recommendation situations, and five are aided brand questions. Plus ten natively worded questions per language. Each prompt ran three times per wave. 3,792 answers for Sweden. The three waves are pooled; the eight situations added in wave three therefore weigh a third as much as the fourteen from the start (three answers per platform instead of nine). ChatGPT's valid Swedish recommendation answers cover 21 of the 22 situations.</li><li>Platforms and models: ChatGPT (gpt-4o-2024-08-06), Claude (claude-sonnet-4-5-20250929), Gemini (gemini-2.5-flash), Perplexity (model "perplexity/sonar" through Perplexity's Agent API, not sonar-pro; which model runs behind that name we have not verified). Web search allowed, not forced; answers with web search are counted in the appendix. Search location Stockholm set for ChatGPT, Claude and Perplexity. ChatGPT's third wave was rerun on 18 October after a discarded test with a changed system instruction; the rerun uses the original instruction. From the third wave on, Claude and Perplexity answers cut off at the token limit were asked once more with a doubled limit; answers still cut off are excluded from the recommendation shares (3 of 600 Swedish recommendation answers), the overlap and source figures include them.</li><li>Google: five seed terms, three fetches per term in each wave, first results page and AI Overview sources, via a SERP API.</li><li>Metrics: BRS v1.0 as published in the Compendium; share outside the core panel = 1 − Σ BRS of the core providers, split into brokers and other registered providers, per platform and averaged with equal weight; Spearman ρ over the twelve core providers with Benjamini-Hochberg correction in two families (per market the two Google-versus-answer-engine tests; all other ρ exploratory); rank bands and language differences by bootstrap over situations; Jaccard overlap of named providers per answer pair.</li><li>Behind reading one: the highest share is computed over every registered name recognised in the answers, including names we only observe, per platform and language, with the same answers as the table; on ChatGPT and Perplexity it is svea.com in both languages. For invoier.com in English, 2,000 resamples of the 22 situations put it first in 79 % on Gemini and 47 % on Claude. By wave it is first on Gemini in all three, on Claude in the first. That it is a marketplace comes from its own site, read on 2 November 2026. Check value in English 246 of 552 answers. The 19 language differences use 95 % intervals, not corrected for multiple comparisons. 110 of ChatGPT's 384 answers to English prompts were not in English, and 70 of the 137 valid recommendation answers, so all ChatGPT comparisons between the languages are indicative. Language correlations are Spearman ρ, n = 12 on Perplexity and Gemini, n = 11 on Claude and ChatGPT. Overlap is the Jaccard value of named providers, defined for 167 to 235 of 339 answer pairs (same situation, same repetition) per platform; where neither answer names a provider, it is not defined. Bases of the .se shares (answer-domain pairs, Swedish and English): Claude 1,793 and 2,007, Gemini 3,718 and 3,397, Perplexity 4,291 and 4,716.</li><li>Behind reading three: every correlation is a Spearman rank correlation (ρ) over all twelve core providers; a provider absent from a view shares that view's last rank, n is the number of providers present in both views. AI Overview against answer engines ρ = 0.66 (n = 11, q = 0.04; vismafinance.se, never cited, is the twelfth); organic against answer engines ρ = 0.40 (n = 12, q = 0.20). These two are the pre-specified tests for this market, corrected together (Benjamini-Hochberg); only the first clears 0.05. Whether the two really differ from each other we did not test, nor the differences per platform; no single platform value clears 0.05 (see appendix). An agreement does not show who follows whom. UK: 0.87 (n = 9, q &lt; 0.01) and 0.55 (n = 10, q = 0.08); the UK platform values against the organic order have n = 9 and are exploratory, so the UK comparison of ChatGPT and Perplexity is indicative. ChatGPT searched in none of its 189 other unaided Swedish answers.</li><li>Behind reading four: the check value lies between 46 of 145 on Perplexity and 82 of 140 on Gemini, pooled over the three waves. It also misses some answers: those whose lists matched fewer than two registered providers (29) are not valid recommendation answers and are in no BRS figure; answers without a list are not checked.</li><li>Behind "What this is not": rank correlation between waves per platform 0.93 to 0.99 in Swedish, 0.53 to 0.94 in English. Each prompt ran nine times over the three waves for the fourteen original situations, three times for the eight added ones; aggregates rest on 130 to 145 valid recommendation answers per platform in Swedish, 126 to 148 in English.</li><li>Behind the check added later (all on 1 November 2026, after the waves). Whole-domain index: Sistrix, country Sweden, weekly chart read from the toolbox, monthly points, about 2 to 4 % above the API in three spot checks; 0.22 uses the mean of May to October 2026. Factoring terms: Sistrix keyword data, Sweden, top 15, every six months from 2018, every quarter from 2023. Three of the five seed terms returned data (factoring, from April 2023; fakturabelåning; factoringbolag); fakturaköp and fakturafinansiering returned none on the dates we checked. Added: sälja fakturor, belåna fakturor, fakturaförsäljning, chosen before the pull. Measure: share of term and date cells in the top ten, 24 cells in 2026 (12 for the three terms), unweighted. That a bank's index also counts mortgages and savings accounts is our reading; we did not split the index by topic. Spearman ρ over the twelve, Benjamini-Hochberg across the 30 tests of this check: 0.53 q = 0.09, 0.76 q = 0.02 (whether either really differs from 0.22 we did not test), before 2024 against AI Overview q = 0.03, against recommendations q = 0.07, so with this data we can't tell a head start from simply still ranking; agreement of the listed sources with AI Overview and organic order q = 0.01 and 0.02 (separate family); listed more often against recommended more (0.68) also clears 0.05. How much it moves: weighted by position 0.41 and 0.52, top 15 instead of top ten 0.60 and 0.86, dropping any one provider 0.40 to 0.65 and 0.69 to 0.85 (first value three terms, second six). Answers count Fortnox Finans for capcito.com; counting fortnox.se, which our register lists as accounting software, as capcito.com too gives 0.71 and 0.79. Across all 90 providers in the register 0.64 and 0.70; only those with at least one top-ten hit (18 and 20) 0.38 and 0.62. The panel started from Google's top ten, so comparisons with Google are partly selected. Listed sources: the provider's domain among the sources of an answer, not necessarily backing a claim; 339 unaided answers to Swedish prompts per platform, mean of the four platforms; on these, ChatGPT lists the twelve in 0 to 11 answers each.</li><li>Behind the AI Overview shares: 45 fetches of five search terms, 39 with an Overview, all sources per Overview counted once per domain. fortnox.se is not counted for capcito.com here (see the note under the table); capcito.com is in 12 of the 39. fortnox.se also carries an invoice-purchase page, which the Overviews on "fakturaköp" link among the providers. Counted in full for capcito.com, the twelve would hold at most 60 %, domains outside the provider register at least 29 %, and capcito.com would be in 20 of the 39.</li><li>Behind listed and named: Swedish prompts outside the brand questions (two name accounting software: Fortnox, Visma eEkonomi), 339 answers per platform (150 to recommendation questions, 189 to others), the twelve core providers, counted per answer and provider. Listed differs by platform, so compare these figures within a platform, not across: on Perplexity and Claude all search results returned to the model (Perplexity up to 20 per search), on Gemini the grounding sources, on ChatGPT the links in the answer. Named means a registered name of the provider appears in the answer text; source lines and links labelled only with a domain do not count. A check for the name's stem anywhere in the text moves Gemini's general-question figure to 93 % and Perplexity's recommendation figure to 38 %. Counting every mention of a provider instead of its share of recommendations gives the same order of the twelve in Swedish.</li><li>Behind "Good SEO is good GEO": This check came after the study and is weaker than it. The test we fixed in advance relied on the generic terms and produced no result, because too few of the twelve appeared; the "sweden" terms were only a side set in that plan, and we chose the 34 providers afterwards. How much the Swedish result holds depends on the terms and on how you count. Google counts first-page places and the engines share of recommendations, so the table is a rough comparison. Perplexity's 0.37 only just clears the bar and ChatGPT's 0.07 does not; across the twelve alone neither Claude nor Gemini does. Why the twelve's share barely moves on ChatGPT and Perplexity is our reading, not something we tested; which search engine each model uses, we did not check. Whether working on SEO causes any of this, this data cannot show. Google via a SERP API on 2 November 2026, location Sweden, language English, three fetches each of five terms from the study's UK set (invoice factoring, invoice finance, invoice discounting, factoring companies, invoice finance companies), and the same five with "sweden". Plus a Swedish control with the study's five terms, the same day: the twelve hold 61.7 % there against 62.7 % in October, though the order of the twelve moved more than the share (0.36 against October, 0.90 between earlier October fetches; the cause is not separated). Shares in the table: the twelve's places among first-page organic places of registered providers (111 of 177, 16 of 64; generic terms 3 of 31), and for the engines the recommendation share as in the appendix; ChatGPT's English value is indicative. Counting only the 34 Swedish register groups on both sides changes little: Google 68 % and 28 %, Claude 68 % and 36 %, Gemini 54 % and 41 %, ChatGPT 62 % and 57 %, Perplexity 66 % and 61 %. The test: Spearman ρ between the change in Google hits per fetch and the change in recommendation share, Swedish to English, over the 34 Swedish register groups; Benjamini-Hochberg across ten values (both term sets, four platforms and the mean): Claude q = 0.001, Gemini q = 0.004, Perplexity q = 0.046, ChatGPT q = 0.68. Many providers with zero on both sides support these values. Over the twelve alone: mean 0.33, Claude 0.37, Gemini 0.38, Perplexity 0.63 (uncorrected p 0.29, 0.24, 0.22, 0.027). A correlation of the twelve's Google order with their recommendation order cannot be computed under our rule of at least eight providers present, because too few appear on Google. Queries: stored search queries for English prompts, Claude 291, Gemini 1,491, ChatGPT 89, Perplexity 1,017. On that day our SERP provider often returned a redirect link instead of a result's domain; we read the domain from the displayed breadcrumb.</li><li>Behind the provider pages: crawls of 9 and 10 October 2026, two sites on 27 October; ten features fixed before the analysis; Spearman ρ against the overall share of recommendations, Benjamini-Hochberg across the ten features, all q at least 0.52. With 33 to 34 entries and ten features tested, this supports no firm conclusion and cannot rule out a moderate link, and it does not test SEO advice. FAQ blocks: FAQPage markup or visible FAQ text, navigation entries included.</li><li>General limits: Whether the systems act on the Stockholm setting we did not check. Anyone asking the same question can get a different answer, so the answer-engine figures cannot be checked one to one. These are API answers, not the consumer apps. ChatGPT searched in only 45 of its 150 answers to Swedish recommendation prompts; its other answers come from what the model learned. Each prompt ran only a few times, so we report pooled shares over the twenty-two situations, not rates for single prompts. The AI Overview shares come from our 39 Overviews on five search terms, not from all Overviews in Sweden. Providers outside our register are not counted. The third wave also asked more situations, so comparisons with it mix time and question set; three waves show stability within a week, not over months, and whether the 39 % holds over months only further waves could show. If a platform changes its model before the next wave, movement cannot be attributed to the market alone. The bank shares under "What comes next" are a rough comparison, since Google shares depend on the layout. The study's Swedish figures are as of 18 October (UK: 19 October) and were not recalculated for this note.</li><li>The same measurement design runs for Denmark, Norway and the United Kingdom. Panels differ in size (Sweden 12, UK 11, Norway 7 after one entry was merged with its owner, Denmark 5), and the UK is asked in English only (1,896 answers; 3,792 in each of the other three). Sweden is the anchor market of the study; this first note was assigned to it before the first wave.</li></ul></details>
+<details class="lab-more"><summary>Appendix: by platform</summary><div class="lab-table"><table><thead><tr><th>Platform</th><th>Core panel, Swedish</th><th>Brokers, Swedish</th><th>Outside the core, Swedish</th><th>Core panel, English</th><th>Brokers, English</th><th>Highest share, Swedish (rank band)</th><th>Highest share, English (rank band)</th></tr></thead><tbody><tr><td>ChatGPT</td><td>60.3 %</td><td>3.0 %</td><td>39.7 %</td><td>55.7 %</td><td>5.8 %</td><td>svea.com 18.6 % (1–2)</td><td>svea.com 14.5 % (1–2)</td></tr><tr><td>Claude</td><td>66.3 %</td><td>6.1 %</td><td>33.7 %</td><td>33.8 %</td><td>19.1 %</td><td>svea.com 12.7 % (1–4)</td><td>invoier.com 10.5 % (broker, no band)</td></tr><tr><td>Gemini</td><td>52.1 %</td><td>15.5 %</td><td>47.9 %</td><td>36.7 %</td><td>19.8 %</td><td>capcito.com 9.1 % (1–6)</td><td>invoier.com 13.3 % (broker, no band)</td></tr><tr><td>Perplexity</td><td>64.5 %</td><td>2.9 %</td><td>35.5 %</td><td>60.8 %</td><td>3.8 %</td><td>svea.com 12.8 % (1–4)</td><td>svea.com 10.7 % (1–4)</td></tr></tbody></table></div>
+<p>Register version 0.3, three waves pooled. Valid recommendation answers, Swedish / English: ChatGPT 132 / 137, Claude 130 / 126, Gemini 140 / 141, Perplexity 145 / 148. Check values (valid answers with at least one unmatched item in a provider list), Swedish / English: ChatGPT 67 / 70, Claude 44 / 54, Gemini 82 / 82, Perplexity 46 / 40. "Highest share" is the highest point estimate among the sixteen panel providers. In every cell with a rank band, the runner-up's band overlaps the leader's, so none of them is a clear first place. Rank bands are computed among the twelve core providers only, not for brokers. ChatGPT's English column is indicative (see reading one). The two broker cells have no band; how firm they are is under reading one.</p>
+<div class="lab-table"><table><thead><tr><th>Platform</th><th>ρ against AI Overview sources (n)</th><th>ρ against organic order (n)</th><th>Answers with web search, of all 150 answers to Swedish recommendation prompts (not only valid ones)</th><th>Unaided answers with at least one source, of 339: Swedish / English</th></tr></thead><tbody><tr><td>ChatGPT</td><td>0.28 (10)</td><td>0.07 (11)</td><td>45</td><td>45 / 89</td></tr><tr><td>Claude</td><td>0.68 (10)</td><td>0.33 (11)</td><td>139</td><td>209 / 239</td></tr><tr><td>Gemini</td><td>0.71 (11)</td><td>0.44 (12)</td><td>150 (grounding metadata present)</td><td>337 / 339</td></tr><tr><td>Perplexity</td><td>0.72 (11)</td><td>0.67 (12)</td><td>150</td><td>334 / 339</td></tr></tbody></table></div>
+<p>ρ and web search: Swedish prompts. The eight platform ρ form a separate, exploratory family (Benjamini-Hochberg); none clears 0.05 (q between 0.07 and 0.92). Across all 948 Swedish-market answers per platform in both languages, ChatGPT used web search in 191.</p></details>
+<h2>Sources</h2>
+<ul><li>rhinegold Observatory Nordic/UK, Sweden, measurement runs of 12, 17 and 18 October 2026; register v0.3 (17 October 2026); analysis of 18 October 2026, the check added later and the count of listed sources on 1 November 2026. Data on file.</li><li>BRS v1.0: insights.rhinegold.de/compendium/brand-recommendation-share (metric definition, first published 7 June 2026).</li><li>Platform divergence: insights.rhinegold.de/compendium/platform-divergence (practitioner concept, 8 June 2026).</li><li>Repeated runs: arXiv 2604.07585 (8 April 2026), standard error of per-brand detection below 0.10 at seven runs. Cited via the Compendium entry above.</li><li>Google AI Overview and organic results: DataForSEO SERP API, three fetches per term in each of the three waves, October 2026.</li><li>Sistrix visibility index and keyword data, Sweden, retrieved 1 November 2026.</li><li>Google results in English and Swedish control: DataForSEO SERP API, 2 November 2026.</li></ul>
+</div></main>
+<footer style="background:#14110f;border-top:1px solid #2a2622;padding:40px 30px 30px;color:#9a938a;margin-top:80px;font-family:'DM Sans',system-ui,sans-serif"><div style="max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;justify-content:space-between"><a href="https://rhinegold.de" aria-label="rhinegold home" style="display:flex;align-items:center;text-decoration:none"><img src="https://insights.rhinegold.de/assets/rhinegold-logo.png" alt="rhinegold" width="620" height="160" style="height:22px;width:auto;display:block"></a><div style="font-size:12px;letter-spacing:.08em;color:#7d766c">Semantic Intelligence · Decision Systems · External Resonance</div><div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;flex-wrap:wrap;gap:20px;font-size:13px"><a href="https://rhinegold.de/contact" style="color:#cdc6bb;text-decoration:none">Contact</a></div><div style="display:flex;flex-wrap:wrap;gap:20px;font-size:12px;color:#7d766c"><a href="https://rhinegold.de/legal-notice" style="color:#7d766c;text-decoration:none">Legal Notice</a><a href="https://rhinegold.de/privacy-policy" style="color:#7d766c;text-decoration:none">Privacy Policy</a><a href="https://rhinegold.de/grounding" style="color:#7d766c;text-decoration:none">Grounding</a></div></div></div><div style="width:100%;text-align:center;font-size:11px;color:#615a51;margin-top:22px;letter-spacing:.04em">© 2026 rhinegold</div></footer>
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* Cookieless configuration - no visitor, session or referrer cookies are set. */
+  _paq.push(['disableCookies']);
+  /* Keeps rhinegold.de and insights.rhinegold.de one site, not an outlink. */
+  _paq.push(['setDomains', ['*.rhinegold.de']]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo-production-2d0c.up.railway.app/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+</body></html>
