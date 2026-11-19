@@ -136,7 +136,7 @@
     "AI sovereignty",
     "two-axis LLM decision"
    ],
-   "tldr": "Choosing an LLM provider is no longer one decision. European enterprises now face two independent choices — visibility in the models their buyers use, and control over the models they process with — and the answers are not the same. The 12 June 2026 US suspension of Anthropic's Fable 5 and Mythos 5 — lifted nineteen days later — turned that from a theory into a dated event.",
+   "tldr": "Choosing an LLM provider is no longer one decision. European enterprises now face two independent choices — visibility in the models their buyers use, and control over the models they process with — and the answers are not the same. The 12 June 2026 US suspension of Anthropic's Fable 5 and Mythos 5 — export controls lifted on 30 June, access to Fable 5 restored on 1 July — turned that from a theory into a dated event.",
    "category": "Strategy & Risk",
    "url": "https://insights.rhinegold.de/compendium/ai-vendor-sovereignty/"
   },
@@ -299,7 +299,7 @@
     "citation decay",
     "citation share decay"
    ],
-   "tldr": "AI citation decay is a sustained decline in a defined citation metric for a page or prompt panel, measured over weeks under comparable conditions. Comparable pages then show whether the decline goes beyond a broader shift. A citation that disappears between two runs is rotation, not decay: most cited pages fade quickly after a peak, and AI Mode and ChatGPT exchange a large part of their sources every week, while AI Overviews keep the same sources for most prompts over months.",
+   "tldr": "AI citation decay is a sustained decline in a defined citation metric for a page or prompt panel, measured over weeks under comparable conditions. Comparable pages then show whether the decline goes beyond a broader shift. A citation that disappears between two runs is rotation, not decay: most cited pages fade quickly after a peak, and AI Mode and ChatGPT exchange a large part of their sources every week, while AI Overviews kept exactly the same sources for just over half of prompts over 17 weeks.",
    "category": "GEO Metrics",
    "url": "https://insights.rhinegold.de/compendium/citation-decay/"
   },
