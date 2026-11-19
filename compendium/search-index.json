@@ -648,7 +648,7 @@
     "mention grading",
     "AI mention scoring"
    ],
-   "tldr": "Mention Quality is the weighted-value layer on top of raw mention presence: it grades each brand mention in an AI-generated answer by position in the response, the framing it carries (primary recommendation vs. passing aside vs. negation), the authority of the underlying source, and the overall context. The earned-media tradition has long distinguished tier-1 quality coverage from raw share of voice — Mention Quality imports that logic into AI-answer measurement.",
+   "tldr": "Mention Quality is the value layer on top of raw mention presence: it grades each brand mention in an AI-generated answer by position in the response, the framing it carries (primary recommendation vs. passing aside vs. negation), the authority of the underlying source, and the overall context. The earned-media tradition has long distinguished tier-1 quality coverage from raw share of voice — Mention Quality imports that logic into AI-answer measurement.",
    "category": "GEO Metrics",
    "url": "https://insights.rhinegold.de/compendium/mention-quality/"
   },
@@ -685,7 +685,7 @@
     "Mistral Vibe",
     "Mistral AI"
    ],
-   "tldr": "Mistral AI plays two roles for European operators: Le Chat (now Mistral Vibe) is an AI assistant and emerging answer surface with limited but growing reach, while Mistral itself is Europe's most-capitalised model provider — the EU-jurisdiction option regulated enterprises weigh against US hyperscalers. The two are separate decisions.",
+   "tldr": "Mistral AI plays two roles for European operators: Le Chat (now Mistral Vibe) is an AI assistant and emerging answer surface with limited but growing reach, while Mistral itself — which by its own account closed the largest equity round ever completed by a European technology company — is the EU-jurisdiction option regulated enterprises weigh against US hyperscalers. The two are separate decisions.",
    "category": "Platform surfaces",
    "url": "https://insights.rhinegold.de/compendium/mistral-le-chat/"
   },
